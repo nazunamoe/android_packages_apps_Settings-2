@@ -16,6 +16,7 @@
 
 package com.android.settings;
 
+
 import com.android.settings.bluetooth.DockEventReceiver;
 
 import android.app.AlertDialog;
@@ -51,8 +52,8 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.VolumePanel;
 
-import java.util.Date;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class SoundSettings extends SettingsPreferenceFragment implements
@@ -196,6 +197,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mVibrateWhenRinging.setPersistent(false);
         mVibrateWhenRinging.setChecked(Settings.System.getInt(resolver,
                 Settings.System.VIBRATE_WHEN_RINGING, 0) != 0);
+        mVibrateWhenRinging.setOnPreferenceChangeListener(this);
 
         mDtmfTone = (CheckBoxPreference) findPreference(KEY_DTMF_TONE);
         mDtmfTone.setPersistent(false);
@@ -230,6 +232,16 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         mRingtonePreference = findPreference(KEY_RINGTONE);
         mNotificationPreference = findPreference(KEY_NOTIFICATION_SOUND);
+        
+        mQuietHours = (PreferenceScreen) findPreference(KEY_QUIET_HOURS);
+        if (Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_ENABLED, 0) == 1) {
+            mQuietHours.setSummary(getString(R.string.quiet_hours_active_from) + " " + 
+                    returnTime(Settings.System.getString(resolver, Settings.System.QUIET_HOURS_START)) 
+                    + " " + getString(R.string.quiet_hours_active_to) + " " +
+                    returnTime(Settings.System.getString(resolver, Settings.System.QUIET_HOURS_END)));
+        } else {
+            mQuietHours.setSummary(getString(R.string.quiet_hours_summary));
+        }
 
         mSafeHeadsetVolume = (CheckBoxPreference) findPreference(KEY_SAFE_HEADSET_VOLUME);
         mSafeHeadsetVolume.setPersistent(false);
