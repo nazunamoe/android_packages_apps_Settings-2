@@ -15,11 +15,6 @@
         android:title="@string/fnv_webpage"
     />
 
-    <Preference
-        android:key="fnv_donate"	
-        android:title="@string/fnv_donate"
-    />
-
 
     <PreferenceCategory
         android:key="fnv_code"

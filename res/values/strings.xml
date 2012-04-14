@@ -20,6 +20,9 @@
     <!-- Strings for Dialog no button -->
     <string name="no">"No"</string>
 
+    <!-- Strings for Dialog ok button -->
+    <string name="ok">"OK"</string>
+
     <!-- Strings for Dialog create button -->
     <string name="create">Create</string>
 
@@ -1687,6 +1690,13 @@
     <string name="lock_sounds_enable_title">Screen lock sound</string>
     <!-- Sound settings screen, setting check box label -->
     <string name="haptic_feedback_enable_title">Vibrate on touch</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="volume_adjust_sounds_enable_title">Volume adjust sound</string>
+    <!-- Sound settings screen, setting check box summary -->
+    <string name="volume_adjust_sounds_enable_summary">Play sound when adjusting volume with hard keys</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="camera_sounds_title">Camera sounds</string>
+    <string name="camera_sounds_summary">WARNING: Disabling camera shutter sound is illegal in some areas!</string>
     <!-- Sound settings screen, setting option name checkbox to enable/disable audio recording features that improve audio recording in noisy environments -->
     <string name="audio_record_proc_title">Noise cancellation</string>
     <!-- Volume description for media volume -->
@@ -4429,15 +4439,28 @@
     <string name="navigation_bar_stub">Navigation Bar</string>
     <string name="status_bar_stub">Status Bar</string>
     <string name="lockscreen_stub">Lockscreen</string>
-    <string name="misc_stub">Misc</string>
+    <string name="general_ui_stub">General UI</string>
+
+    <!-- Status Bar Stub -->
+    <string name="status_bar_clock_header">Clock</string>
+    <string name="status_bar_battery_header">Battery</string>
+    <string name="status_bar_misc">Misc</string>
 
     <!-- Status Bar -->
     <string name="status_bar_clock_title">Clock style</string>
     <string name="status_bar_general_title">General</string>
-    <string name="status_bar_show_clock_title">Show clock</string>
-    <string name="status_bar_am_pm_title">AM/PM</string>
-    <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="clock_title_enable">Clock style</string>
+    <string name="title_clock_ampm_entries">AM/PM style</string>
+    <string name="enable_clock_weekday">Day of the week</string>
+    <string name="enable_clock_weekday_summary">Abbreviated day of the week before the time</string>
     <string name="statusbar_background_color">Statusbar color</string>
+    <string name="clock_color_title">Clock color</string>
+    <!-- Battery Text Color -->
+    <string name="battery_text_color">Battery Text Colors</string>
+    <string name="allow_color_changes">Allow Custom Text Colors</string>
+    <string name="battery_text_charge">Battery Charging Color</string>
+    <string name="battery_text_normal">Battery Color (Above 15%)</string>
+    <string name="battery_text_low">Battery Color (Below 15%)</string>
 
     <!-- Navigation Bar -->
     <string name="navigation_bar_height_title">Navigation bar height</string>
@@ -4465,10 +4488,12 @@
     <string name="custom_carrier_label_notset">Custom label currently not set</string>
     <string name="alt_resolver">Use Alt Default App Grid</string>
     <string name="alt_resolver_summary">Use Alternate (GB style) Default App Picker</string>
+    <string name="status_bar_notif_count_title">Show notification count</string>
+    <string name="status_bar_notif_count_summary">Display number of pending notifications on the status bar</string>
 
     <!-- About FNV -->
     <string name="aboutfnv_settings">About us</string>
-    <string name="fnv_summary">Project Fruits and Veggies is a ROM built by the community to have the features and stability you need to make it your daily driver. Due to us being a community ROM we rely on everyone to do their part, whether that is making a donation to Paypal, submitting code to gerrit, suggesting a feature on our IRC, reporting a bug in your device thread, or just using our rom. You can find these and other useful links below. Thank you for your support!</string>
+    <string name="fnv_summary">Project Fruits and Veggies is a ROM built by the community to have the features and stability you need to make it your daily driver. Due to us being a community ROM we rely on everyone to do their part, submitting code to gerrit, suggesting a feature on our IRC, reporting a bug in your device thread, or just using our rom. You can find these and other useful links below. Thank you for your support!</string>
     <string name="fnv_webpage">Website</string>
     <string name="fnv_donate">Donate with paypal</string>
     <string name="fnv_code">CODE</string>
@@ -4479,7 +4504,5 @@
     <string name="fnv_twitter">Twitter</string>
     <string name="fnv_facebook">Facebook</string>
     <string name="fnv_googleplus">Google+</string>
-    <string name="fnv_donate_title">Donate</string>
-    <string name="fnv_donate_summary">paypal.com</string>
 
 </resources>

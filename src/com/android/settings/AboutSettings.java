@@ -15,7 +15,6 @@ import com.android.settings.R;
 public class AboutSettings extends SettingsPreferenceFragment {
 
         Preference mFnvWebpage;
-        Preference mFnvDonate;
         Preference mFnvGithub;
         Preference mFnvGerrit;
         Preference mFnvIrc;
@@ -31,7 +30,6 @@ public class AboutSettings extends SettingsPreferenceFragment {
         addPreferencesFromResource(R.xml.about_settings);
         
         mFnvWebpage = findPreference("fnv_webpage");
-        mFnvDonate = findPreference("fnv_donate");
         mFnvGithub = findPreference("fnv_github");
         mFnvGerrit = findPreference("fnv_gerrit");
         mFnvIrc = findPreference("fnv_irc");
@@ -47,8 +45,6 @@ public class AboutSettings extends SettingsPreferenceFragment {
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mFnvWebpage) {
             gotoUrl("http://projectfnv.com/");
-       } else if (preference == mFnvDonate) {
-            gotoUrl("http://goo.gl/3Vo2G");
         } else if (preference == mFnvGithub) {
             gotoUrl("https://github.com/FruitsAndVeggies/");
         } else if (preference == mFnvGerrit) {
@@ -61,10 +57,6 @@ public class AboutSettings extends SettingsPreferenceFragment {
             gotoUrl("http://www.facebook.com/projectfnv");
         } else if (preference == mFnvGoogleplus) {
             gotoUrl("http://gplus.to/projectfnv");
-        } else if (preference == mFnvToro) {
-            gotoUrl("http://rootzwiki.com/topic/30061-romaosp411-project-fnv-build-008-rc4-now-with-pcb-goodness-home-grown-community-raised/");
-        } else if (preference == mFnvMaguro) {
-            gotoUrl("http://rootzwiki.com/topic/30514-jbrommaguro-project-fnv-fruits-veggies-a-community-rom/");
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }

@@ -27,18 +27,29 @@
              android:defaultValue="#000000"
              alphaSlider="true" />
 
-        <ListPreference
-             android:key="clock_style"
-             android:title="@string/status_bar_clock_title"
-             android:entries="@array/clock_style_entries"
-             android:entryValues="@array/clock_style_values" />   
- 
-        <ListPreference
-            android:key="status_bar_am_pm"	
-            android:dialogTitle="@string/status_bar_am_pm_title"
-            android:title="@string/status_bar_am_pm_title"
-            android:entries="@array/entries_status_bar_am_pm"
-            android:entryValues="@array/values_status_bar_am_pm" />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+             android:key="clock_color"
+             android:title="@string/clock_color_title"
+             android:defaultValue="@android:color/holo_blue_light" />
+
+	<ListPreference
+		android:entries="@array/clock_style_entries"
+		android:entryValues="@array/clock_style_values"
+		android:key="clock_style"
+		android:title="@string/clock_title_enable" />
+
+	<ListPreference
+		android:entries="@array/clock_ampm_entries"
+		android:entryValues="@array/clock_ampm_values"
+		android:key="clock_am_pm_style"
+		android:title="@string/title_clock_ampm_entries" />
+
+	<ListPreference
+		android:key="clock_weekday"
+		android:title="@string/enable_clock_weekday"
+		android:summary="@string/enable_clock_weekday_summary"
+		android:entries="@array/clock_weekday_entries"
+		android:entryValues="@array/clock_weekday_values" />
 
         </PreferenceCategory>
 
@@ -48,7 +59,8 @@
         <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="interface_navbar_color"
                 android:title="@string/navigation_bar_color_title"
-                android:defaultValue="#000000" />
+                android:defaultValue="#000000"
+                alphaSlider="true" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="nav_button_color"
@@ -91,16 +103,8 @@
         <PreferenceCategory
                 android:title="@string/lockscreen_stub">
 
-        <CheckBoxPreference
-            android:key="volume_rocker_wake"
-            android:title="@string/volume_rocker_wake_title"
-            android:summary="@string/volume_rocker_wake_summary"
-            android:defaultValue="false" />
-
-        <CheckBoxPreference
-            android:key="volume_music_controls"
-            android:title="@string/volume_music_controls_title"
-            android:summary="@string/volume_music_controls_summary" />
+        <Preference
+            android:title="Nothing to see here" />
 
         </PreferenceCategory>
 
@@ -115,6 +119,12 @@
             android:key="use_alt_resolver"
             android:title="@string/alt_resolver"
             android:summary="@string/alt_resolver_summary"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="status_bar_notif_count"
+            android:title="@string/status_bar_notif_count_title"
+            android:summary="@string/status_bar_notif_count_summary"
             android:defaultValue="false" />
 
         </PreferenceCategory>

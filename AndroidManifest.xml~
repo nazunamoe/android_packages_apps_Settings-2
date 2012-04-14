@@ -1436,7 +1436,27 @@
 
         <!-- For FNV Stub -->
 
-        <activity android:name=".fnv.Extras" />
+        <activity android:name="BatteryTextColor"
+            android:label="@string/battery_text_color"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".fnv.Extras"
+            android:label="Customization" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+               <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".fnv.StatusBar" />
+
+        <activity android:name=".fnv.GeneralUI" />
+
+        <activity android:name=".fnv.NavigationBar" />
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->
         <activity android:name="Settings$CryptKeeperSettingsActivity"
