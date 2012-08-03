@@ -4405,6 +4405,7 @@
     <string name="cell_broadcast_settings">Cell broadcasts</string>
     <!-- Cell Broadcast settings description [CHAR LIMIT=100] -->
     <string name="cell_broadcast_settings_summary">Select the types of emergency alerts to display.</string>
+<<<<<<< HEAD
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -4442,10 +4443,56 @@
     <string name="navbar_height_dialog_button_later">I\'ll reboot later</string>
     <string name="navbar_height_dialog_button_reboot">Reboot now!</string>
     <string name="button_transparency_title">Button Transparency</string>
+    <string name="navigation_bar_color_title">Bar color</string>
     <string name="navigation_bar_tint_title">Button color</string>
     <string name="navigation_bar_glow_tint_title">Glow color</string>
     <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
-    <string name="navbar_bg_color">Bar color</string>
     <string name="statusbar_background_color">Statusbar color</string>
 
+=======
+    
+    <!-- FNV EDITS START -->
+
+    <!-- Fnv settings category -->
+    <string name="themes_settings">Themes</string>
+    <string name="aboutfnv_settings">About us</string>
+
+    <!-- Weblinks title -->
+    <string name="fnv_weblinks">WEBLINKS</string>
+
+    <!-- About us -->
+    <string name="fnv_webpage_title">Website</string>
+    <string name="fnv_webpage_summary">projectfnv.com</string>
+    <string name="fnv_github_title">Code</string>
+    <string name="fnv_github_summary">github.com/FruitsAndVeggies</string>
+    <string name="fnv_irc_title">Irc</string>
+    <string name="fnv_irc_summary">webchat.freenode.net/?channels=fnv</string>
+    <string name="fnv_twitter_title">Twitter</string>
+    <string name="fnv_twitter_summary">twitter.com/projectfnv</string>
+    <string name="fnv_facebook_title">Facebook</string>
+    <string name="fnv_facebook_summary">facebook.com/projectfnv</string>
+    <string name="fnv_googleplus_title">Google+</string>
+    <string name="fnv_googleplus_summary">gplus.to/projectfnv</string>
+    
+    <!-- Sound settings screen -->
+    <string name="volbtn_music_controls_title">Volume button music control</string>
+    <string name="volbtn_music_controls_summary">Long-press volume keys to seek music tracks when screen is off</string>
+    
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">Wakeup options</string>
+    <string name="pref_volume_wake_title">Volume wake</string>
+    <string name="pref_volume_wake_summary">Pressing volume keys will wake device</string>
+
+    <!-- Navigation Bar Customization -->
+    <string name="ok">Ok</string>
+    <string name="profile_reset_title">Reset</string>
+    <string name="lockscreen_target_reset_title">Reset</string>
+    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_help_text">1 - To begin editing, tap the lock icon\n\n2 - Tap any button to assign or change functionality\n\n3 - Long press any button to rearrange the order\n\n4 - To save, tap the lock icon again\n\n5 - To restore system default, tap the reset button\n\n</string>
+    <string name="navigation_bar_tips">&#8226; Actions can only be assigned to one button at a time\n\n&#8226; The home button cannot be re-assigned\n\n&#8226; Side buttons cannot be rearranged</string>
+    <string name="navigation_bar_tips_title">Quick tips</string>
+    <string name="navigation_bar_reset_message">Delete current settings and restore to default?</string>
+    <string name="navigation_bar_save_message">Navigation bar settings saved</string>
+    <string name="navigation_bar_reset_toast">Navigation bar reset to default</string>
+>>>>>>> abaafcb... Add About Settings
 </resources>

@@ -58,6 +58,16 @@
         android:fragment="com.android.settings.WirelessSettings"
         android:icon="@drawable/empty_icon" />
 
+    <!-- FRUITS and VEGGIES -->
+    <header android:title="@string/header_category_fnv" />
+
+    <!-- About fnv -->
+    <header
+        android:id="@+id/about_fnv"
+        android:icon="@drawable/ic_settings_aboutfnv"
+        android:fragment="com.android.settings.AboutSettings"
+        android:title="@string/aboutfnv_settings" />
+
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
         android:title="@string/header_category_device" />
