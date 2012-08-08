@@ -4462,5 +4462,7 @@
     <string name="fnv_twitter">Twitter</string>
     <string name="fnv_facebook">Facebook</string>
     <string name="fnv_googleplus">Google+</string>
+    <string name="fnv_donate_title">Donate</string>
+    <string name="fnv_donate_summary">paypal.com</string>
 
 </resources>
