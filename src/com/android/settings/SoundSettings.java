@@ -16,11 +16,15 @@
 
 package com.android.settings;
 
+<<<<<<< HEAD
 import com.android.settings.bluetooth.DockEventReceiver;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.bluetooth.BluetoothDevice;
+=======
+import android.app.ActivityManagerNative;
+>>>>>>> 87e9324... Add safe headset volume check (2/2) Credit: CyanogenMod
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -84,6 +88,7 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
     private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
     private static final String KEY_VOLBTN_MUSIC_CTRL = "volbtn_music_controls";
+    private static final String KEY_SAFE_HEADSET_RESTORE = "safe_headset_restore";
     private static final String KEY_QUIET_HOURS = "quiet_hours";
 
     private static final String SILENT_MODE_OFF = "off";
@@ -187,6 +192,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         } else {
             mQuietHours.setSummary(getString(R.string.quiet_hours_summary));
         }
+
+        mSafeHeadsetRestore = (CheckBoxPreference) findPreference(KEY_SAFE_HEADSET_RESTORE);
+        mSafeHeadsetRestore.setPersistent(false);
+        mSafeHeadsetRestore.setChecked(Settings.System.getInt(resolver,
+                Settings.System.SAFE_HEADSET_VOLUME_RESTORE, 1) != 0);
 
         mVibrateWhenRinging = (CheckBoxPreference) findPreference(KEY_VIBRATE);
         mVibrateWhenRinging.setPersistent(false);
@@ -442,6 +452,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         } else if (preference == mDockAudioMediaEnabled) {
             Settings.Global.putInt(getContentResolver(), Settings.Global.DOCK_AUDIO_MEDIA_ENABLED,
                     mDockAudioMediaEnabled.isChecked() ? 1 : 0);
+
+        } else if (preference == mSafeHeadsetRestore) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SAFE_HEADSET_VOLUME_RESTORE,
+                    mSafeHeadsetRestore.isChecked() ? 1 : 0);
         } else {
             // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
