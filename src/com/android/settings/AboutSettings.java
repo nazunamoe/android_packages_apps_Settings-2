@@ -16,10 +16,13 @@ public class AboutSettings extends SettingsPreferenceFragment {
 
         Preference mFnvWebpage;
         Preference mFnvGithub;
+        Preference mFnvGerrit;
         Preference mFnvIrc;
         Preference mFnvTwitter;
         Preference mFnvFacebook;
         Preference mFnvGoogleplus;
+        Preference mFnvToro;
+        Preference mFnvMaguro;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,10 +31,13 @@ public class AboutSettings extends SettingsPreferenceFragment {
         
         mFnvWebpage = findPreference("fnv_webpage");
         mFnvGithub = findPreference("fnv_github");
+        mFnvGerrit = findPreference("fnv_gerrit");
         mFnvIrc = findPreference("fnv_irc");
         mFnvTwitter = findPreference("fnv_twitter");
         mFnvFacebook = findPreference("fnv_facebook");
         mFnvGoogleplus = findPreference("fnv_googleplus");
+        mFnvToro = findPreference("fnv_toro");
+        mFnvMaguro = findPreference("fnv_maguro");
         
     }
 
@@ -41,6 +47,8 @@ public class AboutSettings extends SettingsPreferenceFragment {
             gotoUrl("http://projectfnv.com/");
         } else if (preference == mFnvGithub) {
             gotoUrl("https://github.com/FruitsAndVeggies/");
+        } else if (preference == mFnvGerrit) {
+            gotoUrl("http://fnv.snipanet.com/");
         } else if (preference == mFnvIrc) {
             gotoUrl("http://webchat.freenode.net/?channels=fnv");
         } else if (preference == mFnvTwitter) {
@@ -49,6 +57,10 @@ public class AboutSettings extends SettingsPreferenceFragment {
             gotoUrl("http://www.facebook.com/projectfnv");
         } else if (preference == mFnvGoogleplus) {
             gotoUrl("http://gplus.to/projectfnv");
+        } else if (preference == mFnvToro) {
+            gotoUrl("http://rootzwiki.com/topic/30061-romaosp411-project-fnv-build-008-rc4-now-with-pcb-goodness-home-grown-community-raised/");
+        } else if (preference == mFnvMaguro) {
+            gotoUrl("http://rootzwiki.com/topic/30514-jbrommaguro-project-fnv-fruits-veggies-a-community-rom/");
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
