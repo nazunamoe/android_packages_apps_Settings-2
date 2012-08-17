@@ -1444,6 +1444,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".fnv.About" />
+
         <activity android:name=".fnv.StatusBar" />
 
         <activity android:name=".fnv.PowerMenu" />

@@ -4438,6 +4438,21 @@
     <string name="set">Set</string>
     <string name="ics_color">ICS</string>
 
+    <!-- About -->
+    <string name="title_about">About us</string>
+    <string name="team">Da Team</string>
+    <string name="contributors">Contributors</string>
+    <string name="xylon">Xylon AOSP</string>
+    <string name="xylon_website_title">Our Website</string>
+    <string name="xylon_website_summary">xylon.androidvenue.com \n Find all latest experiments and news here.</string>
+    <string name="xylon_source_title">Our Source</string>
+    <string name="xylon_source_summary">Xylon AOSP is fully open source. You can always check out our movements at github.com/XYAOSP</string>
+    <string name="donate_daxxmax">http://forum.xda-developers.com/donatetome.php?u=1216319</string>
+    <string name="donate_arzbhatia">http://forum.xda-developers.com/donatetome.php?u=4125911</string>
+    <string name="donate_d4">http://forum.xda-developers.com/donatetome.php?u=3484876</string>
+    <string name="donate_aokp">http://aokp.co/</string>
+    <string name="donate_cyanogenmod">http://forum.cyanogenmod.com/donate</string>
+
     <!-- Customisation -->
     <string name="status_bar_extras">User Interface</string>
     <string name="navigation_bar_stub">Navigation Bar</string>
@@ -4847,7 +4862,6 @@
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
-
 
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Selector notification</string>
