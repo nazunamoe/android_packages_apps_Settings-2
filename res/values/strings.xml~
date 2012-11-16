@@ -4408,7 +4408,7 @@
     <string name="link_volume_mutes">Silent mode affects notifications</string>
     <string name="volume_ring_only_description">Ringtone</string>    
     
-    <!-- Right/Center/Hide clock strings-->
+    <!--Right/Center/Hide clock strings-->
     <string name="combined_clock_title">Clock Settings</string>
     <string name="status_bar_clock_title">Clock style</string>
     <string name="status_bar_general_title">General</string>
