@@ -1873,6 +1873,10 @@
     <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
 
+    <!-- device modversion -->
+    <string name="mod_version">FNV version</string>
+    <string name="mod_version_default">Unknown</string>
+
     <!-- About phone screen, show when a value of some status item is unavailable. -->
     <string name="device_info_not_available">Not available</string>
     <!-- About phone screen, phone status screen title -->
@@ -4402,18 +4406,46 @@
     <!-- Cell Broadcast settings description [CHAR LIMIT=100] -->
     <string name="cell_broadcast_settings_summary">Select the types of emergency alerts to display.</string>
 
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>   
+    <string name="arrow_right">→</string> 
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">ICS</string>
+
     <!-- Volume Panel -->
     <string name="volume_overlay_title">Volume panel</string>
     <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
     <string name="link_volume_mutes">Silent mode affects notifications</string>
-    <string name="volume_ring_only_description">Ringtone</string>    
-    
-    <!-- Right/Center/Hide clock strings-->
-    <string name="combined_clock_title">Clock Settings</string>
+    <string name="volume_ring_only_description">Ringtone</string>
+
+    <!-- Customisation -->
+    <string name="status_bar_extras">Customization</string>
+    <string name="navigation_bar_stub">Navigation Bar</string>
+    <string name="status_bar_stub">Status Bar</string>
     <string name="status_bar_clock_title">Clock style</string>
     <string name="status_bar_general_title">General</string>
     <string name="status_bar_show_clock_title">Show clock</string>
     <string name="status_bar_am_pm_title">AM/PM</string>
     <string name="status_bar_am_pm_info">24-hour clock is enabled</string>
+    <string name="navigation_bar_height_title">Navigation bar height</string>
+    <string name="navigation_bar_height_summary">Navigation Bar height while in portrait.</string>
+    <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
+    <string name="navigation_bar_height_landscape_summary">Navigation Bar height while in landscape.</string>
+    <string name="navigation_bar_width_title">Navigation bar width.</string>
+    <string name="navigation_bar_width_summary">Navigation Bar height if the bar is along a side.</string>
+    <string name="navbar_height_dialog_title">Reboot required!</string>
+    <string name="navbar_height_dialog_summary">Please reboot for height change to be added properly!</string>
+    <string name="navbar_height_dialog_button_later">I\'ll reboot later</string>
+    <string name="navbar_height_dialog_button_reboot">Reboot now!</string>
+    <string name="button_transparency_title">Button Transparency</string>
+    <string name="navigation_bar_color_title">Bar color</string>
+    <string name="navigation_bar_tint_title">Button color</string>
+    <string name="navigation_bar_glow_tint_title">Glow color</string>
+    <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
+    <string name="statusbar_background_color">Statusbar color</string>
 
 </resources>
