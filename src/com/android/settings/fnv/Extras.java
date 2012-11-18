@@ -30,9 +30,11 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
+import android.text.Spannable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -54,6 +56,9 @@ public class Extras extends SettingsPreferenceFragment implements OnPreferenceCh
     private static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String NAVIGATION_BAR_HEIGHT_LANDSCAPE = "navigation_bar_height_landscape";
     private static final String NAVIGATION_BAR_WIDTH = "navigation_bar_width";
+    private static final String PREF_VOLUME_MUSIC = "volume_music_controls";
+    private static final String PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
+    private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
 
     private static final int DIALOG_NAVBAR_HEIGHT_REBOOT = 204;
     private static final int DEFAULT_NAVBAR_BG_COLOR = 0xFF000000;
@@ -68,6 +73,11 @@ public class Extras extends SettingsPreferenceFragment implements OnPreferenceCh
     private ListPreference mNavigationBarHeight;
     private ListPreference mNavigationBarHeightLandscape;
     private ListPreference mNavigationBarWidth;
+    private CheckBoxPreference mVolumeMusic;
+    private Preference mCustomLabel;
+    private CheckBoxPreference mUseAltResolver;
+
+    String mCustomLabelText = null;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -117,6 +127,17 @@ public class Extras extends SettingsPreferenceFragment implements OnPreferenceCh
 
         mNavigationBarWidth = (ListPreference) prefSet.findPreference("navigation_bar_width");
         mNavigationBarWidth.setOnPreferenceChangeListener(this);
+
+        mVolumeMusic = (CheckBoxPreference) prefSet.findPreference(PREF_VOLUME_MUSIC);
+        mVolumeMusic.setChecked(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.VOLUME_MUSIC_CONTROLS, 0) == 1);
+
+        mCustomLabel = prefSet.findPreference(PREF_CUSTOM_CARRIER_LABEL);
+        updateCustomLabelTextSummary();
+
+        mUseAltResolver = (CheckBoxPreference) prefSet.findPreference(PREF_USE_ALT_RESOLVER);
+        mUseAltResolver.setChecked(Settings.System.getBoolean(mContext.getContentResolver(),
+                        Settings.System.ACTIVITY_RESOLVER_USE_ALT, false));
         
         //try {
         //    if (Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
@@ -131,6 +152,63 @@ public class Extras extends SettingsPreferenceFragment implements OnPreferenceCh
         //        Settings.System.STATUS_BAR_AM_PM, 2);
         
         
+    }
+
+    private void updateCustomLabelTextSummary() {
+        mCustomLabelText = Settings.System.getString(getActivity().getContentResolver(),
+                Settings.System.CUSTOM_CARRIER_LABEL);
+        if (mCustomLabelText == null || mCustomLabelText.length() == 0) {
+            mCustomLabel.setSummary(R.string.custom_carrier_label_notset);
+        } else {
+            mCustomLabel.setSummary(mCustomLabelText);
+        }
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mVolumeMusic) {
+
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.VOLUME_MUSIC_CONTROLS,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mCustomLabel) {
+            AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
+
+            alert.setTitle(R.string.custom_carrier_label_title);
+            alert.setMessage(R.string.custom_carrier_label_explain);
+
+            // Set an EditText view to get user input
+            final EditText input = new EditText(getActivity());
+            input.setText(mCustomLabelText != null ? mCustomLabelText : "");
+            alert.setView(input);
+
+            alert.setPositiveButton(getResources().getString(R.string.ok), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    String value = ((Spannable) input.getText()).toString();
+                    Settings.System.putString(getActivity().getContentResolver(),
+                            Settings.System.CUSTOM_CARRIER_LABEL, value);
+                    updateCustomLabelTextSummary();
+                    Intent i = new Intent();
+                    i.setAction("com.aokp.romcontrol.LABEL_CHANGED");
+                    mContext.sendBroadcast(i);
+                }
+            });
+            alert.setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    // Canceled.
+                }
+            });
+
+            alert.show();
+        } else if (preference == mUseAltResolver) {
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.ACTIVITY_RESOLVER_USE_ALT,
+                    isCheckBoxPrefernceChecked(preference));
+            return true;
+        }
+        
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

@@ -4457,7 +4457,8 @@
     <string name="navigation_bar_glow_tint_summary">When you press on a button, there is a glow. Use this to change the color of the glow.</string>
 
     <!-- Lockscreen Options -->
-
+    <string name="volume_music_controls_title">Volume music controls</string>
+    <string name="volume_music_controls_summary">Long press volume buttons to skip tracks while screen is off. Volume wake will not work when music is playing.</string>
 
     <!-- Misc Options -->
     <string name="custom_carrier_label_title">Custom carrier label</string>

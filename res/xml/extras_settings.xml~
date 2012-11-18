@@ -47,7 +47,8 @@
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="interface_navbar_color"
-                android:title="@string/navigation_bar_color_title" />
+                android:title="@string/navigation_bar_color_title"
+                android:defaultValue="#000000" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="nav_button_color"
@@ -84,6 +85,37 @@
                 android:key="navigation_bar_width"
                 android:title="@string/navigation_bar_width_title"
                 android:summary="@string/navigation_bar_width_summary" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:title="@string/lockscreen_stub">
+
+        <CheckBoxPreference
+            android:key="volume_rocker_wake"
+            android:title="@string/volume_rocker_wake_title"
+            android:summary="@string/volume_rocker_wake_summary"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="volume_music_controls"
+            android:title="@string/volume_music_controls_title"
+            android:summary="@string/volume_music_controls_summary" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:title="@string/misc_stub">
+
+        <Preference
+            android:key="custom_carrier_label"
+            android:title="@string/custom_carrier_label_title" />
+
+        <CheckBoxPreference
+            android:key="use_alt_resolver"
+            android:title="@string/alt_resolver"
+            android:summary="@string/alt_resolver_summary"
+            android:defaultValue="false" />
 
         </PreferenceCategory>
 

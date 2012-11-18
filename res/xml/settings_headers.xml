@@ -61,12 +61,11 @@
     <!-- FRUITS and VEGGIES -->
     <header android:title="@string/header_category_fnv" />
 
-    <!-- About fnv -->
     <header
-        android:id="@+id/about_fnv"
-        android:icon="@drawable/ic_settings_aboutfnv"
-        android:fragment="com.android.settings.AboutSettings"
-        android:title="@string/aboutfnv_settings" />
+        android:id="@+id/extras"
+        android:icon="@drawable/ic_settings_fnv_extras"
+        android:fragment="com.android.settings.fnv.Extras"
+        android:title="@string/status_bar_extras" />
 
     <!-- DEVICE -->
     <header android:id="@+id/device_section"
@@ -198,5 +197,12 @@
         android:fragment="com.android.settings.DeviceInfoSettings"
         android:icon="@drawable/ic_settings_about"
         android:title="@string/about_settings" />
+
+    <!-- About fnv -->
+    <header
+        android:id="@+id/about_fnv"
+        android:icon="@drawable/ic_settings_aboutfnv"
+        android:fragment="com.android.settings.AboutSettings"
+        android:title="@string/aboutfnv_settings" />
 
 </preference-headers>
