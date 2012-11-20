@@ -194,7 +194,16 @@
     <style name="KeyguardAppWidgetItem">
         <item name="android:textSize">18sp</item>
     </style>
+<<<<<<< HEAD
     
     <style name="Settings" parent="android:Theme.Holo" />
     
+=======
+
+    <style name="ProfilesPreferenceStyle">
+        <item name="android:layout">@layout/preference_profiles</item>
+        <item name="android:widgetLayout">@layout/preference_profiles_widget</item>
+    </style>
+
+>>>>>>> 2a06107... Bring in Profiles support from mr0
 </resources>
