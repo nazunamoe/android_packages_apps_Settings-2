@@ -1446,6 +1446,8 @@
 
         <activity android:name=".fnv.StatusBar" />
 
+        <activity android:name=".fnv.PowerMenu" />
+
         <activity android:name=".fnv.GeneralUI" />
 
         <activity android:name=".fnv.NavigationBar" />

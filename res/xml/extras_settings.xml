@@ -30,6 +30,11 @@
 	android:summary="@string/navigation_bar_stub" />
 
     <PreferenceScreen
+        android:key="power_menu"
+        android:fragment="com.android.settings.fnv.PowerMenu"
+	android:summary="@string/general_ui_stub" />
+
+    <PreferenceScreen
         android:key="general_ui"
         android:fragment="com.android.settings.fnv.GeneralUI"
 	android:summary="@string/general_ui_stub" />

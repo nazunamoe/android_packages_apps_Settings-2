@@ -4421,6 +4421,12 @@
     <!-- Cell Broadcast settings description [CHAR LIMIT=100] -->
     <string name="cell_broadcast_settings_summary">Select the types of emergency alerts to display.</string>
 
+    <!--- Volume key cursor control -->
+    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
+    <string name="volume_key_cursor_control_off">Disabled</string>
+    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
+
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on Color to apply</string>   
@@ -4450,6 +4456,7 @@
     <string name="status_bar_stub">Status Bar</string>
     <string name="lockscreen_stub">Lockscreen</string>
     <string name="general_ui_stub">General UI</string>
+    <string name="power_menu_stub">Power Menu</string>
 
     <!-- Status Bar Stub -->
     <string name="status_bar_clock_header">Clock</string>
@@ -4509,7 +4516,7 @@
     <string name="interface_navring">Ring Targets</string>
     <string name="navbar_ring">Custom Ring Targets</string>
 
-    <!-- General UI Options -->
+    <!-- General UI -->
     <string name="custom_carrier_label_title">Custom carrier label</string>
     <string name="custom_carrier_label_explain">Please enter a new label. Enter an empty label to revert to stock label.</string>
     <string name="custom_carrier_label_notset">Custom label currently not set</string>
@@ -4521,6 +4528,11 @@
     <string name="show_overflow_summary">Display the 3-dot overflow menu button within apps</string>
     <string name="show_overflow_toast_enable">The menu overflow button may not be visible until apps are restarted</string>
     <string name="show_overflow_toast_disable">The menu overflow button may not be hidden until apps are restarted</string>
+
+    <!-- Power Menu -->
+    <string name="title_show_screenshot">Show screenshot</string>
+    <string name="title_show_airplane_toggle">Show airplane toggle</string>
+    <string name="power_menu_expanded_desktop">Show expanded desktop</string>
 
     <!-- About FNV -->
     <string name="aboutfnv_settings">About us</string>
@@ -4535,11 +4547,5 @@
     <string name="fnv_twitter">Twitter</string>
     <string name="fnv_facebook">Facebook</string>
     <string name="fnv_googleplus">Google+</string>
-
-    <!--- Volume key cursor control -->
-    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
-    <string name="volume_key_cursor_control_off">Disabled</string>
-    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
-    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
 
 </resources>
