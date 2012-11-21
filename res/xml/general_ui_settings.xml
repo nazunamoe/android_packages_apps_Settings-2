@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/general_ui_stub">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
         <Preference
             android:key="custom_carrier_label"
@@ -12,6 +9,12 @@
             android:key="use_alt_resolver"
             android:title="@string/alt_resolver"
             android:summary="@string/alt_resolver_summary"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="show_overflow"
+            android:title="@string/show_overflow_title"
+            android:summary="@string/show_overflow_summary"
             android:defaultValue="false" />
 
         <CheckBoxPreference

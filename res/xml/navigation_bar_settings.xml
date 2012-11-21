@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:title="@string/navigation_bar_stub">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <PreferenceCategory
+                android:key="navigation_bar"
+                android:title="@string/navigation_bar_stub">
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="interface_navbar_color"
@@ -45,6 +47,26 @@
                 android:key="navigation_bar_width"
                 android:title="@string/navigation_bar_width_title"
                 android:summary="@string/navigation_bar_width_summary" />
+
+        </PreferenceCategory>
+
+        <PreferenceCategory
+                android:key="navbar_ring"
+                android:title="@string/navbar_ring_cat">
+
+        <ListPreference
+                android:entries="@array/pref_navring_amount_entries"
+                android:entryValues="@array/pref_navring_amount_values"
+                android:key="pref_navring_amount"
+                android:title="@string/title_navring_amount"
+                android:summary="@string/summary_navring_amount" />
+
+        <Preference
+                android:key="navring_settings"
+                android:title="@string/interface_navring_settings_title"
+                android:summary="@string/interface_navring_settings_summary" />
+
+        </PreferenceCategory>
 
 </PreferenceScreen>
 

@@ -1436,14 +1436,6 @@
 
         <!-- For FNV Stub -->
 
-        <activity android:name="BatteryTextColor"
-            android:label="@string/battery_text_color"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-
         <activity android:name=".fnv.Extras"
             android:label="Customization" >
             <intent-filter>

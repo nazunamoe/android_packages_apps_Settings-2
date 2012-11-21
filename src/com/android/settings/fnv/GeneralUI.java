@@ -21,6 +21,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -31,10 +32,12 @@ public class GeneralUI extends SettingsPreferenceFragment {
     private static final String PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String PREF_USE_ALT_RESOLVER = "use_alt_resolver";
     private static final String PREF_STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
+    private static final String PREF_SHOW_OVERFLOW = "show_overflow";
 
     private Preference mCustomLabel;
     private CheckBoxPreference mUseAltResolver;
     private CheckBoxPreference mStatusBarNotifCount;
+    private CheckBoxPreference mShowActionOverflow;
 
     String mCustomLabelText = null;
 
@@ -53,9 +56,14 @@ public class GeneralUI extends SettingsPreferenceFragment {
         mUseAltResolver.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.ACTIVITY_RESOLVER_USE_ALT, false));
 
+        mShowActionOverflow = (CheckBoxPreference) findPreference(PREF_SHOW_OVERFLOW);
+        mShowActionOverflow.setChecked((Settings.System.getInt(getActivity().
+                        getApplicationContext().getContentResolver(),
+                        Settings.System.UI_FORCE_OVERFLOW_BUTTON, 0) == 1));
+
         mStatusBarNotifCount = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_NOTIF_COUNT);
         mStatusBarNotifCount.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(), 
-                Settings.System.STATUS_BAR_NOTIF_COUNT, false));        
+                Settings.System.STATUS_BAR_NOTIF_COUNT, false));      
 
     }
 
@@ -104,6 +112,19 @@ public class GeneralUI extends SettingsPreferenceFragment {
             boolean checked = ((CheckBoxPreference)preference).isChecked();
             Settings.System.putBoolean(getActivity().getContentResolver(),
                     Settings.System.ACTIVITY_RESOLVER_USE_ALT, checked ? true : false);
+            return true;
+        } else if (preference == mShowActionOverflow) {
+            boolean enabled = mShowActionOverflow.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.UI_FORCE_OVERFLOW_BUTTON,
+                    enabled ? 1 : 0);
+            // Show toast appropriately
+            if (enabled) {
+                Toast.makeText(getActivity(), R.string.show_overflow_toast_enable,
+                        Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getActivity(), R.string.show_overflow_toast_disable,
+                        Toast.LENGTH_LONG).show();
+            }
             return true;
         } else if (preference == mStatusBarNotifCount) {
             boolean checked = ((CheckBoxPreference) preference).isChecked();

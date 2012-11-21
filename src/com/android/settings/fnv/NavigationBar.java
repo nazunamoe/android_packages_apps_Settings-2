@@ -6,11 +6,15 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceActivity;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
@@ -25,6 +29,8 @@ import android.widget.EditText;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.util.Helpers;
+import com.android.settings.fnv.NavRingTargets;
 import com.android.settings.widget.NavBarItemPreference;
 import com.android.settings.widget.SeekBarPreference;
 
@@ -38,9 +44,12 @@ public class NavigationBar extends SettingsPreferenceFragment implements OnPrefe
     private static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
     private static final String NAVIGATION_BAR_HEIGHT_LANDSCAPE = "navigation_bar_height_landscape";
     private static final String NAVIGATION_BAR_WIDTH = "navigation_bar_width";
+    private static final String PREF_NAVRING_AMOUNT = "pref_navring_amount";
 
     private static final int DIALOG_NAVBAR_HEIGHT_REBOOT = 204;
     private static final int DEFAULT_NAVBAR_BG_COLOR = 0xFF000000;
+
+    Preference mNavRingTargets;
 
     private ColorPickerPreference mNavBar;
     private ColorPickerPreference mNavigationBarColor;
@@ -49,6 +58,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements OnPrefe
     private ListPreference mNavigationBarHeight;
     private ListPreference mNavigationBarHeightLandscape;
     private ListPreference mNavigationBarWidth;
+    private ListPreference mNavRingButtonQty;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,6 +67,8 @@ public class NavigationBar extends SettingsPreferenceFragment implements OnPrefe
         addPreferencesFromResource(R.xml.navigation_bar_settings);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mNavRingTargets = prefSet.findPreference("navring_settings");
 
         mNavBar = (ColorPickerPreference) prefSet.findPreference(PREF_NAV_BAR_COLOR);
         mNavBar.setOnPreferenceChangeListener(this);
@@ -82,6 +94,22 @@ public class NavigationBar extends SettingsPreferenceFragment implements OnPrefe
         mNavigationBarWidth = (ListPreference) prefSet.findPreference("navigation_bar_width");
         mNavigationBarWidth.setOnPreferenceChangeListener(this);
 
+        mNavRingButtonQty = (ListPreference) findPreference(PREF_NAVRING_AMOUNT);
+        mNavRingButtonQty.setOnPreferenceChangeListener(this);
+        mNavRingButtonQty.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SYSTEMUI_NAVRING_AMOUNT, 1) + "");
+
+    }
+
+    @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen,
+            Preference preference) {
+        if (preference == mNavRingTargets) {
+            ((PreferenceActivity) getActivity())
+                    .startPreferenceFragment(new NavRingTargets(), true);
+            return true;
+        }
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -138,6 +166,14 @@ public class NavigationBar extends SettingsPreferenceFragment implements OnPrefe
                     height);
             showDialog(DIALOG_NAVBAR_HEIGHT_REBOOT);
             return true;
+        } else if (preference == mNavRingButtonQty) {
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.SYSTEMUI_NAVRING_AMOUNT, val);
+            resetNavRing();
+            refreshSettings();
+            Helpers.restartSystemUI();
+            return true;
         }
         return false;
     }
@@ -174,6 +210,13 @@ public class NavigationBar extends SettingsPreferenceFragment implements OnPrefe
         return null;
     }
 
+    public void refreshSettings() {
+
+        PackageManager pm = getActivity().getApplicationContext().getPackageManager();
+        Resources res = getActivity().getApplicationContext().getResources();
+
+    }
+
     public int mapChosenDpToPixels(int dp) {
         switch (dp) {
             case 48:
@@ -194,5 +237,18 @@ public class NavigationBar extends SettingsPreferenceFragment implements OnPrefe
                 return getResources().getDimensionPixelSize(R.dimen.navigation_bar_0);
         }
         return -1;
+    }
+
+    public void resetNavRing() {
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.SYSTEMUI_NAVRING_1, "none");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.SYSTEMUI_NAVRING_2, "none");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.SYSTEMUI_NAVRING_3, "assist");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.SYSTEMUI_NAVRING_4, "none");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.SYSTEMUI_NAVRING_5, "none");
     }
 }

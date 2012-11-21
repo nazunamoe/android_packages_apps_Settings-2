@@ -35,17 +35,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_CLOCK_WEEKDAY = "clock_weekday";
     private static final String PREF_ENABLE = "clock_style";
     private static final String PREF_STATUSBAR_COLOR = "statusbar_background_color";
-    private static final String BATTERY_TEXT = "battery_text";
-    private static final String BATTERY_TEXT_COLOR = "battery_text_color";
+    private static final String PREF_BATT_ICON = "battery_icon_list";
 
     private ColorPickerPreference mColorPicker;
     private ColorPickerPreference mStatusbarBgColor;
     private ListPreference mClockStyle;
     private ListPreference mClockAmPmstyle;
     private ListPreference mClockWeekday;
-    private CheckBoxPreference mBattText;
-
-    PreferenceScreen mBattColor;
+    private ListPreference mBatteryIcon;
 
 
     @Override
@@ -80,20 +77,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusbarBgColor = (ColorPickerPreference) prefSet.findPreference(PREF_STATUSBAR_COLOR);
         mStatusbarBgColor.setOnPreferenceChangeListener(this);
 
-        mBattText = (CheckBoxPreference) prefSet.findPreference(BATTERY_TEXT);
-        mBattText.setChecked(Settings.System.getInt(getContentResolver(),
-                Settings.System.BATTERY_TEXT, 0) == 1);
+        mBatteryIcon = (ListPreference) findPreference(PREF_BATT_ICON);
+        mBatteryIcon.setOnPreferenceChangeListener(this);
+        mBatteryIcon.setValue((Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_BATTERY_ICON,
+                0))
+                + "");
 
-        mBattColor = (PreferenceScreen) findPreference(BATTERY_TEXT_COLOR);
-        mBattColor.setEnabled(mBattText.isChecked());
-
-    }
-
-    private void updateBatteryTextToggle(boolean bool) {
-        if (bool)
-            mBattColor.setEnabled(true);
-        else
-            mBattColor.setEnabled(false);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -104,6 +94,11 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                     Settings.System.STATUSBAR_CLOCK_AM_PM_STYLE, val);
             mClockAmPmstyle.setSummary(mClockAmPmstyle.getEntries()[index]);
             return true;
+        } else if (preference == mBatteryIcon) {
+
+            int val = Integer.parseInt((String) newValue);
+            return Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_BATTERY_ICON, val);
         } else if (preference == mClockStyle) {
             int val = Integer.parseInt((String) newValue);
             int index = mClockStyle.findIndexOfValue((String) newValue);
@@ -134,19 +129,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_BACKGROUND_COLOR, intHex);
-            return true;
-        }
-        return false;
-    }
-
-    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        boolean value;
-
-        if (preference == mBattText) {
-            value = mBattText.isChecked();
-            Settings.System.putInt(getContentResolver(),
-                    Settings.System.BATTERY_TEXT, value ? 1 : 0);
-            updateBatteryTextToggle(value);
             return true;
         }
         return false;

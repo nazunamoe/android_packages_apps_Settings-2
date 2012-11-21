@@ -773,6 +773,29 @@
         <item>Always allow</item>
     </string-array>
 
+    <!-- Battery styles -->
+    <string-array name="battery_icon_entries">
+        <item>Icon only</item>
+        <item>Text only</item>
+        <item>Icon with text</item>
+        <item>Icon with centered text</item>
+        <item>CircleMOD</item>
+        <item>CM Circle</item>
+        <item>CM Circle with percent</item>
+        <item>Hide</item>
+    </string-array>
+
+    <string-array name="battery_icon_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+
     <!-- Volume Overlay options. -->
     <string-array name="volume_overlay_entries">
         <item>Single</item>
@@ -879,5 +902,47 @@
          <item>24</item>
          <item>0</item>
      </string-array>
+
+    <string-array name="navring_dialog_entries">
+        <item>None</item>
+        <item>Take Screenshot</item>
+        <item>Open IME Switcher</item>
+        <item>Ring/Vib</item>
+        <item>Ring/Silent</item>
+        <item>Ring/Vib/Silent</item>
+        <item>Kill App</item>
+        <item>Screen Off</item>
+        <item>Google Now</item>
+        <item>Select Application</item>
+    </string-array>
+
+    <string-array name="navring_dialog_values">
+        <item>none</item>
+        <item>screenshot</item>
+        <item>ime_switcher</item>
+        <item>ring_vib</item>
+        <item>ring_silent</item>
+        <item>ring_vib_silent</item>
+        <item>killcurrent</item>
+        <item>screenoff</item>
+        <item>assist</item>
+        <item>app</item>
+    </string-array>
+
+    <string-array name="pref_navring_amount_entries">
+        <item>1 target</item>
+        <item>2 targets</item>
+        <item>3 targets</item>
+        <item>4 targets</item>
+        <item>5 targets</item>
+    </string-array>
+
+    <string-array name="pref_navring_amount_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
 
 </resources>
