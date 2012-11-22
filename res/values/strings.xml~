@@ -4575,14 +4575,6 @@
     <string name="size_3_dp">3 dp</string>
     <string name="size_4_dp">4 dp</string>
 
-    <!-- For NavBar -->
-    <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
-
-    <!-- Shortcut picker -->
-    <string name="use_custom_app_title">Use custom application</string>
-    <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
-    <string name="group_applications">Applications</string>
-
     <!-- Nav Ring Targets -->
     <string name="navbar_ring_cat">Navigation Bar Ring Targets</string>
     <string name="interface_softkey_settings">Softkey Settings</string>
