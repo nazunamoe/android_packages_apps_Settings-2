@@ -4,6 +4,7 @@ package com.android.settings.fnv;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 
@@ -15,6 +16,7 @@ import android.app.ListFragment;
 import android.appwidget.AppWidgetHost;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProviderInfo;
+import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -59,8 +61,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.util.Helpers;
 import com.android.settings.util.ShortcutPickerHelper;
-import com.android.settings.widget.NavBarItemPreference;
-import com.android.settings.widget.SeekBarPreference;
+import com.android.settings.widgets.NavBarItemPreference;
+import com.android.settings.widgets.SeekBarPreference;
 import com.android.settings.fnv.NavRingTargets;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
@@ -105,6 +107,9 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     SeekBarPreference mButtonAlpha;
     Preference mWidthHelp;
 
+    private File customnavImage;
+    private File customnavTemp;
+
     Preference mPendingPreference;
     private ShortcutPickerHelper mPicker;
     private int mPendingIconIndex = -1;
@@ -127,6 +132,9 @@ public class NavigationBar extends SettingsPreferenceFragment implements
         PreferenceScreen prefSet = getPreferenceScreen();
 
         PreferenceScreen prefs = getPreferenceScreen();
+
+        customnavImage = new File(getActivity().getFilesDir()+"navbar_icon_" + mPendingIconIndex + ".png");
+        customnavTemp = new File(getActivity().getCacheDir()+"/"+"tmp_icon_" + mPendingIconIndex + ".png");
 
         mNavRingTargets = prefSet.findPreference("navring_settings");
 
@@ -151,11 +159,10 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                 .getContentResolver(), Settings.System.MENU_VISIBILITY,
                 0) + "");
 
-        float defaultAlpha = Settings.System.getFloat(getActivity()
-                .getContentResolver(), Settings.System.NAVIGATION_BAR_BUTTON_ALPHA, 0.6f);
-        mButtonAlpha = (SeekBarPreference) prefSet.findPreference("button_transparency");
-        mButtonAlpha.setInitValue((int) (defaultAlpha * 100));
-        mButtonAlpha.setOnPreferenceChangeListener(this);
+        mNavRingButtonQty = (ListPreference) findPreference(PREF_NAVRING_AMOUNT);
+        mNavRingButtonQty.setOnPreferenceChangeListener(this);
+        mNavRingButtonQty.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.SYSTEMUI_NAVRING_AMOUNT, 1) + "");
 
         mNavBarButtonQty = (ListPreference) findPreference(PREF_NAVBAR_QTY);
         mNavBarButtonQty.setOnPreferenceChangeListener(this);
@@ -177,10 +184,11 @@ public class NavigationBar extends SettingsPreferenceFragment implements
             prefs.removePreference(mEnableNavigationBar);
         }
 
-        mNavRingButtonQty = (ListPreference) findPreference(PREF_NAVRING_AMOUNT);
-        mNavRingButtonQty.setOnPreferenceChangeListener(this);
-        mNavRingButtonQty.setValue(Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.SYSTEMUI_NAVRING_AMOUNT, 1) + "");
+        float defaultAlpha = Settings.System.getFloat(getActivity()
+                .getContentResolver(), Settings.System.NAVIGATION_BAR_BUTTON_ALPHA, 0.6f);
+        mButtonAlpha = (SeekBarPreference) prefSet.findPreference("button_transparency");
+        mButtonAlpha.setInitValue((int) (defaultAlpha * 100));
+        mButtonAlpha.setOnPreferenceChangeListener(this);
 
         mGlowTimes = (ListPreference) findPreference(PREF_GLOW_TIMES);
         mGlowTimes.setOnPreferenceChangeListener(this);
@@ -342,23 +350,35 @@ public class NavigationBar extends SettingsPreferenceFragment implements
             refreshSettings();
             Helpers.restartSystemUI();
             return true;
-        } else if ((preference.getKey().startsWith("navbar_action"))
+        }  else if ((preference.getKey().startsWith("navbar_action"))
                 || (preference.getKey().startsWith("navbar_longpress"))) {
+            boolean longpress = preference.getKey().startsWith("navbar_longpress_");
             int index = Integer.parseInt(preference.getKey().substring(
                     preference.getKey().lastIndexOf("_") + 1));
 
             if (newValue.equals("**app**")) {
                 mPendingNavBarCustomAction = new NavBarCustomAction();
                 mPendingNavBarCustomAction.preference = preference;
+                if (longpress) {
+                    mPendingNavBarCustomAction.activitySettingName = Settings.System.NAVIGATION_LONGPRESS_ACTIVITIES[index];
+                    mPendingNavBarCustomAction.iconIndex = -1;
+                } else {
                     mPendingNavBarCustomAction.activitySettingName = Settings.System.NAVIGATION_CUSTOM_ACTIVITIES[index];
                     mPendingNavBarCustomAction.iconIndex = index;
+                }
                 mPicker.pickShortcut();
             } else {
+                if (longpress) {
+                    Settings.System.putString(getContentResolver(),
+                            Settings.System.NAVIGATION_LONGPRESS_ACTIVITIES[index],
+                            (String) newValue);
+                } else {
                     Settings.System.putString(getContentResolver(),
                             Settings.System.NAVIGATION_CUSTOM_ACTIVITIES[index],
                             (String) newValue);
                     Settings.System.putString(getContentResolver(),
                             Settings.System.NAVIGATION_CUSTOM_APP_ICONS[index], "");
+                }
             }
             refreshSettings();
             return true;
@@ -472,21 +492,20 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                 String iconName = getIconFileName(mPendingIconIndex);
                 FileOutputStream iconStream = null;
                 try {
-                    iconStream = mContext.openFileOutput(iconName, Context.MODE_WORLD_READABLE);
+                    iconStream = getActivity().getApplicationContext().openFileOutput(iconName, Context.MODE_WORLD_READABLE);
                 } catch (FileNotFoundException e) {
                     return; // NOOOOO
                 }
 
-                Uri selectedImageUri = getTempFileUri();
-                try {
-                    Log.e(TAG, "Selected image path: " + selectedImageUri.getPath());
-                    Bitmap bitmap = BitmapFactory.decodeFile(selectedImageUri.getPath());
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, iconStream);
-                } catch (NullPointerException npe) {
-                    Log.e(TAG, "SeletedImageUri was null.");
-                    super.onActivityResult(requestCode, resultCode, data);
-                    return;
+                if (customnavTemp.exists()) {
+                    customnavTemp.renameTo(customnavImage);
                 }
+
+                Uri selectedImageUri = Uri.fromFile(customnavImage);
+                Log.e(TAG, "Selected image path: " + selectedImageUri.getPath());
+                Bitmap bitmap = BitmapFactory.decodeFile(selectedImageUri.getPath());
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, iconStream);
+
                 Settings.System.putString(
                         getContentResolver(),
                         Settings.System.NAVIGATION_CUSTOM_APP_ICONS[mPendingIconIndex], "");
@@ -494,7 +513,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                         getContentResolver(),
                         Settings.System.NAVIGATION_CUSTOM_APP_ICONS[mPendingIconIndex],
                         Uri.fromFile(
-                                new File(mContext.getFilesDir(), iconName)).getPath());
+                                new File(getActivity().getApplicationContext().getFilesDir(), iconName)).getPath());
 
                 File f = new File(selectedImageUri.getPath());
                 if (f.exists())
@@ -522,8 +541,8 @@ public class NavigationBar extends SettingsPreferenceFragment implements
         PreferenceGroup targetGroup = (PreferenceGroup) findPreference("navbar_buttons");
         targetGroup.removeAll();
 
-        PackageManager pm = mContext.getPackageManager();
-        Resources res = mContext.getResources();
+        PackageManager pm = getActivity().getApplicationContext().getPackageManager();
+        Resources res = getActivity().getApplicationContext().getResources();
 
         for (int i = 0; i < navbarQuantity; i++) {
             final int index = i;
@@ -562,19 +581,25 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                     mPendingIconIndex = index;
                     int width = 100;
                     int height = width;
-
+                    
                     Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
                     intent.setType("image/*");
                     intent.putExtra("crop", "true");
+                    intent.putExtra("scale", true);
+                    intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
                     intent.putExtra("aspectX", width);
                     intent.putExtra("aspectY", height);
                     intent.putExtra("outputX", width);
                     intent.putExtra("outputY", height);
-                    intent.putExtra("scale", true);
-                    intent.putExtra(MediaStore.EXTRA_OUTPUT, getTempFileUri());
-                    intent.putExtra("outputFormat", Bitmap.CompressFormat.PNG.toString());
-                    Log.i(TAG, "started for result, should output to: " + getTempFileUri());
+                try {
+                    customnavTemp.createNewFile();
+                    customnavTemp.setWritable(true, false);
+                    intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(customnavTemp));
+                    intent.putExtra("return-data", false);
                     startActivityForResult(intent, REQUEST_PICK_CUSTOM_ICON);
+                } catch (IOException e) {
+                } catch (ActivityNotFoundException e) {
+                }
                 }
             });
 
@@ -623,7 +648,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     private Drawable getNavbarIconImage(int index, boolean landscape) {
         String uri = Settings.System.getString(getActivity().getContentResolver(),
                 Settings.System.NAVIGATION_CUSTOM_ACTIVITIES[index]);
-
+        
         if (uri == null)
             return getResources().getDrawable(R.drawable.ic_sysbar_null);
 
@@ -640,7 +665,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                 return getResources().getDrawable(R.drawable.ic_sysbar_screenshot);
             } else if (uri.equals("**menu**")) {
                 return getResources().getDrawable(R.drawable.ic_sysbar_menu_big);
-             } else if (uri.equals("**ime**")) {
+            } else if (uri.equals("**ime**")) {
                 return getResources().getDrawable(R.drawable.ic_sysbar_ime_switcher);
             } else if (uri.equals("**kill**")) {
                 return getResources().getDrawable(R.drawable.ic_sysbar_killtask);
@@ -648,12 +673,10 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                 return getResources().getDrawable(R.drawable.ic_sysbar_power);
             } else if (uri.equals("**notifications**")) {
                 return getResources().getDrawable(R.drawable.ic_sysbar_notifications);
-            } else if (uri.equals("**widgets**")) {
-                return getResources().getDrawable(R.drawable.ic_sysbar_widget);
             }
         } else {
             try {
-                return mContext.getPackageManager().getActivityIcon(Intent.parseUri(uri, 0));
+                return getActivity().getApplicationContext().getPackageManager().getActivityIcon(Intent.parseUri(uri, 0));
             } catch (NameNotFoundException e) {
                 e.printStackTrace();
             } catch (URISyntaxException e) {
@@ -721,7 +744,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                     String iconName = getIconFileName(mPendingNavBarCustomAction.iconIndex);
                     FileOutputStream iconStream = null;
                     try {
-                        iconStream = mContext.openFileOutput(iconName, Context.MODE_WORLD_READABLE);
+                        iconStream = getActivity().getApplicationContext().openFileOutput(iconName, Context.MODE_WORLD_READABLE);
                     } catch (FileNotFoundException e) {
                         return; // NOOOOO
                     }
@@ -734,17 +757,11 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                             .putString(
                                     getContentResolver(),
                                     Settings.System.NAVIGATION_CUSTOM_APP_ICONS[mPendingNavBarCustomAction.iconIndex],
-                                    Uri.fromFile(mContext.getFileStreamPath(iconName)).toString());
+                                    Uri.fromFile(getActivity().getApplicationContext().getFileStreamPath(iconName)).toString());
                 }
             }
             mPendingNavBarCustomAction.preference.setSummary(friendlyName);
         }
-    }
-
-    private Uri getTempFileUri() {
-        return Uri.fromFile(new File(Environment.getExternalStorageDirectory(),
-                "tmp_icon_" + mPendingIconIndex + ".png"));
-
     }
 
     private String getIconFileName(int index) {
@@ -784,4 +801,5 @@ public class NavigationBar extends SettingsPreferenceFragment implements
             super.onResume();
         }
     }
+
 }

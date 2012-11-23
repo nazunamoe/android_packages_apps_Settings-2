@@ -26,17 +26,6 @@
                 android:title="@string/navbar_qty_title"
                 android:summary="@string/navbar_qty_summary" />
 
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-                android:key="nav_button_color"
-                android:title="@string/navigation_bar_tint_title"
-                android:defaultValue="#FFFFFF" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-                android:key="nav_button_glow_color"
-                android:title="@string/navigation_bar_glow_tint_title"
-                android:summary="@string/navigation_bar_glow_tint_summary"
-                android:defaultValue="#FFFFFF" />
-
         <PreferenceCategory
                 android:key="navbar_buttons"
                 android:title="@string/navbar_button_cat">
@@ -76,30 +65,6 @@
                         android:title="@string/navigation_bar_width_title"
                         android:summary="@string/navigation_bar_width_summary" />
 
-        <Preference
-            android:key="width_help"
-            android:enabled="false"
-            android:title="@string/navbar_width_help_title"
-            android:summary="@string/navbar_width_help_summary" />
-
-        <com.android.settings.widgets.SeekBarPreference
-            android:key="width_port"
-            android:title="@string/width_port_title" />
-
-        <com.android.settings.widgets.SeekBarPreference
-            android:key="width_land"
-            android:title="@string/width_land_title" />
-
-        <com.android.settings.widgets.SeekBarPreference
-            android:key="button_transparency"
-            android:title="@string/button_transparency_title" />
-
-        </PreferenceCategory>
-
-        <PreferenceCategory
-                android:key="navigation_bar"
-                android:title="@string/navigation_bar_stub">
-
         <net.margaritov.preference.colorpicker.ColorPickerPreference
                 android:key="interface_navbar_color"
                 android:title="@string/navbar_bg_color"
@@ -117,30 +82,9 @@
                 android:summary="@string/navigation_bar_glow_tint_summary"
                 android:defaultValue="#FFFFFF" />
 
-        <com.android.settings.widget.SeekBarPreference
+        <com.android.settings.widgets.SeekBarPreference
                 android:key="button_transparency"
                 android:title="@string/button_transparency_title" />
-
-        <ListPreference
-                android:entries="@array/navigation_bar_height_entries"
-                android:entryValues="@array/navigation_bar_height"
-                android:key="navigation_bar_height"
-                android:title="@string/navigation_bar_height_title"
-                android:summary="@string/navigation_bar_height_summary" />
-
-        <ListPreference
-                android:entries="@array/navigation_bar_height_landscape_entries"
-                android:entryValues="@array/navigation_bar_height_landscape"
-                android:key="navigation_bar_height_landscape"
-                android:title="@string/navigation_bar_height_landscape_title"
-                android:summary="@string/navigation_bar_height_landscape_summary" />
-
-        <ListPreference
-                android:entries="@array/navigation_bar_width_entries"
-                android:entryValues="@array/navigation_bar_width"
-                android:key="navigation_bar_width"
-                android:title="@string/navigation_bar_width_title"
-                android:summary="@string/navigation_bar_width_summary" />
 
         </PreferenceCategory>
 
