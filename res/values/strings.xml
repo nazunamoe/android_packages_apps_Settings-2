@@ -4458,7 +4458,7 @@
     <string name="status_bar_extras">User Interface</string>
     <string name="navigation_bar_stub">Navigation Bar</string>
     <string name="status_bar_stub">Status Bar</string>
-    <string name="lockscreen_stub">Lockscreen</string>
+    <string name="lockscreen_stub">Lock Screen</string>
     <string name="general_ui_stub">General UI</string>
     <string name="power_menu_stub">Power Menu</string>
     <string name="quick_toggles_stub">Quick Toggles</string>
@@ -4514,6 +4514,8 @@
     <string name="icon_picker_system_icons_title">System icons</string>
     <string name="icon_picker_gallery_title">Gallery</string>
     <string name="icon_picker_pack_title">Icon pack</string>
+
+    <string name="profile_applist_title">Applications</string>
 
     <!-- Display : Rotation  -->
     <string name="display_rotation_title">Rotation</string>
