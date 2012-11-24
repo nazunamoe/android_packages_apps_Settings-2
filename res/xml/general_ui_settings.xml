@@ -23,4 +23,13 @@
             android:summary="@string/status_bar_notif_count_summary"
             android:defaultValue="false" />
 
+        <Preference
+            android:key="notification_wallpaper"
+            android:title="@string/notification_wallpaper_title"
+            android:summary="@string/notification_wallpaper_summary" />
+
+        <Preference
+            android:key="notification_wallpaper_alpha"
+            android:title="@string/notif_wallpaper_alpha_title" />
+
 </PreferenceScreen>
