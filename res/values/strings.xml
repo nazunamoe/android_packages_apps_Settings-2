@@ -4422,7 +4422,7 @@
     <!-- Cell Broadcast settings description [CHAR LIMIT=100] -->
     <string name="cell_broadcast_settings_summary">Select the types of emergency alerts to display.</string>
 
-    <!-- **FNV ACTIVITIES MODIFICATIONS STARTS** -->
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -4529,7 +4529,7 @@
     <string name="small_weekday">Small weekday</string>
     <string name="regular_weekday">Regular weekday</string>
 
-    <!-- Bring 'em ALL the colors -->
+    <!-- Statusbar + Navigationbar Background color -->
     <string name="navbar_bg">Navbar background</string>
     <string name="navbar_button_colors">Navbar button color</string>
     <string name="navbar_background_style">Navbar background style</string>
@@ -4840,6 +4840,10 @@
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
 
 
- <!-- **FNV ACTIVITIES MODIFICATIONS ENDS** -->
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">Selector notification</string>
+    <string name="ime_switcher_notify_summary">Display input method selector notification</string>
+
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 
 </resources>
