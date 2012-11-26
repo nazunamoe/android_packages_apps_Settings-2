@@ -219,11 +219,11 @@
         android:icon="@drawable/ic_settings_about"
         android:title="@string/about_settings" />
 
-    <!-- About fnv -->
+    <!-- About Xylon // Temporary removed
     <header
         android:id="@+id/about_fnv"
         android:icon="@drawable/ic_settings_aboutfnv"
         android:fragment="com.android.settings.AboutSettings"
-        android:title="@string/aboutfnv_settings" />
+        android:title="@string/aboutfnv_settings" /> -->
 
 </preference-headers>

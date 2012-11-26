@@ -1887,7 +1887,7 @@
     <string name="selinux_status">SELinux status</string>
 
     <!-- device modversion -->
-    <string name="mod_version">Xylon Modversion</string>
+    <string name="mod_version">Modversion</string>
     <string name="mod_version_default">Unknown</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
@@ -4421,6 +4421,31 @@
 
     <!-- **FNV ACTIVITIES MODIFICATIONS STARTS** -->
 
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>   
+    <string name="arrow_right">→</string> 
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">ICS</string>
+
+    <!-- Customisation -->
+    <string name="status_bar_extras">User Interface</string>
+    <string name="navigation_bar_stub">Navigation Bar</string>
+    <string name="status_bar_stub">Status Bar</string>
+    <string name="lockscreen_stub">Lockscreen</string>
+    <string name="general_ui_stub">General UI</string>
+    <string name="power_menu_stub">Power Menu</string>
+    <string name="quick_toggles_stub">Quick Toggles</string>
+
+    <!--- Volume key cursor control -->
+    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
+    <string name="volume_key_cursor_control_off">Disabled</string>
+    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
+
     <string name="dpi">DPI</string>
     <string name="open_market_title">4. Open Market and hit accept</string>
     <string name="open_market_summary">Press back when done to return here.</string>
@@ -4451,51 +4476,18 @@
     <string name="increasing_ring_interval_3seconds">3 seconds</string>
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
-
-    <!-- Sound settings screen -->
     <string name="volume_overlay_title">Volume panel style</string>
     <string name="silent_mode_title">Silent mode</string>
     <string name="volume_ring_only_description">Ringtone</string>
-
-    <!--- Volume key cursor control -->
-    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
-    <string name="volume_key_cursor_control_off">Disabled</string>
-    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
-    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on Color to apply</string>   
-    <string name="arrow_right">→</string> 
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#FF000000</string>
-    <string name="set">Set</string>
-    <string name="ics_color">ICS</string>
+    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
+    <string name="link_volume_mutes">Silent mode affects notifications</string>
+    <string name="volbtn_music_controls_title">Volume rocker music controls</string>
+    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
 
     <!-- Wakeup Options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
-
-    <!-- Sound Settings -->
-    <string name="volume_overlay_title">Volume panel</string>
-    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
-    <string name="link_volume_mutes">Silent mode affects notifications</string>
-    <string name="volume_ring_only_description">Ringtone</string>
-    <string name="volbtn_music_controls_title">Volume rocker music controls</string>
-    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
-    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
-    <string name="link_volume_mutes">Silent mode affects notifications</string>
-
-
-    <!-- Customisation -->
-    <string name="status_bar_extras">User Interface</string>
-    <string name="navigation_bar_stub">Navigation Bar</string>
-    <string name="status_bar_stub">Status Bar</string>
-    <string name="lockscreen_stub">Lockscreen</string>
-    <string name="general_ui_stub">General UI</string>
-    <string name="power_menu_stub">Power Menu</string>
 
     <!-- Status Bar Stub -->
     <string name="status_bar_clock_header">Clock</string>
@@ -4512,6 +4504,15 @@
     <string name="statusbar_background_color">Statusbar color</string>
     <string name="clock_color_title">Clock color</string>
     <string name="battery_icon">Battery icon style</string>
+
+    <!-- Battery Bar -->
+    <string name="battery_bar">Battery bar location</string>
+    <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_cat">Battery bar options</string>
+    <string name="battery_bar_style_title">Battery bar style</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
 
     <!-- clock stuff -->
     <string name="right_clock">Right clock</string>

@@ -163,6 +163,14 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(findPreference(KEY_EMERGENCY_TONE));
         }
 
+        mVolumeOverlay = (ListPreference) findPreference(KEY_VOLUME_OVERLAY);
+        mVolumeOverlay.setOnPreferenceChangeListener(this);
+        int volumeOverlay = Settings.System.getInt(getContentResolver(),
+                Settings.System.MODE_VOLUME_OVERLAY,
+                VolumePanel.VOLUME_OVERLAY_EXPANDABLE);
+        mVolumeOverlay.setValue(Integer.toString(volumeOverlay));
+        mVolumeOverlay.setSummary(mVolumeOverlay.getEntry());
+
         mSilentMode = (ListPreference) findPreference(KEY_SILENT_MODE);
         if (!getResources().getBoolean(R.bool.has_silent_mode)) {
             getPreferenceScreen().removePreference(mSilentMode);
