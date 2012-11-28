@@ -26,12 +26,15 @@ import android.os.ServiceManager;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.IWindowManager;
+import android.view.View.OnClickListener;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.util.Helpers;
 
 public class Extras extends SettingsPreferenceFragment {
 

@@ -28,6 +28,7 @@ import android.os.PowerManager;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
+import android.preference.PreferenceActivity;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
@@ -104,7 +105,7 @@ public class GeneralUI extends SettingsPreferenceFragment {
 
         mStatusBarNotifCount = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_NOTIF_COUNT);
         mStatusBarNotifCount.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(), 
-                Settings.System.STATUS_BAR_NOTIF_COUNT, false));      
+                Settings.System.STATUS_BAR_NOTIF_COUNT, false));
 
         mNotificationWallpaper = findPreference(PREF_NOTIFICATION_WALLPAPER);
 

@@ -48,6 +48,9 @@
     <!-- Settings main menu category heading. System (Updates, data, accessibility, about phone). [CHAR LIMIT=40] -->
     <string name="header_category_system">SYSTEM</string>
 
+    <!-- T-Mobile Theme chooser settings  -->
+    <string name="themes_settings_title">Themes</string>
+
     <!-- Advanced, Device specific (DeviceParts) settings  -->
     <string name="advanced_settings_title">Advanced</string>
 
@@ -4421,55 +4424,30 @@
 
     <!-- **FNV ACTIVITIES MODIFICATIONS STARTS** -->
 
-    <!-- Quick Toggles -->
-    <string name="enabled_toggles_title">Enabled toggles</string>
-    <string name="enabled_toggles_summary">Choose toggles to display</string>
-    <string name="toggles_order_title">Toggle order</string>
-    <string name="toggles_order_summary">Choose the order which your toggles are displayed</string>
-    <string name="toggles_display_dialog">Choose which toggles to use</string>
-    <string name="toggles_display_close">Close</string>
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on Color to apply</string>   
+    <string name="arrow_right">→</string> 
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#FF000000</string>
+    <string name="set">Set</string>
+    <string name="ics_color">ICS</string>
 
-    <!-- Toggle Strings to be called from device overlays -->
-    <string name="toggle_airplane_mode">Airplane Mode</string>
-    <string name="toggle_auto_rotate">Auto Rotate</string>
-    <string name="toggle_bluetooth">Bluetooth</string>
-    <string name="toggle_fast_charge">Fast Charge</string>
-    <string name="toggle_gps">GPS</string>
-    <string name="toggle_lte">LTE</string>
-    <string name="toggle_data">Data</string>
-    <string name="toggle_nfc">NFC</string>
-    <string name="toggle_silent">Silent</string>
-    <string name="toggle_swagger">Swagger</string>
-    <string name="toggle_sync">Sync</string>
-    <string name="toggle_torch">Torch</string>
-    <string name="toggle_2g">2G</string>
-    <string name="toggle_usb_tether">USB Tether</string>
-    <string name="toggle_vibrate">Vibrate</string>
-    <string name="toggle_wifi_ap">Tether</string>
-    <string name="toggle_wifi">Wi-Fi</string>
-    <string name="toggle_user">User</string>
-    <string name="toggle_settings">Settings</string>
-    <string name="toggle_signal">Signal</string>
-    <string name="toggle_clock">Clock</string>
-    <string name="toggle_ime">IME</string>
-    <string name="toggle_battery">Battery</string>
-    <string name="toggle_brightness">Brightness</string>
-    <string name="toggle_ringer">Ringer</string>
+    <!-- Customisation -->
+    <string name="status_bar_extras">User Interface</string>
+    <string name="navigation_bar_stub">Navigation Bar</string>
+    <string name="status_bar_stub">Status Bar</string>
+    <string name="lockscreen_stub">Lockscreen</string>
+    <string name="general_ui_stub">General UI</string>
+    <string name="power_menu_stub">Power Menu</string>
+    <string name="quick_toggles_stub">Quick Toggles</string>
 
-    <string name="dpi">DPI</string>
-    <string name="open_market_title">4. Open Market and hit accept</string>
-    <string name="open_market_summary">Press back when done to return here.</string>
-    <string name="open_market_summary_could_not_open">"Couldn't open the market! If you're sure it's installed, open it yourself from the launcher."</string>
-    <string name="custom_density_title">5. Change density to whatever you like!</string>
-    <string name="custom_density_summary">If you ever have compatibility issues with the market, be sure to return here and repeat the process.</string>
-    <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
-    <string name="custom_density">custom</string>
-    <string name="set_custom_density_title">Set custom density</string>
-    <string name="set_custom_density_set">Set</string>
-    <string name="custom_density_dialog_title">"WARNING!"</string>
-    <string name="custom_density_dialog_summary">"Changing your LCD density can cause unexpected app behavior. If you encounter market app incompatibility please return here and restart the process from step 1."</string>
-    <string name="custom_density_dialog_button_got">Got it!</string>
-    <string name="custom_density_dialog_button_reboot">Reboot now</string>
+    <!--- Volume key cursor control -->
+    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
+    <string name="volume_key_cursor_control_off">Disabled</string>
+    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
 
     <!-- Sound settings -->
     <string name="increasing_ring_title">Ascending ringtone</string>
@@ -4486,48 +4464,23 @@
     <string name="increasing_ring_interval_3seconds">3 seconds</string>
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
-
-    <!-- Sound settings screen -->
     <string name="volume_overlay_title">Volume panel style</string>
     <string name="silent_mode_title">Silent mode</string>
     <string name="volume_ring_only_description">Ringtone</string>
-
-    <!--- Volume key cursor control -->
-    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
-    <string name="volume_key_cursor_control_off">Disabled</string>
-    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
-    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on Color to apply</string>   
-    <string name="arrow_right">→</string> 
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#FF000000</string>
-    <string name="set">Set</string>
-    <string name="ics_color">ICS</string>
+    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
+    <string name="link_volume_mutes">Silent mode affects notifications</string>
+    <string name="volbtn_music_controls_title">Volume rocker music controls</string>
+    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
 
     <!-- Wakeup Options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
     <string name="pref_volume_wake_summary">Pressing the volume rocker up/down will wake the device</string>
 
-    <!-- Sound Settings -->
-    <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
-    <string name="link_volume_mutes">Silent mode affects notifications</string>
-    <string name="volbtn_music_controls_title">Volume rocker music controls</string>
-    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
-
-
-    <!-- Customisation -->
-    <string name="status_bar_extras">User Interface</string>
-    <string name="navigation_bar_stub">Navigation Bar</string>
-    <string name="status_bar_stub">Status Bar</string>
-    <string name="lockscreen_stub">Lockscreen</string>
-    <string name="general_ui_stub">General UI</string>
-    <string name="power_menu_stub">Power Menu</string>
-    <string name="quick_toggles_stub">Quick Toggles</string>
+    <!-- Power Menu -->
+    <string name="title_show_screenshot">Show screenshot</string>
+    <string name="title_show_airplane_toggle">Show airplane toggle</string>
+    <string name="power_menu_expanded_desktop">Show expanded desktop</string>
 
     <!-- Status Bar Stub -->
     <string name="status_bar_clock_header">Clock</string>
@@ -4545,6 +4498,15 @@
     <string name="clock_color_title">Clock color</string>
     <string name="battery_icon">Battery icon style</string>
 
+    <!-- Battery Bar -->
+    <string name="battery_bar">Battery bar location</string>
+    <string name="battery_bar_color">Battery bar color</string>
+    <string name="battery_bar_cat">Battery bar options</string>
+    <string name="battery_bar_style_title">Battery bar style</string>
+    <string name="battery_bar_thickness_title">Battery bar thickness</string>
+    <string name="battery_bar_animate_title">Charging animation</string>
+    <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
+
     <!-- clock stuff -->
     <string name="right_clock">Right clock</string>
     <string name="center_clock">Center clock</string>
@@ -4554,6 +4516,51 @@
     <string name="regular_am_pm">Regular AM/PM</string>
     <string name="small_weekday">Small weekday</string>
     <string name="regular_weekday">Regular weekday</string>
+
+    <!-- Bring 'em ALL the colors -->
+    <string name="navbar_bg">Navbar background</string>
+    <string name="navbar_button_colors">Navbar button color</string>
+    <string name="navbar_background_style">Navbar background style</string>
+    <string name="navbar_color">Color/alpha only</string>
+    <string name="navbar_defaultbg_plus_color">Default Bg plus color/alpha</string>
+    <string name="navbar_defaultbg">Default Bg only</string>
+    <string name="statusbar_bg">Statusbar background</string>
+    <string name="statusbar_background_style">Statusbar background style</string>
+    <string name="navbar_bg_color">Navigation bar background</string>
+
+    <!-- Quick Toggles | AOKP -->
+    <string name="toggle_airplane_mode">Airplane Mode</string>
+    <string name="toggle_auto_rotate">Auto Rotate</string>
+    <string name="toggle_bluetooth">Bluetooth</string>
+    <string name="toggle_fcharge">Fast Charge</string>
+    <string name="toggle_gps">GPS</string>
+    <string name="toggle_lte">LTE</string>
+    <string name="toggle_data">Data</string>
+    <string name="toggle_nfc">NFC</string>
+    <string name="toggle_silent">Silent</string>
+    <string name="toggle_swagger">Swagger</string>
+    <string name="toggle_sync">Sync</string>
+    <string name="toggle_torch">Torch</string>
+    <string name="toggle_2g">2G</string>
+    <string name="toggle_usb_tether">USB Tether</string>
+    <string name="toggle_vibrate">Vibrate</string>
+    <string name="toggle_wifi_tether">Wifi Tether</string>
+    <string name="toggle_wifi">Wi-Fi</string>
+    <string name="toggle_user">User</string>
+    <string name="toggle_settings">Settings</string>
+    <string name="toggle_signal">Signal</string>
+    <string name="toggle_clock">Clock</string>
+    <string name="toggle_ime">IME</string>
+    <string name="toggle_battery">Battery</string>
+    <string name="toggle_brightness">Brightness</string>
+
+    <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH</string>
+    <string name="enabled_toggles_title">Enabled toggles</string>
+    <string name="enabled_toggles_summary">Choose toggles to display</string>
+    <string name="toggles_order_title">Toggle order</string>
+    <string name="toggles_order_summary">Choose the order which your toggles are displayed</string>
+    <string name="toggles_per_row_title">Toggles per row</string>
+    <string name="toggles_per_row_summary">Choose how many toggles to show per row</string>
 
     <!-- Navigation Bar -->
     <string name="right">Right</string>
@@ -4574,6 +4581,18 @@
     <string name="menu_power">Power menu</string>
     <string name="blank">Blank</string>
     <string name="none">None</string>
+    <string name="take_screenshot">Take Screenshot</string>
+    <string name="ring_vib">Ring/Vib</string>
+    <string name="ring_silent">Ring/Silent</string>
+    <string name="ring_vib_silent">Ring/Vib/Silent</string>
+    <string name="screen_off">Screen Off</string>
+    <string name="google_now">Google Now</string>
+    <string name="select_application">Select Application</string>
+    <string name="one_target">1 target</string>
+    <string name="two_targets">2 targets</string>
+    <string name="three_targets">3 targets</string>
+    <string name="four_targets">4 targets</string>
+    <string name="five_targets">5 targets</string>
     <string name="always_show_invincible_icons">Always show invisible icons</string>
     <string name="always_show">Always show</string>
     <string name="default_jb_with_invincible_icons_when_hidden">Default JB with invisible icons when hidden</string>
@@ -4604,7 +4623,6 @@
     <string name="navbar_action_none">Empty</string>
     <string name="navbar_widgets">Navigation Bar Widgets</string>
     <string name="navbar_enable_bar">Enable bar</string>
-    <string name="navbar_bg_color">Bar Color</string>
     <string name="navigation_bar_height_title">Navigation bar height</string>
     <string name="navigation_bar_height_summary">Navigation Bar height while in portrait.</string>
     <string name="navigation_bar_height_landscape_title">Navigation bar height landscape</string>
@@ -4646,10 +4664,8 @@
     <string name="size_3_dp">3 dp</string>
     <string name="size_4_dp">4 dp</string>
 
-    <!-- For NavBar -->
     <string name="custom_app_icon_successfully">"'s icon set successfully!"</string>
 
-    <!-- Shortcut picker -->
     <string name="use_custom_app_title">Use custom application</string>
     <string name="use_custom_app_summary">Use custom application instead of the recent applications dialog</string>
     <string name="group_applications">Applications</string>
@@ -4657,7 +4673,16 @@
     <!-- Nav Ring Targets -->
     <string name="navbar_ring_cat">Navigation Bar Ring Targets</string>
     <string name="interface_softkey_settings">Softkey Settings</string>
-    <string name="interface_softkeys_pref_default_title">No Activity Selected</string>
+    <string name="interface_softkeys_pref_default_1_title">Target 1 short press activity</string>
+    <string name="interface_softkeys_pref_long_1_title">Target 1 long press activity</string>
+    <string name="interface_softkeys_pref_default_2_title">Target 2 short press activity</string>
+    <string name="interface_softkeys_pref_long_2_title">Target 2 long press activity</string>
+    <string name="interface_softkeys_pref_default_3_title">Target 3 short press activity</string>
+    <string name="interface_softkeys_pref_long_3_title">Target 3 long press activity</string>
+    <string name="interface_softkeys_pref_default_4_title">Target 4 short press activity</string>
+    <string name="interface_softkeys_pref_long_4_title">Target 4 long press activity</string>
+    <string name="interface_softkeys_pref_default_5_title">Target 5 short press activity</string>
+    <string name="interface_softkeys_pref_long_5_title">Target 5 long press activity</string>
     <string name="interface_softkeys_pref_default_summary">Tap the settings icon to select a custom long press activity</string>
     <string name="interface_softkeys_activity_dialog_title">Select Activity</string>
     <string name="interface_softkeys_reboot_title">Reboot Menu</string>
@@ -4672,12 +4697,13 @@
     <string name="interface_navring_settings_title">Navigation bar ring</string>
     <string name="interface_navring_settings_summary">Edit your custom nav ring apps</string>
     <string name="title_navring_amount">Number of nav ring targets</string>
-    <string name="summary_navring_amount">How many ring targets you want? *Changing this will reset your current targets and reboot is recommended!*</string>
+    <string name="summary_navring_amount">How many ring targets you want? *Changing this will reset your current targets and restart your System UI*</string>
     <string name="interface_navring_custom_pref_summary">Release on target to launch </string>
     <string name="interface_navring_pref_default_summary">Tap to select a custom ring target activity</string>
     <string name="interface_navring_assist_title">Google Now</string>
     <string name="interface_navring">Ring Targets</string>
     <string name="navbar_ring">Custom Ring Targets</string>
+    <string name="navring_enable_long">Enable Longpress for navring</string>
 
     <!-- General UI -->
     <string name="custom_carrier_label_title">Custom carrier label</string>
@@ -4695,11 +4721,6 @@
     <string name="notification_wallpaper_summary">You can remove the wallpaper from the menu in this window</string>
     <string name="notif_wallpaper_alpha_title">Notification background alpha</string>
     <string name="alpha_dialog_title">Set alpha value</string>
-
-    <!-- Power Menu -->
-    <string name="title_show_screenshot">Show screenshot</string>
-    <string name="title_show_airplane_toggle">Show airplane toggle</string>
-    <string name="power_menu_expanded_desktop">Show expanded desktop</string>
 
     <!-- Display settings screen, notification light settings -->
     <string name="notification_pulse_title">Notification light</string>
@@ -4785,8 +4806,22 @@
     <string name="start_time_title">Start</string>
     <string name="end_time_title">End</string>
 
-    <!-- Themes settings  -->
-    <string name="themes_settings_title">Themes</string>
+    <!-- DPI Changer -->
+    <string name="dpi">DPI</string>
+    <string name="open_market_title">4. Open Market and hit accept</string>
+    <string name="open_market_summary">Press back when done to return here.</string>
+    <string name="open_market_summary_could_not_open">"Couldn't open the market! If you're sure it's installed, open it yourself from the launcher."</string>
+    <string name="custom_density_title">5. Change density to whatever you like!</string>
+    <string name="custom_density_summary">If you ever have compatibility issues with the market, be sure to return here and repeat the process.</string>
+    <string name="custom_density_summary_invalid">"INVALID DENSITY!"</string>
+    <string name="custom_density">custom</string>
+    <string name="set_custom_density_title">Set custom density</string>
+    <string name="set_custom_density_set">Set</string>
+    <string name="custom_density_dialog_title">"WARNING!"</string>
+    <string name="custom_density_dialog_summary">"Changing your LCD density can cause unexpected app behavior. If you encounter market app incompatibility please return here and restart the process from step 1."</string>
+    <string name="custom_density_dialog_button_got">Got it!</string>
+    <string name="custom_density_dialog_button_reboot">Reboot now</string>
+
 
  <!-- **FNV ACTIVITIES MODIFICATIONS ENDS** -->
 

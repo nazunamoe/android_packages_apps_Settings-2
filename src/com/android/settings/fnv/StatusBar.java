@@ -62,18 +62,16 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_AM_PM_STYLE = "clock_am_pm_style";
     private static final String PREF_CLOCK_WEEKDAY = "clock_weekday";
     private static final String PREF_ENABLE = "clock_style";
-    private static final String PREF_STATUS_BAR_COLOR = "status_bar_color";
     private static final String PREF_BATT_ICON = "battery_icon_list";
     private static final String PREF_BATT_BAR = "battery_bar_list";
     private static final String PREF_BATT_BAR_STYLE = "battery_bar_style";
     private static final String PREF_BATT_BAR_COLOR = "battery_bar_color";
     private static final String PREF_BATT_BAR_WIDTH = "battery_bar_thickness";
     private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
-
-    private static final int DEFAULT_STATUS_BAR_COLOR = 0xFF000000;
+    private static final String PREF_STATUSBAR_BACKGROUND_STYLE = "statusbar_background_style";
+    private static final String PREF_STATUSBAR_BACKGROUND_COLOR = "statusbar_background_color";
 
     private ColorPickerPreference mColorPicker;
-    private ColorPickerPreference mStatusBarColor;
     private ListPreference mClockStyle;
     private ListPreference mClockAmPmstyle;
     private ListPreference mClockWeekday;
@@ -83,6 +81,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private ListPreference mBatteryBarThickness;
     private CheckBoxPreference mBatteryBarChargingAnimation;
     private ColorPickerPreference mBatteryBarColor;
+    ListPreference mStatusbarBgStyle;
+    ColorPickerPreference mStatusbarBgColor;
 
     private int seekbarProgress;
 
@@ -114,9 +114,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mClockWeekday.setValue(Integer.toString(Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.STATUSBAR_CLOCK_WEEKDAY,
                 0)));
-
-        mStatusBarColor = (ColorPickerPreference) findPreference(PREF_STATUS_BAR_COLOR);
-        mStatusBarColor.setOnPreferenceChangeListener(this);
 
         mBatteryIcon = (ListPreference) findPreference(PREF_BATT_ICON);
         mBatteryIcon.setOnPreferenceChangeListener(this);
@@ -154,6 +151,23 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1))
                 + "");
 
+        mStatusbarBgColor = (ColorPickerPreference) findPreference(PREF_STATUSBAR_BACKGROUND_COLOR);
+        mStatusbarBgColor.setOnPreferenceChangeListener(this);
+
+        mStatusbarBgStyle = (ListPreference) findPreference(PREF_STATUSBAR_BACKGROUND_STYLE);
+        mStatusbarBgStyle.setOnPreferenceChangeListener(this);
+
+        updateVisibility();
+    }
+
+    private void updateVisibility() {
+        int visible = Settings.System.getInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_BACKGROUND_STYLE, 2);
+        if (visible == 2) {
+            mStatusbarBgColor.setEnabled(false);
+        } else {
+            mStatusbarBgColor.setEnabled(true);
+        }
     }
 
     @Override
@@ -205,14 +219,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_CLOCK_COLOR, intHex);
             Log.e("FNV", intHex + "");
-        } else if (preference == mStatusBarColor) {
-            String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.STATUS_BAR_COLOR, intHex);
-            return true;
         } else if (preference == mBatteryBarColor) {
             String hex = ColorPickerPreference.convertToARGB(Integer
                     .valueOf(String.valueOf(newValue)));
@@ -237,6 +243,25 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             int val = Integer.parseInt((String) newValue);
             return Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, val);
+
+        } else if (preference == mStatusbarBgStyle) {
+            int value = Integer.valueOf((String) newValue);
+            int index = mStatusbarBgStyle.findIndexOfValue((String) newValue);
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.STATUSBAR_BACKGROUND_STYLE, value);
+            preference.setSummary(mStatusbarBgStyle.getEntries()[index]);
+            updateVisibility();
+            return true;
+
+        } else if (preference == mStatusbarBgColor) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
+                    .valueOf(newValue)));
+            preference.setSummary(hex);
+
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_BACKGROUND_COLOR, intHex);
+            Log.e("BAKED", intHex + "");
 
         }
         return false;
