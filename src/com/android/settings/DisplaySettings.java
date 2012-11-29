@@ -18,11 +18,8 @@ package com.android.settings;
 
 import static android.provider.Settings.System.SCREEN_OFF_TIMEOUT;
 
-<<<<<<< HEAD
 import android.app.ActivityManagerNative;
 import android.app.Dialog;
-=======
->>>>>>> 085edd4... Setings: Forward port Display Rotation settings
 import android.app.admin.DevicePolicyManager;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -30,11 +27,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.ContentObserver;
 import android.hardware.display.DisplayManager;
 import android.hardware.display.WifiDisplayStatus;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.RemoteException;
+import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
@@ -56,6 +56,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final int FALLBACK_SCREEN_TIMEOUT_VALUE = 30000;
 
     private static final String KEY_SCREEN_TIMEOUT = "screen_timeout";
+    private static final String KEY_FONT_SIZE = "font_size";
     private static final String KEY_NOTIFICATION_PULSE = "notification_pulse";
     private static final String KEY_SCREEN_SAVER = "screensaver";
     private static final String KEY_WIFI_DISPLAY = "wifi_display";
@@ -76,12 +77,8 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private DisplayManager mDisplayManager;
 
-<<<<<<< HEAD
-    private CheckBoxPreference mAccelerometer;
     private WarnedListPreference mFontSizePref;
     private CheckBoxPreference mVolumeWake;
-=======
->>>>>>> 085edd4... Setings: Forward port Display Rotation settings
     private PreferenceScreen mNotificationPulse;
     private PreferenceScreen mBatteryPulse;
     private PreferenceScreen mDisplayRotationPreference;
@@ -324,7 +321,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         }
         return indices.length-1;
     }
-<<<<<<< HEAD
     
     public void readFontSizePreference(ListPreference pref) {
         try {
@@ -344,9 +340,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
                 fontSizeNames[index]));
     }
     
-=======
-
->>>>>>> 085edd4... Setings: Forward port Display Rotation settings
     @Override
     public void onResume() {
         super.onResume();
@@ -441,6 +434,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        if (preference == mVolumeWake) {
+            Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,
+                    mVolumeWake.isChecked() ? 1 : 0);
+            return true;
+        }
+
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 

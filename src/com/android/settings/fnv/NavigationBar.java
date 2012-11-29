@@ -84,6 +84,8 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     private static final String PREF_NAVRING_AMOUNT = "pref_navring_amount";
     private static final String NAVIGATION_BAR_BACKGROUND_COLOR = "navigation_bar_background_color";
     private static final String PREF_NAVBAR_BG_STYLE = "navbar_bg_style";
+    private static final String ENABLE_NAVRING_LONG = "enable_navring_long";
+
 
     public static final int REQUEST_PICK_CUSTOM_ICON = 200;
     public static final int REQUEST_PICK_LANDSCAPE_ICON = 201;
@@ -107,6 +109,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     ListPreference mNavigationBarWidth;
     SeekBarPreference mButtonAlpha;
     Preference mWidthHelp;
+    CheckBoxPreference mEnableNavringLong;
 
     private File customnavImage;
     private File customnavTemp;
@@ -174,6 +177,10 @@ public class NavigationBar extends SettingsPreferenceFragment implements
         mNavBarButtonQty.setValue(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.NAVIGATION_BAR_BUTTONS_QTY, 3) + "");
 
+        mEnableNavringLong = (CheckBoxPreference) findPreference("enable_navring_long");
+        mEnableNavringLong.setChecked(Settings.System.getBoolean(getContentResolver(),
+                Settings.System.SYSTEMUI_NAVRING_LONG_ENABLE, false));
+
         mPicker = new ShortcutPickerHelper(this, this);
 
         boolean hasNavBarByDefault = mContext.getResources().getBoolean(
@@ -235,6 +242,14 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                         Settings.System.NAVIGATION_CUSTOM_ACTIVITIES[1], "**home**");
                 Settings.System.putString(getActivity().getContentResolver(),
                         Settings.System.NAVIGATION_CUSTOM_ACTIVITIES[2], "**recents**");
+
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.NAVIGATION_LONGPRESS_ACTIVITIES[0], "**null**");
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.NAVIGATION_LONGPRESS_ACTIVITIES[1], "**null**");
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.NAVIGATION_LONGPRESS_ACTIVITIES[2], "**null**");
+
                 Settings.System.putString(getActivity().getContentResolver(),
                         Settings.System.NAVIGATION_CUSTOM_APP_ICONS[0], "");
                 Settings.System.putString(getActivity().getContentResolver(),
@@ -262,9 +277,19 @@ public class NavigationBar extends SettingsPreferenceFragment implements
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             Helpers.restartSystemUI();
             return true;
+        } else if (preference == mEnableNavringLong) {
+
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.SYSTEMUI_NAVRING_LONG_ENABLE,
+                    ((CheckBoxPreference) preference).isChecked() ? true : false);
+            resetNavRingLong();
+            return true;
         } else if (preference == mNavRingTargets) {
-            ((PreferenceActivity) getActivity())
-                    .startPreferenceFragment(new NavRingTargets(), true);
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            NavRingTargets fragment = new NavRingTargets();
+            ft.addToBackStack("config_nav_ring");
+            ft.replace(this.getId(), fragment);
+            ft.commit();
             return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
@@ -473,16 +498,11 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     }
 
     public void resetNavRing() {
-            Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.SYSTEMUI_NAVRING_1, "none");
-            Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.SYSTEMUI_NAVRING_2, "none");
-            Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.SYSTEMUI_NAVRING_3, "assist");
-            Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.SYSTEMUI_NAVRING_4, "none");
-            Settings.System.putString(getActivity().getContentResolver(),
-                    Settings.System.SYSTEMUI_NAVRING_5, "none");
+            // TODO : FIXME
+    }
+
+    public void resetNavRingLong() {
+            // TODO : FIXME
     }
 
     private void updateGlowTimesSummary() {

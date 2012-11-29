@@ -24,7 +24,7 @@ import com.android.settings.R;
 import com.android.settings.util.ShortcutPickerHelper;
 import com.android.settings.widgets.NavBarItemPreference;
 
-public class NavRingTargets extends AOKPPreferenceFragment implements
+public class NavRingTargets extends SettingsPreferenceFragment implements
         ShortcutPickerHelper.OnPickListener, OnPreferenceChangeListener {
 
     public static final int NAVRING_ONE = 1;
@@ -54,9 +54,8 @@ public class NavRingTargets extends AOKPPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(R.string.title_navring);
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.prefs_navring);
+        addPreferencesFromResource(R.xml.navring_settings);
 
         PreferenceScreen prefs = getPreferenceScreen();
 

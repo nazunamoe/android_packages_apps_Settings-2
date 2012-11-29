@@ -28,13 +28,13 @@ import android.widget.TextView;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
-import com.android.settings.widgets.TouchInterceptor;
+import com.android.settings.fnv.TouchInterceptor;
 import com.android.settings.widgets.SeekBarPreference;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.util.ArrayList;
 
-public class StatusBarToggles extends SettingsPreferenceFragment implements
+public class QuickToggles extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String TAG = "TogglesLayout";
@@ -49,9 +49,8 @@ public class StatusBarToggles extends SettingsPreferenceFragment implements
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(R.string.title_statusbar_toggles);
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.prefs_statusbar_toggles);
+        addPreferencesFromResource(R.xml.quick_toggles);
 
         mEnabledToggles = findPreference(PREF_ENABLE_TOGGLES);
 

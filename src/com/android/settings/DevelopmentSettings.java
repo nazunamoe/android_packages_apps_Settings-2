@@ -284,8 +284,7 @@ public class DevelopmentSettings extends PreferenceFragment
         mAllPrefs.add(mShowAllANRs);
         mResetCbPrefs.add(mShowAllANRs);
 
-	mKillAppLongpressBack = (CheckBoxPreference) findPreference(
-                KILL_APP_LONGPRESS_BACK);
+	mKillAppLongpressBack = findAndInitCheckboxPref(KILL_APP_LONGPRESS_BACK);
 
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
@@ -387,6 +386,8 @@ public class DevelopmentSettings extends PreferenceFragment
             mEnabledSwitch.setChecked(mLastEnabledState);
             setPrefsEnabledState(mLastEnabledState);
         }
+
+        updateKillAppLongpressBackOptions();
     }
 
     void updateCheckBox(CheckBoxPreference checkBox, boolean value) {
@@ -433,7 +434,6 @@ public class DevelopmentSettings extends PreferenceFragment
         updateShowAllANRsOptions();
         updateVerifyAppsOverUsbOptions();
         updateBugreportOptions();
-        updateKillAppLongpressBackOptions();
     }
 
     private void resetDangerousOptions() {

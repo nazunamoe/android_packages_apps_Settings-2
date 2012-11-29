@@ -1890,7 +1890,7 @@
     <string name="selinux_status">SELinux status</string>
 
     <!-- device modversion -->
-    <string name="mod_version">Modversion</string>
+    <string name="mod_version">Build date</string>
     <string name="mod_version_default">Unknown</string>
 
     <!-- About phone screen, show when a value of some status item is unavailable. -->
@@ -4567,8 +4567,10 @@
     <string name="toggle_brightness">Brightness</string>
 
     <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH</string>
+    <string name="toggles_display_dialog">Choose which toggles to use</string>
     <string name="enabled_toggles_title">Enabled toggles</string>
     <string name="enabled_toggles_summary">Choose toggles to display</string>
+    <string name="toggles_display_close">Close</string>
     <string name="toggles_order_title">Toggle order</string>
     <string name="toggles_order_summary">Choose the order which your toggles are displayed</string>
     <string name="toggles_per_row_title">Toggles per row</string>
