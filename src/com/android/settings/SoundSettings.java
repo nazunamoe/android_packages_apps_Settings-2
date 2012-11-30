@@ -16,15 +16,12 @@
 
 package com.android.settings;
 
-<<<<<<< HEAD
 import com.android.settings.bluetooth.DockEventReceiver;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.bluetooth.BluetoothDevice;
-=======
 import android.app.ActivityManagerNative;
->>>>>>> 87e9324... Add safe headset volume check (2/2) Credit: CyanogenMod
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
