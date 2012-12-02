@@ -82,7 +82,7 @@
 			android:title="Jesús David"
 			xy:nameDev="D4rKn3sSyS"
 			xy:twitterHandle="D4rKn3sSyS"
-			xy:donateLink="@string/donate_d4rk" />
+			xy:donateLink="@string/donate_d4" />
 
 	</PreferenceCategory>
 
