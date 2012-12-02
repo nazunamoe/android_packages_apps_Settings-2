@@ -225,7 +225,7 @@
     <header
         android:id="@+id/about_xy"
         android:fragment="com.android.settings.fnv.About"
-        android:icon="@drawable/ic_settings_about"
+        android:icon="@drawable/ic_settings_about_xy"
         android:title="@string/title_about" />
 
 </preference-headers>
