@@ -809,6 +809,7 @@
         <item>USBTETHER</item>
         <item>TORCH</item>
         <item>2G</item>
+        <item>SCREEN</item>
         <item>LTE</item>
     </string-array>
     <string-array name="available_toggles_values" translatable="false">
@@ -833,6 +834,7 @@
         <item>@string/toggle_usb_tether</item>
         <item>@string/toggle_torch</item>
         <item>@string/toggle_2g</item>
+        <item>@string/toggle_screen</item>
         <item>@string/toggle_lte</item>
     </string-array>
 

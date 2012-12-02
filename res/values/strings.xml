@@ -4443,15 +4443,16 @@
     <string name="team">Da Team</string>
     <string name="contributors">Contributors</string>
     <string name="xylon">Xylon AOSP</string>
-    <string name="xylon_website_title">Our Website</string>
-    <string name="xylon_website_summary">xylon.androidvenue.com \n Find all latest experiments and news here.</string>
-    <string name="xylon_source_title">Our Source</string>
-    <string name="xylon_source_summary">Xylon AOSP is fully open source. You can always check out our movements at github.com/XYAOSP</string>
+    <string name="xylon_website_title">XY\'s Website</string>
+    <string name="xylon_website_summary">Find all latest experiments and news here.</string>
+    <string name="xylon_source_title">XY\'s Source</string>
+    <string name="xylon_source_summary">We are fully open source. You can always check out our movements at github.com/XYAOSP</string>
     <string name="donate_daxxmax">http://forum.xda-developers.com/donatetome.php?u=1216319</string>
     <string name="donate_arzbhatia">http://forum.xda-developers.com/donatetome.php?u=4125911</string>
     <string name="donate_d4">http://forum.xda-developers.com/donatetome.php?u=3484876</string>
     <string name="donate_aokp">http://aokp.co/</string>
     <string name="donate_cyanogenmod">http://forum.cyanogenmod.com/donate</string>
+    <string name="donate_fnv">http://goo.gl/3Vo2G</string>
 
     <!-- Customisation -->
     <string name="status_bar_extras">User Interface</string>
@@ -4589,6 +4590,7 @@
     <string name="toggle_ime">IME</string>
     <string name="toggle_battery">Battery</string>
     <string name="toggle_brightness">Brightness</string>
+    <string name="toggle_screen">Screen off</string>
 
     <string name="toggle_default_entries">USER|BRIGHTNESS|SETTINGS|WIFI|SIGNAL|ROTATE|BATTERY|AIRPLANE_MODE|BLUETOOTH|SCREEN</string>
     <string name="toggles_display_dialog">Choose which toggles to use</string>

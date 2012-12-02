@@ -61,6 +61,12 @@
 		android:key="contributors"
 		android:title="@string/contributors">
 
+		<com.android.settings.widgets.DeveloperPreference
+			android:title="Fruit N' Veggies"
+			xy:nameDev="ProjectFNV"
+			xy:twitterHandle="ProjectFNV"
+			xy:donateLink="@string/donate_fnv" />
+
                 <com.android.settings.widgets.DeveloperPreference
                         android:title="CyanogenMod"
                         xy:nameDev="cyanogenmod"
