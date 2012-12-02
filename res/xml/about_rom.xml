@@ -25,24 +25,24 @@
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="Daniel MM"
-			xy:nameDev="daxxmax"
+			xy:nameDev="Daniel MM"
 			xy:twitterHandle="daxxmax"
 			xy:donateLink="@string/donate_daxxmax" />
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="Arz Bhatia"
-			xy:nameDev="arzbhatia"
+			xy:nameDev="Arz Bhatia"
 			xy:twitterHandle="arzbhatia"
 			xy:donateLink="@string/donate_arzbhatia" />
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="David Vidal"
-			xy:nameDev="dorilife"
+			xy:nameDev="David Vidal"
 			xy:twitterHandle="dorilife" />
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="Bluewall"
-			xy:nameDev="bluewall"
+			xy:nameDev="Bluewall"
 			xy:twitterHandle="bluewall" />
 
 		<com.android.settings.widgets.DeveloperPreference
@@ -52,7 +52,7 @@
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="DOOMSlayer"
-			xy:nameDev="d00mslayer"
+			xy:nameDev="DOOMSlayer"
 			xy:twitterHandle="d00mslayer" />
 
 	</PreferenceCategory>
@@ -63,30 +63,30 @@
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="Fruit N' Veggies"
-			xy:nameDev="ProjectFNV"
+			xy:nameDev="Fruit N' Veggies"
 			xy:twitterHandle="ProjectFNV"
 			xy:donateLink="@string/donate_fnv" />
 
                 <com.android.settings.widgets.DeveloperPreference
                         android:title="CyanogenMod"
-                        xy:nameDev="cyanogenmod"
+                        xy:nameDev="CyanogenMod"
                         xy:twitterHandle="cyanogenmod"
                         xy:donateLink="@string/donate_cyanogenmod" />
 
                 <com.android.settings.widgets.DeveloperPreference
             		android:title="AOKP"
-	                xy:nameDev="aokp"
+	                xy:nameDev="AOKP"
 	                xy:twitterHandle="aokp_rom"
                         xy:donateLink="@string/donate_aokp" />
 
                 <com.android.settings.widgets.DeveloperPreference
             		android:title="TeamBAKED"
-	                xy:nameDev="team_baked_rom"
+	                xy:nameDev="TeamBAKED"
 	                xy:twitterHandle="team_baked_rom" />
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="Jesús David"
-			xy:nameDev="D4rKn3sSyS"
+			xy:nameDev="Jesús David"
 			xy:twitterHandle="D4rKn3sSyS"
 			xy:donateLink="@string/donate_d4" />
 
