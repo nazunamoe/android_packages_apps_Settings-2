@@ -75,6 +75,13 @@
         android:title="@string/lockscreen_stub"
         android:icon="@drawable/ic_settings_lockscreen" />
 
+    <!-- Lock screen -->
+    <header
+        android:id="@+id/lock_screen_settings"
+        android:fragment="com.android.settings.cyanogenmod.LockscreenInterface"
+        android:title="@string/lock_screen_title"
+        android:icon="@drawable/ic_settings_lockscreen" />
+
     <!-- Themes -->
     <header
         android:id="@+id/themes_settings"
