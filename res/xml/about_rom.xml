@@ -36,6 +36,11 @@
 			xy:donateLink="@string/donate_arzbhatia" />
 
 		<com.android.settings.widgets.DeveloperPreference
+			android:title="Stefano Villa"
+			xy:nameDev="Stefano Villa"
+			xy:twitterHandle="anarkia1976" />
+
+		<com.android.settings.widgets.DeveloperPreference
 			android:title="David Vidal"
 			xy:nameDev="David Vidal"
 			xy:twitterHandle="dorilife" />
