@@ -4508,7 +4508,6 @@
     <string name="safe_headset_restore_title">Safe headset volume restore</string>
     <string name="safe_headset_restore_summary">Prevent loud volume levels when headset is first plugged in</string>
 
-
     <!-- Wakeup Options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
     <string name="pref_volume_wake_title">Volume rocker wake</string>
@@ -4519,9 +4518,10 @@
     <string name="title_show_airplane_toggle">Show airplane toggle</string>
     <string name="power_menu_expanded_desktop">Show expanded desktop</string>
 
-    <!-- Status Bar Stub -->
+    <!-- Status Bar Headers -->
     <string name="status_bar_clock_header">Clock</string>
     <string name="status_bar_battery_header">Battery</string>
+    <string name="status_bar_signal_header">Signal</string>
     <string name="status_bar_misc">Misc</string>
 
     <!-- Status Bar -->
@@ -4544,7 +4544,20 @@
     <string name="battery_bar_animate_title">Charging animation</string>
     <string name="battery_bar_animate_summary">The charging animation may result in a poor user experience. Enable at your own discretion.</string>
 
-    <!-- clock stuff -->
+    <!-- Statusbar | Signal -->
+    <string name="signal_style">Signal text style</string>
+    <string name="signal_color_title">Signal color</string>
+    <string name="hide_signal_title">Hide signal bars</string>
+    <string name="hide_signal_summary">Updates when signal strength changes</string>
+    <string name="wifi_signal_style">WiFi signal text style</string>
+    <string name="wifi_signal_color_title">WiFi signal color</string>
+
+    <!-- signal style -->
+    <string name="show_signal_bars">Show signal bars</string>
+    <string name="show_signal_text">Show signal text</string>
+    <string name="show_with_dbm">Show with dBm</string>
+
+    <!-- Statusbar | Clock -->
     <string name="right_clock">Right clock</string>
     <string name="center_clock">Center clock</string>
     <string name="no_clock">No clock</string>

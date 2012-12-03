@@ -83,6 +83,10 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private ColorPickerPreference mBatteryBarColor;
     ListPreference mStatusbarBgStyle;
     ColorPickerPreference mStatusbarBgColor;
+    ListPreference mDbmStyletyle;
+    ListPreference mWifiStyle;
+    ColorPickerPreference mWifiColorPicker;
+    CheckBoxPreference mHideSignal;
 
     private int seekbarProgress;
 
@@ -96,6 +100,28 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
 
         mColorPicker = (ColorPickerPreference) prefSet.findPreference(PREF_COLOR_PICKER);
         mColorPicker.setOnPreferenceChangeListener(this);
+
+        mDbmStyletyle = (ListPreference) findPreference("signal_style");
+        mDbmStyletyle.setOnPreferenceChangeListener(this);
+        mDbmStyletyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_SIGNAL_TEXT,
+                0)));
+
+        mColorPicker = (ColorPickerPreference) findPreference("signal_color");
+        mColorPicker.setOnPreferenceChangeListener(this);
+        mWifiStyle = (ListPreference) findPreference("wifi_signal_style");
+        mWifiStyle.setOnPreferenceChangeListener(this);
+        mWifiStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_WIFI_SIGNAL_TEXT,
+                0)));
+
+        mWifiColorPicker = (ColorPickerPreference) findPreference("wifi_signal_color");
+        mWifiColorPicker.setOnPreferenceChangeListener(this);
+
+        mHideSignal = (CheckBoxPreference) findPreference("hide_signal");
+        mHideSignal.setChecked(Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUSBAR_HIDE_SIGNAL_BARS,
+                0) != 0);
 
         mClockStyle = (ListPreference) prefSet.findPreference(PREF_ENABLE);
         mClockStyle.setOnPreferenceChangeListener(this);
@@ -179,12 +205,50 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                     Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE,
                     ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
             return true;
+        } else if (preference == mHideSignal) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_HIDE_SIGNAL_BARS,
+                    ((CheckBoxPreference) preference).isChecked() ? 1 : 0);
+
+            return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mClockAmPmstyle) {
+        if (preference == mDbmStyletyle) {
+
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_SIGNAL_TEXT, val);
+            return true;
+        } else if (preference == mColorPicker) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
+                    .valueOf(newValue)));
+            preference.setSummary(hex);
+
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_SIGNAL_TEXT_COLOR, intHex);
+
+            return true;
+        } else if (preference == mWifiStyle) {
+
+            int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_WIFI_SIGNAL_TEXT, val);
+            return true;
+        } else if (preference == mWifiColorPicker) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
+                    .valueOf(newValue)));
+            preference.setSummary(hex);
+
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_WIFI_SIGNAL_TEXT_COLOR, intHex);
+
+            return true;
+        } else if (preference == mClockAmPmstyle) {
             int val = Integer.parseInt((String) newValue);
             int index = mClockAmPmstyle.findIndexOfValue((String) newValue);
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
