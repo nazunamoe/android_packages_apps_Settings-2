@@ -4761,8 +4761,6 @@
     <string name="custom_carrier_label_title">Custom carrier label</string>
     <string name="custom_carrier_label_explain">Please enter a new label. Enter an empty label to revert to stock label.</string>
     <string name="custom_carrier_label_notset">Custom label currently not set</string>
-    <string name="alt_resolver">Use Alt Default App Grid</string>
-    <string name="alt_resolver_summary">Use Alternate (GB style) Default App Picker</string>
     <string name="status_bar_notif_count_title">Show notification count</string>
     <string name="status_bar_notif_count_summary">Display number of pending notifications on the status bar</string>
     <string name="show_overflow_title">Show Menu UI Overflow</string>
