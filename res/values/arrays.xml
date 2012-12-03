@@ -965,7 +965,6 @@
         <item>2</item>
     </string-array>
 
-<<<<<<< HEAD
     <!-- Auto-brightness sensitivity -->
     <string-array name="auto_brightness_sensitivity_entries" translatable="false">
         <item>@string/auto_brightness_sensitivity_verylow</item>
@@ -983,7 +982,6 @@
         <item>25</item>
     </integer-array>
 
-=======
     <!-- Profile mode options. -->
     <string-array name="profile_entries">
         <item>On</item>
@@ -1066,6 +1064,4 @@
         <item>2</item>
     </string-array>
 
-    <!-- **** CYANOGENMOD EDITS END **** -->
->>>>>>> 2a06107... Bring in Profiles support from mr0
 </resources>
