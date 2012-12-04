@@ -37,7 +37,7 @@
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="Stefano Villa"
-			xy:nameDev="Stefano Villa"
+			xy:nameDev="anarkia"
 			xy:twitterHandle="anarkia1976" />
 
 		<com.android.settings.widgets.DeveloperPreference

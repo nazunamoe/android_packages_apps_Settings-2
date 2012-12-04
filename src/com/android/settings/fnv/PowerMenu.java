@@ -17,10 +17,12 @@ public class PowerMenu extends PreferenceFragment {
     private static final String PREF_SCREENSHOT = "show_screenshot";
     private static final String PREF_AIRPLANE_TOGGLE = "show_airplane_toggle";
     private static final String PREF_EXPANDED_DESKTOP = "power_menu_expanded_desktop";
+    private static final String PREF_NAVBAR_HIDE = "show_navbar_hide";
 
     CheckBoxPreference mShowScreenShot;
     CheckBoxPreference mShowAirplaneToggle;
     CheckBoxPreference mExpandedDesktopPref;
+    CheckBoxPreference mShowNavBarHide;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,11 @@ public class PowerMenu extends PreferenceFragment {
                 .getContentResolver(), Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED, 
                 1) == 1);
 
+        mShowNavBarHide = (CheckBoxPreference) findPreference(PREF_NAVBAR_HIDE);
+        mShowNavBarHide.setChecked(Settings.System.getBoolean(getActivity()
+                .getContentResolver(), Settings.System.POWER_DIALOG_SHOW_NAVBAR_HIDE,
+                false));
+
     }
 
     @Override
@@ -64,6 +71,11 @@ public class PowerMenu extends PreferenceFragment {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.POWER_MENU_EXPANDED_DESKTOP_ENABLED,
                     ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mShowNavBarHide) {
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.POWER_DIALOG_SHOW_NAVBAR_HIDE,
+                    ((CheckBoxPreference)preference).isChecked());
             return true;
         }
 

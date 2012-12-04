@@ -4517,6 +4517,7 @@
     <string name="title_show_screenshot">Show screenshot</string>
     <string name="title_show_airplane_toggle">Show airplane toggle</string>
     <string name="power_menu_expanded_desktop">Show expanded desktop</string>
+    <string name="title_show_navbar_hide">Show navigation bar toggle</string>
 
     <!-- Status Bar Headers -->
     <string name="status_bar_clock_header">Clock</string>
