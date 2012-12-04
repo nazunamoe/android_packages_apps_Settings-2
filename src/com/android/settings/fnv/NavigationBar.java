@@ -85,6 +85,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     private static final String NAVIGATION_BAR_BACKGROUND_COLOR = "navigation_bar_background_color";
     private static final String PREF_NAVBAR_BG_STYLE = "navbar_bg_style";
     private static final String ENABLE_NAVRING_LONG = "enable_navring_long";
+    private static final String NAVIGATION_BAR_WIDGETS = "navigation_bar_widgets";
 
 
     public static final int REQUEST_PICK_CUSTOM_ICON = 200;
@@ -110,6 +111,7 @@ public class NavigationBar extends SettingsPreferenceFragment implements
     SeekBarPreference mButtonAlpha;
     Preference mWidthHelp;
     CheckBoxPreference mEnableNavringLong;
+    Preference mConfigureWidgets;
 
     private File customnavImage;
     private File customnavTemp;
@@ -213,6 +215,8 @@ public class NavigationBar extends SettingsPreferenceFragment implements
 
         mNavigationBarWidth = (ListPreference) findPreference("navigation_bar_width");
         mNavigationBarWidth.setOnPreferenceChangeListener(this);
+        mConfigureWidgets = findPreference(NAVIGATION_BAR_WIDGETS);
+
         refreshSettings();
         setHasOptionsMenu(true);
         updateGlowTimesSummary();
@@ -288,6 +292,13 @@ public class NavigationBar extends SettingsPreferenceFragment implements
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             NavRingTargets fragment = new NavRingTargets();
             ft.addToBackStack("config_nav_ring");
+            ft.replace(this.getId(), fragment);
+            ft.commit();
+            return true;
+        } else if (preference == mConfigureWidgets) {
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            WidgetConfigurationFragment fragment = new WidgetConfigurationFragment();
+            ft.addToBackStack("config_widgets");
             ft.replace(this.getId(), fragment);
             ft.commit();
             return true;
