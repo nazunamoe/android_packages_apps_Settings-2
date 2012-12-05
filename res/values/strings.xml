@@ -4947,6 +4947,9 @@
     <string name="ime_switcher_notify">Selector notification</string>
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
+    <!-- Launches Dev Tools -->
+    <string name="development_tools_title">Launch Tools</string>
+
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 
 </resources>
