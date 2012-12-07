@@ -4671,6 +4671,8 @@
     <string name="toggles_order_summary">Choose the order which your toggles are displayed</string>
     <string name="toggles_per_row_title">Toggles per row</string>
     <string name="toggles_per_row_summary">Choose how many toggles to show per row</string>
+    <string name="toggle_favcontact_title">Favorite contact</string>
+    <string name="toggle_favcontact_summary">Choose your favorite contact</string>
 
     <!-- Navigation Bar -->
     <string name="right">Right</string>
