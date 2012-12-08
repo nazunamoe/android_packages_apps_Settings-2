@@ -84,6 +84,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     ListPreference mStatusbarBgStyle;
     ColorPickerPreference mStatusbarBgColor;
     ListPreference mDbmStyletyle;
+    private ColorPickerPreference mDbmColorPicker;
     ListPreference mWifiStyle;
     ColorPickerPreference mWifiColorPicker;
     CheckBoxPreference mHideSignal;
@@ -107,8 +108,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 .getContentResolver(), Settings.System.STATUSBAR_SIGNAL_TEXT,
                 0)));
 
-        mColorPicker = (ColorPickerPreference) findPreference("signal_color");
-        mColorPicker.setOnPreferenceChangeListener(this);
+        mDbmColorPicker = (ColorPickerPreference) findPreference("signal_color");
+        mDbmColorPicker.setOnPreferenceChangeListener(this);
         mWifiStyle = (ListPreference) findPreference("wifi_signal_style");
         mWifiStyle.setOnPreferenceChangeListener(this);
         mWifiStyle.setValue(Integer.toString(Settings.System.getInt(getActivity()
@@ -222,7 +223,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_SIGNAL_TEXT, val);
             return true;
-        } else if (preference == mColorPicker) {
+        } else if (preference == mDbmColorPicker) {
             String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String
                     .valueOf(newValue)));
             preference.setSummary(hex);

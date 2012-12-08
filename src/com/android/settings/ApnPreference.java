@@ -90,7 +90,7 @@ public class ApnPreference extends Preference implements
     }
 
     private void init() {
-        setWidgetLayoutResource(R.layout.preference_profiles_widget);
+        setWidgetLayoutResource(R.layout.preference_widget);
     }
 
     public boolean isChecked() {
