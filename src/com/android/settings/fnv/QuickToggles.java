@@ -74,11 +74,8 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         mLayout = findPreference("toggles");
 
         mFavContact = findPreference(PREF_TOGGLE_FAV_CONTACT);
-
         final String[] entries = getResources().getStringArray(R.array.available_toggles_entries);
-
         List<String> allToggles = Arrays.asList(entries);
-
         if (allToggles.contains("FAVCONTACT")) {
             ArrayList<String> enabledToggles = getTogglesStringArray(getActivity());
             mFavContact.setEnabled(enabledToggles.contains("FAVCONTACT"));
