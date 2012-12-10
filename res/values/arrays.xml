@@ -1273,7 +1273,6 @@
         <item>@string/icon_picker_search</item>
         <item>@string/icon_picker_twitter</item>
     </string-array>
-
     <string-array name="lockscreen_icon_picker_icons" translatable="false">
         <item>@*android:drawable/ic_lockscreen_alarm_normal</item>
         <item>@*android:drawable/ic_lockscreen_browser_normal</item>
@@ -1296,6 +1295,17 @@
         <item>@*android:drawable/ic_lockscreen_rss_normal</item>
         <item>@*android:drawable/ic_lockscreen_google_normal</item>
         <item>@*android:drawable/ic_lockscreen_twitter_normal</item>
+    </string-array>
+
+    <string-array name="user_mode_ui_entries" translatable="false">
+        <item>@string/phone_mode_ui</item>
+        <item>@string/tablet_mode_ui</item>
+        <item>@string/phablet_mode_ui</item>
+    </string-array>
+    <string-array name="user_mode_ui_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
     </string-array>
 
 </resources>
