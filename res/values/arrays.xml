@@ -1238,13 +1238,13 @@
   <item>4</item>
     </string-array>
 
-    <!-- navbar/statusbar background -->
-    <string-array name="navbar_background_entries">
-        <item>@string/navbar_color</item>
-        <item>@string/navbar_defaultbg_plus_color</item>
-        <item>@string/navbar_defaultbg</item>
+    <!-- Navigation Bar + Statusbar Background Style -->
+    <string-array name="background_entries">
+        <item>@string/bgs_color</item>
+        <item>@string/bgs_defaultbg_plus_color</item>
+        <item>@string/bgs_defaultbg</item>
     </string-array>
-    <string-array name="navbar_background_values" translatable="false">
+    <string-array name="background_values" translatable="false">
         <item>0</item>
         <item>1</item>
         <item>2</item>

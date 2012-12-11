@@ -69,9 +69,9 @@
             android:key="navbar_bg_style"
             android:layout="?android:attr/preferenceLayoutChild"
             android:persistent="true"
-            android:entries="@array/navbar_background_entries"
-            android:entryValues="@array/navbar_background_values"
-            android:title="@string/navbar_background_style" />
+            android:entries="@array/background_entries"
+            android:entryValues="@array/background_values"
+            android:title="@string/background_style" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="navigation_bar_background_color"
