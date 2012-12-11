@@ -65,7 +65,7 @@ public class GeneralUI extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_SHOW_OVERFLOW = "show_overflow";
     private static final String PREF_NOTIFICATION_WALLPAPER = "notification_wallpaper";
     private static final String PREF_NOTIFICATION_WALLPAPER_ALPHA = "notification_wallpaper_alpha";
-    private static final String PREF_USER_MODE_UI = "user_mode_ui";
+    // private static final String PREF_USER_MODE_UI = "user_mode_ui";
 
     private static final int REQUEST_PICK_WALLPAPER = 201;
     private static final int REQUEST_PICK_CUSTOM_ICON = 202;
@@ -79,7 +79,7 @@ public class GeneralUI extends SettingsPreferenceFragment implements OnPreferenc
     private CheckBoxPreference mShowActionOverflow;
     Preference mNotificationWallpaper;
     Preference mWallpaperAlpha;
-    ListPreference mUserModeUI;
+    // ListPreference mUserModeUI;
 
     String mCustomLabelText = null;
 
@@ -109,12 +109,12 @@ public class GeneralUI extends SettingsPreferenceFragment implements OnPreferenc
 
         mWallpaperAlpha = (Preference) findPreference(PREF_NOTIFICATION_WALLPAPER_ALPHA);
 
-        mUserModeUI = (ListPreference) findPreference(PREF_USER_MODE_UI);
+   /**     mUserModeUI = (ListPreference) findPreference(PREF_USER_MODE_UI);
         int uiMode = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.CURRENT_UI_MODE, 0);
         mUserModeUI.setValue(Integer.toString(Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.USER_UI_MODE, uiMode)));
-        mUserModeUI.setOnPreferenceChangeListener(this);
+        mUserModeUI.setOnPreferenceChangeListener(this); **/
 
         setHasOptionsMenu(true);
     }
@@ -258,7 +258,7 @@ public class GeneralUI extends SettingsPreferenceFragment implements OnPreferenc
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 
-    @Override
+   /** @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == mUserModeUI) {
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -266,7 +266,7 @@ public class GeneralUI extends SettingsPreferenceFragment implements OnPreferenc
             return true;
         }
         return false;
-    }
+    } **/
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
