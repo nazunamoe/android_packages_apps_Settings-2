@@ -59,7 +59,8 @@ import com.android.settings.util.ShortcutPickerHelper;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
-public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class StatusBar extends SettingsPreferenceFragment  implements
+                ShortcutPickerHelper.OnPickListener, OnPreferenceChangeListener {
 
     private static final String PREF_COLOR_PICKER = "clock_color";
     private static final String PREF_AM_PM_STYLE = "clock_am_pm_style";
