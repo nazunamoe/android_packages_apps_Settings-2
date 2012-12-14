@@ -35,6 +35,7 @@ import android.widget.TextView;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.R;
 import com.android.settings.fnv.TouchInterceptor;
+import com.android.settings.Utils;
 import com.android.settings.widgets.SeekBarPreference;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -50,6 +51,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
     private static final String PREF_ENABLE_TOGGLES = "enabled_toggles";
     private static final String PREF_TOGGLES_PER_ROW = "toggles_per_row";
     private static final String PREF_TOGGLE_FAV_CONTACT = "toggle_fav_contact";
+    private static final String QUICK_PULLDOWN = "quick_pulldown";
 
     private final int PICK_CONTACT = 1;
 
@@ -57,6 +59,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
     Preference mLayout;
     ListPreference mTogglesPerRow;
     Preference mFavContact;
+    CheckBoxPreference mQuickPulldown;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,13 @@ public class QuickToggles extends SettingsPreferenceFragment implements
                 Settings.System.QUICK_TOGGLES_PER_ROW, 3) + "");
 
         mLayout = findPreference("toggles");
+
+        // Add the Quick Pulldown preference and disable for tablets
+        mQuickPulldown = (CheckBoxPreference) prefSet.findPreference(QUICK_PULLDOWN);
+        mQuickPulldown.setChecked(Settings.System.getInt(resolver, Settings.System.QS_QUICK_PULLDOWN, 0) == 1);
+        if (Utils.isTablet(getActivity())) {
+            mQuickPulldown.setEnabled(false);
+        }
 
         mFavContact = findPreference(PREF_TOGGLE_FAV_CONTACT);
         final String[] entries = getResources().getStringArray(R.array.available_toggles_entries);
@@ -154,6 +164,10 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         } else if (preference == mFavContact) {
             Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
             startActivityForResult(intent, PICK_CONTACT);
+        } else if (preference == mQuickPulldown) {
+            Settings.System.putInt(resolver, Settings.System.QS_QUICK_PULLDOWN,
+                    mQuickPulldown.isChecked() ? 1 : 0);
+            return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
 

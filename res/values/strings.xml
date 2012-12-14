@@ -4713,6 +4713,8 @@
     <string name="toggles_per_row_summary">Choose how many toggles to show per row</string>
     <string name="toggle_favcontact_title">Favorite contact</string>
     <string name="toggle_favcontact_summary">Choose your favorite contact</string>
+    <string name="toggle_quick_pulldown_title">Quick pulldown</string>
+    <string name="toggle_quick_pulldown_summary">Show Quick Settings when pulling down notification bar near the right side of the screen</string>
 
     <!-- Navigation Bar -->
     <string name="right">Right</string>
