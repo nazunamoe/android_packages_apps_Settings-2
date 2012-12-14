@@ -4455,6 +4455,7 @@
     <string name="donate_fnv">http://goo.gl/3Vo2G</string>
 
     <!-- Customisation -->
+    <string name="other_cat">Other Settings</string>
     <string name="status_bar_extras">User Interface</string>
     <string name="navigation_bar_stub">Navigation Bar</string>
     <string name="status_bar_stub">Status Bar</string>
