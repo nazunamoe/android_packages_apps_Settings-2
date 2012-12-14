@@ -11,6 +11,8 @@ import java.net.URISyntaxException;
 import java.util.Random;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -53,6 +55,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 import com.android.settings.util.Helpers;
+import com.android.settings.util.ShortcutPickerHelper;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -70,32 +73,45 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
     private static final String PREF_STATUSBAR_BACKGROUND_STYLE = "statusbar_background_style";
     private static final String PREF_STATUSBAR_BACKGROUND_COLOR = "statusbar_background_color";
+    private static final String PREF_DATE_SHORTCLICK = "date_shortclick";
+    private static final String PREF_DATE_LONGCLICK = "date_longclick";
+    private static final String PREF_CLOCK_SHORTCLICK = "clock_shortclick";
+    private static final String PREF_CLOCK_LONGCLICK = "clock_longclick";
 
+    private ColorPickerPreference mStatusbarBgColor;
     private ColorPickerPreference mColorPicker;
-    private ListPreference mClockStyle;
-    private ListPreference mClockAmPmstyle;
-    private ListPreference mClockWeekday;
+    private ColorPickerPreference mBatteryBarColor;
+    private ColorPickerPreference mDbmColorPicker;
+    private ColorPickerPreference mWifiColorPicker;
+    private ListPreference mStatusbarBgStyle;
     private ListPreference mBatteryIcon;
     private ListPreference mBatteryBar;
     private ListPreference mBatteryBarStyle;
     private ListPreference mBatteryBarThickness;
+    private ListPreference mClockStyle;
+    private ListPreference mClockAmPmstyle;
+    private ListPreference mClockWeekday;
+    private ListPreference mDateShortClick;
+    private ListPreference mDateLongClick;
+    private ListPreference mClockShortClick;
+    private ListPreference mClockLongClick;
+    private ListPreference mDbmStyletyle;
+    private ListPreference mWifiStyle;
     private CheckBoxPreference mBatteryBarChargingAnimation;
-    private ColorPickerPreference mBatteryBarColor;
-    ListPreference mStatusbarBgStyle;
-    ColorPickerPreference mStatusbarBgColor;
-    ListPreference mDbmStyletyle;
-    private ColorPickerPreference mDbmColorPicker;
-    ListPreference mWifiStyle;
-    ColorPickerPreference mWifiColorPicker;
-    CheckBoxPreference mHideSignal;
+    private CheckBoxPreference mHideSignal;
 
     private int seekbarProgress;
+    private ShortcutPickerHelper mPicker;
+    private Preference mPreference;
+    private String mString;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.status_bar_settings);
+
+        mPicker = new ShortcutPickerHelper(this, this);
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
@@ -142,47 +158,63 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 .getContentResolver(), Settings.System.STATUSBAR_CLOCK_WEEKDAY,
                 0)));
 
-        mBatteryIcon = (ListPreference) findPreference(PREF_BATT_ICON);
+        mBatteryIcon = (ListPreference) prefSet.findPreference(PREF_BATT_ICON);
         mBatteryIcon.setOnPreferenceChangeListener(this);
         mBatteryIcon.setValue((Settings.System.getInt(getActivity()
                 .getContentResolver(), Settings.System.STATUSBAR_BATTERY_ICON,
                 0))
                 + "");
 
-        mBatteryBar = (ListPreference) findPreference(PREF_BATT_BAR);
+        mBatteryBar = (ListPreference) prefSet.findPreference(PREF_BATT_BAR);
         mBatteryBar.setOnPreferenceChangeListener(this);
         mBatteryBar.setValue((Settings.System
                 .getInt(getActivity().getContentResolver(),
                         Settings.System.STATUSBAR_BATTERY_BAR, 0))
                 + "");
 
-        mBatteryBarStyle = (ListPreference) findPreference(PREF_BATT_BAR_STYLE);
+        mBatteryBarStyle = (ListPreference) prefSet.findPreference(PREF_BATT_BAR_STYLE);
         mBatteryBarStyle.setOnPreferenceChangeListener(this);
         mBatteryBarStyle.setValue((Settings.System.getInt(getActivity()
                 .getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR_STYLE, 0))
                 + "");
 
-        mBatteryBarColor = (ColorPickerPreference) findPreference(PREF_BATT_BAR_COLOR);
+        mBatteryBarColor = (ColorPickerPreference) prefSet.findPreference(PREF_BATT_BAR_COLOR);
         mBatteryBarColor.setOnPreferenceChangeListener(this);
 
-        mBatteryBarChargingAnimation = (CheckBoxPreference) findPreference(PREF_BATT_ANIMATE);
+        mBatteryBarChargingAnimation = (CheckBoxPreference) prefSet.findPreference(PREF_BATT_ANIMATE);
         mBatteryBarChargingAnimation.setChecked(Settings.System.getInt(
                 getActivity().getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR_ANIMATE, 0) == 1);
 
-        mBatteryBarThickness = (ListPreference) findPreference(PREF_BATT_BAR_WIDTH);
+        mBatteryBarThickness = (ListPreference) prefSet.findPreference(PREF_BATT_BAR_WIDTH);
         mBatteryBarThickness.setOnPreferenceChangeListener(this);
         mBatteryBarThickness.setValue((Settings.System.getInt(getActivity()
                 .getContentResolver(),
                 Settings.System.STATUSBAR_BATTERY_BAR_THICKNESS, 1))
                 + "");
 
-        mStatusbarBgColor = (ColorPickerPreference) findPreference(PREF_STATUSBAR_BACKGROUND_COLOR);
+        mStatusbarBgColor = (ColorPickerPreference) prefSet.findPreference(PREF_STATUSBAR_BACKGROUND_COLOR);
         mStatusbarBgColor.setOnPreferenceChangeListener(this);
 
-        mStatusbarBgStyle = (ListPreference) findPreference(PREF_STATUSBAR_BACKGROUND_STYLE);
+        mStatusbarBgStyle = (ListPreference) prefSet.findPreference(PREF_STATUSBAR_BACKGROUND_STYLE);
         mStatusbarBgStyle.setOnPreferenceChangeListener(this);
+
+        mDateShortClick = (ListPreference) prefSet.findPreference(PREF_DATE_SHORTCLICK);
+        mDateShortClick.setOnPreferenceChangeListener(this);
+        mDateShortClick.setSummary(getProperSummary(mDateShortClick));
+
+        mDateLongClick = (ListPreference) prefSet.findPreference(PREF_DATE_LONGCLICK);
+        mDateLongClick.setOnPreferenceChangeListener(this);
+        mDateLongClick.setSummary(getProperSummary(mDateLongClick));
+
+        mClockShortClick = (ListPreference) prefSet.findPreference(PREF_CLOCK_SHORTCLICK);
+        mClockShortClick.setOnPreferenceChangeListener(this);
+        mClockShortClick.setSummary(getProperSummary(mClockShortClick));
+
+        mClockLongClick = (ListPreference) prefSet.findPreference(PREF_CLOCK_LONGCLICK);
+        mClockLongClick.setOnPreferenceChangeListener(this);
+        mClockLongClick.setSummary(getProperSummary(mClockLongClick));
 
         updateVisibility();
     }
@@ -217,6 +249,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        boolean result = false;
+
         if (preference == mDbmStyletyle) {
 
             int val = Integer.parseInt((String) newValue);
@@ -327,8 +361,91 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_BACKGROUND_COLOR, intHex);
             Log.e("BAKED", intHex + "");
+        } else if (preference == mDateShortClick) {
+            mPreference = preference;
+            mString = Settings.System.NOTIFICATION_DATE_SHORTCLICK;
+            if (newValue.equals("**app**")) {
+             mPicker.pickShortcut();
+            } else {
+            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_DATE_SHORTCLICK, (String) newValue);
+            mDateShortClick.setSummary(getProperSummary(mDateShortClick));
+            }
+        } else if (preference == mDateLongClick) {
+            mPreference = preference;
+            mString = Settings.System.NOTIFICATION_DATE_LONGCLICK;
+            if (newValue.equals("**app**")) {
+             mPicker.pickShortcut();
+            } else {
+            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_DATE_LONGCLICK, (String) newValue);
+            mDateLongClick.setSummary(getProperSummary(mDateLongClick));
+            }
+        } else if (preference == mClockShortClick) {
+            mPreference = preference;
+            mString = Settings.System.NOTIFICATION_CLOCK_SHORTCLICK;
+            if (newValue.equals("**app**")) {
+             mPicker.pickShortcut();
+            } else {
+            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_CLOCK_SHORTCLICK, (String) newValue);
+            mClockShortClick.setSummary(getProperSummary(mClockShortClick));
+            }
+        } else if (preference == mClockLongClick) {
+            mPreference = preference;
+            mString = Settings.System.NOTIFICATION_CLOCK_LONGCLICK;
+            if (newValue.equals("**app**")) {
+             mPicker.pickShortcut();
+            } else {
+            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_CLOCK_LONGCLICK, (String) newValue);
+            mClockLongClick.setSummary(getProperSummary(mClockLongClick));
+            }
 
         }
-        return false;
+        return result;
+    }
+
+    public void shortcutPicked(String uri, String friendlyName, Bitmap bmp, boolean isApplication) {
+          mPreference.setSummary(friendlyName);
+          Settings.System.putString(getContentResolver(), mString, (String) uri);
+    }
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == Activity.RESULT_OK) {
+            if (requestCode == ShortcutPickerHelper.REQUEST_PICK_SHORTCUT
+                    || requestCode == ShortcutPickerHelper.REQUEST_PICK_APPLICATION
+                    || requestCode == ShortcutPickerHelper.REQUEST_CREATE_SHORTCUT) {
+                mPicker.onActivityResult(requestCode, resultCode, data);
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private String getProperSummary(Preference preference) {
+        if (preference == mDateLongClick) {
+            mString = Settings.System.NOTIFICATION_DATE_LONGCLICK;
+        } else if (preference == mClockLongClick) {
+            mString = Settings.System.NOTIFICATION_CLOCK_LONGCLICK;
+        } else if (preference == mDateShortClick) {
+            mString = Settings.System.NOTIFICATION_DATE_SHORTCLICK;
+        } else if (preference == mClockShortClick) {
+            mString = Settings.System.NOTIFICATION_CLOCK_SHORTCLICK;
+        }
+
+        String uri = Settings.System.getString(getActivity().getContentResolver(),mString);
+        String empty = "";
+
+        if (uri == null)
+            return empty;
+
+        if (uri.startsWith("**")) {
+            if (uri.equals("**alarm**"))
+                return getResources().getString(R.string.alarm);
+            else if (uri.equals("**event**"))
+                return getResources().getString(R.string.event);
+            else if (uri.equals("**assist**"))
+                return getResources().getString(R.string.voiceassist);
+            else if (uri.equals("**today**"))
+                return getResources().getString(R.string.today);
+        } else {
+            return mPicker.getFriendlyNameForUri(uri);
+        }
+        return null;
     }
 }
