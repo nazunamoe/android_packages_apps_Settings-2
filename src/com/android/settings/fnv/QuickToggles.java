@@ -67,6 +67,9 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         // Load the preferences from an XML resource
         addPreferencesFromResource(R.xml.quick_toggles);
 
+        PreferenceScreen prefSet = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
+
         mEnabledToggles = findPreference(PREF_ENABLE_TOGGLES);
 
         mTogglesPerRow = (ListPreference) findPreference(PREF_TOGGLES_PER_ROW);
