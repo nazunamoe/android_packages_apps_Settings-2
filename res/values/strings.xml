@@ -4717,6 +4717,12 @@
     <string name="toggle_quick_pulldown_title">Quick pulldown</string>
     <string name="toggle_quick_pulldown_summary">Show Quick Settings when pulling down notification bar near the right side of the screen</string>
 
+    <!-- holo theme style for Quick Setting tiles -->
+    <string name="holo_dark">Holo dark</string>
+    <string name="holo_light">Holo light</string>
+    <string name="quicksettings_theme_style">Holo</string>
+    <string name="quicksettings_theme_style_summary">Choose between holo light or holo dark</string>
+
     <!-- Navigation Bar -->
     <string name="right">Right</string>
     <string name="left">Left</string>

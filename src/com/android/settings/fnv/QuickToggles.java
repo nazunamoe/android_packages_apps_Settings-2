@@ -52,6 +52,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
     private static final String PREF_ENABLE_TOGGLES = "enabled_toggles";
     private static final String PREF_TOGGLES_PER_ROW = "toggles_per_row";
     private static final String PREF_TOGGLE_FAV_CONTACT = "toggle_fav_contact";
+    private static final String PREF_QUICK_THEME_STYLE = "quick_theme_style";
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
     private final int PICK_CONTACT = 1;
@@ -60,6 +61,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
     Preference mLayout;
     ListPreference mTogglesPerRow;
     Preference mFavContact;
+    ListPreference mThemeStyle;
     CheckBoxPreference mQuickPulldown;
 
     @Override
@@ -96,6 +98,11 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         } else {
             getPreferenceScreen().removePreference(mFavContact);
         }
+
+        mThemeStyle = (ListPreference) findPreference(PREF_QUICK_THEME_STYLE);
+        mThemeStyle.setOnPreferenceChangeListener(this);
+        mThemeStyle.setValue(Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.QUICK_THEME_STYLE, 1) + "");
     }
 
     @Override
@@ -104,6 +111,11 @@ public class QuickToggles extends SettingsPreferenceFragment implements
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QUICK_TOGGLES_PER_ROW, val);
+        }
+        else if (preference == mThemeStyle) {
+        int val = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QUICK_THEME_STYLE, val);
         }
         return false;
     }
