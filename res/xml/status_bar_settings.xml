@@ -29,7 +29,7 @@
 
         <ListPreference
             android:key="battery_icon_list"
-            android:title="@string/battery_icon"
+            android:title="@string/battery_icon_title"
             android:entries="@array/battery_icon_entries"
             android:entryValues="@array/battery_icon_values" />
 
