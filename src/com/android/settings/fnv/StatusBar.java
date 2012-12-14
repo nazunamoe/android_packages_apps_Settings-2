@@ -73,10 +73,13 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String PREF_BATT_ANIMATE = "battery_bar_animate";
     private static final String PREF_STATUSBAR_BACKGROUND_STYLE = "statusbar_background_style";
     private static final String PREF_STATUSBAR_BACKGROUND_COLOR = "statusbar_background_color";
-    private static final String PREF_DATE_SHORTCLICK = "date_shortclick";
-    private static final String PREF_DATE_LONGCLICK = "date_longclick";
     private static final String PREF_CLOCK_SHORTCLICK = "clock_shortclick";
     private static final String PREF_CLOCK_LONGCLICK = "clock_longclick";
+    private static final String PREF_CLOCK_DOUBLECLICK = "clock_doubleclick";
+
+    private int shortClick = 0;
+    private int longClick = 1;
+    private int doubleClick = 2;
 
     private ColorPickerPreference mStatusbarBgColor;
     private ColorPickerPreference mColorPicker;
@@ -91,16 +94,16 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private ListPreference mClockStyle;
     private ListPreference mClockAmPmstyle;
     private ListPreference mClockWeekday;
-    private ListPreference mDateShortClick;
-    private ListPreference mDateLongClick;
     private ListPreference mClockShortClick;
     private ListPreference mClockLongClick;
+    private ListPreference mClockDoubleClick;
     private ListPreference mDbmStyletyle;
     private ListPreference mWifiStyle;
     private CheckBoxPreference mBatteryBarChargingAnimation;
     private CheckBoxPreference mHideSignal;
 
     private int seekbarProgress;
+
     private ShortcutPickerHelper mPicker;
     private Preference mPreference;
     private String mString;
@@ -200,21 +203,17 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusbarBgStyle = (ListPreference) prefSet.findPreference(PREF_STATUSBAR_BACKGROUND_STYLE);
         mStatusbarBgStyle.setOnPreferenceChangeListener(this);
 
-        mDateShortClick = (ListPreference) prefSet.findPreference(PREF_DATE_SHORTCLICK);
-        mDateShortClick.setOnPreferenceChangeListener(this);
-        mDateShortClick.setSummary(getProperSummary(mDateShortClick));
-
-        mDateLongClick = (ListPreference) prefSet.findPreference(PREF_DATE_LONGCLICK);
-        mDateLongClick.setOnPreferenceChangeListener(this);
-        mDateLongClick.setSummary(getProperSummary(mDateLongClick));
-
-        mClockShortClick = (ListPreference) prefSet.findPreference(PREF_CLOCK_SHORTCLICK);
+        mClockShortClick = (ListPreference) findPreference(PREF_CLOCK_SHORTCLICK);
         mClockShortClick.setOnPreferenceChangeListener(this);
         mClockShortClick.setSummary(getProperSummary(mClockShortClick));
 
-        mClockLongClick = (ListPreference) prefSet.findPreference(PREF_CLOCK_LONGCLICK);
+        mClockLongClick = (ListPreference) findPreference(PREF_CLOCK_LONGCLICK);
         mClockLongClick.setOnPreferenceChangeListener(this);
         mClockLongClick.setSummary(getProperSummary(mClockLongClick));
+
+        mClockDoubleClick = (ListPreference) findPreference(PREF_CLOCK_DOUBLECLICK);
+        mClockDoubleClick.setOnPreferenceChangeListener(this);
+        mClockDoubleClick.setSummary(getProperSummary(mClockDoubleClick));
 
         updateVisibility();
     }
@@ -361,47 +360,36 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_BACKGROUND_COLOR, intHex);
             Log.e("BAKED", intHex + "");
-        } else if (preference == mDateShortClick) {
-            mPreference = preference;
-            mString = Settings.System.NOTIFICATION_DATE_SHORTCLICK;
-            if (newValue.equals("**app**")) {
-             mPicker.pickShortcut();
-            } else {
-            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_DATE_SHORTCLICK, (String) newValue);
-            mDateShortClick.setSummary(getProperSummary(mDateShortClick));
-            }
-        } else if (preference == mDateLongClick) {
-            mPreference = preference;
-            mString = Settings.System.NOTIFICATION_DATE_LONGCLICK;
-            if (newValue.equals("**app**")) {
-             mPicker.pickShortcut();
-            } else {
-            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_DATE_LONGCLICK, (String) newValue);
-            mDateLongClick.setSummary(getProperSummary(mDateLongClick));
-            }
         } else if (preference == mClockShortClick) {
             mPreference = preference;
-            mString = Settings.System.NOTIFICATION_CLOCK_SHORTCLICK;
+            mString = Settings.System.NOTIFICATION_CLOCK[shortClick];
             if (newValue.equals("**app**")) {
-             mPicker.pickShortcut();
+                mPicker.pickShortcut();
             } else {
-            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_CLOCK_SHORTCLICK, (String) newValue);
-            mClockShortClick.setSummary(getProperSummary(mClockShortClick));
+                result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_CLOCK[shortClick], (String) newValue);
+                mClockShortClick.setSummary(getProperSummary(mClockShortClick));
             }
         } else if (preference == mClockLongClick) {
             mPreference = preference;
-            mString = Settings.System.NOTIFICATION_CLOCK_LONGCLICK;
+            mString = Settings.System.NOTIFICATION_CLOCK[longClick];
             if (newValue.equals("**app**")) {
-             mPicker.pickShortcut();
+                mPicker.pickShortcut();
             } else {
-            result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_CLOCK_LONGCLICK, (String) newValue);
-            mClockLongClick.setSummary(getProperSummary(mClockLongClick));
+                result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_CLOCK[longClick], (String) newValue);
+                mClockLongClick.setSummary(getProperSummary(mClockLongClick));
             }
-
+        } else if (preference == mClockDoubleClick) {
+            mPreference = preference;
+            mString = Settings.System.NOTIFICATION_CLOCK[doubleClick];
+            if (newValue.equals("**app**")) {
+                mPicker.pickShortcut();
+            } else {
+                result = Settings.System.putString(getContentResolver(), Settings.System.NOTIFICATION_CLOCK[doubleClick], (String) newValue);
+                mClockDoubleClick.setSummary(getProperSummary(mClockDoubleClick));
+            }
         }
         return result;
     }
-
     public void shortcutPicked(String uri, String friendlyName, Bitmap bmp, boolean isApplication) {
           mPreference.setSummary(friendlyName);
           Settings.System.putString(getContentResolver(), mString, (String) uri);
@@ -418,14 +406,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     }
 
     private String getProperSummary(Preference preference) {
-        if (preference == mDateLongClick) {
-            mString = Settings.System.NOTIFICATION_DATE_LONGCLICK;
+        if (preference == mClockDoubleClick) {
+            mString = Settings.System.NOTIFICATION_CLOCK[doubleClick];
         } else if (preference == mClockLongClick) {
-            mString = Settings.System.NOTIFICATION_CLOCK_LONGCLICK;
-        } else if (preference == mDateShortClick) {
-            mString = Settings.System.NOTIFICATION_DATE_SHORTCLICK;
+            mString = Settings.System.NOTIFICATION_CLOCK[longClick];
         } else if (preference == mClockShortClick) {
-            mString = Settings.System.NOTIFICATION_CLOCK_SHORTCLICK;
+            mString = Settings.System.NOTIFICATION_CLOCK[shortClick];
         }
 
         String uri = Settings.System.getString(getActivity().getContentResolver(),mString);
@@ -439,10 +425,14 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
                 return getResources().getString(R.string.alarm);
             else if (uri.equals("**event**"))
                 return getResources().getString(R.string.event);
-            else if (uri.equals("**assist**"))
+            else if (uri.equals("**voiceassist**"))
                 return getResources().getString(R.string.voiceassist);
+            else if (uri.equals("**clockoptions**"))
+                return getResources().getString(R.string.clock_options);
             else if (uri.equals("**today**"))
                 return getResources().getString(R.string.today);
+            else if (uri.equals("**null**"))
+                return getResources().getString(R.string.nothing);
         } else {
             return mPicker.getFriendlyNameForUri(uri);
         }
