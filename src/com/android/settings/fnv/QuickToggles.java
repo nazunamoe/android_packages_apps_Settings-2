@@ -38,11 +38,12 @@ import com.android.settings.R;
 import com.android.settings.fnv.TouchInterceptor;
 import com.android.settings.Utils;
 import com.android.settings.widgets.SeekBarPreference;
-import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
+
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class QuickToggles extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
@@ -53,6 +54,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
     private static final String PREF_TOGGLES_PER_ROW = "toggles_per_row";
     private static final String PREF_TOGGLE_FAV_CONTACT = "toggle_fav_contact";
     private static final String PREF_QUICK_THEME_STYLE = "quick_theme_style";
+    private static final String PREF_QUICK_TEXT_COLOR = "quick_text_color"; 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
     private final int PICK_CONTACT = 1;
@@ -62,6 +64,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
     ListPreference mTogglesPerRow;
     Preference mFavContact;
     ListPreference mThemeStyle;
+    ColorPickerPreference mTextColor;
     CheckBoxPreference mQuickPulldown;
 
     @Override
@@ -103,6 +106,9 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         mThemeStyle.setOnPreferenceChangeListener(this);
         mThemeStyle.setValue(Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.QUICK_THEME_STYLE, 1) + "");
+
+        mTextColor = (ColorPickerPreference) findPreference(PREF_QUICK_TEXT_COLOR);
+        mTextColor.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -116,6 +122,12 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QUICK_THEME_STYLE, val);
+        } else if (preference == mTextColor) {
+            String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QUICK_TEXT_COLOR, intHex);
         }
         return false;
     }

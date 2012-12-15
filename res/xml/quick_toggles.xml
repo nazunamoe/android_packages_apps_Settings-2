@@ -31,6 +31,11 @@
         android:title="@string/quicksettings_theme_style"
         android:summary="@string/quicksettings_theme_style_summary" />
 
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="quick_text_color"
+        android:title="@string/quick_text_color_title"
+        android:defaultValue="#ffcccccc" />
+
     <CheckBoxPreference
        android:key="quick_pulldown"
        android:title="@string/toggle_quick_pulldown_title"

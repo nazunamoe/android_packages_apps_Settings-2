@@ -4723,6 +4723,7 @@
     <string name="holo_light">Holo light</string>
     <string name="quicksettings_theme_style">Holo</string>
     <string name="quicksettings_theme_style_summary">Choose between holo light or holo dark</string>
+    <string name="quick_text_color_title">Text color</string>
 
     <!-- Navigation Bar -->
     <string name="right">Right</string>
