@@ -1353,4 +1353,14 @@
         <item>**app**</item>
     </string-array>
 
+    <!-- Holo style options for Quick Setting tiles -->
+    <string-array translatable="false" name="quicksettings_theme_style_entries">
+        <item>@string/holo_light</item>
+        <item>@string/holo_dark</item>
+    </string-array>
+    <string-array translatable="false" name="quicksettings_theme_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
 </resources>

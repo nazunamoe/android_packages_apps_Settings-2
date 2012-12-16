@@ -18,11 +18,6 @@
             android:defaultValue="#000000"
             alphaSlider="true" />
 
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-             android:key="clock_color"
-             android:title="@string/clock_color_title"
-             android:defaultValue="@android:color/holo_blue_light" />
-
     <PreferenceCategory
             android:key="battery"
             android:title="@string/status_bar_battery_header">
@@ -70,78 +65,18 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-            android:key="clock"
-            android:title="@string/status_bar_clock_header">
+            android:key="other_cat"
+            android:title="@string/other_cat">
 
-	<ListPreference
-		android:entries="@array/clock_style_entries"
-		android:entryValues="@array/clock_style_values"
-		android:key="clock_style"
-		android:title="@string/clock_title_enable" />
+    <PreferenceScreen
+        android:key="status_bar_clock"
+        android:fragment="com.android.settings.fnv.StatusBarClock"
+        android:title="@string/status_bar_clock_header" />
 
-	<ListPreference
-		android:entries="@array/clock_ampm_entries"
-		android:entryValues="@array/clock_ampm_values"
-		android:key="clock_am_pm_style"
-		android:title="@string/title_clock_ampm_entries" />
-
-	<ListPreference
-		android:key="clock_weekday"
-		android:title="@string/enable_clock_weekday"
-		android:summary="@string/enable_clock_weekday_summary"
-		android:entries="@array/clock_weekday_entries"
-		android:entryValues="@array/clock_weekday_values" />
-
-	<ListPreference
-		android:entries="@array/notification_action_entries"
-		android:entryValues="@array/notification_action_values"
-		android:key="clock_shortclick"
-		android:title="@string/title_clock_shortclick" />
-
-	<ListPreference
-		android:entries="@array/notification_action_entries"
-		android:entryValues="@array/notification_action_values"
-		android:key="clock_longclick"
-		android:title="@string/title_clock_longclick" />
-
-	<ListPreference
-		android:entries="@array/notification_action_entries"
-		android:entryValues="@array/notification_action_values"
-		android:key="clock_doubleclick"
-                android:title="@string/title_clock_doubleclick" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-            android:key="signal"
-            android:title="@string/status_bar_signal_header">
-
-        <ListPreference
-            android:entries="@array/signal_style_entries"
-            android:entryValues="@array/signal_style_values"
-            android:key="signal_style"
-            android:title="@string/signal_style" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="signal_color"
-            android:title="@string/signal_color_title"
-            android:defaultValue="@android:color/holo_blue_light" />
-
-        <ListPreference
-            android:entries="@array/wifi_signal_style_entries"
-            android:entryValues="@array/wifi_signal_style_values"
-            android:key="wifi_signal_style"
-            android:title="@string/wifi_signal_style" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="wifi_signal_color"
-            android:title="@string/wifi_signal_color_title"
-            android:defaultValue="@android:color/holo_blue_light" />
-
-        <CheckBoxPreference
-            android:key="hide_signal"
-            android:title="@string/hide_signal_title"
-            android:summary="@string/hide_signal_summary" />
+    <PreferenceScreen
+        android:key="status_bar_signal"
+        android:fragment="com.android.settings.fnv.StatusBarSignal"
+	android:title="@string/status_bar_signal_header" />
 
     </PreferenceCategory>
 
