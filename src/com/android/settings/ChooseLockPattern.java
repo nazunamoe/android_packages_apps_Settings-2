@@ -103,7 +103,7 @@ public class ChooseLockPattern extends PreferenceActivity {
         private TextView mFooterRightButton;
         protected List<LockPatternView.Cell> mChosenPattern = null;
 
-        private byte PATTERN_SIZE = LockPatternUtils.PATTERN_SIZE_DEFAULT;
+        private byte mPatternSize = LockPatternUtils.PATTERN_SIZE_DEFAULT;
 
         /**
          * The patten used during the help screen to show how to draw a pattern.
@@ -309,7 +309,7 @@ public class ChooseLockPattern extends PreferenceActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
 
-            PATTERN_SIZE = getActivity().getIntent().getByteExtra("pattern_size", LockPatternUtils.PATTERN_SIZE_DEFAULT);
+            mPatternSize = getActivity().getIntent().getByteExtra("pattern_size", LockPatternUtils.PATTERN_SIZE_DEFAULT);
 
             // setupViews()
             View view = inflater.inflate(R.layout.choose_lock_pattern, null);
@@ -318,7 +318,7 @@ public class ChooseLockPattern extends PreferenceActivity {
             mLockPatternView.setOnPatternListener(mChooseNewLockPatternListener);
             mLockPatternView.setTactileFeedbackEnabled(
                     mChooseLockSettingsHelper.utils().isTactileFeedbackEnabled());
-            mLockPatternView.setLockPatternSize(PATTERN_SIZE);
+            mLockPatternView.setLockPatternSize(mPatternSize);
 
             mFooterText = (TextView) view.findViewById(R.id.footerText);
 
@@ -356,7 +356,8 @@ public class ChooseLockPattern extends PreferenceActivity {
                 // restore from previous state
                 final String patternString = savedInstanceState.getString(KEY_PATTERN_CHOICE);
                 if (patternString != null) {
-                    mChosenPattern = LockPatternUtils.stringToPattern(patternString);
+                    LockPatternUtils utils = mChooseLockSettingsHelper.utils();
+                    mChosenPattern = utils.stringToPattern(patternString);
                 }
                 updateStage(Stage.values()[savedInstanceState.getInt(KEY_UI_STAGE)]);
             }
@@ -422,8 +423,9 @@ public class ChooseLockPattern extends PreferenceActivity {
 
             outState.putInt(KEY_UI_STAGE, mUiStage.ordinal());
             if (mChosenPattern != null) {
+                LockPatternUtils utils = mChooseLockSettingsHelper.utils();
                 outState.putString(KEY_PATTERN_CHOICE,
-                        LockPatternUtils.patternToString(mChosenPattern));
+                        utils.patternToString(mChosenPattern));
             }
         }
 
@@ -521,7 +523,7 @@ public class ChooseLockPattern extends PreferenceActivity {
 
             final boolean isFallback = getActivity().getIntent()
                 .getBooleanExtra(LockPatternUtils.LOCKSCREEN_BIOMETRIC_WEAK_FALLBACK, false);
-            utils.setLockPatternSize(PATTERN_SIZE);
+            utils.setLockPatternSize(mPatternSize);
             utils.saveLockPattern(mChosenPattern, isFallback);
             utils.setLockPatternEnabled(true);
 

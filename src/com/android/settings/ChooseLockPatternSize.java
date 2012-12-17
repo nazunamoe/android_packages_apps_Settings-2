@@ -49,15 +49,15 @@ public class ChooseLockPatternSize extends PreferenceActivity {
                 Preference preference) {
             final String key = preference.getKey();
 
-            byte PATTERN_SIZE = 3;
-            if ("lock_pattern_size_3".equals(key)) {
-                PATTERN_SIZE = 3;
-            } else if ("lock_pattern_size_4".equals(key)) {
-                PATTERN_SIZE = 4;
+            byte patternSize;
+            if ("lock_pattern_size_4".equals(key)) {
+                patternSize = 4;
             } else if ("lock_pattern_size_5".equals(key)) {
-                PATTERN_SIZE = 5;
+                patternSize = 5;
             } else if ("lock_pattern_size_6".equals(key)) {
-                PATTERN_SIZE = 6;
+                patternSize = 6;
+            } else {
+                patternSize = 3;
             }
 
             final boolean isFallback = getActivity().getIntent()
@@ -68,7 +68,7 @@ public class ChooseLockPatternSize extends PreferenceActivity {
             intent.setClass(getActivity(), showTutorial
                     ? ChooseLockPatternTutorial.class
                     : ChooseLockPattern.class);
-            intent.putExtra("pattern_size", PATTERN_SIZE);
+            intent.putExtra("pattern_size", patternSize);
             intent.putExtra("key_lock_method", "pattern");
             intent.putExtra("confirm_credentials", false);
             intent.putExtra(LockPatternUtils.LOCKSCREEN_BIOMETRIC_WEAK_FALLBACK,
