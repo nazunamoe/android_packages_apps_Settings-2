@@ -108,13 +108,7 @@ public class ChooseLockPattern extends PreferenceActivity {
         /**
          * The patten used during the help screen to show how to draw a pattern.
          */
-        private final List<LockPatternView.Cell> mAnimatePattern =
-                Collections.unmodifiableList(Lists.newArrayList(
-                        LockPatternView.Cell.of(0, 0),
-                        LockPatternView.Cell.of(0, 1),
-                        LockPatternView.Cell.of(1, 1),
-                        LockPatternView.Cell.of(2, 1)
-                ));
+        private List<LockPatternView.Cell> mAnimatePattern;
 
         @Override
         public void onActivityResult(int requestCode, int resultCode,
@@ -310,6 +304,13 @@ public class ChooseLockPattern extends PreferenceActivity {
                 Bundle savedInstanceState) {
 
             mPatternSize = getActivity().getIntent().getByteExtra("pattern_size", LockPatternUtils.PATTERN_SIZE_DEFAULT);
+            LockPatternView.Cell.updateSize(mPatternSize);
+            mAnimatePattern = Collections.unmodifiableList(Lists.newArrayList(
+                    LockPatternView.Cell.of(0, 0, mPatternSize),
+                    LockPatternView.Cell.of(0, 1, mPatternSize),
+                    LockPatternView.Cell.of(1, 1, mPatternSize),
+                    LockPatternView.Cell.of(2, 1, mPatternSize)
+                    ));
 
             // setupViews()
             View view = inflater.inflate(R.layout.choose_lock_pattern, null);
