@@ -93,6 +93,11 @@
                 android:summary="@string/navigation_bar_glow_tint_summary"
                 android:defaultValue="#FFFFFF" />
 
+        <CheckBoxPreference
+                android:key="navigation_bar_menu_arrow_keys"
+                android:title="@string/navigation_bar_menu_arrow_keys_title"
+                android:summary="@string/navigation_bar_menu_arrow_keys_summary" />
+
         <com.android.settings.widgets.SeekBarPreference
                 android:key="button_transparency"
                 android:title="@string/button_transparency_title" />
