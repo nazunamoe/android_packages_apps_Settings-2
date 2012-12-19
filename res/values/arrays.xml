@@ -782,7 +782,6 @@
         <item>Always allow</item>
     </string-array>
 
-<<<<<<< HEAD
     <!-- Generic toggle overlay. Should be set per device in overlay -->
     <string-array name="available_toggles_entries" translatable="false">
         <item>USER</item>
@@ -862,18 +861,6 @@
     </string-array>
 
     <string-array name="battery_icon_values" translatable="false">
-=======
-    <!-- Volume Overlay options. -->
-    <string-array name="volume_overlay_entries">
-        <item>Single</item>
-        <item>Expandable</item>
-        <item>Expanded</item>
-        <item>None</item>
-    </string-array>
-
-    <!-- Values for Volume Overlay. Do not translate. -->
-    <string-array name="volume_overlay_values" translatable="false">
->>>>>>> 66a7cdb... Performance Settings!!!!!!!!
         <item>0</item>
         <item>1</item>
         <item>2</item>
