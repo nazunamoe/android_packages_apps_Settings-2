@@ -47,11 +47,11 @@ import com.android.settings.Utils;
 public class LockscreenInterface extends SettingsPreferenceFragment {
     private static final String TAG = "LockscreenInterface";
 
-    private static final String PREF_LOCKSCREEN_AUTO_ROTATE = "lockscreen_auto_rotate";
+    // private static final String PREF_LOCKSCREEN_AUTO_ROTATE = "lockscreen_auto_rotate";
     private static final String PREF_LOCKSCREEN_ALL_WIDGETS = "lockscreen_all_widgets";
     private static final String PREF_LOCKSCREEN_UNLIMITED_WIDGETS = "lockscreen_unlimited_widgets";
 
-    CheckBoxPreference mLockscreenAutoRotate;
+    // CheckBoxPreference mLockscreenAutoRotate;
     CheckBoxPreference mLockscreenAllWidgets;
     CheckBoxPreference mLockscreenUnlimitedWidgets;
 
@@ -65,9 +65,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment {
 
         addPreferencesFromResource(R.xml.lockscreen_interface_settings);
 
-        mLockscreenAutoRotate = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_AUTO_ROTATE);
+       /** mLockscreenAutoRotate = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_AUTO_ROTATE);
         mLockscreenAutoRotate.setChecked(Settings.System.getBoolean(mContext
-                .getContentResolver(), Settings.System.LOCKSCREEN_AUTO_ROTATE, false));
+                .getContentResolver(), Settings.System.LOCKSCREEN_AUTO_ROTATE, false)); **/
 
         mLockscreenAllWidgets = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_ALL_WIDGETS);
         mLockscreenAllWidgets.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
@@ -91,12 +91,12 @@ public class LockscreenInterface extends SettingsPreferenceFragment {
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-        if (preference == mLockscreenAutoRotate) {
+       /** if (preference == mLockscreenAutoRotate) {
             Settings.System.putBoolean(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_AUTO_ROTATE,
                     ((CheckBoxPreference) preference).isChecked());
-            return true;
-        } else if (preference == mLockscreenAllWidgets) {
+            return true; **/
+        if (preference == mLockscreenAllWidgets) {
             Settings.System.putBoolean(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_ALL_WIDGETS,
                     ((CheckBoxPreference) preference).isChecked());
