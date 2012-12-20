@@ -17,6 +17,11 @@
             android:summary="@string/status_bar_notif_count_summary"
             android:defaultValue="false" />
 
+        <CheckBoxPreference
+            android:key="statusbar_brightness_slider"
+            android:title="@string/brightness_slider_title"
+            android:summary="@string/brightness_slider_summary" />
+
         <Preference
             android:key="notification_wallpaper"
             android:title="@string/notification_wallpaper_title"

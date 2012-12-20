@@ -62,6 +62,7 @@ public class GeneralUI extends SettingsPreferenceFragment {
 
     private static final String PREF_CUSTOM_CARRIER_LABEL = "custom_carrier_label";
     private static final String PREF_STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
+    private static final String PREF_STATUSBAR_BRIGHTNESS = "statusbar_brightness_slider";
     private static final String PREF_SHOW_OVERFLOW = "show_overflow";
     private static final String PREF_NOTIFICATION_WALLPAPER = "notification_wallpaper";
     private static final String PREF_NOTIFICATION_WALLPAPER_ALPHA = "notification_wallpaper_alpha";
@@ -74,9 +75,10 @@ public class GeneralUI extends SettingsPreferenceFragment {
 
     private static final String WALLPAPER_NAME = "notification_wallpaper.jpg";
 
-    private Preference mCustomLabel;
-    private CheckBoxPreference mStatusBarNotifCount;
-    private CheckBoxPreference mShowActionOverflow;
+    Preference mCustomLabel;
+    CheckBoxPreference mStatusBarNotifCount;
+    CheckBoxPreference mStatusbarSliderPreference;
+    CheckBoxPreference mShowActionOverflow;
     Preference mNotificationWallpaper;
     Preference mWallpaperAlpha;
     // ListPreference mUserModeUI;
@@ -104,6 +106,10 @@ public class GeneralUI extends SettingsPreferenceFragment {
         mStatusBarNotifCount = (CheckBoxPreference) prefSet.findPreference(PREF_STATUS_BAR_NOTIF_COUNT);
         mStatusBarNotifCount.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(), 
                 Settings.System.STATUS_BAR_NOTIF_COUNT, false));
+
+        mStatusbarSliderPreference = (CheckBoxPreference) findPreference(PREF_STATUSBAR_BRIGHTNESS);
+        mStatusbarSliderPreference.setChecked(Settings.System.getBoolean(mContext.getContentResolver(),
+                Settings.System.STATUSBAR_BRIGHTNESS_SLIDER, true));
 
         mNotificationWallpaper = findPreference(PREF_NOTIFICATION_WALLPAPER);
 
@@ -160,6 +166,11 @@ public class GeneralUI extends SettingsPreferenceFragment {
             });
 
             alert.show();
+        } else if (preference == mStatusbarSliderPreference) {
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.STATUSBAR_BRIGHTNESS_SLIDER,
+                    isCheckBoxPrefernceChecked(preference));
+            return true;
         } else if (preference == mShowActionOverflow) {
             boolean enabled = mShowActionOverflow.isChecked();
             Settings.System.putInt(getContentResolver(), Settings.System.UI_FORCE_OVERFLOW_BUTTON,
