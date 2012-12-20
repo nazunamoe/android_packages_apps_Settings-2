@@ -107,7 +107,7 @@ public class GeneralUI extends SettingsPreferenceFragment {
         mStatusBarNotifCount.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(), 
                 Settings.System.STATUS_BAR_NOTIF_COUNT, false));
 
-        mStatusbarSliderPreference = (CheckBoxPreference) findPreference(PREF_STATUSBAR_BRIGHTNESS);
+        mStatusbarSliderPreference = (CheckBoxPreference) prefSet.findPreference(PREF_STATUSBAR_BRIGHTNESS);
         mStatusbarSliderPreference.setChecked(Settings.System.getBoolean(mContext.getContentResolver(),
                 Settings.System.STATUSBAR_BRIGHTNESS_SLIDER, true));
 
@@ -167,9 +167,9 @@ public class GeneralUI extends SettingsPreferenceFragment {
 
             alert.show();
         } else if (preference == mStatusbarSliderPreference) {
+            boolean checked = ((CheckBoxPreference) preference).isChecked();
             Settings.System.putBoolean(getActivity().getContentResolver(),
-                    Settings.System.STATUSBAR_BRIGHTNESS_SLIDER,
-                    isCheckBoxPrefernceChecked(preference));
+                    Settings.System.STATUSBAR_BRIGHTNESS_SLIDER, checked ? true : false);
             return true;
         } else if (preference == mShowActionOverflow) {
             boolean enabled = mShowActionOverflow.isChecked();

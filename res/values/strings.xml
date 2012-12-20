@@ -4906,7 +4906,7 @@
     <string name="phone_mode_ui">Phone - NavBar to side in landscape</string>
     <string name="tablet_mode_ui">Tablet - Combined NavBar and SystemBar</string>
     <string name="phablet_mode_ui">Phablet - NavBar stays at bottom in landscape</string>
-    <string name="brightness_slider_title">Statusbar brightness slider</string>	172
+    <string name="brightness_slider_title">Statusbar brightness slider</string>
     <string name="brightness_slider_summary">Allows you to slide your finger along the top of the statusbar to change the brightness. Does nothing when autobrightness is enabled.</string>
 
     <!-- Display settings screen, notification light settings -->
