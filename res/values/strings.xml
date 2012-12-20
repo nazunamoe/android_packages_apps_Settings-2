@@ -4730,7 +4730,10 @@
     <string name="toggle_favcontact_title">Favorite contact</string>
     <string name="toggle_favcontact_summary">Choose your favorite contact</string>
     <string name="toggle_quick_pulldown_title">Quick pulldown</string>
-    <string name="toggle_quick_pulldown_summary">Show Quick Settings when pulling down notification bar near the right side of the screen</string>
+    <string name="toggle_quick_pulldown_summary">edge of the status bar pulls down Quick Settings</string>
+    <string name="quick_pulldown_off">Off</string>
+    <string name="quick_pulldown_left">Left</string>
+    <string name="quick_pulldown_right">Right</string>
 
     <!-- holo theme style for Quick Setting tiles -->
     <string name="holo_dark">Holo dark</string>
@@ -5092,4 +5095,7 @@
     <string name="saved">mV saved</string>
     <string name="sob">Set on boot</string>
 
+    <!-- Wireless display -->
+    <string name="pref_wifi_disable_hdcp_title">Skip HDCP negotiation</string>
+    <string name="pref_wifi_disable_hdcp_summary">Try this option if you can connect but don\'t get any output</string>
 </resources>

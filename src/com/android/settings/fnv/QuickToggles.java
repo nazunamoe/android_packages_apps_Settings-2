@@ -65,7 +65,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
     Preference mFavContact;
     ListPreference mThemeStyle;
     ColorPickerPreference mTextColor;
-    CheckBoxPreference mQuickPulldown;
+    ListPreference mQuickPulldown;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -85,11 +85,14 @@ public class QuickToggles extends SettingsPreferenceFragment implements
 
         mLayout = findPreference("toggles");
 
-        // Add the Quick Pulldown preference and disable for tablets
-        mQuickPulldown = (CheckBoxPreference) prefSet.findPreference(QUICK_PULLDOWN);
-        mQuickPulldown.setChecked(Settings.System.getInt(resolver, Settings.System.QS_QUICK_PULLDOWN, 0) == 1);
-        if (Utils.isTablet(getActivity())) {
-            mQuickPulldown.setEnabled(false);
+        mQuickPulldown = (ListPreference) prefSet.findPreference(QUICK_PULLDOWN);
+        if (!Utils.isPhone(getActivity())) {
+            prefSet.removePreference(mQuickPulldown);
+        } else {
+            mQuickPulldown.setOnPreferenceChangeListener(this);
+            int statusQuickPulldown = Settings.System.getInt(resolver, Settings.System.QS_QUICK_PULLDOWN, 0);
+            mQuickPulldown.setValue(String.valueOf(statusQuickPulldown));
+            updatePulldownSummary();
         }
 
         mFavContact = findPreference(PREF_TOGGLE_FAV_CONTACT);
@@ -128,6 +131,12 @@ public class QuickToggles extends SettingsPreferenceFragment implements
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QUICK_TEXT_COLOR, intHex);
+        } else if (preference == mQuickPulldown) {
+            int statusQuickPulldown = Integer.valueOf((String) newValue);
+            Settings.System.putInt(resolver, Settings.System.QS_QUICK_PULLDOWN,
+                    statusQuickPulldown);
+            updatePulldownSummary();
+            return true;
         }
         return false;
     }
@@ -193,10 +202,6 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         } else if (preference == mFavContact) {
             Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
             startActivityForResult(intent, PICK_CONTACT);
-        } else if (preference == mQuickPulldown) {
-            Settings.System.putInt(resolver, Settings.System.QS_QUICK_PULLDOWN,
-                    mQuickPulldown.isChecked() ? 1 : 0);
-            return true;
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
 
@@ -225,6 +230,30 @@ public class QuickToggles extends SettingsPreferenceFragment implements
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void updatePulldownSummary() {
+        ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
+        int summaryId;
+        int directionId;
+        summaryId = R.string.summary_quick_pulldown;
+        String value = Settings.System.getString(resolver, Settings.System.QS_QUICK_PULLDOWN);
+        String[] pulldownArray = getResources().getStringArray(R.array.quick_pulldown_values);
+        if (pulldownArray[0].equals(value)) {
+            directionId = R.string.quick_pulldown_off;
+            mQuickPulldown.setValueIndex(0);
+            mQuickPulldown.setSummary(getResources().getString(directionId));
+        } else if (pulldownArray[1].equals(value)) {
+            directionId = R.string.quick_pulldown_right;
+            mQuickPulldown.setValueIndex(1);
+            mQuickPulldown.setSummary(getResources().getString(directionId)
+                    + " " + getResources().getString(summaryId));
+        } else {
+            directionId = R.string.quick_pulldown_left;
+            mQuickPulldown.setValueIndex(2);
+            mQuickPulldown.setSummary(getResources().getString(directionId)
+                    + " " + getResources().getString(summaryId));
+        }
     }
 
     public void addToggle(Context context, String key) {
