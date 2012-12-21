@@ -4471,8 +4471,8 @@
     <!-- Customisation -->
     <string name="other_cat">Other Settings</string>
     <string name="xylon_extras">XY Settings</string>
-    <string name="title_status_bar">Status Bar</string>
-    <string name="title_navigation_bar">Navigation Bar</string>
+    <string name="navigation_bar_stub">Navigation Bar</string>
+    <string name="status_bar_stub">Status Bar</string>
     <string name="lockscreen_stub">Lock Screen</string>
     <string name="general_ui_stub">General UI</string>
     <string name="power_menu_stub">Power Menu</string>
