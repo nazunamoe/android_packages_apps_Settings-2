@@ -65,9 +65,9 @@
 
     <header
         android:id="@+id/extras"
-        android:icon="@drawable/ic_settings_fnv_extras"
+        android:icon="@drawable/ic_settings_ui"
         android:fragment="com.android.settings.fnv.Extras"
-        android:title="@string/status_bar_extras" />
+        android:title="@string/xylon_extras" />
 
     <!-- Lock screen -->
     <header

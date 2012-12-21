@@ -39,7 +39,7 @@
     <ListPreference
        android:key="quick_pulldown"
        android:title="@string/toggle_quick_pulldown_title"
-       android:entries="@array/toggle_quick_pulldown_summary"
+       android:entries="@array/quick_pulldown_entries"
        android:entryValues="@array/quick_pulldown_values"
        android:persistent="false" />
 

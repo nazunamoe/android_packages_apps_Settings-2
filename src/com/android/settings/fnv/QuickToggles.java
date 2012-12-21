@@ -116,6 +116,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
         if (preference == mTogglesPerRow) {
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -236,7 +237,7 @@ public class QuickToggles extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getApplicationContext().getContentResolver();
         int summaryId;
         int directionId;
-        summaryId = R.string.summary_quick_pulldown;
+        summaryId = R.string.toggle_quick_pulldown_summary;
         String value = Settings.System.getString(resolver, Settings.System.QS_QUICK_PULLDOWN);
         String[] pulldownArray = getResources().getStringArray(R.array.quick_pulldown_values);
         if (pulldownArray[0].equals(value)) {
