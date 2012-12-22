@@ -62,7 +62,7 @@
 
                 <com.android.settings.widgets.DeveloperPreference
 			android:title="Benjamin Goodwin"
-			xy:nameDev="Benjamin Goodiwn"
+			xy:nameDev="Benjamin Goodwin"
 			xy:twitterHandle="benjustjammin" />
 
 	</PreferenceCategory>
