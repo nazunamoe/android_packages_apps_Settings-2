@@ -121,11 +121,13 @@ public class QuickToggles extends SettingsPreferenceFragment implements
             int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QUICK_TOGGLES_PER_ROW, val);
+            return true;
         }
         else if (preference == mThemeStyle) {
         int val = Integer.parseInt((String) newValue);
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.QUICK_THEME_STYLE, val);
+            return true;
         } else if (preference == mTextColor) {
             String hex = ColorPickerPreference.convertToARGB(Integer.valueOf(String.valueOf(newValue)));
             preference.setSummary(hex);
