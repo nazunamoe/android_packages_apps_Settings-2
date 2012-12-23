@@ -1438,30 +1438,11 @@
         />
 
         <!-- For FNV Stub -->
-
-        <activity android:name=".fnv.Extras"
-            android:label="Customization" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-               <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <activity android:name=".fnv.About" />
 
-        <activity android:name=".fnv.StatusBar" />
-
-        <activity android:name=".fnv.PowerMenu" />
-
-        <activity android:name=".fnv.GeneralUI" />
-
-        <activity android:name=".fnv.NavigationBar" />
-
-        <activity android:name=".fnv.QuickToggles" />
+        <activity android:name=".fnv.LockscreenInterface" />
 
         <activity android:name=".fnv.LockscreenTargets" />
-
-        <activity android:name=".fnv.LockscreenInterface" />
 
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->

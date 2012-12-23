@@ -63,11 +63,14 @@
     <header android:id="@+id/xylon_section"
         android:title="@string/header_category_xylon" />
 
-    <header
-        android:id="@+id/extras"
-        android:icon="@drawable/ic_settings_ui"
-        android:fragment="com.android.settings.fnv.Extras"
-        android:title="@string/xylon_extras" />
+    <header android:id="@+id/xy_settings"
+            android:title="@string/xylon_extras"
+            android:icon="@drawable/ic_settings_ui" >
+        <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.xylon.settings.XYSettingsActivity"
+                android:targetPackage="com.xylon.settings" />
+    </header>
 
     <!-- Lock screen -->
     <header
