@@ -108,11 +108,7 @@
         <item>1800000</item>
     </string-array>
 
-<<<<<<< HEAD
-    <!-- Security settings.  The delay after screen is turned off until device locks. 
-=======
     <!-- Security settings.  The delay after screen is turned off until device locks.
->>>>>>> 3083912... Settings: Add setting in security for sms message rate alerts from CM10
          These are shown in a list dialog. -->
     <string-array name="lock_after_timeout_entries">
         <item>Immediately</item>
