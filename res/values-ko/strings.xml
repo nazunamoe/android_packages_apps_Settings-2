@@ -1834,4 +1834,362 @@
     <string name="user_picture_title" msgid="7297782792000291692">"사진 ID"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"셀 브로드캐스트"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"표시할 긴급 알림 유형을 선택합니다."</string>
+
+
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
+    <!-- **XYLON KOREAN translated MODOFICATIONS STARTS** -->
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">색상 선택기</string>
+    <string name="press_color_to_apply">색상을 눌러 적용 하세요</string>   
+    <string name="set">설정</string>
+    <string name="ics_color">파란색</string>
+
+    <!-- About -->
+    <string name="title_about">Xylon에 대하여</string>
+    <string name="team">Da 팀</string>
+    <string name="contributors">도움 주신 분들</string>
+    <string name="xylon">Xylon AOSP</string>
+    <string name="xylon_website_title">XY 홈페이지</string>
+    <string name="xylon_website_summary">모든 최신 소식과 최신 베타를 보세요.</string>
+    <string name="xylon_source_title">XY 소스</string>
+    <string name="xylon_source_summary">완전한 오픈 소스 입니다. github.com/XYAOSP 에서 작업내용을 볼 수 있습니다</string>
+
+    <!-- Customisation -->
+    <string name="other_cat">다른 설정</string>
+    <string name="xylon_extras">XY 설정</string>
+    <string name="lockscreen_stub">잠금화면</string>
+
+    <!--- Volume key cursor control -->
+    <string name="volume_key_cursor_control_title">볼륨키 커서 컨트롤</string>
+    <string name="volume_key_cursor_control_off">꺼짐</string>
+    <string name="volume_key_cursor_control_on">불륨 위/아래키로 커서 왼쪽/오른쪽 움직이기</string>
+    <string name="volume_key_cursor_control_on_reverse">불륨 위/아래키로 커서 오른쪽/왼쪽 움직이기</string>
+
+    <!-- Lock Screen -->
+    <string name="lockscreen_auto_rotate_title">잠금화면 회전 허용</string>
+    <string name="lockscreen_auto_rotate_summary">기기 회전으로 잠금화면 까지 회전을 하게 합니다. 화면 자동회전 과는 무관 합니다</string>
+    <string name="lockscreen_all_widgets_title">모든 위젯 허용</string>
+    <string name="lockscreen_all_widgets_summary">**경고** 몇몇 위젯은 잠금화면에서 사용하기 위한 위젯이 아닙니다, 이걸 사용하는가 안하는가는 여러분의 몫 입니다. 책임감 있게 사용하세요.</string>
+    <string name="lockscreen_unlimited_widgets_title">위젯 제한 없애기</string>
+    <string name="lockscreen_unlimited_widgets_summary">**경고** 너무 많은 위젯 추가는 시스템 저하를 일으킵니다.</string>
+
+    <!-- Lock Screen Shortcuts -->
+    <string name="lockscreen_target_info">바로가기를 추가하려면 슬라이더를 빈곳으로 이동해 추가하세요.</string>
+    <string name="lockscreen_target_title">슬라이더 바로가기</string>
+    <string name="lockscreen_target_summary">사용자 잠금화면 바로가기를 보거나 수정합니다.</string>
+    <string name="lockscreen_target_reset">잠금화면 바로가기 초기화 하기</string>
+    <string name="lockscreen_target_save">잠금화면 바로가기 저장됨</string>
+    <string name="lockscreen_target_reset_title">초기화 하기</string>
+    <string name="lockscreen_target_reset_message">커스텀 잠금화면 바로가기를 초기화 하시겠습니까?</string>
+    <string name="lockscreen_target_empty">없음</string>
+    <string name="lockscreen_target_edit_title">아이콘과 바로가기 수정하기</string>
+    <string name="lockscreen_target_edit_msg">선택된 앱의 아이콘과 바로가기를 수정 할 수 있습니다.</string>
+
+    <!-- Lock screen vibrate settings -->
+    <string name="lockscreen_vibrate_enabled_title">진동</string>
+    <string name="lockscreen_vibrate_enabled_head">잠금해제 중 진동</string>
+
+    <!-- Lock screen general strings -->
+    <string name="custom_app_icon_successfully">"의 아이콘 설정 완료!"</string>
+    <string name="use_custom_app_title">사용자 어플 사용하기</string>
+    <string name="use_custom_app_summary">최근 앱 목록 대신 사용자 앱을 사용합니다</string>
+    <string name="group_applications">애플리케이션</string>
+
+    <!-- Screen security - Screen security   -->
+    <string name="screen_security_category">화면 보안</string>
+    <string name="screen_security_title">잠금화면</string>
+    <string name="screen_security_summary">잠금화면의 보안을 보거나 수정하고, 몇가지를 더 설정 합니다</string>
+    <string name="additional_options_title">부가 옵션</string>
+    <string name="unlock_menu_unlock_title">메뉴 언락</string>
+    <string name="unlock_menu_unlock_summary">메뉴 버튼으로 기기를 잠금해제 시킵니다</string>
+    <string name="unlock_home_unlock_title">홈 언락</string>
+    <string name="unlock_home_unlock_summary">홈 버튼으로 기기를 잠금해제 시킵니다</string>
+    <string name="unlock_quick_unlock_control_title">빠른 언락</string>
+    <string name="unlock_quick_unlock_control_summary">PIN/PASSWORD 가 알맞으면 바로 잠금해제 합니다</string>
+
+    <!-- Slide lock delay -->
+    <string name="delay_and_timeout_title">잠금 딜레이</string>
+    <string name="slide_lock_delay_title">화면 잠금 딜레이</string>
+    <string name="slide_lock_timeout_delay_title">화면 꺼진 후 딜레이</string>
+    <string name="slide_lock_screenoff_delay_title">화면 끈 후 딜레이</string>
+    <string name="slide_lock_delay_none">없음</string>
+    <string name="slide_lock_delay_1s">1 초</string>
+    <string name="slide_lock_delay_5s">5 초</string>
+    <string name="slide_lock_delay_10s">10 초</string>
+    <string name="slide_lock_delay_15s">15 초</string>
+    <string name="slide_lock_delay_30s">30 초</string>
+    <string name="slide_lock_delay_1m">1 분</string>
+    <string name="slide_lock_delay_5m">5 분</string>
+    <string name="slide_lock_delay_10m">10 분</string>
+    <string name="slide_lock_delay_30m">30 분</string>
+
+    <!-- Lock screen shortcuts -->
+    <string name="picker_activities">행동</string>
+    <string name="select_custom_app_title">사용자 앱 선택 하기</string>
+    <string name="select_custom_activity_title">사용자 행동 사용 하기</string>
+    <string name="icon_picker_choose_icon_title">아이콘 선택</string>
+    <string name="icon_picker_alarm">알람</string>
+    <string name="icon_picker_browser">인터넷</string>
+    <string name="icon_picker_calendar">달력</string>
+    <string name="icon_picker_camera">카메라</string>
+    <string name="icon_picker_chrome">크롬</string>
+    <string name="icon_picker_facebook">페이스북</string>
+    <string name="icon_picker_gallery">갤러리</string>
+    <string name="icon_picker_maps">지도</string>
+    <string name="icon_picker_movie">영상</string>
+    <string name="icon_picker_music">음악</string>
+    <string name="icon_picker_nav_normal">네비게이션</string>
+    <string name="icon_picker_phone">전화</string>
+    <string name="icon_picker_podcast">팟캐스트</string>
+    <string name="icon_picker_rss">Rss</string>
+    <string name="icon_picker_search">검색</string>
+    <string name="icon_picker_sms">메시지</string>
+    <string name="icon_picker_twitter">트위터</string>
+
+    <!-- String for IconPicker -->
+    <string name="icon_picker_title">아이콘 소스 고르기</string>
+    <string name="icon_picker_system_icons_title">시스템 아이콘</string>
+    <string name="icon_picker_gallery_title">갤러리</string>
+    <string name="icon_picker_pack_title">아이콘 팩</string>
+    <string name="profile_applist_title">애플리케이션</string>
+
+    <!-- Display : Rotation  -->
+    <string name="display_rotation_title">회전</string>
+    <string name="display_rotation_enabled">켜짐</string>
+    <string name="display_rotation_disabled">꺼짐</string>
+    <string name="display_rotation_unit">도</string>
+    <string name="display_lockscreen_rotation_title">잠금화면 회전 사용</string>
+    <string name="display_rotation_category_title">회전 모드</string>
+    <string name="display_rotation_0_title">0 도</string>
+    <string name="display_rotation_90_title">90 도</string>
+    <string name="display_rotation_180_title">180 도</string>
+    <string name="display_rotation_270_title">270 도</string>
+
+    <!-- Sound settings -->
+    <string name="increasing_ring_title">벨소리 상승</string>
+    <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
+    <string name="checkbox_increasing_ring">켜기</string>
+    <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
+    <string name="increasing_ring_min_volume_title">시작 볼륨</string>
+    <string name="increasing_ring_volume_notice">알림:\n시작 볼륨은 벨소리 볼륨보다 더 높이 설정되어 있어야, 벨소리가 벨소리 볼륨을 사용하여 재생됩니다.</string>
+    <string name="increasing_ring_interval_title">증가 주기</string>
+    <string name="increasing_ring_interval_eachring">전화 시 마다</string>
+    <string name="increasing_ring_interval_half_second">0.5 초</string>
+    <string name="increasing_ring_interval_1second">1 초</string>
+    <string name="increasing_ring_interval_2seconds">2 초</string>
+    <string name="increasing_ring_interval_3seconds">3 초</string>
+    <string name="increasing_ring_interval_5seconds">5 초</string>
+    <string name="increasing_ring_interval_10seconds">10 초</string>
+    <string name="volume_overlay_title">볼륨 패널 스타일</string>
+    <string name="silent_mode_title">무음 모드</string>
+    <string name="volume_ring_only_description">벨소리</string>
+    <string name="link_volume_ringtones">벨소리 연결 &amp; 알림 볼륨</string>
+    <string name="link_volume_mutes">알림에 무음 적용</string>
+    <string name="volbtn_music_controls_title">볼륨 락커 음악 컨트롤</string>
+    <string name="volbtn_music_controls_summary">화면이 꺼져있을 때, 볼륨키를 길게눌러 음악을 컨트롤 합니다</string>
+
+    <!-- Safe headset volume restore checkbox -->
+    <string name="safe_headset_restore_title">안전 헤드셋 볼륨 복원</string>
+    <string name="safe_headset_restore_summary">헤드셋이 꼽혔을 때 큰소리를 방지 해 줍니다</string>
+
+    <!-- Wakeup Options -->
+    <string name="display_category_wakeup_options_title">깨어나기 옵션</string>
+    <string name="pref_volume_wake_title">볼륨 키로 깨어나기</string>
+    <string name="pref_volume_wake_summary">볼륨 상/하 키로 기기를 깨웁니다</string>
+
+    <!-- Display settings screen, notification light settings -->
+    <string name="notification_light_general_title">일반</string>
+    <string name="notification_light_applist_title">애플리케이션</string>
+    <string name="notification_light_phonelist_title">전화</string>
+    <string name="notification_light_use_custom">사용자 값 사용하기</string>
+    <string name="notification_light_enabled">켜짐</string>
+    <string name="notification_light_disabled">꺼짐</string>
+    <string name="notification_light_default_value">기본값</string>
+    <string name="notification_light_missed_call_title">부재중 전화</string>
+    <string name="notification_light_voicemail_title">보이스 메일</string>
+
+    <!-- Notification light dialogs -->
+    <string name="edit_light_settings">알름등 설정 수정 하기</string>
+    <string name="pulse_speed_title">알림 속도와 길이</string>
+    <string name="picker_arrow">→</string>
+    <string name="default_time">일반</string>
+    <string name="custom_time">사용자</string>
+    <string name="dialog_test">테스트</string>
+    <string name="dialog_delete_title">지우기</string>
+    <string name="dialog_delete_message">지우시겠습니까?</string>
+    <string name="dialog_test_message">테스트를 하려면 화면을 끄세요, 또는 이 창을 닫아주세요</string>
+    <string name="dialog_test_button">취소</string>
+
+    <!-- Values for the notification light pulse spinners -->
+    <string name="pulse_length_always_on">항상 켜기</string>
+    <string name="pulse_length_very_short">매우 짧게</string>
+    <string name="pulse_length_short">짧게</string>
+    <string name="pulse_length_normal">보통</string>
+    <string name="pulse_length_long">길게</string>
+    <string name="pulse_length_very_long">매우 길게</string>
+    <string name="pulse_speed_very_fast">매우 빠르게</string>
+    <string name="pulse_speed_fast">빠르게</string>
+    <string name="pulse_speed_normal">보통</string>
+    <string name="pulse_speed_slow">느리게</string>
+    <string name="pulse_speed_very_slow">매우 느리게</string>
+
+    <!-- Battery light settings  -->
+    <string name="battery_light_title">배터리 빛</string>
+    <string name="battery_low_pulse_title">배터리가 낮을 시 알림 합니다</string>
+    <string name="battery_light_list_title">색상</string>
+    <string name="battery_light_low_color_title">배터리 낮음</string>
+    <string name="battery_light_medium_color_title">충전 중</string>
+    <string name="battery_light_full_color_title">완충</string>
+
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">초기화</string>
+    <string name="profile_reset_message">모든 유저 프로필과 유저 앱 그룹을 초기화 하시겠습니까</string>
+    <string name="profiles_add">추가</string>
+
+    <!-- Add application dialog box title -->
+    <string name="profile_choose_app">애플리케이션 선택</string>
+
+    <!-- Quiet hours -->
+    <string name="quiet_hours_title">무음 시간</string>
+    <string name="quiet_hours_summary">기기가 조용해질 시간을 설정 합니다</string>
+    <string name="quiet_hours_note_title">노트</string>
+    <string name="quiet_hours_note_summary">수신 전화 음은 무음시간의 영향을 받지 않습니다</string>
+    <string name="quiet_hours_enabled">무음 시간 켜기</string>
+    <string name="quiet_hours_enabled_on">무음 시간 켜짐</string>
+    <string name="quiet_hours_enabled_off">무음 시간 꺼짐</string>
+    <string name="quiet_hours_start">무음 시간 시작</string>
+    <string name="quiet_hours_start_summary">무음 시간을 시작 합니다</string>
+    <string name="quiet_hours_end">무음 시간 끝</string>
+    <string name="quiet_hours_end_summary">무음 시간을 종료 합니다</string>
+    <string name="quiet_hours_mute">음소거 알림</string>
+    <string name="quiet_hours_mute_on">무음</string>
+    <string name="quiet_hours_mute_off">무음 꺼짐</string>
+    <string name="quiet_hours_still">진동 끄기</string>
+    <string name="quiet_hours_still_on">기기가 울리지 않습니다</string>
+    <string name="quiet_hours_still_off">정상적으로 울립니다</string>
+    <string name="quiet_hours_dim">알림 빛 끄기</string>
+    <string name="quiet_hours_dim_on">알림빛이 꺼져있습니다</string>
+    <string name="quiet_hours_dim_off">알림빛이 켜져있습니다</string>
+    <string name="quiet_hours_haptic">햅틱 피드백 끄기</string>
+    <string name="quiet_hours_haptic_on">햅틱 피드백이 꺼져있습니다</string>
+    <string name="quiet_hours_haptic_off">햅틱 피드백이 켜져있습니다</string>
+    <string name="quiet_hours_active_from">부터</string>
+    <string name="quiet_hours_active_to">까지</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">시작</string>
+    <string name="end_time_title">끝</string>
+
+    <!-- DPI Changer -->
+    <string name="dpi">DPI</string>
+    <string name="open_market_title">4. 마켓을 실행하고 허용을 누르세요</string>
+    <string name="open_market_summary">누르고 다시 돌아 오세요.</string>
+    <string name="open_market_summary_could_not_open">마켓을 실행 할 수 없습니다! 알아서 실행 하세요.</string>
+    <string name="custom_density_title">5. 원하는 밀도로 변경 하세요!</string>
+    <string name="custom_density_summary">마켓에 호환성 문제가 있다면, 여기로 다시 돌아와서 과정을 반복해야합니다.</string>
+    <string name="custom_density_summary_invalid">알수없는 밀도!</string>
+    <string name="custom_density">커스텀</string>
+    <string name="set_custom_density_title">커스텀 밀도 설정</string>
+    <string name="set_custom_density_set">설정</string>
+    <string name="custom_density_dialog_title">경고!</string>
+    <string name="custom_density_dialog_summary">원하는 LCD로 변경하면 예상치 못한 오류가 일어날 수 있습니다. 마켓 호환성 문제가 발생하는 경우 스텝1 부터 다시 하세요.</string>
+    <string name="custom_density_dialog_button_got">OK!</string>
+    <string name="custom_density_dialog_button_reboot">재부팅 하기</string>
+
+    <!-- Setting checkbox summary for displaying USB debugging notification -->
+    <string name="adb_notify">USB 디버깅 알림</string>
+    <string name="adb_notify_summary">USB 디버깅이 연결됬을 시 알림이 뜹니다</string>
+
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">IME 선택기 알림</string>
+    <string name="ime_switcher_notify_summary">알림창에 IME 선택기가 나타납니다</string>
+
+    <!-- Launches Dev Tools -->
+    <string name="development_tools_title">툴 실행 하기</string>
+
+    <!-- Android debugging over WiFi -->
+    <string name="adb_over_network">네트워크로 ADB 사용하기</string>
+    <string name="adb_over_network_summary">재부팅 후 적용 됩니다</string>
+    <string name="adb_over_network_warning">"경고: ADB OVER NETWORK 가 적용 됬을 시, 3G,4G 데이터를 사용할 수 있습니다.\n이 기능은 네트워크 연결한 후 적용 하세요.\n정말 사용 하시겠습니까??"</string>
+
+    <!-- Performance settings  -->
+    <string name="performance_settings_title">성능</string>
+
+    <!-- Performance Settings : Processor settings title -->
+    <string name="processor_title">프로세서</string>
+    <!-- Performance Settings : Processor settings summary. -->
+    <string name="processor_summary">CPU 가버너와 클럭 속도를 조절 하세요</string>
+
+    <!-- Performance Settings : Processor settings sub items -->
+    <string name="cpu_cur_freq_title">현재 CPU 클럭</string>
+    <string name="cpu_governors_title">CPU 가버너</string>
+    <string name="cpu_governors_summary">%S</string>
+    <string name="cpu_min_freq_title">최소 CPU 클럭</string>
+    <string name="cpu_min_freq_summary">%s</string>
+    <string name="cpu_max_freq_title">최돼 CPU 클럭</string>
+    <string name="cpu_max_freq_summary">%s</string>
+    <string name="cpu_set_on_boot">시작 시 적용</string>
+    <string name="cpu_set_on_boot_summary">프로세서 설정을 부팅 시 마다 적용 합니다</string>
+
+    <!-- Memory Management -->
+    <string name="memory_management_title">메모리 관리</string>
+    <string name="memory_management_summary">시스템 성능에 변경할 메모리의 사용을 사용자 정의합니다.</string>
+    <!-- zRam -->
+    <string name="pref_zram_title">zRam</string>
+    <string name="pref_zram_summary">메모리를 압축하여 메모리 사용을 늘릴 수 있습니다 (다시 시작 필요)</string>
+    <!-- KSM -->
+    <string name="pref_ksm_title">Kernel Samepage Merging(KSM)</string>
+    <string name="pref_ksm_summary">KSM은 물리 메모리 필요량을 줄이고 성능을 향상시킵니다</string>
+    <!-- Purgeable Assets -->
+    <string name="pref_purgeable_assets_title">자산 정화 허용</string>
+    <string name="pref_purgeable_assets_summary">bit 메모리를 청소함으로써 램을 확보 합니다 (재부팅 필요)</string>
+
+    <!-- Performance Settings : I/O scheduler settings summary. -->
+    <string name="io_scheds_summary">I/O 스케줄을 번경하세요</string>
+
+    <!-- Performance Settings : I/O scheduler settings sub items -->
+    <string name="io_sched_title">I/O 스케쥴</string>
+    <string name="io_sched_summary">%S</string>
+    <string name="io_sched_set_on_boot">부팅 시 적용</string>
+    <string name="io_sched_set_on_boot_summary">I/O 설정을 부팅 시 마다 적용 합니다</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">화면 개선</string>
+    <string name="dithering_no_dither">디더링 해제</string>
+    <string name="dithering_color_banding">색상 구간 수정 (기본값)</string>
+    <string name="dithering_blur_effect">색상 구간 및 흐림 효과 개선</string>
+
+    <!-- Performance Settings : 16bpp Alpha -->
+    <string name="pref_use_16bpp_alpha_title">16bit 투명도</string>
+    <string name="pref_use_16bpp_alpha_summary">그래픽 성능이 좋아지지만, 화면의 질이 낮아질 수 있습니다 (재부팅 필요)</string>
+
+    <!-- Performance | Voltage Control -->
+    <string name="cpu_voltage">전압 컨트롤</string>
+    <string name="cpu_voltage_summary">CPU 클럭의 전압을 설정 합니다</string>
+    <string name="ps_volt_mhz_voltage">" MHz 전압"</string>
+    <string name="ps_volt_save">"저장"</string>
+    <string name="ps_volt_current_voltage">"현재 전압: "</string>
+    <string name="ps_volt_setting_to_apply">"적용할 값: "</string>
+    <string name="pt_volt_control">전압 컨트롤</string>
+    <string name="ps_volt_control">클럭의 전압을 조절 합니다</string>
+    <string name="not_supported">현재 커널이 전압 설정을 지원하지 않습니다</string>
+    <string name="apply_values">값 적용</string>
+    <string name="freq">클럭</string>
+    <string name="current">mV 현재</string>
+    <string name="saved">mV 저장됨</string>
+    <string name="sob">시작 시 적용</string>
+
+    <!-- Wireless display -->
+    <string name="pref_wifi_disable_hdcp_title">HDCP 교섭 건너뛰기</string>
+    <string name="pref_wifi_disable_hdcp_summary">연결할 수 있으면 이 옵션을 켜세요, 하지만 아무 출력결과를 못 얻습니다</string>
+
+    <!--- Sms security limit -->
+    <string name="app_security_title">APP 보안</string>
+    <string name="sms_security_check_limit_title">SMS 제한</string>
+    <string name="sms_security_check_limit_summary">SMS를 값보다 많이 보낼 시 경고를 합니다. 현재 제한: 15분 마다 %d 메시지</string>
+    <string name="sms_security_check_limit_default">30 (기본값)</string>
+
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
+
 </resources>
