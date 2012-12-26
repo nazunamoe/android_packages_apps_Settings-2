@@ -221,7 +221,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
             if (mHits[0] >= (SystemClock.uptimeMillis()-500)) {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
-                intent.putExtra("is_cid", true);
+                intent.putExtra("is_xy", true);
                 intent.setClassName("android",
                         com.android.internal.app.PlatLogoActivity.class.getName());
                 try {
