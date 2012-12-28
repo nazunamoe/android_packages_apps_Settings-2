@@ -106,7 +106,6 @@ public class ConfirmLockPattern extends PreferenceActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             mLockPatternUtils = new LockPatternUtils(getActivity());
-            mLockPatternUtils.updateLockPatternSize();
         }
 
         @Override
