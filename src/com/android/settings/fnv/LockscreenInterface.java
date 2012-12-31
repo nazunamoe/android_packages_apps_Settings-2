@@ -25,6 +25,7 @@ import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.net.Uri;
@@ -47,6 +48,8 @@ import com.android.settings.widgets.SeekBarPreference;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import net.margaritov.preference.colorpicker.ColorPickerView;
@@ -62,6 +65,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_BACKGROUND_PREF = "lockscreen_background";
     private static final String KEY_BACKGROUND_ALPHA_PREF = "lockscreen_alpha";
+    private static final String KEY_LOCK_CLOCK = "lock_clock";
 
     // CheckBoxPreference mLockscreenAutoRotate;
     CheckBoxPreference mLockscreenAllWidgets;
@@ -91,6 +95,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         mResolver = mActivity.getContentResolver();
 
         mIsScreenLarge = Utils.isTablet(getActivity());
+
+        // Dont display the lock clock preference if its not installed
+        removePreferenceIfPackageNotInstalled(findPreference(KEY_LOCK_CLOCK));
 
        /** mLockscreenAutoRotate = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_AUTO_ROTATE);
         mLockscreenAutoRotate.setChecked(Settings.System.getBoolean(mContext
@@ -309,6 +316,24 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
             mBatteryStatus.setValueIndex(batteryStatus);
             mBatteryStatus.setSummary(mBatteryStatus.getEntries()[batteryStatus]);
         }
+    }
+
+    private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
+        String intentUri=((PreferenceScreen) preference).getIntent().toUri(1);
+        Pattern pattern = Pattern.compile("component=([^/]+)/");
+        Matcher matcher = pattern.matcher(intentUri);
+
+        String packageName=matcher.find()?matcher.group(1):null;
+        if(packageName != null) {
+            try {
+                getPackageManager().getPackageInfo(packageName, 0);
+            } catch (NameNotFoundException e) {
+                Log.e(TAG,"package "+packageName+" not installed, hiding preference.");
+                getPreferenceScreen().removePreference(preference);
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
