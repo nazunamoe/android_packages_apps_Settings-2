@@ -51,11 +51,10 @@
             android:fragment="com.android.settings.cyanogenmod.QuietHours"
             android:title="@string/quiet_hours_title" />
 
-   <!-- <CheckBoxPreference
-            android:key="safe_headset_restore"
-            android:title="@string/safe_headset_restore_title"
-            android:summary="@string/safe_headset_restore_summary"
-            android:defaultValue="true" /> -->
+    <CheckBoxPreference
+            android:key="safe_headset_volume"
+            android:title="@string/safe_headset_volume_title"
+            android:defaultValue="true" />
 
     <PreferenceCategory
             android:key="category_calls_and_notification"
@@ -112,7 +111,6 @@
             android:key="haptic_feedback"
             android:title="@string/haptic_feedback_enable_title"
             android:defaultValue="true" />
-
 
     <CheckBoxPreference
             android:key="volume_adjust_sounds"
