@@ -116,6 +116,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         mLockscreenMinChallenge = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_MINIMIZE_CHALLENGE);
         mLockscreenMinChallenge.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE, false));
+        if (isTablet(mContext)) {
+            getPreferenceScreen().removePreference(mLockscreenMinChallenge);
+        }
 
         mBatteryStatus = (ListPreference) findPreference(KEY_ALWAYS_BATTERY_PREF);
         mBatteryStatus.setOnPreferenceChangeListener(this);
