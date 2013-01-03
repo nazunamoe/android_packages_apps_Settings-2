@@ -70,14 +70,19 @@
         </PreferenceScreen>
 
         <CheckBoxPreference
-                android:key="lockscreen_all_widgets"
-                android:title="@string/lockscreen_all_widgets_title"
-                android:summary="@string/lockscreen_all_widgets_summary" />
+            android:key="lockscreen_minimize_challenge"
+            android:title="@string/lockscreen_minimize_challenge_title"
+            android:summary="@string/lockscreen_minimize_challenge_summary" />
 
         <CheckBoxPreference
-                android:key="lockscreen_unlimited_widgets"
-                android:title="@string/lockscreen_unlimited_widgets_title"
-                android:summary="@string/lockscreen_unlimited_widgets_summary" />
+            android:key="lockscreen_all_widgets"
+            android:title="@string/lockscreen_all_widgets_title"
+            android:summary="@string/lockscreen_all_widgets_summary" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_unlimited_widgets"
+            android:title="@string/lockscreen_unlimited_widgets_title"
+            android:summary="@string/lockscreen_unlimited_widgets_summary" />
 
          <ListPreference
             android:key="lockscreen_battery_status"

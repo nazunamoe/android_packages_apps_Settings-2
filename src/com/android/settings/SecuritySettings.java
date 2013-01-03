@@ -92,9 +92,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private static final String KEY_VIBRATE_PREF = "lockscreen_vibrate";
     private static final String KEY_SMS_SECURITY_CHECK_PREF = "sms_security_check_limit";
 
-    // AOKP Additions
-    private static final String LOCK_MINIMIZE_CHALLENGE = "lockscreen_minimize_challenge";
-
     DevicePolicyManager mDPM;
 
     private ChooseLockSettingsHelper mChooseLockSettingsHelper;
@@ -124,9 +121,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
     private CheckBoxPreference mHomeUnlock;
     private CheckBoxPreference mQuickUnlockScreen;
     private ListPreference mSmsSecurityCheck;
-
-    // AOKP Additions
-    private CheckBoxPreference mLockscreenMinChallenge;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -266,12 +260,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     .findPreference(LOCKSCREEN_QUICK_UNLOCK_CONTROL);
             mQuickUnlockScreen.setChecked(Settings.System.getInt(resolver,
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0) == 1);
-
-            // Lock screen Minimize challenge
-            mLockscreenMinChallenge = (CheckBoxPreference) root
-                    .findPreference(LOCK_MINIMIZE_CHALLENGE);
-            mLockscreenMinChallenge.setChecked(Settings.System.getInt(resolver,
-                    Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE, 0) == 1);
 
             // Menu Unlock
             mMenuUnlock = (CheckBoxPreference) root.findPreference(MENU_UNLOCK_PREF);
@@ -661,9 +649,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
         } if (preference == mQuickUnlockScreen) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.LOCKSCREEN_QUICK_UNLOCK_CONTROL, isToggled(preference) ? 1 : 0);
-        } else if (preference == mLockscreenMinChallenge) {
-            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
-                    Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE, isToggled(preference) ? 1 : 0);
         } else if (preference == mMenuUnlock) {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.MENU_UNLOCK_SCREEN, isToggled(preference) ? 1 : 0);

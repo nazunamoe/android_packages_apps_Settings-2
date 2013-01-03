@@ -62,6 +62,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     // private static final String PREF_LOCKSCREEN_AUTO_ROTATE = "lockscreen_auto_rotate";
     private static final String PREF_LOCKSCREEN_ALL_WIDGETS = "lockscreen_all_widgets";
     private static final String PREF_LOCKSCREEN_UNLIMITED_WIDGETS = "lockscreen_unlimited_widgets";
+    private static final String PREF_LOCKSCREEN_MINIMIZE_CHALLENGE = "lockscreen_minimize_challenge";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_BACKGROUND_PREF = "lockscreen_background";
     private static final String KEY_BACKGROUND_ALPHA_PREF = "lockscreen_alpha";
@@ -73,6 +74,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     ListPreference mBatteryStatus;
     ListPreference mCustomBackground;
     SeekBarPreference mBgAlpha;
+    CheckBoxPreference mLockscreenMinChallenge;
 
     private boolean mIsScreenLarge;
 
@@ -110,6 +112,10 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         mLockscreenUnlimitedWidgets = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_UNLIMITED_WIDGETS);
         mLockscreenUnlimitedWidgets.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_UNLIMITED_WIDGETS, false));
+
+        mLockscreenMinChallenge = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_MINIMIZE_CHALLENGE);
+        mLockscreenMinChallenge.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
+                Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE, false));
 
         mBatteryStatus = (ListPreference) findPreference(KEY_ALWAYS_BATTERY_PREF);
         mBatteryStatus.setOnPreferenceChangeListener(this);
@@ -166,6 +172,11 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
             Settings.System.putBoolean(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_UNLIMITED_WIDGETS,
                     ((CheckBoxPreference) preference).isChecked());
+            return true;
+        } else if (preference == mLockscreenMinChallenge) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
             return true;
         }
 
