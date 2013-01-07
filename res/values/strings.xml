@@ -4548,6 +4548,10 @@
     <string name="lockscreen_minimize_challenge_title">Minimize lockscreen challenge</string>
     <string name="lockscreen_minimize_challenge_summary">Set wether the lockscreen challenge (circle, pattern, pin) is minimized when the screen is turned on.</string>
 
+    <!-- Lock screen hide initial hints -->
+    <string name="lockscreen_hide_initial_page_hints_title">Hide initial page hints</string>
+    <string name="lockscreen_hide_initial_page_hints_summary">Set wether the hints for the left and right widgets are shown when the screen is turned on.</string>
+
     <!-- Lock screen shortcuts -->
     <string name="picker_activities">Activities</string>
     <string name="select_custom_app_title">Select custom application</string>
