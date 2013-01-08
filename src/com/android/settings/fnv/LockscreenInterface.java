@@ -62,7 +62,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     // private static final String PREF_LOCKSCREEN_AUTO_ROTATE = "lockscreen_auto_rotate";
     private static final String PREF_LOCKSCREEN_ALL_WIDGETS = "lockscreen_all_widgets";
     private static final String PREF_LOCKSCREEN_UNLIMITED_WIDGETS = "lockscreen_unlimited_widgets";
-    private static final String PREF_LOCKSCREEN_MINIMIZE_CHALLENGE = "lockscreen_minimize_challenge";
+    private static final String PREF_LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
     private static final String PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS = "lockscreen_hide_initial_page_hints";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_BACKGROUND_PREF = "lockscreen_background";
@@ -75,7 +75,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     ListPreference mBatteryStatus;
     ListPreference mCustomBackground;
     SeekBarPreference mBgAlpha;
-    CheckBoxPreference mLockscreenMinChallenge;
+    CheckBoxPreference mMaximizeWidgets;
     CheckBoxPreference mLockscreenHideInitialPageHints;
 
     private boolean mIsScreenLarge;
@@ -115,11 +115,12 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         mLockscreenUnlimitedWidgets.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_UNLIMITED_WIDGETS, false));
 
-        mLockscreenMinChallenge = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_MINIMIZE_CHALLENGE);
-        mLockscreenMinChallenge.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
-                Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE, false));
-        if (isTablet(mContext)) {
-            getPreferenceScreen().removePreference(mLockscreenMinChallenge);
+        mMaximizeWidgets = (CheckBoxPreference)findPreference(KEY_LOCKSCREEN_MAXIMIZE_WIDGETS);
+        if (Utils.isTablet(getActivity())) {
+            getPreferenceScreen().removePreference(mMaximizeWidgets);
+            mMaximizeWidgets = null;
+        } else {
+            mMaximizeWidgets.setOnPreferenceChangeListener(this);
         }
 
         mLockscreenHideInitialPageHints = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS);
@@ -158,6 +159,13 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     @Override
     public void onResume() {
         super.onResume();
+
+        ContentResolver cr = getActivity().getContentResolver();
+
+        if (mMaximizeWidgets != null) {
+            mMaximizeWidgets.setChecked(Settings.System.getInt(cr,
+                    Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, 0) == 1);
+        }
     }
 
     @Override
@@ -167,6 +175,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+       ContentResolver cr = getActivity().getContentResolver();
        /** if (preference == mLockscreenAutoRotate) {
             Settings.System.putBoolean(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_AUTO_ROTATE,
@@ -182,10 +191,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
                     Settings.System.LOCKSCREEN_UNLIMITED_WIDGETS,
                     ((CheckBoxPreference) preference).isChecked());
             return true;
-        } else if (preference == mLockscreenMinChallenge) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_MINIMIZE_LOCKSCREEN_CHALLENGE,
-                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+        } else if (preference == mMaximizeWidgets) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, value ? 1 : 0);
             return true;
         } else if (preference == mLockscreenHideInitialPageHints) {
             Settings.System.putInt(getActivity().getContentResolver(),

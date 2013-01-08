@@ -4545,8 +4545,8 @@
     <string name="slide_lock_delay_30m">30 minutes</string>
 
     <!-- Lock screen Minimize Challenge (By MarcLandis) -->
-    <string name="lockscreen_minimize_challenge_title">Minimize lockscreen challenge</string>
-    <string name="lockscreen_minimize_challenge_summary">Set wether the lockscreen challenge (circle, pattern, pin) is minimized when the screen is turned on.</string>
+    <string name="lockscreen_maximize_widgets_title">Maximize widgets</string>
+    <string name="lockscreen_maximize_widgets_summary">Show widgets maximized and the unlock mimimized when the screen is turned on</string>
 
     <!-- Lock screen hide initial hints -->
     <string name="lockscreen_hide_initial_page_hints_title">Hide initial page hints</string>
