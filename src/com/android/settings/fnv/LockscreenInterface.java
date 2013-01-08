@@ -115,7 +115,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         mLockscreenUnlimitedWidgets.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_UNLIMITED_WIDGETS, false));
 
-        mMaximizeWidgets = (CheckBoxPreference)findPreference(KEY_LOCKSCREEN_MAXIMIZE_WIDGETS);
+        mMaximizeWidgets = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_MAXIMIZE_WIDGETS);
         if (Utils.isTablet(getActivity())) {
             getPreferenceScreen().removePreference(mMaximizeWidgets);
             mMaximizeWidgets = null;
@@ -190,10 +190,6 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
             Settings.System.putBoolean(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_UNLIMITED_WIDGETS,
                     ((CheckBoxPreference) preference).isChecked());
-            return true;
-        } else if (preference == mMaximizeWidgets) {
-            boolean value = (Boolean) objValue;
-            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, value ? 1 : 0);
             return true;
         } else if (preference == mLockscreenHideInitialPageHints) {
             Settings.System.putInt(getActivity().getContentResolver(),
@@ -312,6 +308,10 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
             float val = Float.parseFloat((String) objValue);
             Settings.System.putFloat(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_ALPHA, val / 100);
+            return true;
+        } else if (preference == mMaximizeWidgets) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(cr, Settings.System.LOCKSCREEN_MAXIMIZE_WIDGETS, value ? 1 : 0);
             return true;
         }
         return false;

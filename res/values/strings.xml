@@ -4546,7 +4546,7 @@
 
     <!-- Lock screen Minimize Challenge (By MarcLandis) -->
     <string name="lockscreen_maximize_widgets_title">Maximize widgets</string>
-    <string name="lockscreen_maximize_widgets_summary">Show widgets maximized and the unlock mimimized when the screen is turned on</string>
+    <string name="lockscreen_maximize_widgets_summary">Show widgets maximized and the unlock minimized when the screen is turned on</string>
 
     <!-- Lock screen hide initial hints -->
     <string name="lockscreen_hide_initial_page_hints_title">Hide initial page hints</string>
