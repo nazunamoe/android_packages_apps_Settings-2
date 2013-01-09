@@ -116,7 +116,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
                 Settings.System.LOCKSCREEN_UNLIMITED_WIDGETS, false));
 
         mMaximizeWidgets = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_MAXIMIZE_WIDGETS);
-        if (Utils.isTablet(getActivity())) {
+        if (!Utils.isPhone(getActivity())) {
             getPreferenceScreen().removePreference(mMaximizeWidgets);
             mMaximizeWidgets = null;
         } else {
