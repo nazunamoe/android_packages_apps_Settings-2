@@ -75,6 +75,15 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_HAPTIC_FEEDBACK = "haptic_feedback";
     private static final String KEY_EMERGENCY_TONE = "emergency_tone";
     private static final String KEY_SOUND_SETTINGS = "sound_settings";
+    private static final String KEY_LOCK_SOUNDS = "lock_sounds";
+    private static final String KEY_RINGTONE = "ringtone";
+    private static final String KEY_NOTIFICATION_SOUND = "notification_sound";
+    private static final String KEY_CATEGORY_CALLS = "category_calls_and_notification";
+    private static final String KEY_DOCK_CATEGORY = "dock_category";
+    private static final String KEY_DOCK_AUDIO_SETTINGS = "dock_audio";
+    private static final String KEY_DOCK_SOUNDS = "dock_sounds";
+    private static final String KEY_DOCK_AUDIO_MEDIA_ENABLED = "dock_audio_media_enabled";
+    private static final String KEY_VOLUME_ADJUST_SOUNDS = "volume_adjust_sounds";
     private static final String KEY_VOLBTN_MUSIC_CTRL = "volbtn_music_controls";
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_SAFE_HEADSET_VOLUME = "safe_headset_volume";
