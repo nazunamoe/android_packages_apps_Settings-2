@@ -60,11 +60,6 @@
 			xy:nameDev="DOOMSlayer"
 			xy:twitterHandle="d00mslayer" />
 
-                <com.android.settings.widgets.DeveloperPreference
-			android:title="Benjamin Goodwin"
-			xy:nameDev="Benjamin Goodwin"
-			xy:twitterHandle="benjustjammin" />
-
 	</PreferenceCategory>
 
 	<PreferenceCategory
