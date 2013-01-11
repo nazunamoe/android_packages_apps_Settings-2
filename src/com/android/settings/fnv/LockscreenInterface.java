@@ -59,7 +59,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
 
     private static final int LOCKSCREEN_BACKGROUND = 1024;
 
-    // private static final String PREF_LOCKSCREEN_AUTO_ROTATE = "lockscreen_auto_rotate";
+    private static final String PREF_LOCKSCREEN_AUTO_ROTATE = "lockscreen_auto_rotate";
     private static final String PREF_LOCKSCREEN_ALL_WIDGETS = "lockscreen_all_widgets";
     private static final String PREF_LOCKSCREEN_UNLIMITED_WIDGETS = "lockscreen_unlimited_widgets";
     private static final String PREF_LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
@@ -69,7 +69,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     private static final String KEY_BACKGROUND_ALPHA_PREF = "lockscreen_alpha";
     private static final String KEY_LOCK_CLOCK = "lock_clock";
 
-    // CheckBoxPreference mLockscreenAutoRotate;
+    CheckBoxPreference mLockscreenAutoRotate;
     CheckBoxPreference mLockscreenAllWidgets;
     CheckBoxPreference mLockscreenUnlimitedWidgets;
     ListPreference mBatteryStatus;
@@ -103,9 +103,9 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         // Dont display the lock clock preference if its not installed
         removePreferenceIfPackageNotInstalled(findPreference(KEY_LOCK_CLOCK));
 
-       /** mLockscreenAutoRotate = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_AUTO_ROTATE);
+        mLockscreenAutoRotate = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_AUTO_ROTATE);
         mLockscreenAutoRotate.setChecked(Settings.System.getBoolean(mContext
-                .getContentResolver(), Settings.System.LOCKSCREEN_AUTO_ROTATE, false)); **/
+                .getContentResolver(), Settings.System.LOCKSCREEN_AUTO_ROTATE, false));
 
         mLockscreenAllWidgets = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_ALL_WIDGETS);
         mLockscreenAllWidgets.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
@@ -175,12 +175,12 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
 
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
-       /** if (preference == mLockscreenAutoRotate) {
+        if (preference == mLockscreenAutoRotate) {
             Settings.System.putBoolean(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_AUTO_ROTATE,
                     ((CheckBoxPreference) preference).isChecked());
-            return true; **/
-        if (preference == mLockscreenAllWidgets) {
+            return true; 
+        } else if (preference == mLockscreenAllWidgets) {
             Settings.System.putBoolean(mContext.getContentResolver(),
                     Settings.System.LOCKSCREEN_ALL_WIDGETS,
                     ((CheckBoxPreference) preference).isChecked());
