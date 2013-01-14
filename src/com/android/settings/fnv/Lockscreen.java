@@ -54,8 +54,8 @@ import java.util.regex.Pattern;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import net.margaritov.preference.colorpicker.ColorPickerView;
 
-public class LockscreenInterface extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
-    private static final String TAG = "LockscreenInterface";
+public class Lockscreen extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
+    private static final String TAG = "Lockscreen";
 
     private static final int LOCKSCREEN_BACKGROUND = 1024;
 
@@ -64,6 +64,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     private static final String PREF_LOCKSCREEN_UNLIMITED_WIDGETS = "lockscreen_unlimited_widgets";
     private static final String PREF_LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
     private static final String PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS = "lockscreen_hide_initial_page_hints";
+    private static final String PREF_LOCKSCREEN_USE_CAROUSEL = "lockscreen_use_widget_container_carousel";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_BACKGROUND_PREF = "lockscreen_background";
     private static final String KEY_BACKGROUND_ALPHA_PREF = "lockscreen_alpha";
@@ -77,6 +78,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     SeekBarPreference mBgAlpha;
     CheckBoxPreference mMaximizeWidgets;
     CheckBoxPreference mLockscreenHideInitialPageHints;
+    CheckBoxPreference mLockscreenUseCarousel;
 
     private boolean mIsScreenLarge;
 
@@ -93,7 +95,7 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.lockscreen_interface_settings);
+        addPreferencesFromResource(R.xml.lockscreen_settings);
 
         mActivity = getActivity();
         mResolver = mActivity.getContentResolver();
@@ -126,6 +128,10 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         mLockscreenHideInitialPageHints = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS);
         mLockscreenHideInitialPageHints.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS, false));
+
+        mLockscreenUseCarousel = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_USE_CAROUSEL);
+        mLockscreenUseCarousel.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
+                Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL, false));
 
         mBatteryStatus = (ListPreference) findPreference(KEY_ALWAYS_BATTERY_PREF);
         mBatteryStatus.setOnPreferenceChangeListener(this);
@@ -193,6 +199,11 @@ public class LockscreenInterface extends SettingsPreferenceFragment implements P
         } else if (preference == mLockscreenHideInitialPageHints) {
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS,
+                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mLockscreenUseCarousel) {
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL,
                     ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
             return true;
         }

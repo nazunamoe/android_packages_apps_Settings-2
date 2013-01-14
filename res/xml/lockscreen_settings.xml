@@ -25,11 +25,11 @@
          <extra android:name="cm_security" android:value="true" />
      </PreferenceScreen>
 
-        <Preference
-            android:fragment="com.android.settings.fnv.LockscreenTargets"
-            android:key="lockscreen_targets"
-            android:summary="@string/lockscreen_target_summary"
-            android:title="@string/lockscreen_target_title" />
+        <PreferenceScreen
+            android:key="lock_screen_shortcuts"
+            android:fragment="com.android.settings.fnv.Shortcuts"
+            android:title="@string/lock_screen_shortcuts_title"
+            android:summary="@string/lock_screen_shortcuts_summary" />
 
         <CheckBoxPreference
                 android:key="lockscreen_auto_rotate"
@@ -77,6 +77,11 @@
             android:key="lockscreen_hide_initial_page_hints"
             android:title="@string/lockscreen_hide_initial_page_hints_title"
             android:summary="@string/lockscreen_hide_initial_page_hints_summary" />
+
+        <CheckBoxPreference
+            android:key="lockscreen_use_widget_container_carousel"
+            android:title="@string/lockscreen_use_widget_container_carousel_title"
+            android:summary="@string/lockscreen_use_widget_container_carousel_summary" />
 
         <CheckBoxPreference
             android:key="lockscreen_all_widgets"
