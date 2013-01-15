@@ -64,7 +64,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
     private static final String PREF_LOCKSCREEN_UNLIMITED_WIDGETS = "lockscreen_unlimited_widgets";
     private static final String PREF_LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
     private static final String PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS = "lockscreen_hide_initial_page_hints";
-    private static final String PREF_LOCKSCREEN_USE_CAROUSEL = "lockscreen_use_widget_container_carousel";
+//    private static final String PREF_LOCKSCREEN_USE_CAROUSEL = "lockscreen_use_widget_container_carousel";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_BACKGROUND_PREF = "lockscreen_background";
     private static final String KEY_BACKGROUND_ALPHA_PREF = "lockscreen_alpha";
@@ -78,7 +78,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
     SeekBarPreference mBgAlpha;
     CheckBoxPreference mMaximizeWidgets;
     CheckBoxPreference mLockscreenHideInitialPageHints;
-    CheckBoxPreference mLockscreenUseCarousel;
+//    CheckBoxPreference mLockscreenUseCarousel;
 
     private boolean mIsScreenLarge;
 
@@ -129,9 +129,9 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
         mLockscreenHideInitialPageHints.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS, false));
 
-        mLockscreenUseCarousel = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_USE_CAROUSEL);
-        mLockscreenUseCarousel.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
-                Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL, false));
+//        mLockscreenUseCarousel = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_USE_CAROUSEL);
+//        mLockscreenUseCarousel.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
+//                Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL, true));
 
         mBatteryStatus = (ListPreference) findPreference(KEY_ALWAYS_BATTERY_PREF);
         mBatteryStatus.setOnPreferenceChangeListener(this);
@@ -201,11 +201,11 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
                     Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS,
                     ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
             return true;
-        } else if (preference == mLockscreenUseCarousel) {
-            Settings.System.putInt(getActivity().getContentResolver(),
-                    Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL,
-                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
-            return true;
+//        } else if (preference == mLockscreenUseCarousel) {
+//            Settings.System.putInt(getActivity().getContentResolver(),
+//                    Settings.System.LOCKSCREEN_USE_WIDGET_CONTAINER_CAROUSEL,
+//                    ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+//            return true;
         }
 
         return super.onPreferenceTreeClick(preferenceScreen, preference);
