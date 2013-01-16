@@ -4497,6 +4497,8 @@
     <string name="lockscreen_all_widgets_summary">Warning** Some widgets are not intended to be used on the lockscreen, The widget developer, Team XY are not responsible for your choice of lockscreen widgets. Choose responsibly.</string>
     <string name="lockscreen_unlimited_widgets_title">Allow unlimited widgets</string>
     <string name="lockscreen_unlimited_widgets_summary">Warning** Adding too many widgets can cause major lag issues with lockscreen.</string>
+    <string name="lockscreen_longpress_challenge_title">Enable longpress to unlock</string>
+    <string name="lockscreen_longpress_challenge_summary">This enables your device to be unlocked with the widgets maximised by long pressing the lock icon.</string>
 
     <!-- Lock screen vibrate settings -->
     <string name="lockscreen_vibrate_enabled_title">Vibrate</string>

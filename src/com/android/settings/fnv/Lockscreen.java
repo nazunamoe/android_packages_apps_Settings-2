@@ -64,6 +64,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
     private static final String PREF_LOCKSCREEN_UNLIMITED_WIDGETS = "lockscreen_unlimited_widgets";
     private static final String PREF_LOCKSCREEN_MAXIMIZE_WIDGETS = "lockscreen_maximize_widgets";
     private static final String PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS = "lockscreen_hide_initial_page_hints";
+    private static final String PREF_LOCKSCREEN_LONGPRESS_CHALLENGE = "lockscreen_longpress_challenge";
 //    private static final String PREF_LOCKSCREEN_USE_CAROUSEL = "lockscreen_use_widget_container_carousel";
     private static final String KEY_ALWAYS_BATTERY_PREF = "lockscreen_battery_status";
     private static final String KEY_BACKGROUND_PREF = "lockscreen_background";
@@ -78,6 +79,7 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
     SeekBarPreference mBgAlpha;
     CheckBoxPreference mMaximizeWidgets;
     CheckBoxPreference mLockscreenHideInitialPageHints;
+    CheckBoxPreference mLockscreenLongpressChallenge;
 //    CheckBoxPreference mLockscreenUseCarousel;
 
     private boolean mIsScreenLarge;
@@ -128,6 +130,10 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
         mLockscreenHideInitialPageHints = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS);
         mLockscreenHideInitialPageHints.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
                 Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS, false));
+
+        mLockscreenLongpressChallenge = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_LONGPRESS_CHALLENGE);
+        mLockscreenLongpressChallenge.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
+                Settings.System.LOCKSCREEN_LONGPRESS_CHALLENGE, false));
 
 //        mLockscreenUseCarousel = (CheckBoxPreference)findPreference(PREF_LOCKSCREEN_USE_CAROUSEL);
 //        mLockscreenUseCarousel.setChecked(Settings.System.getBoolean(getActivity().getContentResolver(),
@@ -200,6 +206,11 @@ public class Lockscreen extends SettingsPreferenceFragment implements Preference
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_HIDE_INITIAL_PAGE_HINTS,
                     ((CheckBoxPreference)preference).isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mLockscreenLongpressChallenge) {
+            Settings.System.putBoolean(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_LONGPRESS_CHALLENGE,
+                    ((CheckBoxPreference)preference).isChecked());
             return true;
 //        } else if (preference == mLockscreenUseCarousel) {
 //            Settings.System.putInt(getActivity().getContentResolver(),
