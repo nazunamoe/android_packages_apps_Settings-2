@@ -18,6 +18,7 @@ package com.android.settings;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -52,6 +53,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
     private static final String KEY_COPYRIGHT = "copyright";
+    private static final String KEY_XY_STATS = "xystats";
     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
@@ -66,6 +68,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_MOD_VERSION = "mod_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
+
 
     static final int TAPS_TO_BE_A_DEVELOPER = 7;
 
@@ -155,6 +158,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         // Remove regulatory information if not enabled.
         removePreferenceIfBoolFalse(KEY_REGULATORY_INFO,
                 R.bool.config_show_regulatory_info);
+
+        // Don't display Stats if the app itself isn't installed
+        removePreferenceIfPackageNotInstalled(findPreference(KEY_XY_STATS));
     }
 
     @Override
@@ -254,6 +260,24 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
                 getPreferenceScreen().removePreference(pref);
             }
         }
+    }
+
+     private boolean removePreferenceIfPackageNotInstalled(Preference preference) {
+        String intentUri=((PreferenceScreen) preference).getIntent().toUri(1);
+        Pattern pattern = Pattern.compile("component=([^/]+)/");
+        Matcher matcher = pattern.matcher(intentUri);
+
+        String packageName=matcher.find()?matcher.group(1):null;
+        if(packageName != null) {
+            try {
+                getPackageManager().getPackageInfo(packageName, 0);
+            } catch (NameNotFoundException e) {
+                Log.e(LOG_TAG,"package "+packageName+" not installed, hiding preference.");
+                getPreferenceScreen().removePreference(preference);
+                return true;
+            }
+        }
+        return false;
     }
 
     private void setStringSummary(String preference, String value) {
