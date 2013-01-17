@@ -59,6 +59,12 @@
 			android:title="DOOMSlayer"
 			xy:nameDev="DOOMSlayer"
 			xy:twitterHandle="d00mslayer" />
+			
+		<com.android.settings.widgets.DeveloperPreference
+			android:title="flipz"
+			xy:nameDev="flipz"
+			xy:twitterHandle="flipzmod3"
+			xy:donateLink="@string/donate_flipz" />
 
 	</PreferenceCategory>
 
