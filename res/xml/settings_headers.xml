@@ -65,7 +65,7 @@
 
     <header android:id="@+id/xy_settings"
             android:title="@string/xylon_extras"
-            android:icon="@drawable/ic_settings_ui" >
+            android:icon="@drawable/ic_settings_xy" >
         <intent
                 android:action="android.intent.action.MAIN"
                 android:targetClass="com.xylon.settings.XYSettingsActivity"
@@ -244,7 +244,7 @@
     <header
         android:id="@+id/about_xy"
         android:fragment="com.android.settings.fnv.About"
-        android:icon="@drawable/ic_settings_about_xy"
+        android:icon="@drawable/ic_settings_multiuser"
         android:title="@string/title_about" />
 
 </preference-headers>

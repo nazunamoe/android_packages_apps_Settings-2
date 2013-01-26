@@ -46,11 +46,6 @@
 			xy:twitterHandle="dorilife" />
 
 		<com.android.settings.widgets.DeveloperPreference
-			android:title="Bluewall"
-			xy:nameDev="Bluewall"
-			xy:twitterHandle="bluewall" />
-
-		<com.android.settings.widgets.DeveloperPreference
 			android:title="AlexForTomorrow"
 			xy:nameDev="AlexForTomorrow"
 			xy:twitterHandle="AlexForTomorrow" />
@@ -65,6 +60,16 @@
 			xy:nameDev="flipz"
 			xy:twitterHandle="flipzmod3"
 			xy:donateLink="@string/donate_flipz" />
+
+                <com.android.settings.widgets.DeveloperPreference
+                        android:title="NetChipTi"
+                        xy:nameDev="NetChipTi"
+                        xy:twitterHandle="NetchipTI" />
+
+                <com.android.settings.widgets.DeveloperPreference
+                        android:title="fuss132"
+                        xy:nameDev="fuss132"
+                        xy:twitterHandle="fuss132Dev" />
 
 	</PreferenceCategory>
 
@@ -94,6 +99,11 @@
             		android:title="TeamBAKED"
 	                xy:nameDev="TeamBAKED"
 	                xy:twitterHandle="team_baked_rom" />
+
+		<com.android.settings.widgets.DeveloperPreference
+			android:title="ParanoidAndroid"
+			xy:nameDev="ParanoidAndroid"
+			xy:twitterHandle="paranoid_team" />
 
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="Jesús David"
