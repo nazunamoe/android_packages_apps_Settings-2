@@ -56,4 +56,8 @@
         android:entries="@array/dithering_entries"
         android:entryValues="@array/dithering_values" />
 
+    <CheckBoxPreference
+        android:key="notification_shade_dim"
+        android:title="@string/notification_shade_dim_title"
+        android:summary="@string/notification_shade_dim_summary" />
 </PreferenceScreen>

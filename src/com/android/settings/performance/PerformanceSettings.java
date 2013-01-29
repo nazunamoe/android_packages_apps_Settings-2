@@ -16,6 +16,7 @@
 
 package com.android.settings.performance;
 
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -24,11 +25,11 @@ import android.preference.CheckBoxPreference;
 import android.preference.Preference;
 import android.preference.ListPreference;
 import android.preference.PreferenceScreen;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.Preference;
+import android.provider.Settings;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 public class PerformanceSettings extends SettingsPreferenceFragment implements Preference.OnPreferenceChangeListener {
     private static final String TAG = "PerformanceSettings";
@@ -40,9 +41,15 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements P
     private static final String USE_16BPP_ALPHA_PREF = "pref_use_16bpp_alpha";
     private static final String USE_16BPP_ALPHA_PROP = "persist.sys.use_16bpp_alpha";
 
+    private static final String NOTIFICATION_SHADE_DIM = "notification_shade_dim";
+
     private ListPreference mUseDitheringPref;
 
     private CheckBoxPreference mUse16bppAlphaPref;
+
+    private CheckBoxPreference mNotificationShadeDim;
+
+    private AlertDialog alertDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +71,31 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements P
             String use16bppAlpha = SystemProperties.get(USE_16BPP_ALPHA_PROP, "0");
             mUse16bppAlphaPref.setChecked("1".equals(use16bppAlpha));
 
+            mNotificationShadeDim = (CheckBoxPreference) prefSet.findPreference(NOTIFICATION_SHADE_DIM);
+            mNotificationShadeDim.setChecked((Settings.System.getInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.NOTIFICATION_SHADE_DIM, ActivityManager.isHighEndGfx() ? 1 : 0) == 1));
+
+            if (Utils.isTablet(getActivity())) {
+                getPreferenceScreen().removePreference(mNotificationShadeDim);
+            }
+
+            /* Display the warning dialog */
+            alertDialog = new AlertDialog.Builder(getActivity()).create();
+            alertDialog.setTitle(R.string.performance_settings_warning_title);
+            alertDialog.setMessage(getResources().getString(R.string.performance_settings_warning));
+            alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,
+                    getResources().getString(com.android.internal.R.string.ok),
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            return;
+                        }
+                    });
+            alertDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                public void onCancel(DialogInterface dialog) {
+                    PerformanceSettings.this.finish();
+                }
+            });
+            alertDialog.show();
         }
     }
 
@@ -72,6 +104,9 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements P
         if (preference == mUse16bppAlphaPref) {
             SystemProperties.set(USE_16BPP_ALPHA_PROP,
                     mUse16bppAlphaPref.isChecked() ? "1" : "0");
+        } else if (preference == mNotificationShadeDim) {
+            Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
+                    Settings.System.NOTIFICATION_SHADE_DIM, mNotificationShadeDim.isChecked() ? 1 : 0);
         } else {
             // If we didn't handle it, let preferences handle it.
             return super.onPreferenceTreeClick(preferenceScreen, preference);
