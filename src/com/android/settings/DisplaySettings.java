@@ -62,7 +62,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_WIFI_DISPLAY = "wifi_display";
     private static final String KEY_WAKEUP_CATEGORY = "category_wakeup_options";
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
-    private static final String KEY_BATTERY_LIGHT = "battery_light";
     private static final String KEY_DISPLAY_ROTATION = "display_rotation";
 
     // Strings used for building the summary
@@ -79,8 +78,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private WarnedListPreference mFontSizePref;
     private CheckBoxPreference mVolumeWake;
-    private PreferenceScreen mNotificationPulse;
-    private PreferenceScreen mBatteryPulse;
+    private CheckBoxPreference mNotificationPulse;
     private PreferenceScreen mDisplayRotationPreference;
 
     private final Configuration mCurConfig = new Configuration();
@@ -135,22 +133,18 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         mFontSizePref = (WarnedListPreference) findPreference(KEY_FONT_SIZE);
         mFontSizePref.setOnPreferenceChangeListener(this);
         mFontSizePref.setOnPreferenceClickListener(this);
-        mNotificationPulse = (PreferenceScreen) findPreference(KEY_NOTIFICATION_PULSE);
-        if (mNotificationPulse != null) {
-            if (!getResources().getBoolean(com.android.internal.R.bool.config_intrusiveNotificationLed)) {
-                getPreferenceScreen().removePreference(mNotificationPulse);
-            } else {
-                updateLightPulseDescription();
-            }
-        }
-
-        mBatteryPulse = (PreferenceScreen) findPreference(KEY_BATTERY_LIGHT);
-        if (mBatteryPulse != null) {
-            if (getResources().getBoolean(
-                    com.android.internal.R.bool.config_intrusiveBatteryLed) == false) {
-                getPreferenceScreen().removePreference(mBatteryPulse);
-            } else {
-                updateBatteryPulseDescription();
+        mNotificationPulse = (CheckBoxPreference) findPreference(KEY_NOTIFICATION_PULSE);
+        if (mNotificationPulse != null
+                && getResources().getBoolean(
+                        com.android.internal.R.bool.config_intrusiveNotificationLed) == false) {
+            getPreferenceScreen().removePreference(mNotificationPulse);
+        } else {
+            try {
+                mNotificationPulse.setChecked(Settings.System.getInt(resolver,
+                        Settings.System.NOTIFICATION_LIGHT_PULSE) == 1);
+                mNotificationPulse.setOnPreferenceChangeListener(this);
+            } catch (SettingNotFoundException snfe) {
+                Log.e(TAG, Settings.System.NOTIFICATION_LIGHT_PULSE + " not found");
             }
         }
 
@@ -284,24 +278,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         screenTimeoutPreference.setEnabled(revisedEntries.size() > 0);
     }
 
-    private void updateLightPulseDescription() {
-        if (Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.NOTIFICATION_LIGHT_PULSE, 0) == 1) {
-            mNotificationPulse.setSummary(getString(R.string.notification_light_enabled));
-        } else {
-            mNotificationPulse.setSummary(getString(R.string.notification_light_disabled));
-        }
-    }
-
-    private void updateBatteryPulseDescription() {
-        if (Settings.System.getInt(getActivity().getContentResolver(),
-                Settings.System.BATTERY_LIGHT_ENABLED, 1) == 1) {
-            mBatteryPulse.setSummary(getString(R.string.notification_light_enabled));
-        } else {
-            mBatteryPulse.setSummary(getString(R.string.notification_light_disabled));
-        }
-     }
-
     int floatToIndex(float val) {
         String[] indices = getResources().getStringArray(R.array.entryvalues_font_size);
         float lastVal = Float.parseFloat(indices[0]);
@@ -430,6 +406,11 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
         if (preference == mVolumeWake) {
             Settings.System.putInt(getContentResolver(), Settings.System.VOLUME_WAKE_SCREEN,
                     mVolumeWake.isChecked() ? 1 : 0);
+            return true;
+        } else if (preference == mNotificationPulse) {
+            boolean value = mNotificationPulse.isChecked();
+            Settings.System.putInt(getContentResolver(), Settings.System.NOTIFICATION_LIGHT_PULSE,
+                    value ? 1 : 0);
             return true;
         }
 
