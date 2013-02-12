@@ -122,6 +122,8 @@ public class Settings extends PreferenceActivity
             R.id.about_settings,
             R.id.accessibility_settings,
             R.id.xy_settings,
+            R.id.lock_screen_settings,
+            R.id.performance_settings,
     };
 
     private SharedPreferences mDevelopmentPreferences;
