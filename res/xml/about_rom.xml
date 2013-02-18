@@ -44,16 +44,6 @@
 			android:title="David Vidal"
 			xy:nameDev="David Vidal"
 			xy:twitterHandle="dorilife" />
-
-		<com.android.settings.widgets.DeveloperPreference
-			android:title="AlexForTomorrow"
-			xy:nameDev="AlexForTomorrow"
-			xy:twitterHandle="AlexForTomorrow" />
-
-		<com.android.settings.widgets.DeveloperPreference
-			android:title="DOOMSlayer"
-			xy:nameDev="DOOMSlayer"
-			xy:twitterHandle="d00mslayer" />
 			
 		<com.android.settings.widgets.DeveloperPreference
 			android:title="flipz"
