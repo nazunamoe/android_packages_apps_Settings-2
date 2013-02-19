@@ -90,7 +90,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QUIET_HOURS = "quiet_hours";
     private static final String KEY_SAFE_HEADSET_VOLUME = "safe_headset_volume";
     private static final String KEY_HEADSET_CONNECT_PLAYER = "headset_connect_player";
-    private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
     private static final String SILENT_MODE_OFF = "off";
     private static final String SILENT_MODE_VIBRATE = "vibrate";
@@ -119,7 +118,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private Preference mNotificationPreference;
     private PreferenceScreen mQuietHours;
     private CheckBoxPreference mSafeHeadsetVolume;
-    private CheckBoxPreference mSwapVolumeButtons;
 
     private Runnable mRingtoneLookupRunnable;
 
@@ -246,10 +244,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
 
         mRingtonePreference = findPreference(KEY_RINGTONE);
         mNotificationPreference = findPreference(KEY_NOTIFICATION_SOUND);
-
-        mSwapVolumeButtons = (CheckBoxPreference) findPreference(KEY_SWAP_VOLUME_BUTTONS);
-        mSwapVolumeButtons.setChecked(Settings.System.getInt(resolver,
-                Settings.System.SWAP_VOLUME_KEYS, 0) == 1);
         
         mQuietHours = (PreferenceScreen) findPreference(KEY_QUIET_HOURS);
         if (Settings.System.getInt(resolver, Settings.System.QUIET_HOURS_ENABLED, 0) == 1) {
@@ -483,10 +477,6 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         } else if (preference == mHeadsetConnectPlayer) {
             Settings.System.putInt(getContentResolver(), Settings.System.HEADSET_CONNECT_PLAYER,
                     mHeadsetConnectPlayer.isChecked() ? 1 : 0);
-
-        } else if (preference == mSwapVolumeButtons) {
-            Settings.System.putInt(getActivity().getContentResolver(), Settings.System.SWAP_VOLUME_KEYS,
-                    mSwapVolumeButtons.isChecked() ? 1 : 0);
 
         } else if (preference == mSafeHeadsetVolume) {
                 if (!mSafeHeadsetVolume.isChecked()) {
