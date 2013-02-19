@@ -150,6 +150,13 @@
         android:icon="@drawable/ic_settings_lockscreen"
         android:title="@string/lockscreen_stub" />
 
+    <!-- Hybrid -->
+    <header
+        android:id="@+id/hybrid_settings"
+        android:title="@string/hybrid_settings_title"
+        android:icon="@drawable/ic_settings_jellybeer"
+        android:fragment="com.android.settings.beerbong.HybridSettings" />
+
     <!-- About Rom -->
     <header
         android:id="@+id/about_xy"
