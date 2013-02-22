@@ -135,6 +135,7 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="com.xylon.settings.XYSettingsActivity"
                 android:targetPackage="com.xylon.settings" />
+    </header>
 
     <!-- Lock screen -->
     <header
@@ -142,7 +143,6 @@
         android:fragment="com.android.settings.fnv.Lockscreen"
         android:title="@string/lockscreen_stub"
         android:icon="@drawable/ic_settings_lockscreen" />
-    </header>
 
     <!-- About Rom -->
     <header
