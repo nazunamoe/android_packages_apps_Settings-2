@@ -135,7 +135,7 @@
                 android:action="android.intent.action.MAIN"
                 android:targetClass="com.xylon.settings.XYSettingsActivity"
                 android:targetPackage="com.xylon.settings" />
-    </header>
+     </header>
 
     <!-- Lock screen -->
     <header
