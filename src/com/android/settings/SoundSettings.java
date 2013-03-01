@@ -238,6 +238,10 @@ public class SoundSettings extends SettingsPreferenceFragment implements
         mVolBtnMusicCtrl.setChecked(Settings.System.getInt(resolver,
                 Settings.System.VOLBTN_MUSIC_CONTROLS, 1) != 0);
 
+        mHeadsetConnectPlayer = (CheckBoxPreference) findPreference(KEY_HEADSET_CONNECT_PLAYER);
+        mHeadsetConnectPlayer.setChecked(Settings.System.getInt(resolver,
+                Settings.System.HEADSET_CONNECT_PLAYER, 0) != 0);
+
         mRingtonePreference = findPreference(KEY_RINGTONE);
         mNotificationPreference = findPreference(KEY_NOTIFICATION_SOUND);
         
