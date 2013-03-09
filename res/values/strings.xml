@@ -4795,6 +4795,9 @@ Please dont blame the XY team if your phone goes boom</string>
     <!-- Sound settings, power notifications label for ringtone == none -->
     <string name="power_notifications_ringtone_silent">Silent</string>
 
+    <!-- Permissions Management -->
+    <string name="permissions_settings_title">Permissions</string>
+
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 
 </resources>
