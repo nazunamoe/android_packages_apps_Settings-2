@@ -1,5 +1,5 @@
 
-package com.android.settings.fnv;
+package com.android.settings.about;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -20,14 +20,12 @@ public class About extends SettingsPreferenceFragment {
     public static final String TAG = "About";
 
     Preference mSiteUrl;
-    Preference mSourceUrl;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.about_rom);
         mSiteUrl = findPreference("xylon_website");
-        mSourceUrl = findPreference("xylon_source");
 
         PreferenceGroup devsGroup = (PreferenceGroup) findPreference("team");
         ArrayList<Preference> devs = new ArrayList<Preference>();
@@ -49,8 +47,6 @@ public class About extends SettingsPreferenceFragment {
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mSiteUrl) {
             launchUrl("http://xylon.androidvenue.com/");
-        } else if (preference == mSourceUrl) {
-            launchUrl("http://github.com/XYAOSP");
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
@@ -59,5 +55,7 @@ public class About extends SettingsPreferenceFragment {
         Uri uriUrl = Uri.parse(url);
         Intent donate = new Intent(Intent.ACTION_VIEW, uriUrl);
         getActivity().startActivity(donate);
+        Intent github = new Intent(Intent.ACTION_VIEW, uriUrl);
+        getActivity().startActivity(github);
     }
 }

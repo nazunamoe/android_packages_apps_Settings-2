@@ -1442,7 +1442,7 @@
         />
 
         <!-- For FNV Stub -->
-        <activity android:name=".fnv.About" />
+        <activity android:name=".about.About" />
 
         <activity android:name=".fnv.Lockscreen" />
 
