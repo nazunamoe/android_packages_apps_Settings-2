@@ -137,6 +137,12 @@
                 android:targetPackage="com.xylon.settings" />
      </header>
 
+    <!-- TRDS -->
+    <header
+        android:id="@+id/dxy_settings"
+        android:icon="@drawable/ic_settings_xy"
+        android:title="@string/dxy_settings_title" />
+
     <!-- Lock screen -->
     <header
         android:id="@+id/lock_screen_settings"
@@ -148,7 +154,7 @@
     <header
         android:id="@+id/about_xy"
         android:fragment="com.android.settings.about.About"
-        android:icon="@drawable/ic_settings_xy"
+        android:icon="@drawable/ic_settings_multiuser"
         android:title="@string/title_about" />
 
     <!-- PERSONAL -->
