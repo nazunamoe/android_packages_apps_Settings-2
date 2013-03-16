@@ -30,7 +30,7 @@
     <string name="show_dev_already" msgid="2151632240145446227">"Inutile, vous êtes déjà un développeur."</string>
     <string name="header_category_wireless_networks" msgid="4944823405420438623">"SANS FIL ET RÉSEAUX"</string>
     <string name="header_category_device" msgid="5781174212691167553">"APPAREIL"</string>
-    <string name="header_category_customization">PERSONALISATION</string>
+    <string name="header_category_customization">PERSONNALISATION</string>
     <string name="header_category_personal" msgid="6225932173498802187">"PERSONNEL"</string>
     <string name="header_category_system" msgid="2073558547468647128">"SYSTÈME"</string>
     <string name="themes_settings_title">Thèmes</string>
@@ -1840,7 +1840,7 @@
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Sélectionnez les types d\'alertes d\'urgence à afficher."</string>
      
     <!-- Customisation -->
-    <string name="lockscreen_stub">Écran de vérouillage</string>
+    <string name="lockscreen_stub">Écran de verrouillage</string>
     <string name="title_about">À propos de Xylon</string>
     <string name="other_cat">Autres paramètres</string>
     <string name="misc">Extras</string>
