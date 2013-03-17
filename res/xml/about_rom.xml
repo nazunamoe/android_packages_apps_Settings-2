@@ -55,9 +55,9 @@
 			xy:githubLink="@string/github_flipz" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="NetChipTi"
-                        xy:nameDev="NetChipTi"
-                        xy:twitterHandle="NetchipTI"
+                        android:title="NetChipTl"
+                        xy:nameDev="NetChipTl"
+			xy:twitterHandle="netchiptl"
                         xy:githubLink="@string/github_netchipti" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
