@@ -150,17 +150,6 @@
         android:icon="@drawable/ic_settings_lockscreen"
         android:title="@string/lockscreen_stub" />
 
-    <!-- TricksterMod Device Specific settings -->
-    <header
-        android:id="@+id/trickster_settings"
-        android:title="@string/trickster_settings_title"
-        android:icon="@drawable/ic_settings_advanced">
-        <intent
-            android:action="com.bigeyes0x0.trickstermod.action.LAUNCH_SETTINGS"
-            android:targetPackage="com.bigeyes0x0.trickstermod"
-            android:targetClass="com.bigeyes0x0.trickstermod.main.ActivitySplash" />
-    </header>
-
     <!-- About Rom -->
     <header
         android:id="@+id/about_xy"
