@@ -26,6 +26,9 @@
         </PreferenceScreen>
 -->
 
+        <PreferenceScreen android:key="xylon_logo"
+                          android:layout="@layout/logo_row" />
+
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
                 android:title="@string/device_status" 
