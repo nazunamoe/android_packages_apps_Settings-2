@@ -2116,12 +2116,6 @@
     <string name="usb_mass_storage_title">Stockage de masse</string>
     <string name="usb_mass_storage_summary">Activer le stockage de masse USB</string>
 
-    <!-- Android debugging over WiFi -->
-    <string name="adb_over_network">ADB sur le réseau</string>
-    <string name="adb_over_network_summary">Activer le débogage TCP/IP sur les interfaces réseau (Wi-Fi, USB réseaux). Ce réglage est réinitialisé au redémarrage.</string>
-    <!-- Warning for Adb over Network -->
-    <string name="adb_over_network_warning">AVERTISSEMENT: Lorsque ADB sur le réseau est activé, votre téléphone est ouvert pour les intrusions sur tous les réseaux connectés, y compris les données GSM réseau \n\n Utilisez cette fonction lorsque vous êtes connecté sur des réseaux de confiance \n\nVoulez-vous vraiment activer cette fonction?</string>
-
     <!-- Performance settings  -->
     <string name="performance_settings_title">Performance</string>
 
