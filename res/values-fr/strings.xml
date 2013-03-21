@@ -1838,15 +1838,391 @@
     <string name="user_picture_title" msgid="7297782792000291692">"ID de photo"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Diffusions cellulaires"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Sélectionnez les types d\'alertes d\'urgence à afficher."</string>
-     
-    <!-- Customisation -->
-    <string name="lockscreen_stub">Écran de verrouillage</string>
+    
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
+    
+    <!-- About phone screen -->
+    <string name="mod_version">Version de la Rom</string>
+    <string name="mod_version_default">Inconnu</string>
+    <string name="build_date">Date de compilation</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Sélecteur de couleur</string>
+    <string name="press_color_to_apply">Appuyer sur la couleur pour valider.</string>
+    <string name="set">Ok</string>
+
+    <!-- About -->
     <string name="title_about">À propos de Xylon</string>
-    <string name="other_cat">Autres paramètres</string>
-    <string name="misc">Extras</string>
+    <string name="team">Les Funkies</string>
+    <string name="contributors">Collaborateurs</string>
+    <string name="xylon_website_title">Site web de Xylon</string>
+    <string name="xylon_website_summary">Trouvez toutes les nouvelles ici.</string>
+    <string name="xylon_source_title">XY Sources</string>
+    <string name="xylon_source_summary">Nous sommes entièrement open source. Vous pouvez toujours consulter nos modifications sur github.com/XYAOSP</string>
+
+    <!-- Customisation -->
+    <string name="xylon_extras">XY Tools</string>
+    <string name="lockscreen_stub">Ecran de verrouillage</string>
+    <string name="dxy_settings_title">Dark Xylon</string>
+
+    <!--- Volume key cursor control -->
+    <string name="volume_key_cursor_control_title">Contrôle du curseur via touches volume</string>
+    <string name="volume_key_cursor_control_off">Désactivé</string>
+    <string name="volume_key_cursor_control_on">Volume haut / bas déplace le curseur gauche / droite</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume haut / bas déplace le curseur droite / gauche</string>
+
+    <!-- Lock Screen -->
+    <string name="lockscreen_auto_rotate_title">Rotation auto. de l\'écran de verr.</string>
+    <string name="lockscreen_auto_rotate_summary">L\'écran de verrouillage aura la capacité de rotation par l\'intermédiaire du capteur d\'orientation de l\'appareil. Ceci est indépendant de la rotation automatique du reste du système.</string>
+    <string name="lockscreen_all_widgets_title">Permettre tous les widgets</string>
+    <string name="lockscreen_all_widgets_summary">Attention ** Certains widgets ne sont pas destinés à être utilisés sur le lockscreen. Le développeur du widget, l\'équipe XY, ne sont pas responsables de votre choix de widgets sur le lockscreen. Choisissez vos responsabilités.</string>
+    <string name="lockscreen_unlimited_widgets_title">Autoriser un nombre illimité de widgets</string>
+    <string name="lockscreen_unlimited_widgets_summary">Avertissement ** Ajouter trop de widgets peut causer des problèmes de lag avec les principaux lockscreen.</string>
+    <string name="lockscreen_longpress_challenge_title">Déverrouiller par Appui Long</string>
+    <string name="lockscreen_longpress_challenge_summary">Cela permet à votre appareil d\'être déverrouillé avec les widgets maximisés par un appui long sur l\'icône de verrouillage.</string>
 
     <!-- Lock screen vibrate settings -->
     <string name="lockscreen_vibrate_enabled_title">Vibreur</string>
-    <string name="lockscreen_vibrate_enabled_head">Vibrer lors du dévérouillage</string>
+    <string name="lockscreen_vibrate_enabled_head">Vibrer lors du déverrouillage</string>
 
+    <!-- Lock screen general strings -->
+    <string name="custom_app_icon_successfully">: icône appliqué correctement.</string>
+    <string name="use_custom_app_title">Utiliser une application personnalisée</string>
+    <string name="use_custom_app_summary">Utiliser une application personnalisée au lieu de la boîte de dialogue des applications récentes</string>
+    <string name="group_applications">Applications</string>
+
+    <!-- Screen security - Screen security   -->
+    <string name="screen_security_category">Sécurité de l\'écran</string>
+    <string name="screen_security_title">Ecran de verrouillage</string>
+    <string name="screen_security_summary">Afficher ou modifier les paramètres de sécurité de l\'écran de verrouillage, le délai et le temps d\'attente.</string>
+    <string name="additional_options_title">Options supplémentaires</string>
+    <string name="unlock_menu_unlock_title">Déverrouillage par Menu</string>
+    <string name="unlock_menu_unlock_summary">Appuyer sur le bouton de Menu déverrouille l\'appareil</string>
+    <string name="unlock_home_unlock_title">Déverrouillage par Accueil</string>
+    <string name="unlock_home_unlock_summary">Appuyer sur le bouton Accueil déverrouille l\'appareil</string>
+    <string name="unlock_quick_unlock_control_title">Déverrouillage rapide</string>
+    <string name="unlock_quick_unlock_control_summary">Déverrouiller automatiquement lorsque le code PIN / mot de passe correct est entré.</string>
+
+    <!-- Slide lock delay -->
+    <string name="delay_and_timeout_title">Délai de verrouillage</string>
+    <string name="slide_lock_delay_title">Retard du verrouillage de l\'écran</string>
+    <string name="slide_lock_timeout_delay_title">Retard après temps écoulé</string>
+    <string name="slide_lock_screenoff_delay_title">Retard après avoir été éteint</string>
+    <string name="slide_lock_delay_none">Désactivée.</string>
+    <string name="slide_lock_delay_1s">1 seconde</string>
+    <string name="slide_lock_delay_5s">5 secondes</string>
+    <string name="slide_lock_delay_10s">10 secondes</string>
+    <string name="slide_lock_delay_15s">15 secondes</string>
+    <string name="slide_lock_delay_30s">30 secondes</string>
+    <string name="slide_lock_delay_1m">1 minute</string>
+    <string name="slide_lock_delay_5m">5 minutes</string>
+    <string name="slide_lock_delay_10m">10 minutes</string>
+    <string name="slide_lock_delay_30m">30 minutes</string>
+
+    <!-- Swap volume buttons on rotation -->
+    <string name="swap_volume_keys_title">Inversion des boutons volume</string>
+    <string name="swap_volume_keys_summary">Inversions des boutons de volume lorsque l\'écran est tourné de 90 ou 180 degrés.</string>
+
+    <!-- Lock screen shortcuts -->
+    <string name="picker_activities">Activités</string>
+    <string name="select_custom_app_title">Sélectionner une application personnalisée</string>
+    <string name="select_custom_activity_title">Choisir une activité personnalisée</string>
+    <string name="icon_picker_choose_icon_title">Choisir l\'icône</string>
+    <string name="icon_picker_alarm">Alarme</string>
+    <string name="icon_picker_browser">Navigateur</string>
+    <string name="icon_picker_calendar">Calendrier</string>
+    <string name="icon_picker_camera">Appareil photo</string>
+    <string name="icon_picker_chrome">Chrome</string>
+    <string name="icon_picker_email">Email</string>
+    <string name="icon_picker_email2">Email (Holo)</string>
+    <string name="icon_picker_gallery">Galerie</string>
+    <string name="icon_picker_google_small">Google (petit)</string>
+    <string name="icon_picker_movie">Film</string>
+    <string name="icon_picker_music">Musique</string>
+    <string name="icon_picker_nav_normal">Navigation</string>
+    <string name="icon_picker_phone">Téléphone</string>
+    <string name="icon_picker_podcast">Podcasts</string>
+    <string name="icon_picker_rss">RSS</string>
+    <string name="icon_picker_search">Rechercher</string>
+    <string name="icon_picker_sms">Messages</string>
+
+    <!-- String for IconPicker -->
+    <string name="icon_picker_title">Choisissez la source de l\'icône</string>
+    <string name="icon_picker_system_icons_title">Icônes système</string>
+    <string name="icon_picker_gallery_title">Galerie</string>
+    <string name="icon_picker_pack_title">Pack d\'icônes</string>
+
+    <string name="profile_applist_title">Applications</string>
+
+    <!-- Lock screen misc. settings -->
+    <string name="lockscreen_battery_status_title">État de la batterie</string>
+    <string name="lockscreen_battery_status_charging">Que lors de la charge.</string>
+    <string name="lockscreen_battery_status_alwayson">Toujours affiché</string>
+
+    <!-- Lock screen background -->
+    <string name="lockscreen_style_options_title">Style de l\'écran de verrouillage</string>
+    <string name="lockscreen_custom_background_title">Fond d\'écran</string>
+    <string name="lockscreen_custom_background_dialog_title">Choisir la couleur</string>
+    <string name="lockscreen_background_result_successful">Fond modifié</string>
+    <string name="lockscreen_background_result_not_successful">Fond non modifié</string>
+    <string name="lockscreen_background_color_fill">Color fill</string>
+    <string name="lockscreen_background_custom_image">Image personnalisée</string>
+    <string name="lockscreen_background_full_transparent">Pleine transparence</string>
+    <string name="lockscreen_background_default_wallpaper">Fond d\'écran par défaut</string>
+    <string name="lockscreen_alpha_title">Transparence du fond</string>
+
+    <string name="ls_shortcuts_title">Raccourcis Lockscreen</string>
+
+    <!-- ParanoidAndroid: Lockscreen Shortcuts -->
+    <string name="icon_picker_type">Sélectionnez le type de l\'icône:</string>
+    <string name="icon_default">Par défaut</string>
+    <string name="icon_presets">Presets</string>
+    <string name="icon_custom">Personalisé</string>
+    <string name="lock_screen_shortcuts_title">Rapide</string>
+    <string name="lock_screen_shortcuts_reset_message">Réinitialiser les raccourcis ?</string>
+    <string name="lock_screen_shortcuts_summary">Afficher ou modifier les raccourcis rapides personnalisés</string>
+    <string name="lock_screen_shortcuts_add">Ajouter</string>
+    <string name="lock_screen_shortcuts_reset">Réinitialiser</string>
+    <string name="lock_screen_shortcuts_limit">Seulement 6 raccourcis sont permis!</string>
+
+    <!-- CyanogenMod: Lockscreen Slider Shortcuts -->
+    <string name="lockscreen_target_info">Faites glisser le curseur pour attribuer des raccourcis</string>
+    <string name="lockscreen_target_title">Slider</string>
+    <string name="lockscreen_target_summary">Afficher ou modifier les raccourcis personnalisés</string>
+    <string name="lockscreen_target_reset">Raccourcis de l\'écran de verrouillage, réinitialiser pour défaut. </string>
+    <string name="lockscreen_target_save">Raccourcis de l\'écran de verrouillage sauvés</string>
+    <string name="lockscreen_target_reset_title">Réinitialiser</string>
+    <string name="lockscreen_target_reset_message">Supprimer tous les raccourcis de l\'écran de verrouillage et les restaurer par défaut?</string>
+    <string name="lockscreen_target_empty">Vide</string>
+    <string name="lockscreen_target_edit_title">Modifier l\'icône et le raccourci</string>
+    <string name="lockscreen_target_edit_msg">Sélectionner ou modifier l\'application ou l\'activité souhaitée ainsi que l\'icône associé.</string>
+
+    <!-- AOKP Lockscreen Customizations -->
+    <string name="lockscreen_maximize_widgets_title">Maximiser les widgets</string>
+    <string name="lockscreen_maximize_widgets_summary">Voir les widgets maximisés et le déverrouillage minimisé lorsque l\'écran est allumé</string>
+    <string name="lockscreen_hide_initial_page_hints_title">Masquer les indications de widgets</string>
+    <string name="lockscreen_hide_initial_page_hints_summary">Régler si les indicateurs de widgets à gauche et à droite seront affichés lorsque l\'écran s\'allumera.</string>
+    <string name="lockscreen_use_widget_container_carousel_title">Utiliser une animation carrousel</string>
+    <string name="lockscreen_use_widget_container_carousel_summary">Utilisez une animation carrousel lors du basculement entre les widgets de l\'écran de verrouillage.</string>
+
+    <!-- Display : Rotation  -->
+    <string name="display_rotation_title">Rotation</string>
+    <string name="display_rotation_enabled">Activé</string>
+    <string name="display_rotation_disabled">Désactivé</string>
+    <string name="display_rotation_unit">degrés</string>
+    <string name="display_lockscreen_rotation_title">Inclure l\'écran de verrouillage</string>
+    <string name="display_rotation_category_title">Modes de rotation</string>
+    <string name="display_rotation_0_title">0 degrés</string>
+    <string name="display_rotation_90_title">90 degrés</string>
+    <string name="display_rotation_180_title">180 degrés</string>
+    <string name="display_rotation_270_title">270 degrés</string>
+
+    <!-- Sound settings -->
+
+    <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
+    <string name="checkbox_increasing_ring">Activer</string>
+
+    <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
+    <string name="increasing_ring_title">Sonnerie croissante</string>
+    <string name="increasing_ring_min_volume_title">Volume de la sonnerie, début</string>
+    <string name="increasing_ring_volume_notice">Note: \n Comme le début du volume est réglé supérieur au volume de la sonnerie, la sonnerie sera diffusé en fonction du volume de la sonnerie.</string>
+    <string name="increasing_ring_interval_title">Allonger l\'intervalle</string>
+    <string name="increasing_ring_interval_eachring">À chaque sonnerie</string>
+    <string name="increasing_ring_interval_half_second">0,5 secondes</string>
+    <string name="increasing_ring_interval_1second">1 seconde</string>
+    <string name="increasing_ring_interval_2seconds">2 secondes</string>
+    <string name="increasing_ring_interval_3seconds">3 secondes</string>
+    <string name="increasing_ring_interval_5seconds">5 secondes</string>
+    <string name="increasing_ring_interval_10seconds">10 secondes</string>
+    <string name="volume_overlay_title">Style du panneau Volume</string>
+    <string name="silent_mode_title">Mode silencieux</string>
+    <string name="volume_ring_only_description">Sonnerie</string>
+    <string name="link_volume_ringtones">Lier le volume des sonneries et notifications</string>
+    <string name="link_volume_mutes">Le mode silencieux affecte les notifications</string>
+    <string name="volbtn_music_controls_title">Commander la musique via Volume</string>
+    <string name="volbtn_music_controls_summary">Quand l\'écran est éteint, un appui long sur une touche volume fera passer la musique à la suivante.</string>
+
+    <!-- Safe headset volume restore checkbox -->
+    <string name="safe_headset_volume_title">Volume du casque sécurisé</string>
+    <string name="safe_headset_volume_summary">Prévenir d\'un niveau de volume élevé lorsque les écouteurs sont d\'abord branchés.</string>
+
+    <!-- Waiver -->
+    <string name="waiver_title">ATTENTION !</string>
+    <string name="waiver_body">La modification de ce paramètre peut être contre vos lois gouvernementales. \n\nEn sélectionnant \'Ok\' ci-dessous, vous reconnaissez cet avertissement et indemnisez la Team XY et ses collaborateurs de toutes les obligations légales.</string>
+
+    <!-- Launch music app on connect -->
+    <string name="headset_connect_player_title">Ouvrir appli. de musique à la connexion</string>
+
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">Options de réveil</string>
+    <string name="pref_volume_wake_title">Réveil via touche volume</string>
+    <string name="pref_volume_wake_summary">Appuyer sur une touche volume va réveiller l\'appareil. Fonction similaire au bouton Power.</string>
+
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">Réinitialiser</string>
+    <string name="profile_reset_message">Supprimer tous les profils créés par l\'utilisateur et des groupes d\'applications et de les restaurer par défaut?</string>
+    <string name="profiles_add">Ajouter</string>
+
+    <!-- Add application dialog box title -->
+    <string name="choose_app">Choisir une application</string>
+
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">Heures Silencieuses</string>
+    <string name="quiet_hours_summary">Configurer les heures où l\'appareil doit être discret</string>
+    <string name="quiet_hours_enabled_title">Activer les Heures Silencieuses</string>
+    <string name="quiet_hours_start">Début des Heures Silencieuses</string>
+    <string name="quiet_hours_start_summary">Quand commencer à appliquer les Heures Silencieuses</string>
+    <string name="quiet_hours_end">Fin des Heures Silencieuses</string>
+    <string name="quiet_hours_end_summary">Quand arrêter l\'exécution des heures silencieuses</string>
+    <string name="quiet_hours_notifications_title">Sons de notification désactivés</string>
+    <string name="quiet_hours_ringer_title">Sonnerie de téléphone désactivée</string>
+    <string name="quiet_hours_still_title">Désactiver les vibrations</string>
+    <string name="quiet_hours_dim_title">Désactiver voyant de notification</string>
+    <string name="quiet_hours_active_from">Actif à partir de</string>
+    <string name="quiet_hours_active_to">pour</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">Démarrage</string>
+    <string name="end_time_title">Fin</string>
+
+    <!-- DPI Changer -->
+    <string name="dpi">DPI</string>
+    <string name="open_market_title">4. Ouvrir le Play Store et appuyer sur Accepter.</string>
+    <string name="open_market_summary">Appuyez sur Retour lorsque vous avez terminé pour revenir ici.</string>
+    <string name="open_market_summary_could_not_open">Impossible d\'ouvrir le Play Store ! Si vous êtes sûr qu\'il est installé, ouvrez-le à partir du lanceur d\'applications.</string>
+    <string name="custom_density_title">5. Modifier la densité de ce que vous voulez !</string>
+    <string name="custom_density_summary">Si jamais vous avez des problèmes de compatibilité avec le Play Store, revenir ici et répéter le processus.</string>
+    <string name="custom_density_summary_invalid">DENSITÉ INVALIDE !</string>
+    <string name="custom_density">personaliser</string>
+    <string name="set_custom_density_title">Régler la densité personnalisée</string>
+    <string name="set_custom_density_set">Appliquer</string>
+    <string name="custom_density_dialog_title">AVERTISSEMENT !</string>
+    <string name="custom_density_dialog_summary">Modifier la densité de votre écran peut provoquer un comportement inattendu des applications. Si vous rencontrez une incompatibilité avec le Play Store, merci de revenir ici et de relancer le processus de l\'étape 1.</string>
+    <string name="custom_density_dialog_button_got">Je l\'ai !</string>
+    <string name="custom_density_dialog_button_reboot">Redémarrer maintenant</string>
+
+    <!-- Setting checkbox summary for displaying USB debugging notification -->
+    <string name="adb_notify">Informer du débogage USB </string>
+    <string name="adb_notify_summary">Afficher une notification lorsque le débogage USB est connecté</string>
+
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">Sélecteur en notification</string>
+    <string name="ime_switcher_notify_summary">Afficher le sélecteur de clavier en notification</string>
+
+    <!-- Launches Dev Tools -->
+    <string name="development_tools_title">Outils expérimentaux</string>
+
+    <!-- USB Mass Storage -->
+    <string name="usb_mass_storage_title">Stockage de masse</string>
+    <string name="usb_mass_storage_summary">Activer le stockage de masse USB</string>
+
+    <!-- Android debugging over WiFi -->
+    <string name="adb_over_network">ADB sur le réseau</string>
+    <string name="adb_over_network_summary">Activer le débogage TCP/IP sur les interfaces réseau (Wi-Fi, USB réseaux). Ce réglage est réinitialisé au redémarrage.</string>
+    <!-- Warning for Adb over Network -->
+    <string name="adb_over_network_warning">AVERTISSEMENT: Lorsque ADB sur le réseau est activé, votre téléphone est ouvert pour les intrusions sur tous les réseaux connectés, y compris les données GSM réseau \n\n Utilisez cette fonction lorsque vous êtes connecté sur des réseaux de confiance \n\nVoulez-vous vraiment activer cette fonction?</string>
+
+    <!-- Performance settings  -->
+    <string name="performance_settings_title">Performance</string>
+
+    <!-- Performance Settings : Warning dialog  -->
+    <string name="performance_settings_warning_title">Procédez avec prudence !</string>
+    <string name="performance_settings_warning">Ces paramètres sont inclus pour l\'expérimentation et les modifications apportées à eux ont le potentiel de causer des défaillances, instabilité, accidents, la perte de données ou de matériel. \n\nNous vous demandons de ne pas vous plaindre de bugs si l\'un de ces paramètres ont été modifiés par rapport aux valeurs par défaut. S\'il vous plaît, ne blâmez pas l\'équipe XY si votre téléphone fait BOUM.</string>
+
+    <!-- Performance Settings : Processor settings title -->
+    <string name="processor_title">Processeur</string>
+    <!-- Performance Settings : Processor settings summary. -->
+    <string name="processor_summary">Changer le gouverneur et les fréquences du CPU</string>
+
+    <!-- Performance Settings : Processor settings sub items -->
+    <string name="cpu_cur_freq_title">Fréquence actuelle du CPU</string>
+    <string name="cpu_governors_title">Gouverneur CPU</string>
+    <string name="cpu_min_freq_title">Fréquence minimum du processeur</string>
+    <string name="cpu_max_freq_title">Fréquence maximale du processeur</string>
+    <string name="cpu_set_on_boot">Appliqer au démarrage ou redémarrage</string>
+    <string name="cpu_set_on_boot_summary">Restaurer les paramètres du processeur au démarrage</string>
+
+    <!-- Memory Management -->
+    <string name="memory_management_title">Gestion de la mémoire</string>
+    <string name="memory_management_summary">Personnaliser l\'utilisation de la mémoire pour améliorer les performances du système</string>
+    <!-- zRam -->
+    <string name="pref_zram_title">zRAM</string>
+    <string name="pref_zram_summary">Comprimer la mémoire pour une capacité virtuelle accrue (Redémarrage nécessaire)</string>
+    <!-- KSM -->
+    <string name="pref_ksm_title">Kernel Samepage Merging</string>
+    <string name="pref_ksm_summary">KSM réduit les besoins en mémoire et améliore les performances physiques</string>
+    <!-- Purgeable Assets -->
+    <string name="pref_purgeable_assets_title">Permettre la purge des actifs</string>
+    <string name="pref_purgeable_assets_summary">Purge des actifs de mémoire bitmap permet la libération de plus de RAM en cas de besoin (Redémarrage nécessaire)</string>
+
+    <!-- Performance Settings : I/O scheduler settings summary. -->
+    <string name="io_scheds_summary">Changer de planificateur I/O</string>
+
+    <!-- Performance Settings : I/O scheduler settings sub items -->
+    <string name="io_sched_title">Planificateur I/O</string>
+    <string name="io_sched_set_on_boot">Appliquer au démarrage ou redémarrage</string>
+    <string name="io_sched_set_on_boot_summary">Restaurer les paramètres du planificateur I/O au démarrage</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">Amélioration de surface</string>
+    <string name="dithering_no_dither">Désactiver le dithering</string>
+    <string name="dithering_color_banding">Correction des bandes de couleur (Défaut)</string>
+    <string name="dithering_blur_effect">Correction des bandes de couleur et effet de flou</string>
+
+    <!-- Performance Settings : 16bpp Alpha -->
+    <string name="pref_use_16bpp_alpha_title">Transparence 16bit</string>
+    <string name="pref_use_16bpp_alpha_summary">De meilleures performances graphiques, mais de moins bonne qualité et peut causer des artefacts visuels tels que des déchirures d\'écran et autres trucs bizarres (Redémarrage nécessaire).</string>
+
+    <!-- Performance | Voltage Control -->
+    <string name="cpu_voltage">Contrôle de la tension</string>
+    <string name="cpu_voltage_summary">Changer la tension du CPU de chaque fréquence</string>
+    <string name="ps_volt_mhz_voltage"> Tension MHz</string>
+    <string name="ps_volt_save">Enregistrer</string>
+    <string name="ps_volt_current_voltage">Tension actuelle: </string>
+    <string name="ps_volt_setting_to_apply">Paramètres à appliquer: </string>
+    <string name="pt_volt_control">Contrôle des tensions</string>
+    <string name="ps_volt_control">Régler les tensions pour chaque fréquence</string>
+    <string name="not_supported">Votre kernel ne supporte pas la modification des tensions</string>
+    <string name="apply_values">Appliquer les valeurs</string>
+    <string name="freq">Fréquence</string>
+    <string name="current">mV actuel.</string>
+    <string name="saved">mV sauvegarder.</string>
+    <string name="sob">Appliquer au démarrage</string>
+
+    <!-- Notification shade dimming -->
+    <string name="notification_shade_dim_title">Ombre des notifications</string>
+    <string name="notification_shade_dim_summary">Activer l\'effet d\'ombre en tirant vers le bas la barre de notification</string>
+
+    <!--- Sms security limit -->
+    <string name="app_security_title">Sécurisation</string>
+    <string name="sms_security_check_limit_title">Limite SMS</string>
+    <string name="sms_security_check_limit_summary">Les applications peuvent envoyer %d messages en 30 minutes avant d\'exiger une confirmation.</string>
+    <string name="sms_security_check_limit_default">1000 (Par défaut)</string>
+
+    <!--- Lock clock -->
+    <string name="lock_clock_title">Widget horloge</string>
+    <string name="lock_clock_summary">Afficher ou modifier ce que le widget \'cLock\' affichera.</string>
+
+    <!-- XYStats -->
+    <string name="anonymous_statistics_title">XYStats</string>
+    <string name="anonymous_statistics_summary">Aidez à l\'amélioration de Xylon en autorisant l\'envoi de rapports anonymes à la team.</string>
+
+    <!-- Automatic brightness customization -->
+    <string name="light_sensor_current_value">Valeur actuelle du capteur: <xliff:g id="light_level">%d</xliff:g> lux</string> 
+    <string name="auto_brightness_dialog_title">Niveaux de luminosité automatique</string>
+    <string name="auto_brightness_adjust_button">Ajuster</string>
+    <string name="auto_brightness_reset_button">Réinitialiser</string>
+    <string name="auto_brightness_lux_dialog_title">Plage de luminosité ambiante</string>
+    <string name="auto_brightness_split_dialog_title">Modifier les niveaux de luminosité</string>
+    <string name="auto_brightness_start_lux">Début de la plage (lux)</string>
+    <string name="auto_brightness_end_lux">Fin de la plage (lux)</string>
+    <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux?</string>
+    <string name="auto_brightness_reset_confirmation">Tous les niveaux de luminosité seront réinitialisés à leurs réglages par défaut.</string>
+    <string name="auto_brightness_split_lux_format">Intervalle désiré (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> luxs)</string>
+    <string name="auto_brightness_level_options">Options de niveau de lumière</string>
+    <string name="auto_brightness_menu_edit_lux">Plage de luminosité ambiante</string>
+    <string name="auto_brightness_menu_split">Modifier</string>
+    <string name="auto_brightness_menu_remove">Supprimer</string>
+
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
