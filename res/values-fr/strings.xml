@@ -1862,7 +1862,7 @@
 
     <!-- Customisation -->
     <string name="xylon_extras">XY Tools</string>
-    <string name="lockscreen_stub">Ecran de verrouillage</string>
+    <string name="lockscreen_stub">Écran de verrouillage</string>
     <string name="dxy_settings_title">Dark Xylon</string>
 
     <!--- Volume key cursor control -->
