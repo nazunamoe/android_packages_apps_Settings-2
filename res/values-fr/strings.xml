@@ -1856,7 +1856,7 @@
     <string name="team">Les Funkies</string>
     <string name="contributors">Collaborateurs</string>
     <string name="xylon_website_title">Site web de Xylon</string>
-    <string name="xylon_website_summary">Trouvez toutes les nouvelles ici.</string>
+    <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
     <string name="xylon_source_title">XY Sources</string>
     <string name="xylon_source_summary">Nous sommes entièrement open source. Vous pouvez toujours consulter nos modifications sur github.com/XYAOSP</string>
 
@@ -1877,7 +1877,7 @@
     <string name="lockscreen_all_widgets_title">Permettre tous les widgets</string>
     <string name="lockscreen_all_widgets_summary">Attention ** Certains widgets ne sont pas destinés à être utilisés sur le lockscreen. Le développeur du widget, l\'équipe XY, ne sont pas responsables de votre choix de widgets sur le lockscreen. Choisissez vos responsabilités.</string>
     <string name="lockscreen_unlimited_widgets_title">Autoriser un nombre illimité de widgets</string>
-    <string name="lockscreen_unlimited_widgets_summary">Avertissement ** Ajouter trop de widgets peut causer des problèmes de lag avec les principaux lockscreen.</string>
+    <string name="lockscreen_unlimited_widgets_summary">Attention ** Ajouter trop de widgets peut causer des problèmes de lag avec les principaux lockscreen.</string>
     <string name="lockscreen_longpress_challenge_title">Déverrouiller par Appui Long</string>
     <string name="lockscreen_longpress_challenge_summary">Cela permet à votre appareil d\'être déverrouillé avec les widgets maximisés par un appui long sur l\'icône de verrouillage.</string>
 
@@ -1956,7 +1956,7 @@
 
     <!-- Lock screen misc. settings -->
     <string name="lockscreen_battery_status_title">État de la batterie</string>
-    <string name="lockscreen_battery_status_charging">Que lors de la charge.</string>
+    <string name="lockscreen_battery_status_charging">Que lors de la charge</string>
     <string name="lockscreen_battery_status_alwayson">Toujours affiché</string>
 
     <!-- Lock screen background -->
@@ -1965,7 +1965,7 @@
     <string name="lockscreen_custom_background_dialog_title">Choisir la couleur</string>
     <string name="lockscreen_background_result_successful">Fond modifié</string>
     <string name="lockscreen_background_result_not_successful">Fond non modifié</string>
-    <string name="lockscreen_background_color_fill">Color fill</string>
+    <string name="lockscreen_background_color_fill">Couleur unie</string>
     <string name="lockscreen_background_custom_image">Image personnalisée</string>
     <string name="lockscreen_background_full_transparent">Pleine transparence</string>
     <string name="lockscreen_background_default_wallpaper">Fond d\'écran par défaut</string>
@@ -1978,21 +1978,21 @@
     <string name="icon_default">Par défaut</string>
     <string name="icon_presets">Presets</string>
     <string name="icon_custom">Personalisé</string>
-    <string name="lock_screen_shortcuts_title">Rapide</string>
+    <string name="lock_screen_shortcuts_title">Raccourcis</string>
     <string name="lock_screen_shortcuts_reset_message">Réinitialiser les raccourcis ?</string>
-    <string name="lock_screen_shortcuts_summary">Afficher ou modifier les raccourcis rapides personnalisés</string>
+    <string name="lock_screen_shortcuts_summary">Afficher ou modifier les raccourcis personnalisés</string>
     <string name="lock_screen_shortcuts_add">Ajouter</string>
     <string name="lock_screen_shortcuts_reset">Réinitialiser</string>
-    <string name="lock_screen_shortcuts_limit">Seulement 6 raccourcis sont permis!</string>
+    <string name="lock_screen_shortcuts_limit">Seulement 6 raccourcis sont permis !</string>
 
     <!-- CyanogenMod: Lockscreen Slider Shortcuts -->
     <string name="lockscreen_target_info">Faites glisser le curseur pour attribuer des raccourcis</string>
     <string name="lockscreen_target_title">Slider</string>
-    <string name="lockscreen_target_summary">Afficher ou modifier les raccourcis personnalisés</string>
-    <string name="lockscreen_target_reset">Raccourcis de l\'écran de verrouillage, réinitialiser pour défaut. </string>
-    <string name="lockscreen_target_save">Raccourcis de l\'écran de verrouillage sauvés</string>
+    <string name="lockscreen_target_summary">Afficher ou modifier les raccourcis personnalisés du Slider (Pas de sécurité seulement)</string>
+    <string name="lockscreen_target_reset">Raccourcis du Slider réinitialisés. </string>
+    <string name="lockscreen_target_save">Raccourcis du Slider sauvés.</string>
     <string name="lockscreen_target_reset_title">Réinitialiser</string>
-    <string name="lockscreen_target_reset_message">Supprimer tous les raccourcis de l\'écran de verrouillage et les restaurer par défaut?</string>
+    <string name="lockscreen_target_reset_message">Supprimer tous les raccourcis du Slider de l\'écran de verrouillage et les restaurer par défaut?</string>
     <string name="lockscreen_target_empty">Vide</string>
     <string name="lockscreen_target_edit_title">Modifier l\'icône et le raccourci</string>
     <string name="lockscreen_target_edit_msg">Sélectionner ou modifier l\'application ou l\'activité souhaitée ainsi que l\'icône associé.</string>
@@ -2024,9 +2024,9 @@
 
     <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
     <string name="increasing_ring_title">Sonnerie croissante</string>
-    <string name="increasing_ring_min_volume_title">Volume de la sonnerie, début</string>
-    <string name="increasing_ring_volume_notice">Note: \n Comme le début du volume est réglé supérieur au volume de la sonnerie, la sonnerie sera diffusé en fonction du volume de la sonnerie.</string>
-    <string name="increasing_ring_interval_title">Allonger l\'intervalle</string>
+    <string name="increasing_ring_min_volume_title">Volume de la sonnerie, au début</string>
+    <string name="increasing_ring_volume_notice">Note: \nComme le début du volume est réglé supérieur au volume de la sonnerie, la sonnerie sera diffusé en fonction du volume de la sonnerie.</string>
+    <string name="increasing_ring_interval_title">Faire augmenter le son:</string>
     <string name="increasing_ring_interval_eachring">À chaque sonnerie</string>
     <string name="increasing_ring_interval_half_second">0,5 secondes</string>
     <string name="increasing_ring_interval_1second">1 seconde</string>
@@ -2051,7 +2051,7 @@
     <string name="waiver_body">La modification de ce paramètre peut être contre vos lois gouvernementales. \n\nEn sélectionnant \'Ok\' ci-dessous, vous reconnaissez cet avertissement et indemnisez la Team XY et ses collaborateurs de toutes les obligations légales.</string>
 
     <!-- Launch music app on connect -->
-    <string name="headset_connect_player_title">Ouvrir appli. de musique à la connexion</string>
+    <string name="headset_connect_player_title">Ouvrir app. de musique à la connexion</string>
 
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Options de réveil</string>
@@ -2107,7 +2107,7 @@
 
     <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Sélecteur en notification</string>
-    <string name="ime_switcher_notify_summary">Afficher le sélecteur de clavier en notification</string>
+    <string name="ime_switcher_notify_summary">Afficher le sélecteur de clavier, sous forme de notification</string>
 
     <!-- Launches Dev Tools -->
     <string name="development_tools_title">Outils expérimentaux</string>
@@ -2120,7 +2120,7 @@
     <string name="performance_settings_title">Performance</string>
 
     <!-- Performance Settings : Warning dialog  -->
-    <string name="performance_settings_warning_title">Procédez avec prudence !</string>
+    <string name="performance_settings_warning_title">Procéder avec prudence !</string>
     <string name="performance_settings_warning">Ces paramètres sont inclus pour l\'expérimentation et les modifications apportées à eux ont le potentiel de causer des défaillances, instabilité, accidents, la perte de données ou de matériel. \n\nNous vous demandons de ne pas vous plaindre de bugs si l\'un de ces paramètres ont été modifiés par rapport aux valeurs par défaut. S\'il vous plaît, ne blâmez pas l\'équipe XY si votre téléphone fait BOUM.</string>
 
     <!-- Performance Settings : Processor settings title -->
@@ -2210,7 +2210,7 @@
     <string name="auto_brightness_split_dialog_title">Modifier les niveaux de luminosité</string>
     <string name="auto_brightness_start_lux">Début de la plage (lux)</string>
     <string name="auto_brightness_end_lux">Fin de la plage (lux)</string>
-    <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux?</string>
+    <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux ?</string>
     <string name="auto_brightness_reset_confirmation">Tous les niveaux de luminosité seront réinitialisés à leurs réglages par défaut.</string>
     <string name="auto_brightness_split_lux_format">Intervalle désiré (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> luxs)</string>
     <string name="auto_brightness_level_options">Options de niveau de lumière</string>
