@@ -847,10 +847,10 @@
 
     <!-- Volume Overlay options. -->
     <string-array name="volume_overlay_entries">
-        <item>Single</item>
-        <item>Expandable</item>
-        <item>Expanded</item>
-        <item>None</item>
+        <item>@string/volume_overlay_single</item>
+        <item>@string/volume_overlay_expandable</item>
+        <item>@string/volume_overlay_expanded</item>
+        <item>@string/volume_overlay_none</item>
     </string-array>
 
     <!-- Values for Volume Overlay. Do not translate. -->
@@ -863,9 +863,9 @@
 
     <!-- Silent mode options. -->
     <string-array name="silent_mode_entries">
-        <item>Off</item>
-        <item>Vibrate</item>
-        <item>Mute</item>
+        <item>@string/silent_mode_off</item>
+        <item>@string/silent_mode_vibrate</item>
+        <item>@string/silent_mode_mute</item>
     </string-array>
 
     <!-- Values for Silent mode. Do not translate. -->
@@ -1056,11 +1056,13 @@
 
     <!--- Sms security limit -->
     <string-array name="sms_security_check_limit_entries" translatable="false">
-        <item>@string/sms_security_check_limit_default</item>
+        <item>30</item>
         <item>50</item>
-        <item>100</item>
+        <item>@string/sms_security_check_limit_default</item>
         <item>200</item>
         <item>500</item>
+        <item>1000</item>
+        <item>10000</item>
         </string-array>
 
     <string-array name="sms_security_check_limit_values" translatable="false">
@@ -1069,6 +1071,8 @@
         <item>100</item>
         <item>200</item>
         <item>500</item>
+        <item>1000</item>
+        <item>10000</item>
         </string-array>
 
 </resources>
