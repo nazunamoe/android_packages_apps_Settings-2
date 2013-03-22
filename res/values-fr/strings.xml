@@ -2035,7 +2035,14 @@
     <string name="increasing_ring_interval_5seconds">5 secondes</string>
     <string name="increasing_ring_interval_10seconds">10 secondes</string>
     <string name="volume_overlay_title">Style du panneau Volume</string>
+    <string name="volume_overlay_single">Simple</string>
+    <string name="volume_overlay_expandable">Extensible</string>
+    <string name="volume_overlay_expanded">Étendu</string>
+    <string name="volume_overlay_none">Masqué</string>
     <string name="silent_mode_title">Mode silencieux</string>
+    <string name="silent_mode_off">Off</string>
+    <string name="silent_mode_vibrate">Vibreur</string>
+    <string name="silent_mode_mute">Muet</string>
     <string name="volume_ring_only_description">Sonnerie</string>
     <string name="link_volume_ringtones">Lier le volume des sonneries et notifications</string>
     <string name="link_volume_mutes">Le mode silencieux affecte les notifications</string>
@@ -2191,7 +2198,7 @@
     <string name="app_security_title">Sécurisation</string>
     <string name="sms_security_check_limit_title">Limite SMS</string>
     <string name="sms_security_check_limit_summary">Les applications peuvent envoyer %d messages en 30 minutes avant d\'exiger une confirmation.</string>
-    <string name="sms_security_check_limit_default">1000 (Par défaut)</string>
+    <string name="sms_security_check_limit_default">100 (Par défaut)</string>
 
     <!--- Lock clock -->
     <string name="lock_clock_title">Widget horloge</string>
