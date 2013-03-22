@@ -4674,7 +4674,7 @@
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
     <string name="volume_overlay_title">Volume panel style</string>
     <string name="volume_overlay_single">Single</string>
-    <string name="volume_overlay_expandable"Expandable</string>
+    <string name="volume_overlay_expandable">Expandable</string>
     <string name="volume_overlay_expanded">Expanded</string>
     <string name="volume_overlay_none">None</string>
     <string name="silent_mode_title">Silent mode</string>
