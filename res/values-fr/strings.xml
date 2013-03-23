@@ -1864,6 +1864,7 @@
     <string name="xylon_extras">XY Tools</string>
     <string name="lockscreen_stub">Écran de verrouillage</string>
     <string name="dxy_settings_title">Dark Xylon</string>
+    <string name="misc">Divers</string>
 
     <!--- Volume key cursor control -->
     <string name="volume_key_cursor_control_title">Contrôle du curseur via touches volume</string>
@@ -1971,7 +1972,7 @@
     <string name="lockscreen_background_default_wallpaper">Fond d\'écran par défaut</string>
     <string name="lockscreen_alpha_title">Transparence du fond</string>
 
-    <string name="ls_shortcuts_title">Raccourcis Lockscreen</string>
+    <string name="ls_shortcuts_title">Raccourcis écran de verrouillage</string>
 
     <!-- ParanoidAndroid: Lockscreen Shortcuts -->
     <string name="icon_picker_type">Sélectionnez le type de l\'icône:</string>
@@ -2003,7 +2004,7 @@
     <string name="lockscreen_hide_initial_page_hints_title">Masquer les indications de widgets</string>
     <string name="lockscreen_hide_initial_page_hints_summary">Régler si les indicateurs de widgets à gauche et à droite seront affichés lorsque l\'écran s\'allumera.</string>
     <string name="lockscreen_use_widget_container_carousel_title">Utiliser une animation carrousel</string>
-    <string name="lockscreen_use_widget_container_carousel_summary">Utilisez une animation carrousel lors du basculement entre les widgets de l\'écran de verrouillage.</string>
+    <string name="lockscreen_use_widget_container_carousel_summary">Utiliser une animation carrousel lors du basculement entre les widgets de l\'écran de verrouillage.</string>
 
     <!-- Display : Rotation  -->
     <string name="display_rotation_title">Rotation</string>
@@ -2024,7 +2025,7 @@
 
     <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
     <string name="increasing_ring_title">Sonnerie croissante</string>
-    <string name="increasing_ring_min_volume_title">Volume de la sonnerie, au début</string>
+    <string name="increasing_ring_min_volume_title">Volume de la sonnerie, au début:</string>
     <string name="increasing_ring_volume_notice">Note: \nComme le début du volume est réglé supérieur au volume de la sonnerie, la sonnerie sera diffusé en fonction du volume de la sonnerie.</string>
     <string name="increasing_ring_interval_title">Faire augmenter le son:</string>
     <string name="increasing_ring_interval_eachring">À chaque sonnerie</string>
@@ -2034,7 +2035,7 @@
     <string name="increasing_ring_interval_3seconds">3 secondes</string>
     <string name="increasing_ring_interval_5seconds">5 secondes</string>
     <string name="increasing_ring_interval_10seconds">10 secondes</string>
-    <string name="volume_overlay_title">Style du panneau Volume</string>
+    <string name="volume_overlay_title">Style du panneau volume</string>
     <string name="volume_overlay_single">Simple</string>
     <string name="volume_overlay_expandable">Extensible</string>
     <string name="volume_overlay_expanded">Étendu</string>
@@ -2046,9 +2047,11 @@
     <string name="volume_ring_only_description">Sonnerie</string>
     <string name="link_volume_ringtones">Lier le volume des sonneries et notifications</string>
     <string name="link_volume_mutes">Le mode silencieux affecte les notifications</string>
-    <string name="volbtn_music_controls_title">Commander la musique via Volume</string>
+    <string name="volbtn_music_controls_title">Commander la musique via volume</string>
     <string name="volbtn_music_controls_summary">Quand l\'écran est éteint, un appui long sur une touche volume fera passer la musique à la suivante.</string>
-
+    <string name="volume_adjust_sounds_enable_title">Son d\'ajustement</string>
+    <string name="volume_adjust_sounds_enable_summary">Jouer un son lors du réglage du niveau de volume</string>
+    
     <!-- Safe headset volume restore checkbox -->
     <string name="safe_headset_volume_title">Volume du casque sécurisé</string>
     <string name="safe_headset_volume_summary">Prévenir d\'un niveau de volume élevé lorsque les écouteurs sont d\'abord branchés.</string>
@@ -2058,8 +2061,9 @@
     <string name="waiver_body">La modification de ce paramètre peut être contre vos lois gouvernementales. \n\nEn sélectionnant \'Ok\' ci-dessous, vous reconnaissez cet avertissement et indemnisez la Team XY et ses collaborateurs de toutes les obligations légales.</string>
 
     <!-- Launch music app on connect -->
-    <string name="headset_connect_player_title">Ouvrir app. de musique à la connexion</string>
-
+    <string name="headset_connect_player_title">App. de musique au branchement</string>
+    <string name="headset_connect_player_summary">Ouvrir l\'app. de musique par défaut lorsqu\'une prise jack est branchée</string>
+    
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Options de réveil</string>
     <string name="pref_volume_wake_title">Réveil via touche volume</string>
@@ -2077,7 +2081,7 @@
     <string name="quiet_hours_title">Heures Silencieuses</string>
     <string name="quiet_hours_summary">Configurer les heures où l\'appareil doit être discret</string>
     <string name="quiet_hours_enabled_title">Activer les Heures Silencieuses</string>
-    <string name="quiet_hours_start">Début des Heures Silencieuses</string>
+    <string name="quiet_hours_start">Début des heures silencieuses</string>
     <string name="quiet_hours_start_summary">Quand commencer à appliquer les Heures Silencieuses</string>
     <string name="quiet_hours_end">Fin des Heures Silencieuses</string>
     <string name="quiet_hours_end_summary">Quand arrêter l\'exécution des heures silencieuses</string>
@@ -2205,7 +2209,7 @@
     <string name="lock_clock_summary">Afficher ou modifier ce que le widget \'cLock\' affichera.</string>
 
     <!-- XYStats -->
-    <string name="anonymous_statistics_title">XYStats</string>
+    <string name="anonymous_statistics_title">Statistiques XY</string>
     <string name="anonymous_statistics_summary">Aidez à l\'amélioration de Xylon en autorisant l\'envoi de rapports anonymes à la team.</string>
 
     <!-- Automatic brightness customization -->
