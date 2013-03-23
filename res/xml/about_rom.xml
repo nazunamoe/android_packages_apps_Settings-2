@@ -27,7 +27,7 @@
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="Daniel MM"
 			xy:nameDev="Daniel MM"
-			xy:twitterHandle="danthefluffer"
+			xy:twitterHandle="daxinonito"
 			xy:githubLink="@string/github_daxxmax" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
