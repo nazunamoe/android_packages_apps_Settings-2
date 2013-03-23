@@ -4697,6 +4697,7 @@
 
     <!-- Launch music app on connect -->
     <string name="headset_connect_player_title">Launch music app on connect</string>
+    <string name="headset_connect_player_summary">@null</string>
 
     <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Wakeup options</string>
