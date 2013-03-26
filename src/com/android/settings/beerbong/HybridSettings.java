@@ -163,7 +163,7 @@ public class HybridSettings extends SettingsPreferenceFragment implements
                 .getActualProperty("com.android.systemui.navbar.dpi") / 5;
 
         LayoutInflater factory = LayoutInflater.from(getActivity());
-        final View alphaDialog = factory.inflate(R.layout.seekbar_dialog, null);
+        final View alphaDialog = factory.inflate(R.layout.seekbar_dpi_dialog, null);
         SeekBar seekbar = (SeekBar) alphaDialog.findViewById(R.id.seek_bar);
         final TextView seektext = (TextView) alphaDialog
                 .findViewById(R.id.seek_text);
