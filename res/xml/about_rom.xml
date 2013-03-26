@@ -76,7 +76,7 @@
                         android:title="MBQ"
                         xy:nameDev="MBQsniper"
                         xy:twitterHandle="MBQsniper"
-                        xy:githubLink="@string/github_MBQsniper" />
+                        xy:githubLink="@string/github_mbqsniper" />
 
 
 	</PreferenceCategory>
