@@ -72,6 +72,12 @@
                         xy:twitterHandle="psafx"
                         xy:githubLink="@string/github_psafx" />
 
+		<com.android.settings.about.widgets.DeveloperPreference
+                        android:title="MBQ"
+                        xy:nameDev="MBQsniper"
+                        xy:twitterHandle="MBQsniper"
+                        xy:githubLink="@string/github_MBQsniper" />
+
 
 	</PreferenceCategory>
 
