@@ -75,7 +75,7 @@
 		<com.android.settings.about.widgets.DeveloperPreference
                         android:title="MBQ"
                         xy:nameDev="MBQsniper"
-                        xy:twitterHandle="MBQsniper"
+                        xy:twitterHandle="mbqsniper"
                         xy:githubLink="@string/github_mbqsniper" />
 
 
