@@ -78,7 +78,12 @@
                         xy:twitterHandle="mbqsniper"
                         xy:githubLink="@string/github_mbqsniper" />
 
-
+		<com.android.settings.about.widgets.DeveloperPreference
+			android:title="AirOne70"
+			xy:nameDev="AirOne"
+			xy:twitterHandle="airone70500"
+			xy:githubLink="@string/github_airone" />
+			
 	</PreferenceCategory>
 
 	<PreferenceCategory
