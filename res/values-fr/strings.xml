@@ -1843,7 +1843,7 @@
     
     <!-- About phone screen -->
     <string name="mod_version">Version de la Rom</string>
-    <string name="mod_version_default">Inconnu</string>
+    <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
 
     <!-- Color Picker -->
@@ -1865,12 +1865,14 @@
     <string name="lockscreen_stub">Écran de verrouillage</string>
     <string name="dxy_settings_title">Dark Xylon</string>
     <string name="misc">Divers</string>
+    <string name="headset_category_title">Casque audio</string>
+
 
     <!--- Volume key cursor control -->
-    <string name="volume_key_cursor_control_title">Contrôle du curseur via touches volume</string>
+    <string name="volume_key_cursor_control_title">Contrôle du curseur par les touches du volume</string>
     <string name="volume_key_cursor_control_off">Désactivé</string>
-    <string name="volume_key_cursor_control_on">Volume haut / bas déplace le curseur gauche / droite</string>
-    <string name="volume_key_cursor_control_on_reverse">Volume haut / bas déplace le curseur droite / gauche</string>
+    <string name="volume_key_cursor_control_on">La touche haut déplace le curseur vers la gauche et bas vers la droite</string>
+    <string name="volume_key_cursor_control_on_reverse">La touche haut déplace le curseur vers la droite et bas vers la gauche</string>
 
     <!-- Lock Screen -->
     <string name="lockscreen_auto_rotate_title">Rotation auto. de l\'écran de verr.</string>
@@ -1957,20 +1959,22 @@
 
     <!-- Lock screen misc. settings -->
     <string name="lockscreen_battery_status_title">État de la batterie</string>
-    <string name="lockscreen_battery_status_charging">Que lors de la charge</string>
-    <string name="lockscreen_battery_status_alwayson">Toujours affiché</string>
+    <string name="lockscreen_battery_status_charging">Lors du chargement</string>
+    <string name="lockscreen_battery_status_alwayson">Toujours afficher</string>
+    <string name="lockpattern_settings_enable_error_path_title">Afficher l\'erreur de schéma</string>
+    <string name="lockpattern_settings_enable_dots_title">Afficher les points</string>
 
     <!-- Lock screen background -->
     <string name="lockscreen_style_options_title">Style de l\'écran de verrouillage</string>
-    <string name="lockscreen_custom_background_title">Fond d\'écran</string>
-    <string name="lockscreen_custom_background_dialog_title">Choisir la couleur</string>
-    <string name="lockscreen_background_result_successful">Fond modifié</string>
-    <string name="lockscreen_background_result_not_successful">Fond non modifié</string>
-    <string name="lockscreen_background_color_fill">Couleur unie</string>
-    <string name="lockscreen_background_custom_image">Image personnalisée</string>
     <string name="lockscreen_background_full_transparent">Pleine transparence</string>
-    <string name="lockscreen_background_default_wallpaper">Fond d\'écran par défaut</string>
     <string name="lockscreen_alpha_title">Transparence du fond</string>
+    <string name="lockscreen_custom_background_title">Fond d\'écran</string>
+    <string name="lockscreen_custom_background_dialog_title">Choisir une couleur</string>
+    <string name="lockscreen_background_result_successful">Fond d\'écran changé avec succès</string>
+    <string name="lockscreen_background_result_not_successful">Impossible de changer le fond d\écran</string>
+    <string name="lockscreen_background_color_fill">Couleur de remplissage</string>
+    <string name="lockscreen_background_custom_image">Image personnalisée</string>
+    <string name="lockscreen_background_default_wallpaper">Fond d\'écran par défaut</string>
 
     <string name="ls_shortcuts_title">Raccourcis écran de verrouillage</string>
 
@@ -1986,21 +1990,21 @@
     <string name="lock_screen_shortcuts_reset">Réinitialiser</string>
     <string name="lock_screen_shortcuts_limit">Seulement 6 raccourcis sont permis !</string>
 
-    <!-- CyanogenMod: Lockscreen Slider Shortcuts -->
-    <string name="lockscreen_target_info">Faites glisser le curseur pour attribuer des raccourcis</string>
-    <string name="lockscreen_target_title">Slider</string>
-    <string name="lockscreen_target_summary">Afficher ou modifier les raccourcis personnalisés du Slider (Pas de sécurité seulement)</string>
-    <string name="lockscreen_target_reset">Raccourcis du Slider réinitialisés. </string>
-    <string name="lockscreen_target_save">Raccourcis du Slider sauvés.</string>
+    <!-- Lock Screen Shortcuts -->
+    <string name="lockscreen_target_info">Glisser pour assigner les raccourcis</string>
+    <string name="lockscreen_target_title">Raccourcis</string>
+    <string name="lockscreen_target_summary">Configurer les raccourcis de l\'écran de verrouillage</string>
+    <string name="lockscreen_target_reset">Les raccourcis ont été réinitialisés</string>
+    <string name="lockscreen_target_save">Raccourcis enregistrés</string>
     <string name="lockscreen_target_reset_title">Réinitialiser</string>
-    <string name="lockscreen_target_reset_message">Supprimer tous les raccourcis du Slider de l\'écran de verrouillage et les restaurer par défaut?</string>
+    <string name="lockscreen_target_reset_message">Réinitialiser tous les raccourcis et revenir à la configuration d\'origine\u00A0?</string>
     <string name="lockscreen_target_empty">Vide</string>
-    <string name="lockscreen_target_edit_title">Modifier l\'icône et le raccourci</string>
-    <string name="lockscreen_target_edit_msg">Sélectionner ou modifier l\'application ou l\'activité souhaitée ainsi que l\'icône associé.</string>
+    <string name="lockscreen_target_edit_title">Modifier le raccourci</string>
+    <string name="lockscreen_target_edit_msg">Sélectionner l\'application, l\'activité et l\'icône du raccourci</string>
 
     <!-- AOKP Lockscreen Customizations -->
     <string name="lockscreen_maximize_widgets_title">Maximiser les widgets</string>
-    <string name="lockscreen_maximize_widgets_summary">Voir les widgets maximisés et le déverrouillage minimisé lorsque l\'écran est allumé</string>
+    <string name="lockscreen_maximize_widgets_summary">Afficher les widgets maximisés et le système de déverrouillage minimisé lorque l\'écran est déverrouillé</string>
     <string name="lockscreen_hide_initial_page_hints_title">Masquer les indications de widgets</string>
     <string name="lockscreen_hide_initial_page_hints_summary">Régler si les indicateurs de widgets à gauche et à droite seront affichés lorsque l\'écran s\'allumera.</string>
     <string name="lockscreen_use_widget_container_carousel_title">Utiliser une animation carrousel</string>
@@ -2010,7 +2014,7 @@
     <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_enabled">Activé</string>
     <string name="display_rotation_disabled">Désactivé</string>
-    <string name="display_rotation_unit">degrés</string>
+    <string name="display_rotation_unit">degré(s)</string>
     <string name="display_lockscreen_rotation_title">Inclure l\'écran de verrouillage</string>
     <string name="display_rotation_category_title">Modes de rotation</string>
     <string name="display_rotation_0_title">0 degrés</string>
@@ -2020,16 +2024,13 @@
 
     <!-- Sound settings -->
 
-    <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
+    <string name="increasing_ring_title">Sonnerie progressive</string>
     <string name="checkbox_increasing_ring">Activer</string>
-
-    <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
-    <string name="increasing_ring_title">Sonnerie croissante</string>
-    <string name="increasing_ring_min_volume_title">Volume de la sonnerie, au début:</string>
-    <string name="increasing_ring_volume_notice">Note: \nComme le début du volume est réglé supérieur au volume de la sonnerie, la sonnerie sera diffusé en fonction du volume de la sonnerie.</string>
-    <string name="increasing_ring_interval_title">Faire augmenter le son:</string>
+    <string name="increasing_ring_min_volume_title">Volume de départ</string>
+    <string name="increasing_ring_volume_notice">Note :\nComme le volume défini est plus grand que celui de la sonnerie, il sera réduit à son niveau.</string>
+    <string name="increasing_ring_interval_title">Intervale de progression</string>
     <string name="increasing_ring_interval_eachring">À chaque sonnerie</string>
-    <string name="increasing_ring_interval_half_second">0,5 secondes</string>
+    <string name="increasing_ring_interval_half_second">0,5 seconde</string>
     <string name="increasing_ring_interval_1second">1 seconde</string>
     <string name="increasing_ring_interval_2seconds">2 secondes</string>
     <string name="increasing_ring_interval_3seconds">3 secondes</string>
@@ -2046,28 +2047,28 @@
     <string name="silent_mode_mute">Muet</string>
     <string name="volume_ring_only_description">Sonnerie</string>
     <string name="link_volume_ringtones">Lier le volume des sonneries et notifications</string>
-    <string name="link_volume_mutes">Le mode silencieux affecte les notifications</string>
-    <string name="volbtn_music_controls_title">Commander la musique via volume</string>
-    <string name="volbtn_music_controls_summary">Quand l\'écran est éteint, un appui long sur une touche volume fera passer la musique à la suivante.</string>
-    <string name="volume_adjust_sounds_enable_title">Son d\'ajustement</string>
-    <string name="volume_adjust_sounds_enable_summary">Jouer un son lors du réglage du niveau de volume</string>
-    
+    <string name="link_volume_mutes">Silence commun pour alertes et sonnerie</string>
+    <string name="volume_adjust_sounds_enable_title">Son au réglage du volume</string>
+    <string name="volume_adjust_sounds_enable_summary">Émettre un son lors du réglage du volume avec les touches</string>
+    <string name="volbtn_music_controls_title">Contrôle de la musique</string>
+    <string name="volbtn_music_controls_summary">Lorsque l\'écran est éteint, un appui long sur les boutons de volume permet de changer le titre en cours de lecture</string>
+
+    <!-- Launch music player when headset is connected -->
+    <string name="headset_connect_player_title">Lancer lecteur de musique</string>
+    <string name="headset_connect_player_summary">Lancer le lecteur de musique par défaut au branchement du casque</string>
+
     <!-- Safe headset volume restore checkbox -->
-    <string name="safe_headset_volume_title">Volume du casque sécurisé</string>
-    <string name="safe_headset_volume_summary">Prévenir d\'un niveau de volume élevé lorsque les écouteurs sont d\'abord branchés.</string>
+    <string name="safe_headset_volume_title">Volume sécurisé du casque</string>
+    <string name="safe_headset_volume_summary">Mettre en garde l\'utilisateur contre les volumes sonores élevés lors de la première utilisation du casque</string>
 
     <!-- Waiver -->
-    <string name="waiver_title">ATTENTION !</string>
-    <string name="waiver_body">La modification de ce paramètre peut être contre vos lois gouvernementales. \n\nEn sélectionnant \'Ok\' ci-dessous, vous reconnaissez cet avertissement et indemnisez la Team XY et ses collaborateurs de toutes les obligations légales.</string>
+    <string name="cyanogenmod_waiver_title">ATTENTION</string>
+    <string name="cyanogenmod_waiver_body">Le changement de ce paramètre peut être interdit par les lois de votre gouvernement ou état.\n\nEn sélectionnant \'OK\' ci-dessous, vous reconnaissez avoir pris connaissance de cet avertissement, et vous dégagez CyanogenMod et ses contributeurs de toutes responsabilités et de toutes obligations juridiques.</string>
 
-    <!-- Launch music app on connect -->
-    <string name="headset_connect_player_title">App. de musique au branchement</string>
-    <string name="headset_connect_player_summary">Ouvrir l\'app. de musique par défaut lorsqu\'une prise jack est branchée</string>
-    
     <!-- Wakeup options -->
-    <string name="display_category_wakeup_options_title">Options de réveil</string>
-    <string name="pref_volume_wake_title">Réveil via touche volume</string>
-    <string name="pref_volume_wake_summary">Appuyer sur une touche volume va réveiller l\'appareil. Fonction similaire au bouton Power.</string>
+    <string name="display_category_wakeup_options_title">Sortie de veille</string>
+    <string name="pref_volume_wake_title">Éveil par boutons Volume</string>
+    <string name="pref_volume_wake_summary">Permet de rallumer l\'appareil à l\'aide des boutons de volume.</string>
 
     <!-- Reset Profiles -->
     <string name="profile_reset_title">Réinitialiser</string>
@@ -2113,15 +2114,15 @@
     <string name="custom_density_dialog_button_reboot">Redémarrer maintenant</string>
 
     <!-- Setting checkbox summary for displaying USB debugging notification -->
-    <string name="adb_notify">Informer du débogage USB </string>
-    <string name="adb_notify_summary">Afficher une notification lorsque le débogage USB est connecté</string>
+    <string name="adb_notify">Notification débogage</string>
+    <string name="adb_notify_summary">Afficher une notification lorsque le débogage est actif</string>
 
     <!-- Whether to display IME switcher notifcation -->
-    <string name="ime_switcher_notify">Sélecteur en notification</string>
-    <string name="ime_switcher_notify_summary">Afficher le sélecteur de clavier, sous forme de notification</string>
+    <string name="ime_switcher_notify">Icône méthode de saisie</string>
+    <string name="ime_switcher_notify_summary">Afficher l\'icône de la méthode de saisie dans la barre de notification</string>
 
     <!-- Launches Dev Tools -->
-    <string name="development_tools_title">Outils expérimentaux</string>
+    <string name="development_tools_title">Outils dév.</string>
 
     <!-- USB Mass Storage -->
     <string name="usb_mass_storage_title">Stockage de masse</string>
@@ -2132,7 +2133,7 @@
 
     <!-- Performance Settings : Warning dialog  -->
     <string name="performance_settings_warning_title">Procéder avec prudence !</string>
-    <string name="performance_settings_warning">Ces paramètres sont inclus pour l\'expérimentation et les modifications apportées à eux ont le potentiel de causer des défaillances, instabilité, accidents, la perte de données ou de matériel. \n\nNous vous demandons de ne pas vous plaindre de bugs si l\'un de ces paramètres ont été modifiés par rapport aux valeurs par défaut. S\'il vous plaît, ne blâmez pas l\'équipe XY si votre téléphone fait BOUM.</string>
+    <string name="performance_settings_warning">Les options présentes ici altèrent les performances du système, en bien ou en mal.\nElles ont des comportements différents selon les appareils et ne sont disponibles que pour expérimentation.\nNous vous demandons de ne pas soumettre de rapport de bug à propos de celles-ci.</string>
 
     <!-- Performance Settings : Processor settings title -->
     <string name="processor_title">Processeur</string>
@@ -2149,16 +2150,16 @@
 
     <!-- Memory Management -->
     <string name="memory_management_title">Gestion de la mémoire</string>
-    <string name="memory_management_summary">Personnaliser l\'utilisation de la mémoire pour améliorer les performances du système</string>
+    <string name="memory_management_summary">Options de gestion de la mémoire pour optimiser les performances</string>
     <!-- zRam -->
-    <string name="pref_zram_title">zRAM</string>
-    <string name="pref_zram_summary">Comprimer la mémoire pour une capacité virtuelle accrue (Redémarrage nécessaire)</string>
+    <string name="pref_zram_title">Utiliser zRam</string>
+    <string name="pref_zram_summary">Compresser la mémoire pour augmenter virtuellement sa capacité (nécessite un redémarrage)</string>
     <!-- KSM -->
-    <string name="pref_ksm_title">Kernel Samepage Merging</string>
-    <string name="pref_ksm_summary">KSM réduit les besoins en mémoire et améliore les performances physiques</string>
+    <string name="pref_ksm_title">Utiliser KSM</string>
+    <string name="pref_ksm_summary">Cette fonction du noyau réduit l\'utilisation de la mémoire physique et améliore les performances (Kernel Same-page Merging)</string>
     <!-- Purgeable Assets -->
-    <string name="pref_purgeable_assets_title">Permettre la purge des actifs</string>
-    <string name="pref_purgeable_assets_summary">Purge des actifs de mémoire bitmap permet la libération de plus de RAM en cas de besoin (Redémarrage nécessaire)</string>
+    <string name="pref_purgeable_assets_title">Purge des bitmaps</string>
+    <string name="pref_purgeable_assets_summary">Le système peut libérer plus de RAM si la mémoire des bitmaps peut être réclamée (nécessite un redémarrage)</string>
 
     <!-- Performance Settings : I/O scheduler settings summary. -->
     <string name="io_scheds_summary">Changer de planificateur I/O</string>
@@ -2169,14 +2170,14 @@
     <string name="io_sched_set_on_boot_summary">Restaurer les paramètres du planificateur I/O au démarrage</string>
 
     <!-- Performance Settings : Dithering -->
-    <string name="pref_use_dithering_title">Amélioration de surface</string>
-    <string name="dithering_no_dither">Désactiver le dithering</string>
-    <string name="dithering_color_banding">Correction des bandes de couleur (Défaut)</string>
-    <string name="dithering_blur_effect">Correction des bandes de couleur et effet de flou</string>
+    <string name="pref_use_dithering_title">Activer le tramage</string>
+    <string name="dithering_no_dither">Désactiver le tramage</string>
+    <string name="dithering_color_banding">Corriger les bandes de couleurs (défaut)</string>
+    <string name="dithering_blur_effect">Corriger les bandes de couleurs et l\'effet de flou</string>
 
     <!-- Performance Settings : 16bpp Alpha -->
-    <string name="pref_use_16bpp_alpha_title">Transparence 16bit</string>
-    <string name="pref_use_16bpp_alpha_summary">De meilleures performances graphiques, mais de moins bonne qualité et peut causer des artefacts visuels tels que des déchirures d\'écran et autres trucs bizarres (Redémarrage nécessaire).</string>
+    <string name="pref_use_16bpp_alpha_title">Transparence 16 bits</string>
+    <string name="pref_use_16bpp_alpha_summary">Utiliser le mode 16 bits améliore la vitesse de défilement et des animations, mais peut affecter l\'affichage des éléments transparents (nécessite un redémarrage)</string>
 
     <!-- Performance | Voltage Control -->
     <string name="cpu_voltage">Contrôle de la tension</string>
@@ -2198,32 +2199,41 @@
     <string name="notification_shade_dim_title">Ombre des notifications</string>
     <string name="notification_shade_dim_summary">Activer l\'effet d\'ombre en tirant vers le bas la barre de notification</string>
 
-    <!--- Sms security limit -->
-    <string name="app_security_title">Sécurisation</string>
-    <string name="sms_security_check_limit_title">Limite SMS</string>
-    <string name="sms_security_check_limit_summary">Les applications peuvent envoyer %d messages en 30 minutes avant d\'exiger une confirmation.</string>
-    <string name="sms_security_check_limit_default">100 (Par défaut)</string>
+    <!-- Wireless display -->
+    <string name="pref_wifi_disable_hdcp_title">Eviter la négociation HDCP</string>
+    <string name="pref_wifi_disable_hdcp_summary">Essayer cette option si vous voulez vous connecter sans aucune sortie</string>
+    <string name="wifi_setting_countrycode_title">Code de région Wi-Fi</string>
+    <string name="wifi_setting_countrycode_summary">Spécifier le code de région Wi-Fi</string>
+    <string name="wifi_setting_countrycode_error">Il y a eu un problème de réglage du code de région.</string>
+    <string name="wifi_setting_priority_title">Priorité Wi-Fi</string>
+    <string name="wifi_setting_priority_summary">Définir la priorité des réseaux Wi-Fi</string>
+
+     <!--- Sms security limit -->
+    <string name="app_security_title">Sécurité des applications</string>
+    <string name="sms_security_check_limit_title">Limiter l\'émission de SMS</string>
+    <string name="sms_security_check_limit_summary">Afficher un message d\'alerte pour prevenir qu\'une application envoie des messages SMS trop fréquemment. Limite actuelle : %d messages en 15 minutes</string>
+    <string name="sms_security_check_limit_default">100 (Défaut)</string>
 
     <!--- Lock clock -->
     <string name="lock_clock_title">Widget horloge</string>
-    <string name="lock_clock_summary">Afficher ou modifier ce que le widget \'cLock\' affichera.</string>
+    <string name="lock_clock_summary">Afficher ou modifier la façon dont \'cLock\' est affiché sur l\'écran d\'accueil ou de verrouillage</string>
 
     <!-- XYStats -->
     <string name="anonymous_statistics_title">Statistiques XY</string>
     <string name="anonymous_statistics_summary">Aidez à l\'amélioration de Xylon en autorisant l\'envoi de rapports anonymes à la team.</string>
 
-    <!-- Automatic brightness customization -->
-    <string name="light_sensor_current_value">Valeur actuelle du capteur: <xliff:g id="light_level">%d</xliff:g> lux</string> 
-    <string name="auto_brightness_dialog_title">Niveaux de luminosité automatique</string>
+        <!-- Automatic brightness customization -->
+    <string name="light_sensor_current_value">Valeur actuelle du capteur de lumière\u00A0: <xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">Niveaux d\'éclairage automatique</string>
     <string name="auto_brightness_adjust_button">Ajuster</string>
     <string name="auto_brightness_reset_button">Réinitialiser</string>
     <string name="auto_brightness_lux_dialog_title">Plage de luminosité ambiante</string>
-    <string name="auto_brightness_split_dialog_title">Modifier les niveaux de luminosité</string>
-    <string name="auto_brightness_start_lux">Début de la plage (lux)</string>
-    <string name="auto_brightness_end_lux">Fin de la plage (lux)</string>
-    <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux ?</string>
+    <string name="auto_brightness_split_dialog_title">Modifier le niveau de luminosité</string>
+    <string name="auto_brightness_start_lux">Plage de début (lux)</string>
+    <string name="auto_brightness_end_lux">Plage de fin (lux)</string>
+    <string name="auto_brightness_reset_dialog_title">Réinitialiser les niveaux\u00A0?</string>
     <string name="auto_brightness_reset_confirmation">Tous les niveaux de luminosité seront réinitialisés à leurs réglages par défaut.</string>
-    <string name="auto_brightness_split_lux_format">Intervalle désiré (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> luxs)</string>
+    <string name="auto_brightness_split_lux_format">Position de coupure (entre <xliff:g id="min">%1$d</xliff:g> et <xliff:g id="max">%2$d</xliff:g> lux)</string>
     <string name="auto_brightness_level_options">Options de niveau de lumière</string>
     <string name="auto_brightness_menu_edit_lux">Plage de luminosité ambiante</string>
     <string name="auto_brightness_menu_split">Modifier</string>
