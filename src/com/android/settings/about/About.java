@@ -1,4 +1,3 @@
-
 package com.android.settings.about;
 
 import android.content.Intent;
@@ -46,7 +45,7 @@ public class About extends SettingsPreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mSiteUrl) {
-            launchUrl("http://xylon.androidvenue.com/");
+            launchUrl("http://xylon.androidvenue.com");
         }
         return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
