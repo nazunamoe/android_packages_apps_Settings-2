@@ -189,7 +189,7 @@ public class InputMethodAndLanguageSettings extends SettingsPreferenceFragment
             if (Utils.hasVolumeRocker(getActivity())) {
                 mVolumeKeyCursorControl.setOnPreferenceChangeListener(this);
                 mVolumeKeyCursorControl.setValue(Integer.toString(Settings.System.getInt(getActivity()
-                        .getContentResolver(), Settings.System.KEY_VOLUME_KEY_CURSOR_CONTROL, 0)));
+                        .getContentResolver(), Settings.System.VOLUME_KEY_CURSOR_CONTROL, 0)));
                 mVolumeKeyCursorControl.setSummary(mVolumeKeyCursorControl.getEntry());
             }
         } else {
