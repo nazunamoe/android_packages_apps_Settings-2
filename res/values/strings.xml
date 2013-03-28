@@ -4945,8 +4945,7 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="per_app_layout_list_title">Application list</string>
     <string name="per_app_layout_alert_title">Select a layout</string>
 
-    <string name="navbar_height_title">NavigationBar height</string>
-    <string name="navbar_height_summary">Specify the navigationBar height</string>
+    <string name="navbar_height_title">Navigation bar Height</string>
 
     <string name="alert_reboot">Reboot needed</string>
     <string name="alert_reboot_message">This change needs a reboot to be applied. Do you want to reboot now?</string>
