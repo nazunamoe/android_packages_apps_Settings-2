@@ -2242,7 +2242,7 @@
     <!-- Hybrid -->
     <string name="hybrid_settings_title">Paramètres Hybride</string>
 
-    <string name="uimode_title">Mode d\'interface</string>
+    <string name="uimode_title">Mode d\'interface du système</string>
     <string name="uimode_phone">Phone</string>
     <string name="uimode_phablet">Phablet</string>
     <string name="uimode_tablet">Tablette</string>
@@ -2250,49 +2250,49 @@
     <string name="dpi_settings_title">Densités</string>
     <string name="system_dpi_title">Densité du système</string>
     <string name="system_dpi_summary">Densité actuelle du système:</string>
-    <string name="system_dpi_standar_title">Densité standard</string>
-    <string name="system_dpi_standar_summary">Sélectionner une densité dans la liste</string>
-    <string name="system_dpi_custom_title">Spécifier une densité</string>
+    <string name="system_dpi_standar_title">Densité prédéfinie</string>
+    <string name="system_dpi_standar_summary">Sélectionner une densité prédéfinie dans une liste</string>
+    <string name="system_dpi_custom_title">Densité personnalisée</string>
     <string name="system_dpi_custom_hint">120 à 480</string>
-    <string name="system_dpi_custom_summary">Sélectionner une densité entre 120 et 480</string>
+    <string name="system_dpi_custom_summary">Sélectionner une densité personnalisée entre 120 et 480</string>
 
-    <string name="appsuimode_title">Mode d\'interface des App.</string>
+    <string name="appsuimode_title">Mode d\'interface des applications</string>
 
-    <string name="apps_dpi_title">Densités</string>
+    <string name="apps_dpi_title">Densité des applications</string>
     <string name="apps_dpi_summary">Densité actuelle des applications:</string>
-    <string name="apps_dpi_custom_title">Spécifier une densité</string>
+    <string name="apps_dpi_custom_title">Densité prédéfinie</string>
     <string name="apps_dpi_custom_hint">120 à 480</string>
-    <string name="apps_dpi_custom_summary">Sélectionner une densité entre 120 et 480</string>
+    <string name="apps_dpi_custom_summary">Sélectionner une densité personnalisée entre 120 et 480</string>
 
-    <string name="dpi_groups_title">Groupes de DPI</string>
-    <string name="dpi_groups_summary">Définir quelle application doit être dans quel groupe</string>
-    <string name="dpi_group_title">Groupe de DPI</string>
-    <string name="dpi_groups_apps">applications</string>
-    <string name="dpi_group_add_app">Ajouter une application</string>
-    <string name="dpi_group_app_list">Liste d\'applications</string>
+    <string name="dpi_groups_title">Groupes de densité</string>
+    <string name="dpi_groups_summary">Définir des densités personalisées pour chaque applications</string>
+    <string name="dpi_group_title">DPI.</string>
+    <string name="dpi_groups_apps">application(s)</string>
+    <string name="dpi_group_add_app">Ajouter une application à ce groupe</string>
+    <string name="dpi_group_app_list">Liste des applications</string>
     <string name="dpi_group_alert_add_app_title">Choisir une application</string>
     <string name="dpi_groups_alert_remove_app">Supprimer une application</string>
     <string name="dpi_groups_remove_app">Retirer l\'applications %s du groupe ?</string>
-    <string name="dpi_groups_backuprestore_title">Sauvegarde and restauration</string>
-    <string name="dpi_groups_auto_backup">Sauvegarde-auto</string>
-    <string name="dpi_groups_auto_backup_summary">Sauvegarde-auto de vos changements</string>
+    <string name="dpi_groups_backuprestore_title">Sauvegarde et restauration</string>
+    <string name="dpi_groups_auto_backup">Sauvegarde automatique</string>
+    <string name="dpi_groups_auto_backup_summary">Sauvegarde auto. des modifications effectuées</string>
     <string name="dpi_groups_backup_title">Sauvegarder</string>
     <string name="dpi_groups_backup_summary">Faire une sauvegarde de vos paramètres</string>
-    <string name="dpi_groups_restore_title">Restauration</string>
-    <string name="dpi_groups_restore_summary">Restaurer vos paramètres sauvegardés</string>
-    <string name="dpi_groups_backup_done">Fichier de sauvegarde effectué</string>
+    <string name="dpi_groups_restore_title">Restaurer</string>
+    <string name="dpi_groups_restore_summary">Restaurer vos derniers paramètres sauvegardés</string>
+    <string name="dpi_groups_backup_done">Fichier de sauvegarde mis à jour</string>
     <string name="dpi_groups_restore_done">Fichier de sauvegarde restauré</string>
     <string name="dpi_groups_restore_default_title">Restaurer les groupes par défaut</string>
-    <string name="dpi_groups_restore_default_summary">Supprimer tous les groupes de DPI et revenir par défaut</string>
-    <string name="dpi_groups_delete_title">Supprimer groupe de DPI</string>
-    <string name="dpi_groups_delete_summary">Voulez-vous supprimer ce groupe de DPI ?</string>
+    <string name="dpi_groups_restore_default_summary">Supprimer tous les groupes de densité et revenir par défaut</string>
+    <string name="dpi_groups_delete_title">Supprimer un groupe de densité</string>
+    <string name="dpi_groups_delete_summary">Voulez-vous supprimer ce groupe ?</string>
     <string name="customdpigroup">Ajouter un groupe</string>
-    <string name="customdpigroup_summary">Ajouter un groupe de DPI perso.</string>
-    <string name="custom_dpi">DPI actuels:</string>
-    <string name="customdpigroup_group_exists">Le groupe de DPI perso. sélectionné existe déjà</string>
+    <string name="customdpigroup_summary">Ajouter un groupe de densité personnalisée</string>
+    <string name="custom_dpi">DPI :</string>
+    <string name="customdpigroup_group_exists">Le groupe de densité désiré existe déjà</string>
     <string name="per_app_layout_title">Per-app-Layout</string>
     <string name="per_app_layout_summary">Définir une disposition pour chaque application</string>
-    <string name="per_app_layout_list_title">Liste d\'application</string>
+    <string name="per_app_layout_list_title">Liste des applications</string>
     <string name="per_app_layout_alert_title">Sélectionner une disposition</string>
 
     <string name="navbar_height_title">Hauteur de la barre de navigation</string>
