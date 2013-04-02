@@ -30,8 +30,10 @@
     <string name="show_dev_already" msgid="2151632240145446227">"No es necesario, ya eres un desarrollador."</string>
     <string name="header_category_wireless_networks" msgid="4944823405420438623">"CONEXIONES INALÁMBRICAS Y REDES"</string>
     <string name="header_category_device" msgid="5781174212691167553">"DISPOSITIVO"</string>
-    <string name="header_category_personal" msgid="6225932173498802187">"PERSONAL"</string>
+    <string name="header_category_customization">"PERSONALIZAR"</string>
+    <string name="header_category_personal">"PERSONAL"</string>
     <string name="header_category_system" msgid="2073558547468647128">"SISTEMA"</string>
+    <string name="headset_category_title">Audífonos</string>
     <string name="turn_on_radio" msgid="8706561489788373676">"Activar señal móvil"</string>
     <string name="turn_off_radio" msgid="1820294552893884115">"Desactivar señal móvil"</string>
     <string name="sms_over_ims_on" msgid="5085290395865632925">"Activar SMS por IMS"</string>
@@ -1830,4 +1832,398 @@
     <string name="user_picture_title" msgid="7297782792000291692">"ID de foto"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Difusiones móviles"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Selecciona los tipos de alertas de emergencia que quieres ver."</string>
+    
+        <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
+
+    <!-- About phone screen,  setting option name-->
+    <string name="mod_version">Versión de Xylon/FNV</string>
+    <string name="mod_version_default">Desconocido</string>
+    <!-- About phone screen, build date of ROM -->
+    <string name="build_date">Fecha de Compilación</string>
+
+    <string name="dxy_settings_title">Xylon Oscuro</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Selector de Color</string>
+    <string name="press_color_to_apply">Pulse en el color de abajo para aplicar</string>
+    <string name="set">Establecer</string>
+
+    <!-- About -->
+    <string name="title_about">Acerca de Xylon</string>
+    <string name="team">Los Funkies</string>
+    <string name="contributors">Colaboradores</string>
+    <string name="xylon_website_title">Página Web de XY</string>
+    <string name="xylon_website_summary">Encuentra todos los experimentos y noticias más recientes aquí</string>
+
+    <!-- Customisation -->
+    <string name="other_cat">Otras Configuraciones</string>
+    <string name="xylon_extras">Herramientas de XY</string>
+    <string name="lockscreen_stub">Pantalla de Bloqueo</string>
+    <string name="misc">Varios</string>
+
+    <!--- Volume key cursor control -->
+    <string name="volume_key_cursor_control_title">Control del Cursor para los Botones del Volumen</string>
+    <string name="volume_key_cursor_control_off">Deshabilitado</string>
+    <string name="volume_key_cursor_control_on">Volumen arriba/abajo mueve el cursor hacia la izquierda/derecha</string>
+    <string name="volume_key_cursor_control_on_reverse">Volumen arriba/abajo mueve el cursor a la derecha/izquierda</string>
+
+    <!-- Lock Screen -->
+    <string name="lockscreen_auto_rotate_title">Permitir la Rotación de la Pantalla de Bloqueo</string>
+    <string name="lockscreen_auto_rotate_summary">La pantalla de bloqueo tendrá capacidad para rotar a través de la orientación del dispositivo. Esto es independiente de la auto-rotación en pantalla</string>
+    <string name="lockscreen_all_widgets_title">Permitir a Todos los Widgets</string>
+    <string name="lockscreen_all_widgets_summary">Advertencia ** Algunos widgets no están destinados a ser utilizados en la pantalla de bloqueo. El desarrollador del widget y el equipo de XY no son responsables de la elección de los widgets en la pantalla de bloqueo. Elige responsablemente</string>
+    <string name="lockscreen_unlimited_widgets_title">Permitir Widgets Ilimitados</string>
+    <string name="lockscreen_unlimited_widgets_summary">Advertencia ** Añadir muchos widgets puede causar lentitud importante en la pantalla de bloqueo</string>
+    <string name="lockscreen_longpress_challenge_title">Habilitar Pulsación Larga para Desbloquear</string>
+    <string name="lockscreen_longpress_challenge_summary">Esto permite que el dispositivo pueda ser desbloqueado con los widgets maximizados con una pulsación larga en el icono de bloqueo</string>
+
+    <!-- Lock screen vibrate settings -->
+    <string name="lockscreen_vibrate_enabled_title">Vibrar</string>
+    <string name="lockscreen_vibrate_enabled_head">Vibrar al Desbloquear</string>
+
+    <!-- Lock screen general strings -->
+    <string name="custom_app_icon_successfully">¡Conjunto de iconos aplicados con éxito!</string>
+    <string name="use_custom_app_title">Usar Aplicación Personalizada</string>
+    <string name="use_custom_app_summary">Usar aplicación personalizada en vez del diálogo de aplicaciones recientes</string>
+    <string name="group_applications">Aplicaciones</string>
+
+    <!-- Screen security - Screen security   -->
+    <string name="screen_security_category">Seguridad en Pantalla</string>
+    <string name="screen_security_title">Pantalla de Bloqueo</string>
+    <string name="screen_security_summary">Ver o cambiar la configuración de seguridad de la pantalla de bloqueo, el retardo y tiempo de espera</string>
+    <string name="additional_options_title">Opciones Adicionales</string>
+    <string name="unlock_menu_unlock_title">Desbloqueo por Menú</string>
+    <string name="unlock_menu_unlock_summary">Al presionar el botón de menú se desbloquea el dispositivo</string>
+    <string name="unlock_home_unlock_title">Desbloqueo por Inicio</string>
+    <string name="unlock_home_unlock_summary">Al presionar el botón de inicio se desbloquea el dispositivo</string>
+    <string name="unlock_quick_unlock_control_title">Desbloqueo Rápido</string>
+    <string name="unlock_quick_unlock_control_summary">Desbloquear automáticamente cuando se introduce el PIN/contraseña</string>
+
+    <!-- Slide lock delay -->
+    <string name="delay_and_timeout_title">Retrasar el Bloqueo</string>
+    <string name="slide_lock_delay_title">Retrasar en Bloquear Pantalla</string>
+    <string name="slide_lock_timeout_delay_title">Retrasar Después de Tiempo de Espera</string>
+    <string name="slide_lock_screenoff_delay_title">Retrasar Después de Apagar</string>
+    <string name="slide_lock_delay_none">Ninguno</string>
+    <string name="slide_lock_delay_1s">1 Segundo</string>
+    <string name="slide_lock_delay_5s">5 Segundos</string>
+    <string name="slide_lock_delay_10s">10 Segundos</string>
+    <string name="slide_lock_delay_15s">15 Segundos</string>
+    <string name="slide_lock_delay_30s">30 Segundos</string>
+    <string name="slide_lock_delay_1m">1 Minuto</string>
+    <string name="slide_lock_delay_5m">5 Minutos</string>
+    <string name="slide_lock_delay_10m">10 Minutos</string>
+    <string name="slide_lock_delay_30m">30 Minutos</string>
+
+    <!-- Swap volume buttons on rotation -->
+    <string name="swap_volume_keys_title">Intercambiar Botones de Volumen</string>
+    <string name="swap_volume_keys_summary">Intercambiar Botones de Volumen Cuando la Pantalla se Gira 90 ó 180 Grados</string>
+
+    <!-- Lock screen shortcuts -->
+    <string name="picker_activities">Actividades</string>
+    <string name="select_custom_app_title">Seleccionar Aplicación Personalizada</string>
+    <string name="select_custom_activity_title">Seleccionar Actividad Personalizada</string>
+    <string name="icon_picker_choose_icon_title">Escoger Icono</string>
+    <string name="icon_picker_alarm">Alarma</string>
+    <string name="icon_picker_browser">Navegador</string>
+    <string name="icon_picker_calendar">Calendario</string>
+    <string name="icon_picker_camera">Cámara</string>
+    <string name="icon_picker_email">Correo Electrónico</string>
+    <string name="icon_picker_email2">Email Holo</string>
+    <string name="icon_picker_gallery">Galería</string>
+    <string name="icon_picker_google_small">Google (pequeño)</string>
+    <string name="icon_picker_movie">Película</string>
+    <string name="icon_picker_music">Música</string>
+    <string name="icon_picker_nav_normal">Navegación</string>
+    <string name="icon_picker_phone">Teléfono</string>
+    <string name="icon_picker_podcast">Podcast</string>
+    <string name="icon_picker_rss">Rss</string>
+    <string name="icon_picker_search">Búsqueda</string>
+    <string name="icon_picker_sms">Mensajería</string>
+
+    <!-- String for IconPicker -->
+    <string name="icon_picker_title">Elegir Icono Fuente</string>
+    <string name="icon_picker_system_icons_title">Iconos del Sistema</string>
+    <string name="icon_picker_gallery_title">Galería</string>
+    <string name="icon_picker_pack_title">Paquete de Iconos</string>
+
+    <string name="profile_applist_title">Aplicaciones</string>
+
+    <!-- Lock screen misc. settings -->
+    <string name="lockscreen_battery_status_title">Estado de la Batería</string>
+    <string name="lockscreen_battery_status_charging">Sólo Cuando se Carga</string>
+    <string name="lockscreen_battery_status_alwayson">Siempre</string>
+
+    <!-- Lock screen background -->
+    <string name="lockscreen_style_options_title">Estilo de la Pantalla de Bloqueo</string>
+    <string name="lockscreen_custom_background_title">Fondo</string>
+    <string name="lockscreen_custom_background_dialog_title">Eligir el Color</string>
+    <string name="lockscreen_background_result_successful">Fondo Cambiado</string>
+    <string name="lockscreen_background_result_not_successful">Fondo No Cambiado</string>
+    <string name="lockscreen_background_color_fill">Color de Relleno</string>
+    <string name="lockscreen_background_custom_image">Imagen Personalizada</string>
+    <string name="lockscreen_background_full_transparent">Completamente Transparente</string>
+    <string name="lockscreen_background_default_wallpaper">Fondo de Pantalla por Defecto</string>
+    <string name="lockscreen_alpha_title">Transparencia del Fondo</string>
+
+    <string name="ls_shortcuts_title">Atajos de la Pantalla de Bloqueo</string>
+
+    <!-- ParanoidAndroid: Lockscreen Shortcuts -->
+    <string name="icon_picker_type">Seleccionar Tipo de Icono:</string>
+    <string name="icon_default">Por Defecto</string>
+    <string name="icon_presets">Predeterminado</string>
+    <string name="icon_custom">Personalizado</string>
+    <string name="lock_screen_shortcuts_title">Rápido</string>
+    <string name="lock_screen_shortcuts_reset_message">¿Restablecer los accesos directos de la pantalla de bloqueo?</string>
+    <string name="lock_screen_shortcuts_summary">Ver o cambiar los accesos directos personalizados</string>
+    <string name="lock_screen_shortcuts_add">Añadir</string>
+    <string name="lock_screen_shortcuts_reset">Reajustar</string>
+    <string name="lock_screen_shortcuts_limit">¡Sólo 6 accesos están permitidos!</string>
+
+    <!-- CyanogenMod: Lockscreen Slider Shortcuts -->
+    <string name="lockscreen_target_info">Arrastre el control de deslizamiento hacia los objetivos para asignar los accesos directos</string>
+    <string name="lockscreen_target_title">Carrusel</string>
+    <string name="lockscreen_target_summary">Ver o cambiar los accesos directos personalizados deslizantes</string>
+    <string name="lockscreen_target_reset">Restablecer los accesos directos de la pantalla de bloqueo a los valores predeterminados</string>
+    <string name="lockscreen_target_save">Accesos directos de la pantalla de bloqueo guardados</string>
+    <string name="lockscreen_target_reset_title">Reajustar</string>
+    <string name="lockscreen_target_reset_message">¿Eliminar todos los accesos directos creados por el usuario en la pantalla de bloqueo y restaurar por defecto?</string>
+    <string name="lockscreen_target_empty">Vacío</string>
+    <string name="lockscreen_target_edit_title">Editar Acceso e Icono</string>
+    <string name="lockscreen_target_edit_msg">Seleccionar o cambiar la aplicación o actividad deseada y el icono asociado</string>
+
+    <!-- AOKP Lockscreen Customizations -->
+    <string name="lockscreen_maximize_widgets_title">Maximizar los Widgets</string>
+    <string name="lockscreen_maximize_widgets_summary">Mostrar los widgets maximizados y el desbloqueo minimizado cuando la pantalla está encendida</string>
+    <string name="lockscreen_hide_initial_page_hints_title">Ocultar Sugerencias Iniciales en la Página</string>
+    <string name="lockscreen_hide_initial_page_hints_summary">Establecer si los consejos para los widgets de izquierda y derecha se muestra cuando la pantalla está encendida</string>
+    <string name="lockscreen_use_widget_container_carousel_title">Utilice Carrusel de Widgets</string>
+    <string name="lockscreen_use_widget_container_carousel_summary">Utilizar animación de carrusel al cambiar entre los widgets de la pantalla de bloqueo</string>
+
+    <!-- Display : Rotation  -->
+    <string name="display_rotation_title">Rotación</string>
+    <string name="display_rotation_enabled">Habilitado</string>
+    <string name="display_rotation_disabled">Deshabilitado</string>
+    <string name="display_rotation_unit">Grados</string>
+    <string name="display_lockscreen_rotation_title">Incluye la Pantalla de Bloqueo</string>
+    <string name="display_rotation_category_title">Modos de Rotación</string>
+    <string name="display_rotation_0_title">0 Grados</string>
+    <string name="display_rotation_90_title">90 Grados</string>
+    <string name="display_rotation_180_title">180 Grados</string>
+    <string name="display_rotation_270_title">270 Grados</string>
+
+    <!-- Sound settings -->
+
+    <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
+    <string name="checkbox_increasing_ring">Habilitado</string>
+
+    <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
+    <string name="increasing_ring_title">Timbre Ascendente</string>
+    <string name="increasing_ring_min_volume_title">Volumen de Inicio del Timbre</string>
+    <string name="increasing_ring_volume_notice">Aviso: \ nMientras el volumen de inicio sea mayor al volumen del timbre, el tono se reproducirá con el volumen del timbre.</string>
+    <string name="increasing_ring_interval_title">Aumentar Intervalo</string>
+    <string name="increasing_ring_interval_eachring">En cada Anillo</string>
+    <string name="increasing_ring_interval_half_second">0,5 Segundos</string>
+    <string name="increasing_ring_interval_1second">1 Segundo</string>
+    <string name="increasing_ring_interval_2seconds">2 Segundos</string>
+    <string name="increasing_ring_interval_3seconds">3 Segundos</string>
+    <string name="increasing_ring_interval_5seconds">5 Segundos</string>
+    <string name="increasing_ring_interval_10seconds">10 Segundos</string>
+    <string name="volume_overlay_title">Estilo del Panel de Volumen</string>
+    <string name="volume_overlay_single">Sencillo</string>
+    <string name="volume_overlay_expandable">Ampliable</string>
+    <string name="volume_overlay_expanded">Expandido</string>
+    <string name="volume_overlay_none">Ninguno</string>
+    <string name="silent_mode_title">Modo Silencioso</string>
+    <string name="silent_mode_off">Apagado</string>
+    <string name="silent_mode_vibrate">Vibrar</string>
+    <string name="silent_mode_mute">Silencio</string>
+    <string name="volume_ring_only_description">Tono</string>
+    <string name="link_volume_ringtones">Enlazar Tono de Timbre y Notificación</string>
+    <string name="link_volume_mutes">Modo Silencioso Afecta a las Notificaciones</string>
+    <string name="volbtn_music_controls_title">Controles de Botones de Volumen</string>
+    <string name="volbtn_music_controls_summary">Cuando la pantalla esté apagada, presionando largamente los botones de volumen buscarán pistas de música</string>
+
+    <!-- Safe headset volume restore checkbox -->
+    <string name="safe_headset_volume_title">Volumen Seguro de Audífonos</string>
+    <string name="safe_headset_volume_summary">Evita niveles altos de volumen cuando el audífono se conecta por primera vez</string>
+
+    <!-- Waiver -->
+    <string name="waiver_title">Renuncia</string>
+    <string name="waiver_body">El cambio de este ajuste puede estar en contra de las leyes de su estado o del gobierno. \n\nAl seleccionar \'Aceptar\' a continuación, reconoce esta advertencia y renuncia a indemnizar y demandar a TeamRootXY y sus colaboradores de todas las responsabilidades legales.</string>
+
+    <!-- Launch music app on connect -->
+    <string name="headset_connect_player_title">Lanzar Aplicación de Música al Conectar</string>
+    <string name="headset_connect_player_summary">-Explicación del Lanzador de la Aplicación de Música-</string>
+
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">Opciones de Activación</string>
+    <string name="pref_volume_wake_title">Botones de Volumen</string>
+    <string name="pref_volume_wake_summary">Al presionar el control de volumen arriba/abajo se despierta el dispositivo</string>
+
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">Reajustar</string>
+    <string name="profile_reset_message">¿Eliminar todos los perfiles de usuarios creados y grupos de aplicaciones y restaurar los valores predeterminados?</string>
+    <string name="profiles_add">Añadir</string>
+
+    <!-- Add application dialog box title -->
+    <string name="choose_app">Elegir Aplicación</string>
+
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">Horas de Silencio</string>
+    <string name="quiet_hours_summary">Configurar las horas en el que el dispositivo debe estar en silencio</string>
+    <string name="quiet_hours_enabled_title">Habilitar Horas de Silencio</string>
+    <string name="quiet_hours_start">Inicio de las Horas de Silencio</string>
+    <string name="quiet_hours_start_summary">Cuándo Comenzar a las Horas de Silencio</string>
+    <string name="quiet_hours_end">Fin de Horas de Silencio</string>
+    <string name="quiet_hours_end_summary">Cuándo Finalizar las Horas de Silencio</string>
+    <string name="quiet_hours_notifications_title">Silenciar Sonidos de Notificación</string>
+    <string name="quiet_hours_ringer_title">Silenciar Tonos Telefónicos</string>
+    <string name="quiet_hours_still_title">Desactivar las Vibraciones</string>
+    <string name="quiet_hours_dim_title">Desactivar la Luz de Notificación</string>
+    <string name="quiet_hours_active_from">Activo de</string>
+    <string name="quiet_hours_active_to">Hasta</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">Inicio</string>
+    <string name="end_time_title">Fin</string>
+
+    <!-- DPI Changer -->
+    <string name="dpi">DPI</string>
+    <string name="open_market_title">4. Abra el Play Store y presione aceptar</string>
+    <string name="open_market_summary">Presione atrás cuando haya finalizado para volver aquí</string>
+    <string name="open_market_summary_could_not_open">¡No se pudo abrir el Play Store! Si estás seguro que está instalado, ábrelo tú mismo desde el lanzador de aplicaciones</string>
+    <string name="custom_density_title">5. ¡Cambiar la densidad a lo que quieras!</string>
+    <string name="custom_density_summary">Si alguna vez tiene problemas de compatibilidad con el Play Store, asegúrese de volver aquí y repetir el proceso</string>
+    <string name="custom_density_summary_invalid">¡Densiad Inválida!</string>
+    <string name="custom_density">Personalizada</string>
+    <string name="set_custom_density_title">Establecer Densidad Personalizada</string>
+    <string name="set_custom_density_set">Establecer</string>
+    <string name="custom_density_dialog_title">¡ADVERTENCIA! </string>
+    <string name="custom_density_dialog_summary">Cambiar la densidad del LCD puede provocar un comportamiento inesperado en las aplicaciones. Si se produce incompatibilidad en el Play Store, por favor regrese aquí y reinicie el proceso desde el paso 1</string>
+    <string name="custom_density_dialog_button_got">¡Lo tengo!</string>
+    <string name="custom_density_dialog_button_reboot">Reiniciar Ahora</string>
+
+    <!-- Setting checkbox summary for displaying USB debugging notification -->
+    <string name="adb_notify">Notificación de Depuración por USB</string>
+    <string name="adb_notify_summary">Mostrar una notificación cuando la depuración USB está activada</string>
+
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">Selector de Notificación</string>
+    <string name="ime_switcher_notify_summary">Método de Visualización de la Notificación de Selección de Entrada</string>
+
+    <!-- Launches Dev Tools -->
+    <string name="development_tools_title">Iniciar Herramientas</string>
+
+    <!-- USB Mass Storage -->
+    <string name="usb_mass_storage_title">Almacenamiento Masivo</string>
+    <string name="usb_mass_storage_summary">Activar el Almacenamiento Masivo por USB</string>
+
+    <!-- Performance settings  -->
+    <string name="performance_settings_title">Rendimiento</string>
+
+    <!-- Performance Settings : Warning dialog  -->
+    <string name="performance_settings_warning_title">Procede con Cuidado</string>
+    <string name="performance_settings_warning">Estos ajustes son experimentales y los cambios realizados en ellos tienen la posibilidad de causar inestabilidad, accidentes, pérdida de datos o fallas en el hardware. \ N \ nSe pide no enviar los informes de error si cualquiera de estos valores han sido cambiados de los valores predeterminados. Por favor no culpar al equipo XY si su teléfono explota</string>
+
+    <!-- Performance Settings : Processor settings title -->
+    <string name="processor_title">Procesador</string>
+    <!-- Performance Settings : Processor settings summary. -->
+    <string name="processor_summary">Cambiar el gobernador de la CPU y la velocidad de frecuencia</string>
+
+    <!-- Performance Settings : Processor settings sub items -->
+    <string name="cpu_cur_freq_title">Frecuencia Actual de la CPU</string>
+    <string name="cpu_governors_title">Gobernado de la CPU</string>
+    <string name="cpu_min_freq_title">Frecuencia Mínima de la CPU</string>
+    <string name="cpu_max_freq_title">Frecuencia Máxima de la CPU</string>
+    <string name="cpu_set_on_boot">Establecer en Inicio o Reinicio</string>
+    <string name="cpu_set_on_boot_summary">Restaurar la Configuración del Procesador al Iniciar</string>
+
+    <!-- Memory Management -->
+    <string name="memory_management_title">Gestión de la Memoria</string>
+    <string name="memory_management_summary">Personalizar el uso de la memoria para mejorar el rendimiento del sistema</string>
+    <!-- zRam -->
+    <string name="pref_zram_summary">Comprimir memoria para mayor capacidad virtual (requiere reinicio)</string>
+    <!-- KSM -->
+    <string name="pref_ksm_title">Fusión del Paginado del Kernel</string>
+    <string name="pref_ksm_summary">FPK reduce los requisitos de memoria física y mejora el rendimiento</string>
+    <!-- Purgeable Assets -->
+    <string name="pref_purgeable_assets_title">Permitir la Purga de Activos</string>
+    <string name="pref_purgeable_assets_summary">Purgar los activos del mapa de bits de memoria permite la liberación de más RAM cuando es necesario (requiere reiniciar)</string>
+
+    <!-- Performance Settings : I/O scheduler settings summary. -->
+    <string name="io_scheds_summary">Cambiar el Planificador de E/S</string>
+
+    <!-- Performance Settings : I/O scheduler settings sub items -->
+    <string name="io_sched_title">Planificador de E/S</string>
+    <string name="io_sched_set_on_boot">Establecer en Inicio o Reinicio</string>
+    <string name="io_sched_set_on_boot_summary">Restaurar la Configuración de E/S del Planificador al Iniciar</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">Mejora de Superifcie</string>
+    <string name="dithering_no_dither">Desactivar la Interpolación de Colores</string>
+    <string name="dithering_color_banding">Reparar las Bandas de Color (por defecto)</string>
+    <string name="dithering_blur_effect">Reparar las Bandas de Color y Efecto de Desenfoque</string>
+
+    <!-- Performance Settings : 16bpp Alpha -->
+    <string name="pref_use_16bpp_alpha_title">Transparencia de 16bit</string>
+    <string name="pref_use_16bpp_alpha_summary">Mejor rendimiento en gráficos, pero de menor calidad y pueden causar efectos visuales como rayas en la pantalla y otras cosas extrañas (requiere reinicio)</string>
+
+    <!-- Performance | Voltage Control -->
+    <string name="cpu_voltage">Control de Voltaje</string>
+    <string name="cpu_voltage_summary">Cambio de Voltaje para cada Frecuencia de la CPU</string>
+    <string name="ps_volt_mhz_voltage"> Voltaje MHz</string>
+    <string name="ps_volt_save">Guardar</string>
+    <string name="ps_volt_current_voltage">Voltaje Actual: </string>
+    <string name="ps_volt_setting_to_apply">Configuración a Aplicar: </string>
+    <string name="pt_volt_control">Control de Voltaje</string>
+    <string name="ps_volt_control">Establecer Voltajes para cada Frecuencia</string>
+    <string name="not_supported">Su kernel no es compatible con el control de voltaje</string>
+    <string name="apply_values">Aplicar Valores</string>
+    <string name="freq">Frecuencia</string>
+    <string name="current">mV Actual</string>
+    <string name="saved">mV Guardado</string>
+    <string name="sob">Establecer en el Arranque</string>
+
+    <!-- Notification shade dimming -->
+    <string name="notification_shade_dim_title">Sombra de Notificación del Oscurecimiento</string>
+    <string name="notification_shade_dim_summary">Activar el efecto de oscurecimiento al tirar hacia abajo la sombra notificación</string>
+
+    <!-- Wireless display -->
+    <string name="pref_wifi_disable_hdcp_title">Saltar Negociación HDCP</string>
+    <string name="pref_wifi_disable_hdcp_summary">Pruebe esta opción si puede conectarse pero no obtienen ningún resultado</string>
+
+    <!--- Sms security limit -->
+    <string name="app_security_title">Seguridad de Aplicación</string>
+    <string name="sms_security_check_limit_title">Límite de Mensajes SMS</string>
+    <string name="sms_security_check_limit_summary">Las aplicaciones pueden enviar %d mensajes en 30 minutos antes de requerir confirmación</string>
+    <string name="sms_security_check_limit_default">100 (por defecto)</string>
+
+    <!--- Lock clock -->
+    <string name="lock_clock_title">Widget de Reloj</string>
+    <string name="lock_clock_summary">Ver o cambiar la forma en que los widgets de \'cLock\' se muestran en la pantalla de inicio y en la pantalla de bloqueo</string>
+
+    <!-- XYStats -->
+    <string name="anonymous_statistics_title">Estadísticas de Xylon</string>
+    <string name="anonymous_statistics_summary">Ayuda a hacer mejor a Xylon participando en las estadísticas anónimas de informes</string>
+
+    <!-- Automatic brightness customization -->
+    <string name="light_sensor_current_value">Valor Actual del Sensor de Luz: <xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">Niveles de Brillo Automático</string>
+    <string name="auto_brightness_adjust_button">Ajustar</string>
+    <string name="auto_brightness_reset_button">Reajustar</string>
+    <string name="auto_brightness_lux_dialog_title">Rango de Luminosidad Ambiental</string>
+    <string name="auto_brightness_split_dialog_title">Dividir Nivel de Brillo</string>
+    <string name="auto_brightness_start_lux">Rango de Inicio (lux)</string>
+    <string name="auto_brightness_end_lux">Rango de Fin (lux)</string>
+    <string name="auto_brightness_reset_dialog_title">¿Restablecer los Niveles?</string>
+    <string name="auto_brightness_reset_confirmation">Todos los niveles de brillo se restablecerán a sus valores predeterminados</string>
+    <string name="auto_brightness_split_lux_format">Dividir la Posición (entre <xliff:g id="min">%1$d</xliff:g> y <xliff:g id="max">%2$d</xliff:g> lux)</string>
+    <string name="auto_brightness_level_options">Opciones de Nivel de Luz</string>
+    <string name="auto_brightness_menu_edit_lux">Rango de Luminosidad Ambiental</string>
+    <string name="auto_brightness_menu_split">Dividir</string>
+    <string name="auto_brightness_menu_remove">Eliminar</string>
+
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
+
 </resources>
