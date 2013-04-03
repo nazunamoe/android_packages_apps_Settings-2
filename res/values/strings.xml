@@ -4814,6 +4814,10 @@ Please dont blame the XY team if your phone goes boom</string>
     <!-- Purgeable Assets -->
     <string name="pref_purgeable_assets_title">Allow purging of assets</string>
     <string name="pref_purgeable_assets_summary">Purging of bitmap memory assets allows the freeing of more RAM when needed (requires reboot)</string>
+    <!-- Vibration Editor -->
+    <string name="pref_vibe_strength_title">Vibration Strength</string>
+    <string name="pref_vibe_strength_summary">Vibration strength is <xliff:g id="vibe_strength">%1$s</xliff:g></string>
+    <string name="pref_vibe_strength_dialogtitle">Enter a value between 0-127</string>
 
     <!-- Performance Settings : I/O scheduler settings summary. -->
     <string name="io_scheds_summary">Change the I/O scheduler</string>
@@ -4849,6 +4853,11 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="current">mV current</string>
     <string name="saved">mV saved</string>
     <string name="sob">Set on boot</string>
+    <string name="general_perf">General preferences</string>
+    <string name="cpu_pref">CPU settings</string>
+    <string name="pref_disable_bootanimation_title">Disable boot animation</string>
+    <string name="pref_disable_bootanimation_summary">Disable the boot animation for a slightly quicker boot time</string>
+    <string name="io_pref">I/O settings</string>
 
     <!-- Notification shade dimming -->
     <string name="notification_shade_dim_title">Dim notification shade</string>

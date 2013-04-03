@@ -26,6 +26,8 @@ import android.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
+import com.android.settings.util.CMDProcessor;
+
 
 //
 // CPU Related Settings

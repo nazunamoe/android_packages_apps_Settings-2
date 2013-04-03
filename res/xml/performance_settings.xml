@@ -19,6 +19,9 @@
     android:title="@string/performance_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/cpu_pref">
+
     <PreferenceScreen
         android:key="processor"
         android:fragment="com.android.settings.performance.Processor"
@@ -26,22 +29,42 @@
         android:summary="@string/processor_summary" />
 
     <PreferenceScreen
+        android:key="volt_control"
+        android:fragment="com.android.settings.performance.VoltageControlSettings"
+        android:title="@string/cpu_voltage"
+        android:summary="@string/cpu_voltage_summary" />
+        
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/io_pref">
+        
+     <PreferenceScreen
+        android:key="ioscheduler"
+        android:fragment="com.android.settings.performance.IOScheduler"
+        android:title="@string/io_sched_title"
+        android:summary="@string/io_scheds_summary" />
+        
+    <CheckBoxPreference
+        android:key="pref_purgeable_assets"
+        android:title="@string/pref_purgeable_assets_title"
+        android:summary="@string/pref_purgeable_assets_summary" />
+
+    <PreferenceScreen
         android:key="memory_management"
         android:fragment="com.android.settings.performance.MemoryManagement"
         android:title="@string/memory_management_title"
         android:summary="@string/memory_management_summary" />
 
-    <PreferenceScreen
-        android:key="ioscheduler"
-        android:fragment="com.android.settings.performance.IOScheduler"
-        android:title="@string/io_sched_title"
-        android:summary="@string/io_scheds_summary" />
+    </PreferenceCategory>
 
-    <PreferenceScreen
-        android:key="volt_control"
-        android:fragment="com.android.settings.performance.VoltageControlSettings"
-        android:title="@string/cpu_voltage"
-        android:summary="@string/cpu_voltage_summary" />
+    <PreferenceCategory
+        android:title="@string/general_perf">
+    
+    <CheckBoxPreference
+        android:key="pref_disable_bootanimation"
+        android:title="@string/pref_disable_bootanimation_title"
+        android:summary="@string/pref_disable_bootanimation_summary" />
 
     <CheckBoxPreference
         android:key="pref_use_16bpp_alpha"
@@ -56,8 +79,19 @@
         android:entries="@array/dithering_entries"
         android:entryValues="@array/dithering_values" />
 
+    <EditTextPreference
+        android:key="pref_vibe_strength"
+        android:title="@string/pref_vibe_strength_title"
+        android:summary="@string/pref_vibe_strength_summary"
+        android:dialogTitle="@string/pref_vibe_strength_dialogtitle"
+        android:digits="0123456789"
+        android:inputType="number" />
+
     <CheckBoxPreference
         android:key="notification_shade_dim"
         android:title="@string/notification_shade_dim_title"
         android:summary="@string/notification_shade_dim_summary" />
+        
+    </PreferenceCategory>
+
 </PreferenceScreen>
