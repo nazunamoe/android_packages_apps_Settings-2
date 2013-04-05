@@ -4629,6 +4629,8 @@
     <string name="lock_screen_shortcuts_add">Add</string>
     <string name="lock_screen_shortcuts_reset">Reset</string>
     <string name="lock_screen_shortcuts_limit">Only 6 shorcuts are allowed!</string>
+    <string name="dialog_delete_title">Delete</string>
+    <string name="dialog_delete_message">Remove selected item?</string>
 
     <!-- CyanogenMod: Lockscreen Slider Shortcuts -->
     <string name="lockscreen_target_info">Drag the slider to targets to assign shortcuts</string>
