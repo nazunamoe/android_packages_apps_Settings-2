@@ -1983,9 +1983,9 @@
     <string name="icon_default">Par défaut</string>
     <string name="icon_presets">Presets</string>
     <string name="icon_custom">Personalisé</string>
-    <string name="lock_screen_shortcuts_title">Raccourcis</string>
+    <string name="lock_screen_shortcuts_title">Icônes de raccourcis</string>
     <string name="lock_screen_shortcuts_reset_message">Réinitialiser les raccourcis ?</string>
-    <string name="lock_screen_shortcuts_summary">Afficher ou modifier les raccourcis personnalisés</string>
+    <string name="lock_screen_shortcuts_summary">Afficher ou modifier les icônes de raccourcis personnalisés</string>
     <string name="lock_screen_shortcuts_add">Ajouter</string>
     <string name="lock_screen_shortcuts_reset">Réinitialiser</string>
     <string name="lock_screen_shortcuts_limit">Seulement 6 raccourcis sont permis !</string>
@@ -1994,8 +1994,8 @@
 
     <!-- Lock Screen Shortcuts -->
     <string name="lockscreen_target_info">Glisser pour assigner les raccourcis</string>
-    <string name="lockscreen_target_title">Raccourcis</string>
-    <string name="lockscreen_target_summary">Configurer les raccourcis de l\'écran de verrouillage</string>
+    <string name="lockscreen_target_title">Raccourcis du slider</string>
+    <string name="lockscreen_target_summary">Configurer les raccourcis de l\'anneau sur l\'écran de verrouillage</string>
     <string name="lockscreen_target_reset">Les raccourcis ont été réinitialisés</string>
     <string name="lockscreen_target_save">Raccourcis enregistrés</string>
     <string name="lockscreen_target_reset_title">Réinitialiser</string>
