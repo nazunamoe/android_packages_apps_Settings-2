@@ -415,7 +415,7 @@ public class DevelopmentSettings extends PreferenceFragment
             setPrefsEnabledState(mLastEnabledState);
         }
 
-        updateKillAppLongpressBackOptions();
+        // updateKillAppLongpressBackOptions();
     }
 
     void updateCheckBox(CheckBoxPreference checkBox, boolean value) {
