@@ -4894,10 +4894,10 @@ Please dont blame the XY team if your phone goes boom</string>
     <!-- Hybrid -->
     <string name="hybrid_settings_title">Hybrid settings</string>
 
-    <string name="uimode_title">UIMode</string>
-    <string name="uimode_phone">Phone</string>
-    <string name="uimode_phablet">Phablet</string>
-    <string name="uimode_tablet">Tablet</string>
+    <string name="uimode_title">UI Mode</string>
+    <string name="uimode_phone">Phone (360dp)</string>
+    <string name="uimode_phablet">Phablet (600dp)</string>
+    <string name="uimode_tablet">Tablet (720/1000dp)</string>
 
     <string name="dpi_settings_title">System density</string>
     <string name="system_dpi_title">System density</string>
