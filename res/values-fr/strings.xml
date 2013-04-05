@@ -1989,6 +1989,8 @@
     <string name="lock_screen_shortcuts_add">Ajouter</string>
     <string name="lock_screen_shortcuts_reset">Réinitialiser</string>
     <string name="lock_screen_shortcuts_limit">Seulement 6 raccourcis sont permis !</string>
+    <string name="dialog_delete_title">Suppression</string>
+    <string name="dialog_delete_message">Supprimer l\'élément sélectionné ?</string>
 
     <!-- Lock Screen Shortcuts -->
     <string name="lockscreen_target_info">Glisser pour assigner les raccourcis</string>
@@ -2243,9 +2245,9 @@
     <string name="hybrid_settings_title">Paramètres Hybride</string>
 
     <string name="uimode_title">Mode d\'interface du système</string>
-    <string name="uimode_phone">Phone</string>
-    <string name="uimode_phablet">Phablet</string>
-    <string name="uimode_tablet">Tablette</string>
+    <string name="uimode_phone">Phone (360dp)</string>
+    <string name="uimode_phablet">Phablet (600dp)</string>
+    <string name="uimode_tablet">Tablette (720/1000dp)</string>
 
     <string name="dpi_settings_title">Densités</string>
     <string name="system_dpi_title">Densité du système</string>
