@@ -144,7 +144,7 @@ public class DevelopmentSettings extends PreferenceFragment
 
     private static final int RESULT_DEBUG_APP = 1000;
 
-    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+    // private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
 
     private IWindowManager mWindowManager;
@@ -195,7 +195,7 @@ public class DevelopmentSettings extends PreferenceFragment
     private ListPreference mAppProcessLimit;
 
     private CheckBoxPreference mShowAllANRs;
-    private CheckBoxPreference mKillAppLongpressBack;
+    // private CheckBoxPreference mKillAppLongpressBack;
 
     private PreferenceScreen mDevelopmentTools;
 
@@ -302,7 +302,7 @@ public class DevelopmentSettings extends PreferenceFragment
         mAllPrefs.add(mShowAllANRs);
         mResetCbPrefs.add(mShowAllANRs);
 
-	mKillAppLongpressBack = findAndInitCheckboxPref(KILL_APP_LONGPRESS_BACK);
+        // mKillAppLongpressBack = findAndInitCheckboxPref(KILL_APP_LONGPRESS_BACK);
 
         Preference hdcpChecking = findPreference(HDCP_CHECKING_KEY);
         if (hdcpChecking != null) {
@@ -976,7 +976,7 @@ public class DevelopmentSettings extends PreferenceFragment
             getActivity().getContentResolver(), Settings.Secure.ANR_SHOW_BACKGROUND, 0) != 0);
     }
 
-    private void writeKillAppLongpressBackOptions() {
+    /** private void writeKillAppLongpressBackOptions() {
         Settings.Secure.putInt(getActivity().getContentResolver(),
                 Settings.Secure.KILL_APP_LONGPRESS_BACK,
                 mKillAppLongpressBack.isChecked() ? 1 : 0);
@@ -985,7 +985,7 @@ public class DevelopmentSettings extends PreferenceFragment
     private void updateKillAppLongpressBackOptions() {
         mKillAppLongpressBack.setChecked(Settings.Secure.getInt(
             getActivity().getContentResolver(), Settings.Secure.KILL_APP_LONGPRESS_BACK, 0) != 0);
-    }
+    } **/
 
     private void updateEnableTracesOptions() {
         long flags = SystemProperties.getLong(Trace.PROPERTY_TRACE_TAG_ENABLEFLAGS, 0);
@@ -1161,8 +1161,8 @@ public class DevelopmentSettings extends PreferenceFragment
             writeImmediatelyDestroyActivitiesOptions();
         } else if (preference == mShowAllANRs) {
             writeShowAllANRsOptions();
-        } else if (preference == mKillAppLongpressBack) {
-            writeKillAppLongpressBackOptions();
+        // } else if (preference == mKillAppLongpressBack) {
+        //     writeKillAppLongpressBackOptions();
         } else if (preference == mForceHardwareUi) {
             writeHardwareUiOptions();
         } else if (preference == mForceMsaa) {
