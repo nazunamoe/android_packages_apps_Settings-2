@@ -1835,7 +1835,7 @@
      
     <!-- XYStats -->
     <string name="anonymous_statistics_title">Xylon statistics</string>
-    <string name="anonymous_statistics_summary">Hilf Xylon besser zumachen indem du die anonymen Statistiken aktivierst</string>
+    <string name="anonymous_statistics_summary">Hilf Xylon zu verbessern, indem du die anonymen Statistiken aktivierst</string>
 
     <!-- Automatic brightness customization -->
     <string name="light_sensor_current_value">Current light sensor value: <xliff:g id="light_level">%d</xliff:g> lux</string>
