@@ -126,6 +126,18 @@
                         xy:twitterHandle="slimroms"
                         xy:githubLink="@string/github_slim" />
 
+                 <com.android.settings.about.widgets.DeveloperPreference
+                        android:title="SaberMod"
+                        xy:nameDev="SaberMod"
+                        xy:twitterHandle="sparksco1980"
+                        xy:githubLink="@string/github_sabermod" />
+
+                 <com.android.settings.about.widgets.DeveloperPreference
+                        android:title="Rascarlo"
+                        xy:nameDev="Rascarlo"
+                        xy:twitterHandle="rascarlo"
+                        xy:githubLink="@string/github_rascarlo" />
+
 	</PreferenceCategory>
 
 </PreferenceScreen>

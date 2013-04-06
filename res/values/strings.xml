@@ -4498,6 +4498,8 @@
     <string name="github_paranoid">http://github.com/ParanoidAndroid</string>
     <string name="github_carbon">http://github.com/CarbonDev</string>
     <string name="github_slim">http://github.com/SlimRoms</string>
+    <string name="github_sabermod">http://github.com/SaberMod</string>
+    <string name="github_rascarlo">http://github.com/rascarlo</string>
 
     <!-- Customisation -->
     <string name="other_cat">Other Settings</string>
