@@ -4908,7 +4908,7 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="system_dpi_custom_hint">120 to 480</string>
     <string name="system_dpi_custom_summary">Select a custom density from 120 to 480</string>
 
-    <string name="appsuimode_title">Apps UIMode</string>
+    <string name="appsuimode_title">Apps UI Mode</string>
 
     <string name="apps_dpi_title">Apps density</string>
     <string name="apps_dpi_summary">Current apps density:</string>
