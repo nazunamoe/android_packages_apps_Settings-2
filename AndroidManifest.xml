@@ -1446,10 +1446,6 @@
         <!-- For FNV Stub -->
         <activity android:name=".about.About" />
 
-        <activity android:name=".fnv.Lockscreen" />
-
-        <activity android:name=".fnv.Targets" />
-
         <activity android:name=".ApnEditor" />
 
         <!-- Pseudo-activity used to provide an intent-filter entry point to encryption settings -->

@@ -125,7 +125,6 @@ public class Settings extends PreferenceActivity
             R.id.accessibility_settings,
             R.id.customize_section,
             R.id.xy_settings,
-            R.id.lock_screen_settings,
             R.id.performance_settings,
             R.id.about_xy,
             R.id.dxy_settings,
