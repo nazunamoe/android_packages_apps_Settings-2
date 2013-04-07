@@ -1878,6 +1878,10 @@
     <string name="lockscreen_vibrate_enabled_title">Vibreur</string>
     <string name="lockscreen_vibrate_enabled_head">Vibrer lors du déverrouillage</string>
 
+     <!-- Lock screen misc. settings -->
+    <string name="lockpattern_settings_enable_error_path_title">Afficher le mauvais schéma</string>
+    <string name="lockpattern_settings_enable_dots_title">Afficher les points</string>
+
     <!-- Lock screen general strings -->
     <string name="custom_app_icon_successfully">: icône appliqué correctement.</string>
     <string name="use_custom_app_title">Utiliser une application personnalisée</string>
