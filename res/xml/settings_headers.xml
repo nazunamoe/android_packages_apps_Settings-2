@@ -143,13 +143,6 @@
         android:icon="@drawable/ic_settings_xy"
         android:title="@string/dxy_settings_title" />
 
-    <!-- About Rom -->
-    <header
-        android:id="@+id/about_xy"
-        android:fragment="com.android.settings.about.About"
-        android:icon="@drawable/ic_settings_multiuser"
-        android:title="@string/title_about" />
-
     <!-- PERSONAL -->
     <header
         android:id="@+id/personal_section"
@@ -227,6 +220,13 @@
         android:fragment="com.android.settings.performance.PerformanceSettings"
         android:icon="@drawable/ic_settings_performance"
         android:title="@string/performance_settings_title" />
+
+    <!-- About Rom -->
+    <header
+        android:id="@+id/about_xy"
+        android:fragment="com.android.settings.about.About"
+        android:icon="@drawable/ic_settings_multiuser"
+        android:title="@string/title_about" />
 
     <!-- About Device -->
     <header
