@@ -1867,16 +1867,6 @@
     <string name="volume_key_cursor_control_on">Volumen arriba/abajo mueve el cursor hacia la izquierda/derecha</string>
     <string name="volume_key_cursor_control_on_reverse">Volumen arriba/abajo mueve el cursor a la derecha/izquierda</string>
 
-    <!-- Lock Screen -->
-    <string name="lockscreen_auto_rotate_title">Permitir la Rotación de la Pantalla de Bloqueo</string>
-    <string name="lockscreen_auto_rotate_summary">La pantalla de bloqueo tendrá capacidad para rotar a través de la orientación del dispositivo. Esto es independiente de la auto-rotación en pantalla</string>
-    <string name="lockscreen_all_widgets_title">Permitir a Todos los Widgets</string>
-    <string name="lockscreen_all_widgets_summary">Advertencia ** Algunos widgets no están destinados a ser utilizados en la pantalla de bloqueo. El desarrollador del widget y el equipo de XY no son responsables de la elección de los widgets en la pantalla de bloqueo. Elige responsablemente</string>
-    <string name="lockscreen_unlimited_widgets_title">Permitir Widgets Ilimitados</string>
-    <string name="lockscreen_unlimited_widgets_summary">Advertencia ** Añadir muchos widgets puede causar lentitud importante en la pantalla de bloqueo</string>
-    <string name="lockscreen_longpress_challenge_title">Habilitar Pulsación Larga para Desbloquear</string>
-    <string name="lockscreen_longpress_challenge_summary">Esto permite que el dispositivo pueda ser desbloqueado con los widgets maximizados con una pulsación larga en el icono de bloqueo</string>
-
     <!-- Lock screen vibrate settings -->
     <string name="lockscreen_vibrate_enabled_title">Vibrar</string>
     <string name="lockscreen_vibrate_enabled_head">Vibrar al Desbloquear</string>
@@ -1918,87 +1908,6 @@
     <!-- Swap volume buttons on rotation -->
     <string name="swap_volume_keys_title">Intercambiar Botones de Volumen</string>
     <string name="swap_volume_keys_summary">Intercambiar Botones de Volumen Cuando la Pantalla se Gira 90 ó 180 Grados</string>
-
-    <!-- Lock screen shortcuts -->
-    <string name="picker_activities">Actividades</string>
-    <string name="select_custom_app_title">Seleccionar Aplicación Personalizada</string>
-    <string name="select_custom_activity_title">Seleccionar Actividad Personalizada</string>
-    <string name="icon_picker_choose_icon_title">Escoger Icono</string>
-    <string name="icon_picker_alarm">Alarma</string>
-    <string name="icon_picker_browser">Navegador</string>
-    <string name="icon_picker_calendar">Calendario</string>
-    <string name="icon_picker_camera">Cámara</string>
-    <string name="icon_picker_email">Correo Electrónico</string>
-    <string name="icon_picker_email2">Email Holo</string>
-    <string name="icon_picker_gallery">Galería</string>
-    <string name="icon_picker_google_small">Google (pequeño)</string>
-    <string name="icon_picker_movie">Película</string>
-    <string name="icon_picker_music">Música</string>
-    <string name="icon_picker_nav_normal">Navegación</string>
-    <string name="icon_picker_phone">Teléfono</string>
-    <string name="icon_picker_podcast">Podcast</string>
-    <string name="icon_picker_rss">Rss</string>
-    <string name="icon_picker_search">Búsqueda</string>
-    <string name="icon_picker_sms">Mensajería</string>
-
-    <!-- String for IconPicker -->
-    <string name="icon_picker_title">Elegir Icono Fuente</string>
-    <string name="icon_picker_system_icons_title">Iconos del Sistema</string>
-    <string name="icon_picker_gallery_title">Galería</string>
-    <string name="icon_picker_pack_title">Paquete de Iconos</string>
-
-    <string name="profile_applist_title">Aplicaciones</string>
-
-    <!-- Lock screen misc. settings -->
-    <string name="lockscreen_battery_status_title">Estado de la Batería</string>
-    <string name="lockscreen_battery_status_charging">Sólo Cuando se Carga</string>
-    <string name="lockscreen_battery_status_alwayson">Siempre</string>
-
-    <!-- Lock screen background -->
-    <string name="lockscreen_style_options_title">Estilo de la Pantalla de Bloqueo</string>
-    <string name="lockscreen_custom_background_title">Fondo</string>
-    <string name="lockscreen_custom_background_dialog_title">Eligir el Color</string>
-    <string name="lockscreen_background_result_successful">Fondo Cambiado</string>
-    <string name="lockscreen_background_result_not_successful">Fondo No Cambiado</string>
-    <string name="lockscreen_background_color_fill">Color de Relleno</string>
-    <string name="lockscreen_background_custom_image">Imagen Personalizada</string>
-    <string name="lockscreen_background_full_transparent">Completamente Transparente</string>
-    <string name="lockscreen_background_default_wallpaper">Fondo de Pantalla por Defecto</string>
-    <string name="lockscreen_alpha_title">Transparencia del Fondo</string>
-
-    <string name="ls_shortcuts_title">Atajos de la Pantalla de Bloqueo</string>
-
-    <!-- ParanoidAndroid: Lockscreen Shortcuts -->
-    <string name="icon_picker_type">Seleccionar Tipo de Icono:</string>
-    <string name="icon_default">Por Defecto</string>
-    <string name="icon_presets">Predeterminado</string>
-    <string name="icon_custom">Personalizado</string>
-    <string name="lock_screen_shortcuts_title">Rápido</string>
-    <string name="lock_screen_shortcuts_reset_message">¿Restablecer los accesos directos de la pantalla de bloqueo?</string>
-    <string name="lock_screen_shortcuts_summary">Ver o cambiar los accesos directos personalizados</string>
-    <string name="lock_screen_shortcuts_add">Añadir</string>
-    <string name="lock_screen_shortcuts_reset">Reajustar</string>
-    <string name="lock_screen_shortcuts_limit">¡Sólo 6 accesos están permitidos!</string>
-
-    <!-- CyanogenMod: Lockscreen Slider Shortcuts -->
-    <string name="lockscreen_target_info">Arrastre el control de deslizamiento hacia los objetivos para asignar los accesos directos</string>
-    <string name="lockscreen_target_title">Carrusel</string>
-    <string name="lockscreen_target_summary">Ver o cambiar los accesos directos personalizados deslizantes</string>
-    <string name="lockscreen_target_reset">Restablecer los accesos directos de la pantalla de bloqueo a los valores predeterminados</string>
-    <string name="lockscreen_target_save">Accesos directos de la pantalla de bloqueo guardados</string>
-    <string name="lockscreen_target_reset_title">Reajustar</string>
-    <string name="lockscreen_target_reset_message">¿Eliminar todos los accesos directos creados por el usuario en la pantalla de bloqueo y restaurar por defecto?</string>
-    <string name="lockscreen_target_empty">Vacío</string>
-    <string name="lockscreen_target_edit_title">Editar Acceso e Icono</string>
-    <string name="lockscreen_target_edit_msg">Seleccionar o cambiar la aplicación o actividad deseada y el icono asociado</string>
-
-    <!-- AOKP Lockscreen Customizations -->
-    <string name="lockscreen_maximize_widgets_title">Maximizar los Widgets</string>
-    <string name="lockscreen_maximize_widgets_summary">Mostrar los widgets maximizados y el desbloqueo minimizado cuando la pantalla está encendida</string>
-    <string name="lockscreen_hide_initial_page_hints_title">Ocultar Sugerencias Iniciales en la Página</string>
-    <string name="lockscreen_hide_initial_page_hints_summary">Establecer si los consejos para los widgets de izquierda y derecha se muestra cuando la pantalla está encendida</string>
-    <string name="lockscreen_use_widget_container_carousel_title">Utilice Carrusel de Widgets</string>
-    <string name="lockscreen_use_widget_container_carousel_summary">Utilizar animación de carrusel al cambiar entre los widgets de la pantalla de bloqueo</string>
 
     <!-- Display : Rotation  -->
     <string name="display_rotation_title">Rotación</string>
@@ -2198,10 +2107,6 @@
     <string name="sms_security_check_limit_title">Límite de Mensajes SMS</string>
     <string name="sms_security_check_limit_summary">Las aplicaciones pueden enviar %d mensajes en 30 minutos antes de requerir confirmación</string>
     <string name="sms_security_check_limit_default">100 (por defecto)</string>
-
-    <!--- Lock clock -->
-    <string name="lock_clock_title">Widget de Reloj</string>
-    <string name="lock_clock_summary">Ver o cambiar la forma en que los widgets de \'cLock\' se muestran en la pantalla de inicio y en la pantalla de bloqueo</string>
 
     <!-- XYStats -->
     <string name="anonymous_statistics_title">Estadísticas de Xylon</string>
