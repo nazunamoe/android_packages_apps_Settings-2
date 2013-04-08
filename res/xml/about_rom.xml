@@ -73,7 +73,7 @@
                         xy:githubLink="@string/github_psafx" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="Kyler"
+                        android:title="Kyler J"
                         xy:nameDev="MBQsniper"
                         xy:twitterHandle="mbqsniper"
                         xy:githubLink="@string/github_mbqsniper" />
@@ -91,8 +91,8 @@
 		android:title="@string/contributors">
 
 		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="Fruits N' Veggies"
-			xy:nameDev="Fruit N' Veggies"
+			android:title="Fruits n' Veggies"
+			xy:nameDev="Fruits n' Veggies"
 			xy:twitterHandle="ProjectFNV"
 			xy:githubLink="@string/github_fnv" />
 
