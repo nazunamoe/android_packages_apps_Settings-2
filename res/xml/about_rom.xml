@@ -91,7 +91,7 @@
 		android:title="@string/contributors">
 
 		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="Fruit N' Veggies"
+			android:title="Fruits N' Veggies"
 			xy:nameDev="Fruit N' Veggies"
 			xy:twitterHandle="ProjectFNV"
 			xy:githubLink="@string/github_fnv" />
