@@ -1857,16 +1857,11 @@
     <string name="contributors">Collaborateurs</string>
     <string name="xylon_website_title">Site web de Xylon</string>
     <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
-    <string name="xylon_source_title">XY Sources</string>
-    <string name="xylon_source_summary">Nous sommes entièrement open source. Vous pouvez toujours consulter nos modifications sur github.com/XYAOSP</string>
 
     <!-- Customisation -->
-    <string name="xylon_extras">XY Tools</string>
-    <string name="lockscreen_stub">Écran de verrouillage</string>
     <string name="dxy_settings_title">Dark Xylon</string>
     <string name="misc">Divers</string>
     <string name="headset_category_title">Casque audio</string>
-
 
     <!--- Volume key cursor control -->
     <string name="volume_key_cursor_control_title">Contrôle du curseur par les touches du volume</string>
@@ -1905,7 +1900,7 @@
     <string name="slide_lock_delay_title">Retard du verrouillage de l\'écran</string>
     <string name="slide_lock_timeout_delay_title">Retard après temps écoulé</string>
     <string name="slide_lock_screenoff_delay_title">Retard après avoir été éteint</string>
-    <string name="slide_lock_delay_none">Désactivée.</string>
+    <string name="slide_lock_delay_none">Désactivée</string>
     <string name="slide_lock_delay_1s">1 seconde</string>
     <string name="slide_lock_delay_5s">5 secondes</string>
     <string name="slide_lock_delay_10s">10 secondes</string>
