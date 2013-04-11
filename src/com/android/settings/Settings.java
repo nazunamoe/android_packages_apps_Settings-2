@@ -782,15 +782,17 @@ public class Settings extends PreferenceActivity
 
         super.onHeaderClick(header, position);
 
-        if (header.id == R.id.dxy_settings) {
-            mTRDSSwitch.toggle();
-        }
         if (revert && mLastHeader != null) {
             highlightHeader((int) mLastHeader.id);
         } else {
             mLastHeader = header;
         }
-        setTitle(mLastHeader.titleRes);
+        if (android.provider.Settings.System.getBoolean(getContentResolver(), android.provider.Settings.System.FORCE_DUAL_PANEL, false)) {
+            setTitle(mLastHeader.titleRes);
+        }
+        if (header.id == R.id.dxy_settings) {
+            mTRDSSwitch.toggle();
+        }
     }
 
     @Override
