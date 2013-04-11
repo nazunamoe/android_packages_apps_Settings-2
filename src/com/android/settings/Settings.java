@@ -782,14 +782,15 @@ public class Settings extends PreferenceActivity
 
         super.onHeaderClick(header, position);
 
+        if (header.id == R.id.dxy_settings) {
+            mTRDSSwitch.toggle();
+        }
         if (revert && mLastHeader != null) {
             highlightHeader((int) mLastHeader.id);
         } else {
             mLastHeader = header;
         }
-        if (header.id == R.id.dxy_settings) {
-            mTRDSSwitch.toggle();
-        }
+        setTitle(mLastHeader.titleRes);
     }
 
     @Override
