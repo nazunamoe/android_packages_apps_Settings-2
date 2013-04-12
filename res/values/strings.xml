@@ -4135,7 +4135,7 @@
     <string name="data_usage_app_restrict_dialog_title">Restrict background data?</string>
     <!-- Body of dialog shown when user restricts background data usage of a specific application. [CHAR LIMIT=NONE] -->
     <string name="data_usage_app_restrict_dialog">This feature may cause an app that depends on background data to stop working when only mobile networks are available.\n\nYou can find more appropriate data usage controls in the settings available within the app.</string>
-    <!-- Body of dialog shown when user attempts to restrict ba!-- Summary message for checkbox that restricts background data usage of a specific application when no networks have been limited. [CHAR LIMIT=64] --ckground data before a network data limit has been set. [CHAR LIMIT=NONE] -->
+    <!-- Body of dialog shown when user attempts to restrict background data before a network data limit has been set. [CHAR LIMIT=NONE] -->
     <string name="data_usage_restrict_denied_dialog">Restricting background data is possible only when you\'ve set a mobile data limit.</string>
     <!--  Title of dialog shown when user enables global auto sync [CHAR LIMIT=32] -->
     <string name="data_usage_auto_sync_on_dialog_title">Turn auto-sync data on?</string>
@@ -4659,24 +4659,24 @@ Please dont blame the XY team if your phone goes boom</string>
 
     <!-- Performance Settings : Processor settings sub items -->
     <string name="cpu_cur_freq_title">Current CPU frequency</string>
-    <string name="cpu_governors_title">CPU Governor</string>
+    <string name="cpu_governors_title">CPU governor</string>
     <string name="cpu_governors_summary">%S</string>
     <string name="cpu_min_freq_title">Minimum CPU frequency</string>
     <string name="cpu_min_freq_summary">%s</string>
     <string name="cpu_max_freq_title">Maximum CPU frequency</string>
     <string name="cpu_max_freq_summary">%s</string>
-    <string name="cpu_set_on_boot">Set on boot</string>
-    <string name="cpu_set_on_boot_summary">Restore the CPU settings on boot</string>
+    <string name="cpu_set_on_boot">Set on boot or reboot</string>
+    <string name="cpu_set_on_boot_summary">Restore the processor settings on boot</string>
 
     <!-- Memory Management -->
-    <string name="memory_management_title">Memory Management</string>
-    <string name="memory_management_summary">Customize the usage of memory to enhance performance</string>
+    <string name="memory_management_title">Memory management</string>
+    <string name="memory_management_summary">Customize the usage of memory to enhance system performance</string>
     <!-- zRam -->
     <string name="pref_zram_title">zRAM</string>
     <string name="pref_zram_summary">Compress memory for increased virtual capacity (requires reboot)</string>
     <!-- KSM -->
-    <string name="pref_ksm_title">KSM</string>
-    <string name="pref_ksm_summary">Kernel Samepage Merging reduces physical memory requirements and improves performance</string>
+    <string name="pref_ksm_title">Kernel Samepage Merging</string>
+    <string name="pref_ksm_summary">KSM reduces physical memory requirements and improves performance</string>
     <!-- Purgeable Assets -->
     <string name="pref_purgeable_assets_title">Allow purging of assets</string>
     <string name="pref_purgeable_assets_summary">Purging of bitmap memory assets allows the freeing of more RAM when needed (requires reboot)</string>
@@ -4686,7 +4686,7 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="pref_vibe_strength_dialogtitle">Enter a value between 0-127</string>
 
     <!-- Performance Settings : I/O scheduler settings summary. -->
-    <string name="io_scheds_summary">I/O scheduler</string>
+    <string name="io_scheds_summary">Change the I/O scheduler</string>
 
     <!-- Performance Settings : I/O scheduler settings sub items -->
     <string name="io_sched_title">I/O scheduler</string>
@@ -4696,13 +4696,13 @@ Please dont blame the XY team if your phone goes boom</string>
 
     <!-- Performance Settings : Dithering -->
     <string name="pref_use_dithering_title">Surface improvement</string>
-    <string name="dithering_no_dither">Disable surface dithering</string>
+    <string name="dithering_no_dither">Disable dithering</string>
     <string name="dithering_color_banding">Fix color banding (default)</string>
     <string name="dithering_blur_effect">Fix color banding and blur effect</string>
 
     <!-- Performance Settings : 16bpp Alpha -->
-    <string name="pref_use_16bpp_alpha_title">16-bit transparency</string>
-    <string name="pref_use_16bpp_alpha_summary">Better graphic performance, but lower quality visuals, and may cause visual artifacts such as screen tearing and other weird stuff (requires reboot)</string>
+    <string name="pref_use_16bpp_alpha_title">16bit transparency</string>
+    <string name="pref_use_16bpp_alpha_summary">Better graphics performance, but lower quality and may cause visual artifacts such as screen tearing and other weird stuff (requires reboot)</string>
 
     <!-- Performance | Voltage Control -->
     <string name="cpu_voltage">Voltage control</string>
