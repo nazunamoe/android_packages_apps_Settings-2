@@ -4135,7 +4135,7 @@
     <string name="data_usage_app_restrict_dialog_title">Restrict background data?</string>
     <!-- Body of dialog shown when user restricts background data usage of a specific application. [CHAR LIMIT=NONE] -->
     <string name="data_usage_app_restrict_dialog">This feature may cause an app that depends on background data to stop working when only mobile networks are available.\n\nYou can find more appropriate data usage controls in the settings available within the app.</string>
-    <!-- Body of dialog shown when user attempts to restrict ba!-- Summary message for checkbox that restricts background data usage of a specific application when no networks have been limited. [CHAR LIMIT=64] --ckground data before a network data limit has been set. [CHAR LIMIT=NONE] -->
+    <!-- Summary message for checkbox that restricts background data usage of a specific application when no networks have been limited. [CHAR LIMIT=64]-->
     <string name="data_usage_restrict_denied_dialog">Restricting background data is possible only when you\'ve set a mobile data limit.</string>
     <!--  Title of dialog shown when user enables global auto sync [CHAR LIMIT=32] -->
     <string name="data_usage_auto_sync_on_dialog_title">Turn auto-sync data on?</string>
