@@ -46,10 +46,6 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements P
     public static final String VIBE_STR = "pref_vibe_strength";
     public static final String VIBE_STR_FILE = "/sys/vibrator/pwmvalue";
 
-    private static final String PURGEABLE_ASSETS_PREF = "pref_purgeable_assets";
-    private static final String PURGEABLE_ASSETS_PERSIST_PROP = "persist.sys.purgeable_assets";
-    private static final String PURGEABLE_ASSETS_DEFAULT = "1";
-
     private static final String DISABLE_BOOTANIMATION_PREF = "pref_disable_bootanimation";
     private static final String DISABLE_BOOTANIMATION_PERSIST_PROP = "persist.sys.nobootanimation";
     private static final String DISABLE_BOOTANIMATION_DEFAULT = "0";
@@ -77,11 +73,6 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements P
             addPreferencesFromResource(R.xml.performance_settings);
 
             PreferenceScreen prefSet = getPreferenceScreen();
-
-            mPurgeableAssetsPref = (CheckBoxPreference) prefSet.findPreference(PURGEABLE_ASSETS_PREF);
-            String purgeableAssets = SystemProperties.get(PURGEABLE_ASSETS_PERSIST_PROP,
-                    PURGEABLE_ASSETS_DEFAULT);
-            mPurgeableAssetsPref.setChecked("1".equals(purgeableAssets));
 
             String useDithering = SystemProperties.get(USE_DITHERING_PERSIST_PROP, USE_DITHERING_DEFAULT);
             mUseDitheringPref = (ListPreference) prefSet.findPreference(USE_DITHERING_PREF);
@@ -142,10 +133,6 @@ public class PerformanceSettings extends SettingsPreferenceFragment implements P
         if (preference == mUse16bppAlphaPref) {
             SystemProperties.set(USE_16BPP_ALPHA_PROP,
                     mUse16bppAlphaPref.isChecked() ? "1" : "0");
-        } else if (preference == mPurgeableAssetsPref) {
-            SystemProperties.set(PURGEABLE_ASSETS_PERSIST_PROP,
-                    mPurgeableAssetsPref.isChecked() ? "1" : "0");
-            return true;
         } else if (preference == mDisableBootanimPref) {
             SystemProperties.set(DISABLE_BOOTANIMATION_PERSIST_PROP,
                     mDisableBootanimPref.isChecked() ? "1" : "0");
