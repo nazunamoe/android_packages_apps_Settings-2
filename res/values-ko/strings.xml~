@@ -1854,7 +1854,6 @@
     <string name="build_date_default">2012-01-01-0000</string>
 
     <string name="dxy_settings_title">Dark Xylon</string>
-    <string name="header_category_customization">사용자화</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">색상 선택기</string>
