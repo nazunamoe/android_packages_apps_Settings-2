@@ -1981,7 +1981,7 @@
     <string name="profiles_add">Ajouter</string>
     
     <!-- Camera Sound settings -->
-    <string name="camera_sounds_title">Son de l'obturateur</string>
+    <string name="camera_sounds_title">Son de l\'obturateur</string>
     <string name="camera_sounds_summary">Désactiver le son de l\'appareil photo. ATTENTION: Le désactiver est illégal dans certains endroits.
 </string>
 
