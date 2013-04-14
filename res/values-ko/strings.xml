@@ -1834,6 +1834,17 @@
 
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
     <!-- **XYLON KOREAN translated MODOFICATIONS STARTS** -->
+
+    <!-- Sound settings screen, setting check box label -->
+    <string name="camera_sounds_title">카메라 셔터 음</string>
+    <string name="camera_sounds_summary">몇몇 지역에선 카메라 셔터음 제거가 불법입니다!</string>
+    <!-- Sound settings screen, setting check box label -->
+    <string name="volume_adjust_sounds_enable_title">볼륨 조정 소리</string>
+    <!-- Sound settings screen, setting check box summary -->
+    <string name="volume_adjust_sounds_enable_summary">볼륨을 버튼으로 조정할 때 소리가 나게 합니다.</string>
+
+    <!-- Advanced, Device specific (DeviceParts) settings  -->
+    <string name="advanced_settings_title">고급 설정</string>
 	
 	<!-- About phone screen,  setting option name-->
     <string name="mod_version">Xylon/FNV 버전</string>
@@ -1843,6 +1854,7 @@
     <string name="build_date_default">2012-01-01-0000</string>
 
     <string name="dxy_settings_title">Dark Xylon</string>
+    <string name="header_category_customization">사용자화</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">색상 선택기</string>
@@ -1943,8 +1955,9 @@
     <string name="volbtn_music_controls_summary">화면이 꺼져 있을 때, 볼륨 키로 음악 트랙을 조정합니다.</string>
 
     <!-- Safe headset volume restore checkbox -->
-    <string name="safe_headset_restore_title">안전 헤드셋 볼륨 복원</string>
-    <string name="safe_headset_restore_summary">헤드셋이 꼽혔을 때 큰소리를 방지 해 줍니다</string>
+    <string name="safe_headset_restore_title">안전한 헤드셋 볼륨</string>
+    <string name="safe_headset_restore_summary">헤드셋이 꼽혔을 때 큰 소리를 방지합니다.</string>
+    <string name="headset_category_title">헤드셋</string>
  
     <!-- Waiver -->
     <string name="waiver_title">Waiver</string>
@@ -1956,12 +1969,12 @@
 
     <!-- Wakeup Options -->
     <string name="display_category_wakeup_options_title">깨어나기 옵션</string>
-    <string name="pref_volume_wake_title">볼륨 키로 깨어나기</string>
-    <string name="pref_volume_wake_summary">볼륨 상/하 키로 기기를 깨웁니다</string>
+    <string name="pref_volume_wake_title">볼륨 키로 깨우기</string>
+    <string name="pref_volume_wake_summary">볼륨 상/하 키로 기기를 꺠웁니다.</string>
 
     <!-- Reset Profiles -->
     <string name="profile_reset_title">초기화</string>
-    <string name="profile_reset_message">모든 유저 프로필과 유저 앱 그룹을 초기화 하시겠습니까</string>
+    <string name="profile_reset_message">모든 유저 프로필과 유저 앱 그룹을 초기화 하시겠습니까?</string>
     <string name="profiles_add">추가</string>
 
     <!-- Add application dialog box title -->
@@ -2133,7 +2146,7 @@
     <!--- Sms security limit -->
     <string name="app_security_title">APP 보안</string>
     <string name="sms_security_check_limit_title">SMS 제한</string>
-    <string name="sms_security_check_limit_summary">SMS를 값보다 많이 보낼 시 경고합니다. 현재 제한: 15분 마다 %d 메시지</string>
+    <string name="sms_security_check_limit_summary">SMS를 값보다 많이 보낼 시 경고합니다. 현재 제한 : 15분 마다 %d개의 SMS</string>
     <string name="sms_security_check_limit_default">30 (기본값)</string>
 	
 	<!-- Slide lock delay -->
