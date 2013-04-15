@@ -4581,7 +4581,7 @@
 
     <!-- Waiver -->
     <string name="waiver_title">Waiver</string>
-    <string name="waiver_body">Changing this setting may be against your state or government laws.\n\nIn selecting \'OK\' below, you acknowledge this warning and waive, indemnify and hold harmless TeamRootXY and its contributors from all legal liabilities.</string>
+    <string name="waiver_body">Changing this setting may be against your state or government laws.\n\nIn selecting \'OK\' below, you acknowledge this warning and waive, indemnify and hold harmless Team XYE and its contributors from all legal liabilities.</string>
 
     <!-- Launch music app on connect -->
     <string name="headset_connect_player_title">Launch music app on connect</string>
