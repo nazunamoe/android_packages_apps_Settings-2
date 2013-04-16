@@ -1994,25 +1994,25 @@
 
     <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">Heures Silencieuses</string>
-    <string name="quiet_hours_summary">Configurer les heures où l\'appareil doit être discret</string>
-    <string name="quiet_hours_enabled_title">Activer les Heures Silencieuses</string>
+    <string name="quiet_hours_summary">Ce sont les moments où l\'appareil doit être discret</string>
+    <string name="quiet_hours_enabled_title">Activer les heures silencieuses</string>
     <string name="quiet_hours_start">Début des heures silencieuses</string>
     <string name="quiet_hours_start_summary">Quand commencer à appliquer les Heures Silencieuses</string>
     <string name="quiet_hours_end">Fin des Heures Silencieuses</string>
     <string name="quiet_hours_end_summary">Quand arrêter l\'exécution des heures silencieuses</string>
-    <string name="quiet_hours_notifications_title">Sons de notification désactivés</string>
+    <string name="quiet_hours_notifications_title">Sons des notifications désactivés</string>
     <string name="quiet_hours_ringer_title">Sonnerie de téléphone désactivée</string>
-    <string name="quiet_hours_still_title">Désactiver les vibrations</string>
-    <string name="quiet_hours_dim_title">Désactiver voyant de notification</string>
+    <string name="quiet_hours_still_title">Vibrations désactivées</string>
+    <string name="quiet_hours_dim_title">Voyant de notification désactivé</string>
     <string name="quiet_hours_active_from">Actif à partir de</string>
-    <string name="quiet_hours_active_to">pour</string>
+    <string name="quiet_hours_active_to">jusqu\'à</string>
 
     <!-- time range preference -->
     <string name="start_time_title">Démarrage</string>
     <string name="end_time_title">Fin</string>
 
     <!-- Setting checkbox summary for displaying USB debugging notification -->
-    <string name="adb_notify">Notification débogage</string>
+    <string name="adb_notify">Notification de débogage</string>
     <string name="adb_notify_summary">Afficher une notification lorsque le débogage est actif</string>
 
     <!-- Whether to display IME switcher notifcation -->
@@ -2110,7 +2110,7 @@
     <string name="sms_security_check_limit_default">100 (Défaut)</string>
 
     <!-- XYStats -->
-    <string name="anonymous_statistics_title">Statistiques XY</string>
+    <string name="anonymous_statistics_title">Statistiques Xylon</string>
     <string name="anonymous_statistics_summary">Aidez à l\'amélioration de Xylon en autorisant l\'envoi de rapports anonymes à la team.</string>
 
         <!-- Automatic brightness customization -->
