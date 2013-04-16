@@ -1839,6 +1839,10 @@
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Diffusions cellulaires"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Sélectionnez les types d\'alertes d\'urgence à afficher."</string>
     
+    <string name="nfc_polling_mode_title">Mode de scan de la NFC</string>
+    <string name="nfc_polling_mode_screen_off">Écran éteint</string>
+    <string name="nfc_polling_mode_screen_locked">Écran allumé, verrouillé</string>
+    <string name="nfc_polling_mode_screen_unlocked">Écran allumé, déverrouillé (Par défaut)</string>
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
     
     <!-- About phone screen -->
@@ -1885,7 +1889,7 @@
 
     <!-- Screen security - Screen security   -->
     <string name="screen_security_category">Sécurité de l\'écran</string>
-    <string name="screen_security_title">Ecran de verrouillage</string>
+    <string name="screen_security_title">Écran de verrouillage</string>
     <string name="screen_security_summary">Afficher ou modifier les paramètres de sécurité de l\'écran de verrouillage, le délai et le temps d\'attente.</string>
     <string name="additional_options_title">Options supplémentaires</string>
     <string name="unlock_menu_unlock_title">Déverrouillage par Menu</string>
@@ -1982,7 +1986,7 @@
     
     <!-- Camera Sound settings -->
     <string name="camera_sounds_title">Son de l\'obturateur</string>
-    <string name="camera_sounds_summary">Désactiver le son de l\'appareil photo. ATTENTION: Le désactiver est illégal dans certains endroits.
+    <string name="camera_sounds_summary">Activer le son de l\'appareil photo. ATTENTION: Le désactiver est illégal dans certains endroits.
 </string>
 
     <!-- Add application dialog box title -->
