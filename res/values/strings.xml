@@ -4741,6 +4741,12 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="notification_shade_dim_title">Dim notification shade</string>
     <string name="notification_shade_dim_summary">Toggle the dimming effect when pulling down the notification shade</string>
 
+    <!-- MediaScanner behavior on boot -->
+    <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
+    <string name="media_scanner_on_boot_enabled">Scan media</string>
+    <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
+    <string name="media_scanner_on_boot_disabled">Do not scan media</string>
+
     <!-- Wireless display -->
     <string name="pref_wifi_disable_hdcp_title">Skip HDCP negotiation</string>
     <string name="pref_wifi_disable_hdcp_summary">Try this option if you can connect but don\'t get any output</string>
