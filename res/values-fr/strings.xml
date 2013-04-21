@@ -1838,56 +1838,47 @@
     <string name="user_picture_title" msgid="7297782792000291692">"ID de photo"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"Diffusions cellulaires"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"Sélectionnez les types d\'alertes d\'urgence à afficher."</string>
-    
     <string name="nfc_polling_mode_title">Mode de scan de la NFC</string>
     <string name="nfc_polling_mode_screen_off">Écran éteint</string>
     <string name="nfc_polling_mode_screen_locked">Écran allumé, verrouillé</string>
     <string name="nfc_polling_mode_screen_unlocked">Écran allumé, déverrouillé (Par défaut)</string>
+    
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
     
-    <!-- About phone screen -->
     <string name="mod_version">Version de la Rom</string>
     <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
 
-    <!-- Color Picker -->
     <string name="dialog_color_picker">Sélecteur de couleur</string>
     <string name="press_color_to_apply">Appuyer sur la couleur pour valider.</string>
     <string name="set">Ok</string>
 
-    <!-- About -->
     <string name="title_about">À propos de Xylon</string>
     <string name="team">Les Funkies</string>
     <string name="contributors">Collaborateurs</string>
     <string name="xylon_website_title">Site web de Xylon</string>
     <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
 
-    <!-- Customisation -->
     <string name="dxy_settings_title">Dark Xylon</string>
     <string name="misc">Divers</string>
     <string name="headset_category_title">Casque audio</string>
 
-    <!--- Volume key cursor control -->
     <string name="volume_key_cursor_control_title">Contrôle du curseur par les touches du volume</string>
     <string name="volume_key_cursor_control_off">Désactivé</string>
     <string name="volume_key_cursor_control_on">La touche haut déplace le curseur vers la gauche et bas vers la droite</string>
     <string name="volume_key_cursor_control_on_reverse">La touche haut déplace le curseur vers la droite et bas vers la gauche</string>
 
-    <!-- Lock screen vibrate settings -->
     <string name="lockscreen_vibrate_enabled_title">Vibreur</string>
     <string name="lockscreen_vibrate_enabled_head">Vibrer lors du déverrouillage</string>
 
-     <!-- Lock screen misc. settings -->
     <string name="lockpattern_settings_enable_error_path_title">Afficher le mauvais schéma</string>
     <string name="lockpattern_settings_enable_dots_title">Afficher les points</string>
 
-    <!-- Lock screen general strings -->
     <string name="custom_app_icon_successfully">: icône appliqué correctement.</string>
     <string name="use_custom_app_title">Utiliser une application personnalisée</string>
     <string name="use_custom_app_summary">Utiliser une application personnalisée au lieu de la boîte de dialogue des applications récentes</string>
     <string name="group_applications">Applications</string>
 
-    <!-- Screen security - Screen security   -->
     <string name="screen_security_category">Sécurité de l\'écran</string>
     <string name="screen_security_title">Écran de verrouillage</string>
     <string name="screen_security_summary">Afficher ou modifier les paramètres de sécurité de l\'écran de verrouillage, le délai et le temps d\'attente.</string>
@@ -1899,7 +1890,6 @@
     <string name="unlock_quick_unlock_control_title">Déverrouillage rapide</string>
     <string name="unlock_quick_unlock_control_summary">Déverrouiller automatiquement lorsque le code PIN / mot de passe correct est entré.</string>
 
-    <!-- Slide lock delay -->
     <string name="delay_and_timeout_title">Délai de verrouillage</string>
     <string name="slide_lock_delay_title">Retard du verrouillage de l\'écran</string>
     <string name="slide_lock_timeout_delay_title">Retard après temps écoulé</string>
@@ -1915,11 +1905,9 @@
     <string name="slide_lock_delay_10m">10 minutes</string>
     <string name="slide_lock_delay_30m">30 minutes</string>
 
-    <!-- Swap volume buttons on rotation -->
     <string name="swap_volume_buttons_title">Inversion des boutons volume</string>
     <string name="swap_volume_buttons_summary">Inversions des boutons de volume lorsque l\'écran est tourné.</string>
 
-    <!-- Display : Rotation  -->
     <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_enabled">Activé</string>
     <string name="display_rotation_disabled">Désactivé</string>
@@ -1930,8 +1918,6 @@
     <string name="display_rotation_90_title">90 degrés</string>
     <string name="display_rotation_180_title">180 degrés</string>
     <string name="display_rotation_270_title">270 degrés</string>
-
-    <!-- Sound settings -->
 
     <string name="increasing_ring_title">Sonnerie progressive</string>
     <string name="checkbox_increasing_ring">Activer</string>
@@ -1962,37 +1948,28 @@
     <string name="volbtn_music_controls_title">Contrôle de la musique</string>
     <string name="volbtn_music_controls_summary">Lorsque l\'écran est éteint, un appui long sur les boutons de volume permet de changer le titre en cours de lecture</string>
 
-    <!-- Launch music player when headset is connected -->
     <string name="headset_connect_player_title">Lancer lecteur de musique</string>
     <string name="headset_connect_player_summary">Lancer le lecteur de musique par défaut au branchement du casque</string>
 
-    <!-- Safe headset volume restore checkbox -->
     <string name="safe_headset_volume_title">Volume sécurisé du casque</string>
     <string name="safe_headset_volume_summary">Mettre en garde l\'utilisateur contre les volumes sonores élevés lors de la première utilisation du casque</string>
 
-    <!-- Waiver -->
     <string name="cyanogenmod_waiver_title">ATTENTION</string>
     <string name="cyanogenmod_waiver_body">Le changement de ce paramètre peut être interdit par les lois de votre gouvernement ou état.\n\nEn sélectionnant \'OK\' ci-dessous, vous reconnaissez avoir pris connaissance de cet avertissement, et vous dégagez CyanogenMod et ses contributeurs de toutes responsabilités et de toutes obligations juridiques.</string>
 
-    <!-- Wakeup options -->
     <string name="display_category_wakeup_options_title">Sortie de veille</string>
     <string name="pref_volume_wake_title">Éveil par boutons Volume</string>
     <string name="pref_volume_wake_summary">Permet de rallumer l\'appareil à l\'aide des boutons de volume.</string>
 
-    <!-- Reset Profiles -->
     <string name="profile_reset_title">Réinitialiser</string>
     <string name="profile_reset_message">Supprimer tous les profils créés par l\'utilisateur et des groupes d\'applications et de les restaurer par défaut?</string>
     <string name="profiles_add">Ajouter</string>
     
-    <!-- Camera Sound settings -->
-    <string name="camera_sounds_title">Son de l\'obturateur</string>
-    <string name="camera_sounds_summary">Activer le son de l\'appareil photo. ATTENTION: Le désactiver est illégal dans certains endroits.
-</string>
+    <string name="camera_sounds_title">Son de l\'obturateur de l\'appareil photo</string>
+    <string name="camera_sounds_summary">Activer le son de l\'appareil photo. ATTENTION: Le désactiver est illégal dans certains endroits.</string>
 
-    <!-- Add application dialog box title -->
     <string name="choose_app">Choisir une application</string>
 
-    <!-- Quiet hours #CM -->
     <string name="quiet_hours_title">Période silencieuse</string>
     <string name="quiet_hours_summary">Configurer les heures où l\'appareil doit être discret</string>
     <string name="quiet_hours_enabled_title">Activer les heures silencieuses</string>
@@ -2009,34 +1986,25 @@
     <string name="start_time_title">Démarrage</string>
     <string name="end_time_title">Fin</string>
 
-    <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">Notification de débogage</string>
     <string name="adb_notify_summary">Afficher une notification lorsque le débogage est actif</string>
 
-    <!-- Whether to display IME switcher notifcation -->
     <string name="ime_switcher_notify">Icône méthode de saisie</string>
     <string name="ime_switcher_notify_summary">Afficher l\'icône de la méthode de saisie dans la barre de notification</string>
 
-    <!-- Launches Dev Tools -->
     <string name="development_tools_title">Outils de dév.</string>
 
-    <!-- USB Mass Storage -->
     <string name="usb_mass_storage_title">Stockage de masse</string>
     <string name="usb_mass_storage_summary">Activer le stockage de masse USB</string>
 
-    <!-- Performance settings  -->
     <string name="performance_settings_title">Performance</string>
 
-    <!-- Performance Settings : Warning dialog  -->
     <string name="performance_settings_warning_title">Procéder avec prudence !</string>
     <string name="performance_settings_warning">Les options présentes ici altèrent les performances du système, en bien ou en mal.\nElles ont des comportements différents selon les appareils et ne sont disponibles que pour expérimentation.\nNous vous demandons de ne pas soumettre de rapport de bug à propos de celles-ci.</string>
 
-    <!-- Performance Settings : Processor settings title -->
     <string name="processor_title">Processeur</string>
-    <!-- Performance Settings : Processor settings summary. -->
     <string name="processor_summary">Changer le gouverneur et les fréquences du CPU</string>
 
-    <!-- Performance Settings : Processor settings sub items -->
     <string name="cpu_cur_freq_title">Fréquence actuelle du CPU</string>
     <string name="cpu_governors_title">Gouverneur CPU</string>
     <string name="cpu_min_freq_title">Fréquence minimum du processeur</string>
@@ -2044,35 +2012,27 @@
     <string name="cpu_set_on_boot">Appliqer au démarrage ou redémarrage</string>
     <string name="cpu_set_on_boot_summary">Restaurer les paramètres du processeur au démarrage</string>
 
-    <!-- Memory Management -->
     <string name="memory_management_title">Gestion de la mémoire</string>
     <string name="memory_management_summary">Options de gestion de la mémoire pour optimiser les performances</string>
-    <!-- zRam -->
     <string name="pref_zram_title">zRam</string>
     <string name="pref_zram_summary">Compresser la mémoire pour augmenter virtuellement sa capacité (nécessite un redémarrage)</string>
-    <!-- KSM -->
     <string name="pref_ksm_title">KSM</string>
     <string name="pref_ksm_summary">Cette fonction du noyau réduit l\'utilisation de la mémoire physique et améliore les performances (Kernel Same-page Merging)</string>
 
-    <!-- Performance Settings : I/O scheduler settings summary. -->
     <string name="io_scheds_summary">Changer de planificateur I/O</string>
 
-    <!-- Performance Settings : I/O scheduler settings sub items -->
     <string name="io_sched_title">Planificateur I/O</string>
     <string name="io_sched_set_on_boot">Appliquer au démarrage ou redémarrage</string>
     <string name="io_sched_set_on_boot_summary">Restaurer les paramètres du planificateur I/O au démarrage</string>
 
-    <!-- Performance Settings : Dithering -->
     <string name="pref_use_dithering_title">Activer le tramage</string>
     <string name="dithering_no_dither">Désactiver le tramage</string>
     <string name="dithering_color_banding">Corriger les bandes de couleurs (défaut)</string>
     <string name="dithering_blur_effect">Corriger les bandes de couleurs et l\'effet de flou</string>
 
-    <!-- Performance Settings : 16bpp Alpha -->
     <string name="pref_use_16bpp_alpha_title">Transparence 16 bits</string>
     <string name="pref_use_16bpp_alpha_summary">Utiliser le mode 16 bits améliore la vitesse de défilement et des animations, mais peut affecter l\'affichage des éléments transparents (nécessite un redémarrage)</string>
 
-    <!-- Performance | Voltage Control -->
     <string name="cpu_voltage">Contrôle de la tension</string>
     <string name="cpu_voltage_summary">Changer la tension du CPU de chaque fréquence</string>
     <string name="ps_volt_mhz_voltage"> Tension MHz</string>
@@ -2088,11 +2048,9 @@
     <string name="saved">mV sauvegarder.</string>
     <string name="sob">Appliquer au démarrage</string>
 
-    <!-- Notification shade dimming -->
     <string name="notification_shade_dim_title">Ombre des notifications</string>
     <string name="notification_shade_dim_summary">Activer l\'effet d\'ombre en tirant vers le bas la barre de notification</string>
 
-    <!-- Wireless display -->
     <string name="pref_wifi_disable_hdcp_title">Eviter la négociation HDCP</string>
     <string name="pref_wifi_disable_hdcp_summary">Essayer cette option si vous voulez vous connecter sans aucune sortie</string>
     <string name="wifi_setting_countrycode_title">Code de région Wi-Fi</string>
@@ -2101,17 +2059,14 @@
     <string name="wifi_setting_priority_title">Priorité Wi-Fi</string>
     <string name="wifi_setting_priority_summary">Définir la priorité des réseaux Wi-Fi</string>
 
-     <!--- Sms security limit -->
     <string name="app_security_title">Sécurité des applications</string>
     <string name="sms_security_check_limit_title">Limiter l\'émission de SMS</string>
     <string name="sms_security_check_limit_summary">Afficher un message d\'alerte pour prevenir qu\'une application envoie des messages SMS trop fréquemment. Limite actuelle : %d messages en 15 minutes</string>
     <string name="sms_security_check_limit_default">100 (Défaut)</string>
 
-    <!-- XYStats -->
     <string name="anonymous_statistics_title">Statistiques Xylon</string>
     <string name="anonymous_statistics_summary">Aidez à l\'amélioration de Xylon en autorisant l\'envoi de rapports anonymes à la team.</string>
 
-        <!-- Automatic brightness customization -->
     <string name="light_sensor_current_value">Valeur actuelle du capteur de lumière\u00A0: <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">Niveaux d\'éclairage automatique</string>
     <string name="auto_brightness_adjust_button">Ajuster</string>
@@ -2127,6 +2082,12 @@
     <string name="auto_brightness_menu_edit_lux">Plage de luminosité ambiante</string>
     <string name="auto_brightness_menu_split">Modifier</string>
     <string name="auto_brightness_menu_remove">Supprimer</string>
+    
+    <string name="power_notifications_category_title">Power sounds</string>
+    <string name="power_notifications_enable_title">Activé</string>
+    <string name="power_notifications_vibrate_title">Vibreur</string>
+    <string name="power_notifications_ringtone_title">Son de notification</string>
+    <string name="power_notifications_ringtone_silent">Silencieux</string>
 
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
