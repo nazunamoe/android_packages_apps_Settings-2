@@ -4818,6 +4818,8 @@ Please dont blame the XY team if your phone goes boom</string>
 
     <!-- Sound settings, power notifications enable/disable, setting check box label -->
     <string name="power_notifications_enable_title">Enable</string>
+    <!-- Sound settings, power notifications enable/disable, summary -->
+    <string name="power_notifications_enable_summary">@null</string>
     <!-- Sound settings, power notifications vibrate enable/disable, setting check box label -->
     <string name="power_notifications_vibrate_title">Vibrate</string>
     <!-- Sound settings, power notifications ringtone selection, preference label -->
