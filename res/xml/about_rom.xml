@@ -67,7 +67,7 @@
                         xy:githubLink="@string/github_psafx" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="Kyler J"
+                        android:title="MBQ"
                         xy:nameDev="MBQsniper"
                         xy:twitterHandle="mbqsniper"
                         xy:githubLink="@string/github_mbqsniper" />
@@ -116,7 +116,7 @@
 
 		<com.android.settings.about.widgets.DeveloperPreference
                         android:title="SlimRoms"
-                        xy:nameDev="SlimRoms"
+                        xy:nameDev="SlimRom"
                         xy:twitterHandle="slimroms"
                         xy:githubLink="@string/github_slim" />
 
