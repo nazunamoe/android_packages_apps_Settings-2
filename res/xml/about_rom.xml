@@ -116,7 +116,7 @@
 
 		<com.android.settings.about.widgets.DeveloperPreference
                         android:title="SlimRoms"
-                        xy:nameDev="SlimRom"
+                        xy:nameDev="SlimRoms"
                         xy:twitterHandle="slimroms"
                         xy:githubLink="@string/github_slim" />
 
