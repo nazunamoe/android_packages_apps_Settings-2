@@ -2083,11 +2083,12 @@
     <string name="auto_brightness_menu_split">Modifier</string>
     <string name="auto_brightness_menu_remove">Supprimer</string>
     
-    <string name="power_notifications_category_title">Power sounds</string>
+    <string name="power_notifications_category_title">Son dû au chargeur</string>
     <string name="power_notifications_enable_title">Activé</string>
+    <string name="power_notifications_enable_summary">Émettre un son lorsqu\'un chargeur est branché/débranché</string>
     <string name="power_notifications_vibrate_title">Vibreur</string>
-    <string name="power_notifications_ringtone_title">Son de notification</string>
-    <string name="power_notifications_ringtone_silent">Silencieux</string>
+    <string name="power_notifications_ringtone_title">Son émis</string>
+    <string name="power_notifications_ringtone_silent">Aucun</string>
 
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
