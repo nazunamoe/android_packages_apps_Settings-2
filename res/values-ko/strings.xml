@@ -1859,10 +1859,6 @@
     <!-- Color Picker -->
     <string name="dialog_color_picker">색상 선택기</string>
     <string name="press_color_to_apply">아래의 색상을 선택하여 적용</string>
-    <string name="arrow_right">→</string>
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex :</string>
-    <string name="hex_hint">#ff000000</string>
     <string name="set">설정</string>
 	
     <!-- About -->
@@ -1874,24 +1870,6 @@
     <string name="xylon_website_summary">Xylon의 최신 정보 및 베타를 만나세요.</string>
     <string name="xylon_source_title">Xylon 소스</string>
     <string name="xylon_source_summary">Xylon의 모든 소스는 공개되어 있습니다. github.com/XYAOSP에서 만나보세요.</string>
-    <string name="github_xyaosp">http://github.com/XYAOSP</string>
-    <string name="github_daxxmax">http://github.com/daxxmax</string>
-    <string name="github_arzbhatia">http://github.com/arzbhatia</string>
-    <string name="github_anarkia">http://github.com/anarkia1976</string>
-    <string name="github_dorilife">http://github.com/dorilife</string>
-    <string name="github_netchipti">http://github.com/FrostBite-Android</string>
-    <string name="github_fuss132">http://github.com/fuss132</string>
-    <string name="github_mbqsniper">http://github.com/MBQsniper/</string>
-    <string name="github_psafx">http://github.com/psafx</string>
-    <string name="github_airone">http://github.com/AirOne70</string>
-    <string name="github_fnv">http://github.com/FruitNVeggies</string>
-    <string name="github_aokp">http://github.com/AOKP</string>
-    <string name="github_cyanogenmod">http://github.com/CyanogenMod</string>
-    <string name="github_paranoid">http://github.com/ParanoidAndroid</string>
-    <string name="github_carbon">http://github.com/CarbonDev</string>
-    <string name="github_slim">http://github.com/SlimRoms</string>
-    <string name="github_sabermod">http://github.com/SaberMod</string>
-    <string name="github_rascarlo">http://github.com/rascarlo</string>
 
     <!-- Customisation -->
     <string name="other_cat">기타 설정</string>
@@ -2051,11 +2029,8 @@
     <!-- Performance Settings : Processor settings sub items -->
     <string name="cpu_cur_freq_title">현재 CPU 클럭</string>
     <string name="cpu_governors_title">CPU 가버너</string>
-    <string name="cpu_governors_summary">%S</string>
     <string name="cpu_min_freq_title">최소 CPU 클럭</string>
-    <string name="cpu_min_freq_summary">%s</string>
     <string name="cpu_max_freq_title">최대 CPU 클럭</string>
-    <string name="cpu_max_freq_summary">%s</string>
     <string name="cpu_set_on_boot">시작 시 적용</string>
     <string name="cpu_set_on_boot_summary">프로세서 설정을 부팅 시 마다 적용합니다.</string>
 
@@ -2170,13 +2145,10 @@
 
     <!-- XYStats -->
     <string name="anonymous_statistics_title">Xylon 통계</string>
-    <string name="anonymous_statistics_summary">@null</string>
 
     <!-- Automatic brightness customization -->
     <string name="light_sensor_current_value">현재 광량 센서 값 : <xliff:g id="light_level">%d</xliff:g> lux</string>
     <string name="auto_brightness_dialog_title">자동 밝기 값</string>
-    <string name="auto_brightness_level_format"><xliff:g id="start_level">%1$s</xliff:g> -\n<xliff:g id="end_level">%2$s</xliff:g> lux</string>
-    <string name="auto_brightness_brightness_format"><xliff:g id="percent">%s</xliff:g>%%</string>
     <string name="auto_brightness_adjust_button">조정</string>
     <string name="auto_brightness_reset_button">초기화</string>
     <string name="auto_brightness_lux_dialog_title">주변 밝기 범위</string>
