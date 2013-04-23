@@ -1845,6 +1845,7 @@
     
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
     
+    <string name="xylon_extras">Outils XYE</string>
     <string name="mod_version">Version de la Rom</string>
     <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
@@ -1854,7 +1855,7 @@
     <string name="set">Ok</string>
 
     <string name="title_about">À propos de Xylon</string>
-    <string name="team">Les Funkies</string>
+    <string name="team">La Team</string>
     <string name="contributors">Collaborateurs</string>
     <string name="xylon_website_title">Site web de Xylon</string>
     <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
@@ -1965,7 +1966,7 @@
     <string name="profile_reset_message">Supprimer tous les profils créés par l\'utilisateur et des groupes d\'applications et de les restaurer par défaut?</string>
     <string name="profiles_add">Ajouter</string>
     
-    <string name="camera_sounds_title">Son de l\'obturateur de l\'appareil photo</string>
+    <string name="camera_sounds_title">Son obturateur de l\'appareil photo</string>
     <string name="camera_sounds_summary">Activer le son de l\'appareil photo. ATTENTION: Le désactiver est illégal dans certains endroits.</string>
 
     <string name="choose_app">Choisir une application</string>
@@ -2085,7 +2086,7 @@
     
     <string name="power_notifications_category_title">Son dû au chargeur</string>
     <string name="power_notifications_enable_title">Activé</string>
-    <string name="power_notifications_enable_summary">Émettre un son lorsqu\'un chargeur est branché/débranché</string>
+    <string name="power_notifications_enable_summary">Va émettre un son de notification lorsqu\'un chargeur sera branché/débranché</string>
     <string name="power_notifications_vibrate_title">Vibreur</string>
     <string name="power_notifications_ringtone_title">Son émis</string>
     <string name="power_notifications_ringtone_silent">Aucun</string>
