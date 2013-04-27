@@ -1830,4 +1830,390 @@
     <string name="user_picture_title" msgid="7297782792000291692">"照片 ID"</string>
     <string name="cell_broadcast_settings" msgid="8415582011920085222">"小区广播"</string>
     <string name="cell_broadcast_settings_summary" msgid="3301339398950905913">"请选择要显示的紧急消息类型。"</string>
+
+    <!--Missed Translations Begin-->
+     
+    <string name="ok">确定</string>
+	
+    <string name="nfc_polling_mode_title">NFC侦测模式</string>
+    <string name="nfc_polling_mode_screen_off">关闭屏幕</string>
+    <string name="nfc_polling_mode_screen_locked">屏幕开启，锁定</string>
+    <string name="nfc_polling_mode_screen_unlocked">屏幕开启，解锁（默认）</string>
+
+    <!-- Setting checkbox title for root access -->
+    <string name="root_access">Root权限</string>
+    <string name="root_access_warning_title">允许Root权限？</string>
+    <string name="root_access_warning_message">允许应用程序获取Root权限是非常危险的，可能影响到手机的安全性！</string>
+    <string name="root_access_none">已禁用</string>
+    <string name="root_access_apps">仅应用程序</string>
+    <string name="root_access_adb">仅ADB</string>
+    <string name="root_access_all">应用程序和ADB</string>
+
+    <!--Missed Translations End-->
+
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS STARTS** -->
+
+    <!-- About phone screen,  setting option name-->
+    <string name="mod_version">Xylon/FNV版本</string>
+    <string name="mod_version_default">未知</string>
+    <!-- About phone screen, build date of ROM -->
+    <string name="build_date">编译日期</string>
+    <string name="build_date_default">2012-01-01-0000</string>
+
+    <string name="dxy_settings_title">Dark Xylon</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">颜色选择器</string>
+    <string name="press_color_to_apply">点击颜色选择</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">设置</string>
+
+    <!-- About -->
+    <string name="title_about">关于Xylon</string>
+    <string name="team">团队</string>
+    <string name="contributors">贡献者</string>
+    <string name="xylon">Xylon安卓开源项目</string>
+    <string name="xylon_website_title">Xylon的网站</string>
+    <string name="xylon_website_summary">在这儿找到所有的最新消息和体验。</string>
+    <string name="xylon_source_title">Xylon的源代码</string>
+    <string name="xylon_source_summary">我们是完全开源的，到这儿查看最新代码：github.com/XYAOSP</string>
+    <string name="github_xyaosp">http://github.com/XYAOSP</string>
+    <string name="github_daxxmax">http://github.com/daxxmax</string>
+    <string name="github_arzbhatia">http://github.com/arzbhatia</string>
+    <string name="github_anarkia">http://github.com/anarkia1976</string>
+    <string name="github_dorilife">http://github.com/dorilife</string>
+    <string name="github_netchipti">http://github.com/FrostBite-Android</string>
+    <string name="github_fuss132">http://github.com/fuss132</string>
+    <string name="github_mbqsniper">http://github.com/MBQsniper/</string>
+    <string name="github_psafx">http://github.com/psafx</string>
+    <string name="github_airone">http://github.com/AirOne70</string>
+    <string name="github_fnv">http://github.com/FruitNVeggies</string>
+    <string name="github_aokp">http://github.com/AOKP</string>
+    <string name="github_cyanogenmod">http://github.com/CyanogenMod</string>
+    <string name="github_paranoid">http://github.com/ParanoidAndroid</string>
+    <string name="github_carbon">http://github.com/CarbonDev</string>
+    <string name="github_slim">http://github.com/SlimRoms</string>
+    <string name="github_sabermod">http://github.com/SaberMod</string>
+    <string name="github_rascarlo">http://github.com/rascarlo</string>
+
+    <!-- Customisation -->
+    <string name="other_cat">其它设置</string>
+    <string name="xylon_extras">常规设置</string>
+    <string name="lockscreen_stub">锁屏界面</string>
+    <string name="misc">杂项</string>
+
+
+    <!--- Volume key cursor control -->
+    <string name="volume_key_cursor_control_title">音量键控制光标</string>
+    <string name="volume_key_cursor_control_off">已关闭</string>
+    <string name="volume_key_cursor_control_on">音量上/下移动光标左/右</string>
+    <string name="volume_key_cursor_control_on_reverse">音量上/下移动光标右/左</string>
+    
+    <!-- Swap volume buttons when the screen is rotated -->
+    <string name="swap_volume_buttons_title">反向音量按钮</string>
+    <string name="swap_volume_buttons_summary">屏幕旋转90度或180度时反向音量按钮</string>
+
+
+    <!-- Display : Rotation  -->
+    <string name="display_rotation_title">旋转</string>
+    <string name="display_rotation_enabled">已开启</string>
+    <string name="display_rotation_disabled">已关闭</string>
+    <string name="display_rotation_unit">度</string>
+    <string name="display_lockscreen_rotation_title">包括锁屏状态</string>
+    <string name="display_rotation_category_title">旋转模式</string>
+    <string name="display_rotation_0_title">0 °</string>
+    <string name="display_rotation_90_title">90 °</string>
+    <string name="display_rotation_180_title">180 °</string>
+    <string name="display_rotation_270_title">270 °</string>
+
+    <!-- Sound settings -->
+
+    <!-- Sound settings screen, the caption of the checkbox for making incoming calls increase in volume -->
+    <string name="checkbox_increasing_ring">启用</string>
+
+    <!-- Sound settings screen, the title of the volume bar to adjust the minimum increasing ring volume -->
+    <string name="increasing_ring_title">渐进音量</string>
+    <string name="increasing_ring_min_volume_title">振铃开始音量</string>
+    <string name="increasing_ring_volume_notice">"注意:由于启动音量设置高于振铃的音量将直接使用振铃的音量"</string>
+    <string name="increasing_ring_interval_title">增加间隔</string>
+    <string name="increasing_ring_interval_eachring">各铃声</string>
+    <string name="increasing_ring_interval_half_second">0.5 秒</string>
+    <string name="increasing_ring_interval_1second">1 秒</string>
+    <string name="increasing_ring_interval_2seconds">2 秒</string>
+    <string name="increasing_ring_interval_3seconds">3 秒</string>
+    <string name="increasing_ring_interval_5seconds">5 秒</string>
+    <string name="increasing_ring_interval_10seconds">10 秒</string>
+    <string name="volume_overlay_title">音量面板风格</string>
+
+    <string name="volume_overlay_single">单一</string>
+    <string name="volume_overlay_expandable">可扩展的</string>
+    <string name="volume_overlay_expanded">扩展的</string>
+    <string name="volume_overlay_none">无</string>
+    <string name="silent_mode_title">静音模式</string>
+    <string name="silent_mode_off">关闭</string>
+    <string name="silent_mode_vibrate">震动</string>
+    <string name="silent_mode_mute">静音</string>
+    <string name="volume_ring_only_description">手机铃声</string>
+    <string name="link_volume_ringtones">将铃声和通知提示音设置成相同音量</string>
+    <string name="link_volume_mutes">静音模式时禁用通知提示音</string>
+    <string name="volbtn_music_controls_title">音量按键控制音乐</string>
+    <string name="volbtn_music_controls_summary">当关闭屏幕长按音量按键播放音乐曲目</string>
+
+    <!-- Safe headset volume restore checkbox -->
+    <string name="safe_headset_volume_title">安全耳机音量</string>
+    <string name="safe_headset_volume_summary">设定耳机插入时的音量防止音量过大</string>
+
+    <!-- Waiver -->
+    <string name="waiver_title">放弃</string>
+    <string name="waiver_body">改变此选项我们将不负任何责任 如果你需要此功能请点击确定</string>
+
+    <!-- Launch music app on connect -->
+    <string name="headset_connect_player_title">启动音乐应用程序连接</string>
+    <string name="headset_connect_player_summary">@null</string>
+
+    <!-- Wakeup options -->
+    <string name="display_category_wakeup_options_title">唤醒选项</string>
+    <string name="pref_volume_wake_title">音量键唤醒</string>
+    <string name="pref_volume_wake_summary">按音量键上/下将唤醒屏幕</string>
+
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">重设</string>
+    <string name="profile_reset_message">删除所有用户创建的配置文件和应用程序，将其还原到默认？</string>
+    <string name="profiles_add">添加</string>
+
+    <!-- Add application dialog box title -->
+    <string name="choose_app">选择应用程序</string>
+
+    <!-- Quiet hours #CM -->
+    <string name="quiet_hours_title">静音时段</string>
+    <string name="quiet_hours_summary">配置设备的安静时段</string>
+    <string name="quiet_hours_enabled_title">静音时段</string>
+    <string name="quiet_hours_start">静音开始时间</string>
+    <string name="quiet_hours_start_summary">何时开始执行静音模式</string>
+    <string name="quiet_hours_end">静音结束时间</string>
+    <string name="quiet_hours_end_summary">何时停止执行静音模式</string>
+    <string name="quiet_hours_notifications_title">静音通知铃音</string>
+    <string name="quiet_hours_ringer_title">静音手机铃声</string>
+    <string name="quiet_hours_still_title">关闭震动</string>
+    <string name="quiet_hours_dim_title">关闭指示灯</string>
+    <string name="quiet_hours_active_from">活动</string>
+    <string name="quiet_hours_active_to">到</string>
+
+    <!-- time range preference -->
+    <string name="start_time_title">开始</string>
+    <string name="end_time_title">结束</string>
+
+    <!-- DPI Changer -->
+    <string name="dpi">DPI</string>
+    <string name="open_market_title">4. 打开市场，选择接受。</string>
+    <string name="open_market_summary">完成后回到这里</string>
+    <string name="open_market_summary_could_not_open">"无法打开市场。如果已经安装，请自行打开执行一次。"</string>
+    <string name="custom_density_title">5. 请任意更改密度。</string>
+    <string name="custom_density_summary">如果你有谷歌市场兼容问题，请返回这里重复此过程。</string>
+    <string name="custom_density_summary_invalid">"无效的密度"</string>
+    <string name="custom_density">自定义</string>
+    <string name="set_custom_density_title">设置自定义密度</string>
+    <string name="set_custom_density_set">设置</string>
+    <string name="custom_density_dialog_title">"警告！"</string>
+    <string name="custom_density_dialog_summary">"改变LCD密度可能会导致应用程序停止。如果您遇到应用程序不兼容，请重新从第一步执行整个过程。"</string>
+    <string name="custom_density_dialog_button_got">明白了！</string>
+    <string name="custom_density_dialog_button_reboot">立即重新启动</string>
+
+    <!-- Setting checkbox summary for displaying USB debugging notification -->
+    <string name="adb_notify">USB调试通知</string>
+    <string name="adb_notify_summary">当连接USB调试显示一个通知</string>
+
+    <!-- Whether to display IME switcher notifcation -->
+    <string name="ime_switcher_notify">输入法切换</string>
+    <string name="ime_switcher_notify_summary">状态栏显示输入法切换通知</string>
+
+    <!-- Launches Dev Tools -->
+    <string name="development_tools_title">开发工具</string>
+
+    <!-- USB Mass Storage -->
+    <string name="usb_mass_storage_title">大容量储存</string>
+    <string name="usb_mass_storage_summary">开启USB大容量存储</string>
+
+    <!-- Android debugging over WiFi -->
+    <string name="adb_over_network">网络ADB调试</string>
+    <string name="adb_over_network_summary">通过网络接口（WIFI，USB网络）进行TCP/IP调试（需要重启完成设置）</string>
+    <!-- Warning for Adb over Network -->
+    <string name="adb_over_network_warning">警告：ADB通过网络启用时，您的手机将完全暴露在网络上，包括GSM数据网络！ 请在确保所接入网络是安全可信时使用此功能。 确定要开启此功能？</string>
+
+    <!-- Performance settings  -->
+    <string name="performance_settings_title">性能设置</string>
+
+    <!-- Performance Settings : Warning dialog  -->
+    <string name="performance_settings_warning_title">慎重修改</string>
+    <string name="performance_settings_warning">"进行这些设置试验，它们所做的任何更改都可能导致不稳定，死机，数据丢失或硬件故障。\n\n如果更改任何设置的默认值使你的手机出现问题，我们不要求你提交错误报告。
+    
+    也请不要责怪XY团队，因为这与XY团队无关。"</string>
+
+    <!-- Performance Settings : Processor settings title -->
+    <string name="processor_title">处理器</string>
+    <!-- Performance Settings : Processor settings summary. -->
+    <string name="processor_summary">更改CPU时钟频率</string>
+
+    <!-- Performance Settings : Processor settings sub items -->
+    <string name="cpu_cur_freq_title">当前CPU频率</string>
+    <string name="cpu_governors_title">CPU调速</string>
+    <string name="cpu_governors_summary">%S</string>
+    <string name="cpu_min_freq_title">最低CPU频率</string>
+    <string name="cpu_min_freq_summary">%s</string>
+    <string name="cpu_max_freq_title">最高CPU频率</string>
+    <string name="cpu_max_freq_summary">%s</string>
+    <string name="cpu_set_on_boot">开机启动</string>
+    <string name="cpu_set_on_boot_summary">开机时启动相应CPU设置</string>
+
+    <!-- Memory Management -->
+    <string name="memory_management_title">内存管理</string>
+    <string name="memory_management_summary">自定义内存的使用情况来改变系统的性能</string>
+    <!-- zRam -->
+    <string name="pref_zram_title">zRAM</string>
+    <string name="pref_zram_summary">压缩内存增加虚拟容量（需要重启）</string>
+    <!-- KSM -->
+    <string name="pref_ksm_title">Kernel Samepage Merging</string>
+    <string name="pref_ksm_summary">KSM减少物理内存的需求提高性能</string>
+    <!-- Purgeable Assets -->
+    <string name="pref_purgeable_assets_title">允许资源置换</string>
+    <string name="pref_purgeable_assets_summary">在需要的时候清除内存资源释放更多的内存（需重新启动）</string>
+    <!-- Vibration Editor -->
+    <string name="pref_vibe_strength_title">震动强度</string>
+    <string name="pref_vibe_strength_summary">震动强度为 <xliff:g id="vibe_strength">%1$s</xliff:g></string>
+    <string name="pref_vibe_strength_dialogtitle">输入一个介于0-127之间的数值</string>
+
+    <!-- Performance Settings : I/O scheduler settings summary. -->
+    <string name="io_scheds_summary">更改I/O调度</string>
+
+    <!-- Performance Settings : I/O scheduler settings sub items -->
+    <string name="io_sched_title">I/O调度</string>
+    <string name="io_sched_summary">%S</string>
+    <string name="io_sched_set_on_boot">开机启动</string>
+    <string name="io_sched_set_on_boot_summary">开机时启动相应I/O设置</string>
+
+    <!-- Performance Settings : Dithering -->
+    <string name="pref_use_dithering_title">表面改善</string>
+    <string name="dithering_no_dither">禁用抖动处理</string>
+    <string name="dithering_color_banding">修复颜色条带（默认）</string>
+    <string name="dithering_blur_effect">修复色彩条纹和模糊效果</string>
+
+    <!-- Performance Settings : 16bpp Alpha -->
+    <string name="pref_use_16bpp_alpha_title">16bit图像</string>
+    <string name="pref_use_16bpp_alpha_summary">更好的图形性能但质量较低可能造成的视觉假象（需要重新启动）</string>
+
+    <!-- Performance | Voltage Control -->
+    <string name="cpu_voltage">电压控制</string>
+    <string name="cpu_voltage_summary">更改每个频率的CPU对应的电压</string>
+    <string name="ps_volt_mhz_voltage">" MHz电压"</string>
+    <string name="ps_volt_save">保存</string>
+    <string name="ps_volt_current_voltage">当前电压:</string>
+    <string name="ps_volt_setting_to_apply">应用:</string>
+    <string name="pt_volt_control">电压控制</string>
+    <string name="ps_volt_control">设置针对每个频率的电压</string>
+    <string name="not_supported">您的内核不支持调压</string>
+    <string name="apply_values">应用该值</string>
+    <string name="freq">频率</string>
+    <string name="current">mV 当前</string>
+    <string name="saved">mV 保存</string>
+    <string name="sob">开机启动设置</string>
+    <string name="general_perf">通用设置</string>
+    <string name="cpu_pref">CPU设置</string>
+    <string name="pref_disable_bootanimation_title">关闭开机动画</string>
+    <string name="pref_disable_bootanimation_summary">关闭开机动画可以细微加快开机速度</string>
+    <string name="io_pref">I/O设置</string>
+
+    <!-- Notification shade dimming -->
+    <string name="notification_shade_dim_title">模糊通知色彩</string>
+    <string name="notification_shade_dim_summary">下拉栏开启时启用特效</string>
+
+    <!-- Wireless display -->
+    <string name="pref_wifi_disable_hdcp_title">跳过HDCP协商</string>
+    <string name="pref_wifi_disable_hdcp_summary">试试这个选项，如果你可以连接但没有任何输出</string>
+
+    <!-- Lock screen general strings -->
+    <string name="custom_app_icon_successfully">"的图标已经成功设置！"</string>
+    <string name="use_custom_app_title">使用自定义应用</string>
+    <string name="use_custom_app_summary">使用自定义应用而不是最近应用的对话框</string>
+    <string name="group_applications">应用程序</string>
+
+    <!-- Screen security - Screen security   -->
+    <string name="screen_security_category">屏幕安全保护</string>
+    <string name="screen_security_title">屏幕锁定</string>
+    <string name="screen_security_summary">查看或者更改锁屏设置、延迟和超时设定。</string>
+    <string name="additional_options_title">附加设定</string>
+    <string name="unlock_menu_unlock_title">菜单键解锁</string>
+    <string name="unlock_menu_unlock_summary">按下菜单键来解锁</string>
+    <string name="unlock_home_unlock_title">Home键解锁</string>
+    <string name="unlock_home_unlock_summary">按下Home键来解锁</string>
+    <string name="unlock_quick_unlock_control_title">快速解锁</string>
+    <string name="unlock_quick_unlock_control_summary">当输入正确的PIN/密码时自动解锁</string>
+
+    <!--- Sms security limit -->
+    <string name="app_security_title">应用程序安全性</string>
+    <string name="sms_security_check_limit_title">SMS消息限制</string>
+    <string name="sms_security_check_limit_summary">限制程序在没有得到许可之前30分钟内只能发送%d条短信</string>
+    <string name="sms_security_check_limit_default">100（默认）</string>
+
+    <!-- Slide lock delay -->
+    <string name="delay_and_timeout_title">延迟和超时</string>
+    <string name="slide_lock_delay_title">延迟锁屏</string>
+    <string name="slide_lock_timeout_delay_title">超时后延迟</string>
+    <string name="slide_lock_screenoff_delay_title">关屏后延迟</string>
+    <string name="slide_lock_delay_none">无</string>
+    <string name="slide_lock_delay_1s">1 秒</string>
+    <string name="slide_lock_delay_5s">5 秒</string>
+    <string name="slide_lock_delay_10s">10 秒</string>
+    <string name="slide_lock_delay_15s">15 秒</string>
+    <string name="slide_lock_delay_30s">30 秒</string>
+    <string name="slide_lock_delay_1m">1 分钟</string>
+    <string name="slide_lock_delay_5m">5 分钟</string>
+    <string name="slide_lock_delay_10m">10 分钟</string>
+    <string name="slide_lock_delay_30m">30 分钟</string>
+
+    <!-- Lock screen vibrate settings -->
+    <string name="lockscreen_vibrate_enabled_title">震动</string>
+    <string name="lockscreen_vibrate_enabled_head">解锁时震动</string>
+
+    <!-- XYStats -->
+    <string name="anonymous_statistics_title">Xylon统计</string>
+    <string name="anonymous_statistics_summary">发送匿名统计信息给Xylon来使我们做得更好。</string>
+
+    <!-- Automatic brightness customization -->
+    <string name="light_sensor_current_value">当前亮度传感器数值：<xliff:g id="light_level">%d</xliff:g> lux</string>
+    <string name="auto_brightness_dialog_title">自动亮度等级</string>
+    <string name="auto_brightness_level_format"><xliff:g id="start_level">%1$s</xliff:g> -\n<xliff:g id="end_level">%2$s</xliff:g> lux</string>
+    <string name="auto_brightness_brightness_format"><xliff:g id="percent">%s</xliff:g>%%</string>
+    <string name="auto_brightness_adjust_button">调整</string>
+    <string name="auto_brightness_reset_button">重置</string>
+    <string name="auto_brightness_lux_dialog_title">周围环境的亮度范围</string>
+    <string name="auto_brightness_split_dialog_title">分割亮度级别</string>
+    <string name="auto_brightness_start_lux">范围起点 (lux)</string>
+    <string name="auto_brightness_end_lux">范围终点 (lux)</string>
+    <string name="auto_brightness_reset_dialog_title">复位级别？</string>
+    <string name="auto_brightness_reset_confirmation">所有的亮度级别将被重置为它们的默认设置。</string>
+    <string name="auto_brightness_split_lux_format">分割位置 (介于 %1$d 和 %2$d lux 之间)</string>
+    <string name="auto_brightness_level_options">亮度级别选项</string>
+    <string name="auto_brightness_menu_edit_lux">周围环境的亮度范围</string>
+    <string name="auto_brightness_menu_split">分割</string>
+    <string name="auto_brightness_menu_remove">删除</string>
+
+    <!-- Category title for power sound notification specific Settings.
+         [CHAR LIMIT=40] -->
+    <string name="power_notifications_category_title">电源提示音</string>
+
+    <!-- Sound settings, power notifications enable/disable, setting check box label -->
+    <string name="power_notifications_enable_title">开启</string>
+    <!-- Sound settings, power notifications enable/disable, summary -->
+    <string name="power_notifications_enable_summary">@null</string>
+    <!-- Sound settings, power notifications vibrate enable/disable, setting check box label -->
+    <string name="power_notifications_vibrate_title">震动</string>
+    <!-- Sound settings, power notifications ringtone selection, preference label -->
+    <string name="power_notifications_ringtone_title">通知提示音</string>
+    <!-- Sound settings, power notifications label for ringtone == none -->
+    <string name="power_notifications_ringtone_silent">静音</string>
+
+    <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
