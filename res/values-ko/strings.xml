@@ -1945,9 +1945,9 @@
     <string name="headset_connect_player_summary">@null</string>
 
     <!-- Wakeup Options -->
-    <string name="display_category_wakeup_options_title">깨어나기 옵션</string>
+    <string name="display_category_wakeup_options_title">기타</string>
     <string name="pref_volume_wake_title">볼륨 키로 깨우기</string>
-    <string name="pref_volume_wake_summary">볼륨 상/하 키로 기기를 꺠웁니다.</string>
+    <string name="pref_volume_wake_summary">볼륨 상/하 키로 기기를 깨웁니다.</string>
 
     <!-- Reset Profiles -->
     <string name="profile_reset_title">초기화</string>
@@ -2145,6 +2145,7 @@
 
     <!-- XYStats -->
     <string name="anonymous_statistics_title">Xylon 통계</string>
+    <string name="anonymous_statistics_summary">Xylon 개선을 위해 익명으로 사용 통계 보내기</string>
 
     <!-- Automatic brightness customization -->
     <string name="light_sensor_current_value">현재 광량 센서 값 : <xliff:g id="light_level">%d</xliff:g> lux</string>
