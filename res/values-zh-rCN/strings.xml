@@ -1858,17 +1858,10 @@
     <string name="mod_version_default">未知</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">编译日期</string>
-    <string name="build_date_default">2012-01-01-0000</string>
-
-    <string name="dxy_settings_title">Dark Xylon</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">颜色选择器</string>
     <string name="press_color_to_apply">点击颜色选择</string>
-    <string name="arrow_right">→</string>
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
     <string name="set">设置</string>
 
     <!-- About -->
@@ -1880,24 +1873,6 @@
     <string name="xylon_website_summary">在这儿找到所有的最新消息和体验。</string>
     <string name="xylon_source_title">Xylon的源代码</string>
     <string name="xylon_source_summary">我们是完全开源的，到这儿查看最新代码：github.com/XYAOSP</string>
-    <string name="github_xyaosp">http://github.com/XYAOSP</string>
-    <string name="github_daxxmax">http://github.com/daxxmax</string>
-    <string name="github_arzbhatia">http://github.com/arzbhatia</string>
-    <string name="github_anarkia">http://github.com/anarkia1976</string>
-    <string name="github_dorilife">http://github.com/dorilife</string>
-    <string name="github_netchipti">http://github.com/FrostBite-Android</string>
-    <string name="github_fuss132">http://github.com/fuss132</string>
-    <string name="github_mbqsniper">http://github.com/MBQsniper/</string>
-    <string name="github_psafx">http://github.com/psafx</string>
-    <string name="github_airone">http://github.com/AirOne70</string>
-    <string name="github_fnv">http://github.com/FruitNVeggies</string>
-    <string name="github_aokp">http://github.com/AOKP</string>
-    <string name="github_cyanogenmod">http://github.com/CyanogenMod</string>
-    <string name="github_paranoid">http://github.com/ParanoidAndroid</string>
-    <string name="github_carbon">http://github.com/CarbonDev</string>
-    <string name="github_slim">http://github.com/SlimRoms</string>
-    <string name="github_sabermod">http://github.com/SaberMod</string>
-    <string name="github_rascarlo">http://github.com/rascarlo</string>
 
     <!-- Customisation -->
     <string name="other_cat">其它设置</string>
