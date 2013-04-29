@@ -89,6 +89,7 @@
         <item>5 minutes</item>
         <item>10 minutes</item>
         <item>30 minutes</item>
+		<item>60 minutes</item>
     </string-array>
 
     <!-- Do not translate. -->
@@ -109,6 +110,8 @@
         <item>600000</item>
         <!-- Do not translate. -->
         <item>1800000</item>
+		<!-- Do not translate. -->
+		<item>3600000</item>
     </string-array>
 
     <!-- Security settings.  The delay after screen is turned off until device locks.
@@ -151,7 +154,7 @@
         <item msgid="6490061470416867723">Small</item>
         <item msgid="3579015730662088893">Normal</item>
         <item msgid="1678068858001018666">Large</item>
-        <item msgid="490158884605093126">Huge</item>
+        <item msgid="490158884605093126">Giant</item>
     </string-array>
 
     <string-array name="entryvalues_font_size" translatable="false">
@@ -742,6 +745,7 @@
         <item>At most 2 processes</item>
         <item>At most 3 processes</item>
         <item>At most 4 processes</item>
+		<item>At most 10 processes</item>
     </string-array>
 
     <!-- Values for app process limit preference. -->
@@ -752,6 +756,7 @@
         <item>2</item>
         <item>3</item>
         <item>4</item>
+		<item>10</item>
     </string-array>
 
     <!-- Match this with the constants in VpnProfile. --> <skip />
