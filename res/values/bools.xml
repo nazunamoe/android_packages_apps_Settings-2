@@ -22,14 +22,6 @@
     <!-- Whether the power control widget is enabled for this device. Should be overridden for 
          specific product builds. -->
     <bool name="has_powercontrol_widget">true</bool>
-	
-	<!-- Pimp My ROM -->
-	<bool name="abs__action_bar_embed_tabs">false</bool>
-    <bool name="abs__split_action_bar_is_narrow">true</bool>
-    <bool name="abs__action_bar_expanded_action_views_exclusive">true</bool>
-    <bool name="abs__config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <bool name="abs__config_actionMenuItemAllCaps">true</bool>
-    <bool name="abs__config_allowActionMenuItemTextWithIcon">false</bool>
 
     <!-- Display additional System Update menu if true -->
     <bool name="config_additional_system_update_setting_enable">false</bool>
