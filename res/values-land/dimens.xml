@@ -22,4 +22,12 @@
     <dimen name="keyguard_appwidget_picker_margin_left">2dip</dimen>
     <dimen name="keyguard_appwidget_picker_margin_right">2dip</dimen>
     <integer name="keyguard_appwidget_picker_cols">2</integer>
+	
+	<!-- Pimp My ROM -->
+	<dimen name="abs__action_bar_default_height">40.0dip</dimen>
+    <dimen name="abs__action_bar_icon_vertical_padding">4.0dip</dimen>
+    <dimen name="abs__action_bar_title_text_size">16.0dip</dimen>
+    <dimen name="abs__action_bar_subtitle_text_size">12.0dip</dimen>
+    <dimen name="abs__action_bar_subtitle_top_margin">-2.0dip</dimen>
+    <dimen name="abs__action_bar_subtitle_bottom_margin">4.0dip</dimen>
 </resources>

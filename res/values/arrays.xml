@@ -915,6 +915,32 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+	
+	<!-- Pimp My ROM-->
+	string-array name="lcd_density_entries">
+        <item>160</item>
+        <item>180</item>
+        <item>200</item>
+        <item>220</item>
+        <item>240</item>
+        <item>241</item>
+        <item>260</item>
+        <item>280</item>
+        <item>300</item>
+        <item>320</item>
+        <item>340</item>
+        <item>@string/custom_density</item>
+    </string-array>
+    <string-array name="lcd_density_stock_entries">
+        <item>160 -- mdpi</item>
+        <item>240 -- hdpi</item>
+        <item>320 -- xhdpi</item>
+    </string-array>
+    <string-array name="lcd_density_stock_values">
+        <item>160</item>
+        <item>240</item>
+        <item>320</item>
+    </string-array>
 
     <!--- Sms security limit -->
     <string-array name="sms_security_check_limit_entries" translatable="false">

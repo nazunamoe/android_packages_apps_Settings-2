@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/scrollView1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/RelativeLayout1" android:layout_width="wrap_content" android:layout_height="2888.0dip">
+        <TextView android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:textColor="#ff33b6ea" android:ellipsize="none" android:id="@id/GPS" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/title_activity_gps" android:maxLines="10" android:scrollHorizontally="false" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:ellipsize="none" android:gravity="center_horizontal" android:id="@id/GPSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/gps_sub" android:maxLines="10" android:scrollHorizontally="false" android:layout_below="@id/GPS" android:layout_centerHorizontal="true" />
+        <View android:id="@id/TopDivider" android:background="#ff33b6ea" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="19.0dip" android:layout_below="@id/GPSmall" android:layout_alignParentLeft="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="#ff33b6ea" android:gravity="center_horizontal" android:id="@id/Continent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:text="@string/continents" android:layout_below="@id/TopDivider" android:layout_centerHorizontal="true" />
+        <View android:id="@id/ContiDivider" android:background="#ff33b6ea" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="17.0dip" android:layout_below="@id/Continent" android:layout_alignParentLeft="true" />
+        <RadioGroup android:id="@id/radioGroup1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="28.0dip" android:layout_marginTop="20.0dip" android:layout_below="@id/ContiDivider" android:layout_alignParentLeft="true">
+            <RadioButton android:id="@id/Africa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/africa" />
+            <RadioButton android:id="@id/Asia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/asia" />
+            <RadioButton android:id="@id/Europe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/europe" />
+            <RadioButton android:id="@id/NorthAmerica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/north_america" />
+            <RadioButton android:id="@id/Oceania" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oceania" />
+            <RadioButton android:id="@id/SouthAmerica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/south_america" />
+        </RadioGroup>
+        <View android:id="@id/CountryDivider" android:background="#ff33b6ea" android:layout_width="wrap_content" android:layout_height="2.0dip" android:layout_marginTop="28.0dip" android:layout_below="@id/radioGroup1" android:layout_alignParentLeft="true" />
+        <TextView android:textAppearance="?android:textAppearanceSmall" android:textStyle="bold" android:textColor="#ff33b6ea" android:gravity="center_horizontal" android:id="@id/Countries" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17.0dip" android:text="@string/countries" android:layout_below="@id/CountryDivider" android:layout_centerHorizontal="true" />
+        <View android:id="@id/CountDivider" android:background="#ff33b6ea" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="17.0dip" android:layout_below="@id/Countries" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/imageView1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@*android:drawable/ic_menu_mapmode" android:layout_below="@id/TopDivider" android:layout_alignBottom="@id/ContiDivider" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/imageView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@*android:drawable/ic_menu_mylocation" android:layout_alignTop="@id/CountryDivider" android:layout_alignBottom="@id/CountDivider" />
+        <RadioGroup android:id="@id/radioGroup2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_below="@id/CountDivider" android:layout_alignLeft="@id/radioGroup1">
+            <RadioButton android:id="@id/radio0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:text="@string/a" />
+            <RadioButton android:id="@id/radio1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/b" />
+            <RadioButton android:id="@id/radio2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/c" />
+            <RadioButton android:id="@id/radio3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/d" />
+            <RadioButton android:id="@id/radio4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/e" />
+            <RadioButton android:id="@id/radio5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/f" />
+            <RadioButton android:id="@id/radio6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/g" />
+            <RadioButton android:id="@id/radio7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/h" />
+            <RadioButton android:id="@id/radio8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/i" />
+            <RadioButton android:id="@id/radio9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/j" />
+            <RadioButton android:id="@id/radio10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/k" />
+            <RadioButton android:id="@id/radio11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/l" />
+            <RadioButton android:id="@id/radio12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/m" />
+            <RadioButton android:id="@id/radio13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/n" />
+            <RadioButton android:id="@id/radio14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/o" />
+            <RadioButton android:id="@id/radio15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/p" />
+            <RadioButton android:id="@id/radio16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/q" />
+            <RadioButton android:id="@id/radio17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/r" />
+            <RadioButton android:id="@id/radio18" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/s" />
+            <RadioButton android:id="@id/radio19" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/t" />
+            <RadioButton android:id="@id/radio20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/u" />
+            <RadioButton android:id="@id/radio22" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/v" />
+            <RadioButton android:id="@id/radio23" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/w" />
+            <RadioButton android:id="@id/radio24" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/x" />
+            <RadioButton android:id="@id/radio25" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/y" />
+            <RadioButton android:id="@id/radio26" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/z" />
+            <RadioButton android:id="@id/radio27" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/aa" />
+            <RadioButton android:id="@id/radio28" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bb" />
+            <RadioButton android:id="@id/radio29" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cc" />
+            <RadioButton android:id="@id/radio30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dd" />
+            <RadioButton android:id="@id/radio31" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ee" />
+            <RadioButton android:id="@id/radio32" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ff" />
+            <RadioButton android:id="@id/radio33" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/gg" />
+            <RadioButton android:id="@id/radio34" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hh" />
+            <RadioButton android:id="@id/radio35" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ii" />
+            <RadioButton android:id="@id/radio36" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jj" />
+            <RadioButton android:id="@id/radio37" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kk" />
+            <RadioButton android:id="@id/radio38" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ll" />
+            <RadioButton android:id="@id/radio39" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mm" />
+            <RadioButton android:id="@id/radio40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nn" />
+            <RadioButton android:id="@id/radio41" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/oo" />
+            <RadioButton android:id="@id/radio42" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/pp" />
+            <RadioButton android:id="@id/radio43" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qq" />
+            <RadioButton android:id="@id/radio44" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rr" />
+            <RadioButton android:id="@id/radio45" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ss" />
+            <RadioButton android:id="@id/radio46" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tt" />
+            <RadioButton android:id="@id/radio47" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uu" />
+            <RadioButton android:id="@id/radio48" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vv" />
+            <RadioButton android:id="@id/radio49" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ww" />
+            <RadioButton android:id="@id/radio50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xx" />
+            <RadioButton android:id="@id/radio51" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yy" />
+            <RadioButton android:id="@id/radio52" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zz" />
+            <RadioButton android:id="@id/radio53" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/aaa" />
+            <RadioButton android:id="@id/radio54" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bbb" />
+            <RadioButton android:id="@id/radio55" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ccc" />
+            <RadioButton android:id="@id/radio56" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ddd" />
+            <RadioButton android:id="@id/radio57" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/eee" />
+            <RadioButton android:id="@id/radio58" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fff" />
+            <RadioButton android:id="@id/radio59" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ggg" />
+            <RadioButton android:id="@id/radio60" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hhh" />
+            <RadioButton android:id="@id/radio61" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/iii" />
+            <RadioButton android:id="@id/radio62" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/jjj" />
+            <RadioButton android:id="@id/radio63" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kkk" />
+            <RadioButton android:id="@id/radio64" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lll" />
+            <RadioButton android:id="@id/radio65" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mmm" />
+            <RadioButton android:id="@id/radio66" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/nnn" />
+            <RadioButton android:id="@id/radio67" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ooo" />
+            <RadioButton android:id="@id/radio68" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ppp" />
+            <RadioButton android:id="@id/radio69" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/qqq" />
+            <RadioButton android:id="@id/radio70" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/rrr" />
+            <RadioButton android:id="@id/radio71" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sss" />
+            <RadioButton android:id="@id/radio72" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ttt" />
+            <RadioButton android:id="@id/radio73" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/uuu" />
+            <RadioButton android:id="@id/radio74" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/vvv" />
+            <RadioButton android:id="@id/radio75" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/www" />
+            <RadioButton android:id="@id/radio76" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/xxx" />
+            <RadioButton android:id="@id/radio77" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yyy" />
+            <RadioButton android:id="@id/radio78" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/zzz" />
+            <RadioButton android:id="@id/radio79" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/aaaa" />
+        </RadioGroup>
+        <Button android:textColor="#ff33b6ea" android:id="@id/button1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/apply" android:layout_below="@id/radioGroup2" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" style="?android:attr/buttonStyleSmall" />
+    </RelativeLayout>
+</ScrollView>

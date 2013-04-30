@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:id="@id/layout_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:id="@id/voltageDialogLayout" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="100.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <SeekBar android:id="@id/DensitySeek" android:paddingLeft="10.0dip" android:paddingTop="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:progress="50" android:layout_toRightOf="@id/voltageEdit" />
+            <TextView android:textSize="18.0dip" android:typeface="monospace" android:textColor="#ffffffff" android:id="@id/voltageMeter" android:paddingLeft="14.0dip" android:paddingTop="40.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/linearLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/radioGroup1">
+            <Button android:textColor="#ff33b6ea" android:id="@id/button1" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Apply" android:layout_weight="0.5" style="?android:attr/buttonStyleSmall" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
