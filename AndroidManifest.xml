@@ -1553,18 +1553,6 @@
         </receiver>
 
         <activity android:name=".performance.VoltageControlSettings" />
-		
-		<!--MBQs CPU Guide -->
-		<activity android:theme="@style/AppTheme" 
-		android:label="@string/app_name" 
-		android:icon="@drawable/ic_launcher" 
-		android:allowBackup="true"
-        android:name="com.MBQmbqscpuguide.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
     </application>
 </manifest>
