@@ -8,7 +8,7 @@
 		android:title="@string/xylon">
 
 		<Preference
-			android:key="xylon_website"
+		        android:key="xylon_website"
 			android:title="@string/xylon_website_title"
 			android:summary="@string/xylon_website_summary" />
 
@@ -67,7 +67,7 @@
                         xy:githubLink="@string/github_psafx" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="MBQ"
+                        android:title="Kyler"
                         xy:nameDev="MBQsniper"
                         xy:twitterHandle="mbqsniper"
                         xy:githubLink="@string/github_mbqsniper" />
