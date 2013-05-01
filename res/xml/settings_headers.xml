@@ -227,7 +227,7 @@
 
     <!-- Performance Settings -->
     <header
-        android:id="@+id/Guide"
+        android:id="@+id/performance_settings"
         android:fragment="com.android.settings.performance.PerformanceSettings"
         android:icon="@drawable/ic_settings_performance"
         android:title="@string/performance_settings_title" />
