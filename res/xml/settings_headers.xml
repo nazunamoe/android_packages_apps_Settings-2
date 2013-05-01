@@ -227,10 +227,17 @@
 
     <!-- Performance Settings -->
     <header
-        android:id="@+id/performance_settings"
+        android:id="@+id/Guide"
         android:fragment="com.android.settings.performance.PerformanceSettings"
         android:icon="@drawable/ic_settings_performance"
         android:title="@string/performance_settings_title" />
+		
+	<!-- MBQs CPU Guide -->
+	<header
+		android:id="@+id/app_name"
+		android:fragment="com.android.settings.mbqscpuguide"
+		android:icon="@drawable/ic_launcher"
+		android:title="@string/mbqs_cpu_guide" />
 
     <!-- About Rom -->
     <header

@@ -69,5 +69,9 @@
 
     <!-- Light settings dialog -->
     <dimen name="dialog_light_settings_width">400dip</dimen>
+	
+	<!-- MBQs CPU Guide -->
+	<dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
 
 </resources>
