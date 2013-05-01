@@ -4786,7 +4786,7 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="LionHeart">LionHeart</string>
     <string name="LionHeartInfo">"Conservative-based governor off of Samsung update3 source (Line copied directly from a guide, thank you 'Amal Das'), scales aggressively. This Governor is strictly for performance."</string>
     <string name="BrazilianWax">BrazilianWax</string>
-    <string name="BrazilianWaxInfo">Similar to smartassV2, the only real difference is, it scales more aggressively than SAv2 does, which reduces battery life, while improving performance.</string>
+    <string name="BrazilianWaxInfo">Similar to SmartassV2, the only real difference is, it scales more aggressively than SAv2 does, which reduces battery life, while improving performance.</string>
     <string name="SavagedZen">SavagedZen</string>
     <string name="SavagedZenInfo">Based off of SmartassV2, similar to BrazilianWax, but this Governor tends to favor battery over performance. From personal experience, I can say it does a great job of doing so.</string>
     <string name="Scary">Scary</string>
@@ -4797,7 +4797,6 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="OnDemandPlusInfo">A governor based off of OnDemand and Interactive. It provides a balance between performance, and saving battery</string>
     <string name="DynInteractive">DynInteractive</string>
     <string name="DynInteractiveInfo">"A dynamic interactive Governor. This Governor dynamically adapts it's own CPU frequencies within your parameters based off the system(s) load"</string>
-</resources>
 
     <!-- Notification shade dimming -->
     <string name="notification_shade_dim_title">Dim notification shade</string>
