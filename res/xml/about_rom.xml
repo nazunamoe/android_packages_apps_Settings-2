@@ -8,14 +8,14 @@
 		android:title="@string/xylon">
 
 		<Preference
-						android:key="xylon_website"
-						android:title="@string/xylon_website_title"
-						android:summary="@string/xylon_website_summary" />
+			android:key="xylon_website"
+			android:title="@string/xylon_website_title"
+			android:summary="@string/xylon_website_summary" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="Xylon AOSP"
-						xy:nameDev="Xylon AOSP"
-						xy:twitterHandle="XYAOSP"
+			android:title="Xylon AOSP"
+			xy:nameDev="Xylon AOSP"
+			xy:twitterHandle="XYAOSP"
                         xy:githubLink="@string/github_xyaosp" />
 
 	</PreferenceCategory>
@@ -25,33 +25,33 @@
 		android:title="@string/team">
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="Daniel MM"
-						xy:nameDev="Daniel MM"
-						xy:twitterHandle="daxinonito"
-						xy:githubLink="@string/github_daxxmax" />
+			android:title="Daniel MM"
+			xy:nameDev="Daniel MM"
+			xy:twitterHandle="daxinonito"
+			xy:githubLink="@string/github_daxxmax" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="Arz Bhatia"
-						xy:nameDev="Arz Bhatia"
-						xy:twitterHandle="arzbhatia"
-						xy:githubLink="@string/github_arzbhatia" />
+			android:title="Arz Bhatia"
+			xy:nameDev="Arz Bhatia"
+			xy:twitterHandle="arzbhatia"
+			xy:githubLink="@string/github_arzbhatia" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="Stefano Villa"
-						xy:nameDev="Anarkia"
-						xy:twitterHandle="anarkia1976"
+			android:title="Stefano Villa"
+			xy:nameDev="anarkia"
+			xy:twitterHandle="anarkia1976"
                         xy:githubLink="@string/github_anarkia" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="David Vidal"
-						xy:nameDev="David Vidal"
-						xy:twitterHandle="dorilife"
+			android:title="David Vidal"
+			xy:nameDev="David Vidal"
+			xy:twitterHandle="dorilife"
                         xy:githubLink="@string/github_dorilife" />
 			
 		<com.android.settings.about.widgets.DeveloperPreference
                         android:title="NetChipTl"
                         xy:nameDev="NetChipTl"
-						xy:twitterHandle="netchiptl"
+			xy:twitterHandle="netchiptl"
                         xy:githubLink="@string/github_netchipti" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
@@ -73,10 +73,10 @@
                         xy:githubLink="@string/github_mbqsniper" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="AirOne70"
-						xy:nameDev="AirOne"
-						xy:twitterHandle="airone70500"
-						xy:githubLink="@string/github_airone" />
+			android:title="AirOne70"
+			xy:nameDev="AirOne"
+			xy:twitterHandle="airone70500"
+			xy:githubLink="@string/github_airone" />
 			
 	</PreferenceCategory>
 
@@ -85,10 +85,10 @@
 		android:title="@string/contributors">
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="Fruits n' Veggies"
-						xy:nameDev="Fruits n' Veggies"
-						xy:twitterHandle="ProjectFNV"
-						xy:githubLink="@string/github_fnv" />
+			android:title="Fruits n' Veggies"
+			xy:nameDev="Fruits n' Veggies"
+			xy:twitterHandle="ProjectFNV"
+			xy:githubLink="@string/github_fnv" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
                         android:title="CyanogenMod"
@@ -97,15 +97,15 @@
                         xy:githubLink="@string/github_cyanogenmod" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="AOKP"
-						xy:nameDev="AOKP"
-						xy:twitterHandle="aokp_rom"
+            		android:title="AOKP"
+	                xy:nameDev="AOKP"
+	                xy:twitterHandle="aokp_rom"
                         xy:githubLink="@string/github_aokp" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-						android:title="ParanoidAndroid"
-						xy:nameDev="ParanoidAndroid"
-						xy:twitterHandle="paranoid_team"
+			android:title="ParanoidAndroid"
+			xy:nameDev="ParanoidAndroid"
+			xy:twitterHandle="paranoid_team"
                         xy:githubLink="@string/github_paranoid" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
