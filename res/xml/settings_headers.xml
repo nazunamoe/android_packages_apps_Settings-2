@@ -231,6 +231,7 @@
         android:fragment="com.android.settings.performance.PerformanceSettings"
         android:icon="@drawable/ic_settings_performance"
         android:title="@string/performance_settings_title" />
+<<<<<<< HEAD
 		
 	<!-- MBQs CPU Guide -->
 	<header
@@ -238,6 +239,8 @@
 		android:fragment="com.android.settings.mbqscpuguide"
 		android:icon="@drawable/ic_launcher"
 		android:title="@string/mbqs_cpu_guide" />
+=======
+>>>>>>> parent of 2aa0832... Hardcode my CPU Guide into Settings (Testing this out, will revert this if it causes build errors or user issues)
 
     <!-- About Rom -->
     <header

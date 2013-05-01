@@ -4736,6 +4736,7 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="pref_disable_bootanimation_title">Disable boot animation</string>
     <string name="pref_disable_bootanimation_summary">Disable the boot animation for a slightly quicker boot time</string>
     <string name="io_pref">I/O settings</string>
+<<<<<<< HEAD
 	
 	<!-- MBQs CPU Guide -->
 	<string name="app_name">MBQs CPU Guide</string>
@@ -4797,6 +4798,8 @@ Please dont blame the XY team if your phone goes boom</string>
     <string name="OnDemandPlusInfo">A governor based off of OnDemand and Interactive. It provides a balance between performance, and saving battery</string>
     <string name="DynInteractive">DynInteractive</string>
     <string name="DynInteractiveInfo">"A dynamic interactive Governor. This Governor dynamically adapts it's own CPU frequencies within your parameters based off the system(s) load"</string>
+=======
+>>>>>>> parent of 2aa0832... Hardcode my CPU Guide into Settings (Testing this out, will revert this if it causes build errors or user issues)
 
     <!-- Notification shade dimming -->
     <string name="notification_shade_dim_title">Dim notification shade</string>
