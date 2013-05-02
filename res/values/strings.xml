@@ -2843,7 +2843,8 @@
     <!-- Running service details, stop confirmation descriptive text. Displays when user selects selects to stop a system service. -->
     <string name="runningservicedetails_stop_dlg_text" product="tablet">If you stop this service, some
         features of your tablet may stop working correctly until you power it off
-        and then on again.</string>
+      
+      and then on again.</string>
     <!-- Running service details, stop confirmation descriptive text. Displays when user selects selects to stop a system service. -->
     <string name="runningservicedetails_stop_dlg_text" product="default">If you stop this service, some
         features of your phone may stop working correctly until you power it off
@@ -4558,7 +4559,7 @@
     <string name="increasing_ring_interval_3seconds">3 seconds</string>
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
-	<string name="increasing_ring_interval_15seconds">15 seconds</string>
+    <string name="increasing_ring_interval_15seconds">15 seconds</string>
     <string name="volume_overlay_title">Volume panel style</string>
     <string name="volume_overlay_single">Single</string>
     <string name="volume_overlay_expandable">Expandable</string>
