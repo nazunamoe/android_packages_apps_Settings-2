@@ -2737,7 +2737,7 @@
     <!-- [CHAR LIMIT=200] Manage applications, text for dialog when killing persistent apps-->
     <string name="force_stop_dlg_text">If you force stop an app, it may misbehave.</string>
     <!-- Manage applications, text for dialog when moving an app -->
-    <string name="move_app_failed_dlg_title"></string>
+    <string name="move_app_failed_dlg_title">Failed</string>
     <!-- Manage applications, text for dialog moving an app -->
     <string name="move_app_failed_dlg_text">Couldn\'t move app. <xliff:g id="reason">%1$s</xliff:g></string>
     <!-- Manage applications, application installation location title -->
