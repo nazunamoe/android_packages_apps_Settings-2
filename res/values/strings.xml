@@ -1929,9 +1929,9 @@
     <!-- About phone screen,  setting option name-->
     <string name="baseband_version">Baseband version</string>
     <!-- About phone screen,  setting option name-->
-    <string name="kernel_version">Kernel version</string>
+    <string name="kernel_version">Kernel</string>
     <!-- About phone screen,  setting option name-->
-    <string name="build_number">Build number</string>
+    <string name="build_number">Build</string>
     <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
 
