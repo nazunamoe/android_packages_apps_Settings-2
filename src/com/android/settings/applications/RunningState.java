@@ -69,7 +69,7 @@ public class RunningState {
     static final long TIME_UPDATE_DELAY = 1000;
     static final long CONTENTS_UPDATE_DELAY = 2000;
 
-    static final int MAX_SERVICES = 100;
+    static final int MAX_SERVICES = 200;
 
     final Context mApplicationContext;
     final ActivityManager mAm;
