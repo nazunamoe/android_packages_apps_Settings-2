@@ -32,6 +32,8 @@
     <string name="header_category_device" msgid="5781174212691167553">"设备"</string>
     <string name="header_category_personal" msgid="6225932173498802187">"个人"</string>
     <string name="header_category_system" msgid="2073558547468647128">"系统"</string>
+    <!-- Advanced, Device specific (DeviceParts) settings -->
+    <string name="advanced_settings_title">高级颜色设置</string>
     <string name="turn_on_radio" msgid="8706561489788373676">"打开无线通信"</string>
     <string name="turn_off_radio" msgid="1820294552893884115">"关闭无线通信"</string>
     <string name="sms_over_ims_on" msgid="5085290395865632925">"启用通过 IMS 发送短信的功能"</string>
@@ -1043,7 +1045,7 @@
     <string name="auto_launch_label" msgid="3012617472833815382">"默认启动"</string>
     <string name="auto_launch_label_generic" msgid="3230569852551968694">"默认操作"</string>
     <string name="screen_compatibility_label" msgid="663250687205465394">"屏幕兼容性"</string>
-    <string name="permissions_label" msgid="2605296874922726203">"权限"</string>
+    <string name="permissions_label">权限管理</string>
     <string name="cache_header_label" msgid="1877197634162461830">"缓存"</string>
     <string name="clear_cache_btn_text" msgid="5756314834291116325">"清除缓存"</string>
     <string name="cache_size_label" msgid="7505481393108282913">"缓存"</string>
@@ -1858,6 +1860,8 @@
     <string name="mod_version_default">未知</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">编译日期</string>
+    <string name="dxy_settings_title">深色 Xylon</string>
+    
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">颜色选择器</string>
