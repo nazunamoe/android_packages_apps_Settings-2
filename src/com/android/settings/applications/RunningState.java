@@ -67,7 +67,7 @@ public class RunningState {
     static final int MSG_UPDATE_TIME = 4;
 
     static final long TIME_UPDATE_DELAY = 1000;
-    static final long CONTENTS_UPDATE_DELAY = 2000;
+    static final long CONTENTS_UPDATE_DELAY = 1000;
 
     static final int MAX_SERVICES = 200;
 
