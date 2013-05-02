@@ -846,7 +846,7 @@
         <item>@string/increasing_ring_interval_3seconds</item>
         <item>@string/increasing_ring_interval_5seconds</item>
         <item>@string/increasing_ring_interval_10seconds</item>
-		<item>@string/	increasing_ring_interval_15seconds</item>	
+	<item>@string/increasing_ring_interval_15seconds</item>	
     </string-array>
 
     <integer-array name="increasing_ring_interval_values" translatable="false">
@@ -856,7 +856,7 @@
         <item>3000</item>
         <item>5000</item>
         <item>10000</item>
-		<item>15000</item>
+	<item>15000</item>
     </integer-array>
 
     <!-- Volume Overlay options. -->
