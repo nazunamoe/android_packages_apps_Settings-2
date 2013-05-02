@@ -4559,6 +4559,7 @@
     <string name="increasing_ring_interval_3seconds">3 seconds</string>
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
+	<string name="increasing_ring_interval_15seconds">15 seconds</string>
     <string name="volume_overlay_title">Volume panel style</string>
     <string name="volume_overlay_single">Single</string>
     <string name="volume_overlay_expandable">Expandable</string>
