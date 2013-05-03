@@ -193,7 +193,7 @@
     <!-- Battery Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="battery_info_awake_battery">Awake time on battery:</string>
     <!-- Battery Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
-    <string name="battery_info_awake_plugged">Awake time on charger:</string>
+    <string name="battery_info_awake_plugged">Awake time when charging:</string>
     <!-- Battery Info screen. Label for a status item.  Used for diagnostic info screens, precise translation isn't needed -->
     <string name="battery_info_screen_on">Screen ON time:</string>
 
@@ -305,13 +305,13 @@
     <!--Bluetooth settings screen, summary text for Bluetooth device with no name -->
     <string name="bluetooth_device">Unnamed Bluetooth device</string>
     <!--Bluetooth settings screen, text that appears in heading bar when scanning for devices -->
-    <string name="progress_scanning">Searching...</string>
+    <string name="progress_scanning">Searching</string>
     <!--Bluetooth settings screen, text that appears when scanning for devices is finished and no nearby bluetooth device was found [CHAR LIMIT=40]-->
     <string name="bluetooth_no_devices_found">No nearby Bluetooth devices were found.</string>
     <!-- Notification ticker text (shown in the status bar) when a Bluetooth device wants to pair with us -->
-    <string name="bluetooth_notif_ticker">Bluetooth pairing request...</string>
+    <string name="bluetooth_notif_ticker">Bluetooth pairing request</string>
     <!-- Notification title when a Bluetooth device wants to pair with us -->
-    <string name="bluetooth_notif_title">Pairing request...</string>
+    <string name="bluetooth_notif_title">Pairing request</string>
     <!-- Notification message when a Bluetooth device wants to pair with us -->
     <string name="bluetooth_notif_message">Touch to pair with <xliff:g id="device_name">%1$s</xliff:g>.</string>
     <!-- Bluetooth settings screen, menu to show the list of received files [CHAR LIMIT=30] -->
@@ -589,7 +589,7 @@
     <string name="proxy_settings_label">Proxy settings</string>
 
     <!-- ======================================================================================= -->
-    <!--                                           NEW STUFF                                     -->
+    <!-- NEW STUFF -->
     <!-- ======================================================================================= -->
 
     <!-- Button label for generic cancel action -->
@@ -1929,9 +1929,9 @@
     <!-- About phone screen,  setting option name-->
     <string name="baseband_version">Baseband version</string>
     <!-- About phone screen,  setting option name-->
-    <string name="kernel_version">Kernel</string>
+    <string name="kernel_version">Kernel version</string>
     <!-- About phone screen,  setting option name-->
-    <string name="build_number">Build</string>
+    <string name="build_number">Build number</string>
     <!-- About phone screen,  setting option name-->
     <string name="selinux_status">SELinux status</string>
 
@@ -2737,7 +2737,7 @@
     <!-- [CHAR LIMIT=200] Manage applications, text for dialog when killing persistent apps-->
     <string name="force_stop_dlg_text">If you force stop an app, it may misbehave.</string>
     <!-- Manage applications, text for dialog when moving an app -->
-    <string name="move_app_failed_dlg_title">Failed</string>
+    <string name="move_app_failed_dlg_title"></string>
     <!-- Manage applications, text for dialog moving an app -->
     <string name="move_app_failed_dlg_text">Couldn\'t move app. <xliff:g id="reason">%1$s</xliff:g></string>
     <!-- Manage applications, application installation location title -->
@@ -2843,8 +2843,7 @@
     <!-- Running service details, stop confirmation descriptive text. Displays when user selects selects to stop a system service. -->
     <string name="runningservicedetails_stop_dlg_text" product="tablet">If you stop this service, some
         features of your tablet may stop working correctly until you power it off
-      
-      and then on again.</string>
+        and then on again.</string>
     <!-- Running service details, stop confirmation descriptive text. Displays when user selects selects to stop a system service. -->
     <string name="runningservicedetails_stop_dlg_text" product="default">If you stop this service, some
         features of your phone may stop working correctly until you power it off
@@ -3261,15 +3260,15 @@
     <!-- Display the battery level and status [CHAR_LIMIT=30] -->
     <string name="power_usage_level_and_status"><xliff:g id="level">%1$s</xliff:g> - <xliff:g id="status">%2$s</xliff:g></string>
     <!-- Battery usage since unplugged -->
-    <string name="battery_since_unplugged">Battery used since unplugged</string>
+    <string name="battery_since_unplugged">Battery use since unplugged</string>
     <!-- Battery usage since user reset the stats -->
-    <string name="battery_since_reset">Battery used since reset</string>
+    <string name="battery_since_reset">Battery use since reset</string>
     <!-- Battery usage on battery duration -->
     <string name="battery_stats_on_battery"><xliff:g id="time">%1$s</xliff:g> on battery</string>
     <!-- Battery usage duration -->
     <string name="battery_stats_duration"><xliff:g id="time">%1$s</xliff:g> since unplugged</string>
     <!-- [CHAR LIMIT=25] Label for battery stats charging state graph -->
-    <string name="battery_stats_charging_label">Charging..</string>
+    <string name="battery_stats_charging_label">Charging</string>
     <!-- [CHAR LIMIT=25] Label for battery stats screen on state graph -->
     <string name="battery_stats_screen_on_label">Screen on</string>
     <!-- [CHAR LIMIT=25] Label for battery stats gps on state graph -->
@@ -3307,7 +3306,7 @@
     <!-- Label for power consumed by the screen -->
     <string name="power_screen">Screen</string>
     <!-- Label for power consumed by Wi-Fi -->
-    <string name="power_wifi">WiFi</string>
+    <string name="power_wifi">Wi-Fi</string>
     <!-- Label for power consumed by Bluetooth -->
     <string name="power_bluetooth">Bluetooth</string>
     <!-- Label for power consumed by Cell idle -->
@@ -3652,7 +3651,7 @@
     <string name="local_backup_password_toast_validation_failure">Failure setting backup password</string>
 
     <!-- Dialog title for confirmation to erase backup data from server -->
-    <string name="backup_erase_dialog_title">Back up your Wi-Fi passwords, bookmarks, other settings, and app data, plus erase all copies on Google servers?</string>
+    <string name="backup_erase_dialog_title"></string>
     <!-- Dialog title for confirmation to erase backup data from server -->
     <string name="backup_erase_dialog_message">Stop backing up your Wi-Fi passwords, bookmarks, other settings, and app data, plus erase all copies on Google servers?</string>
 
@@ -4488,13 +4487,13 @@
 
     <!-- About -->
     <string name="title_about">About Xylon</string>
-    <string name="team">The team</string>
+    <string name="team">The Team</string>
     <string name="contributors">Contributors</string>
     <string name="xylon">Xylon AOSP</string>
-    <string name="xylon_website_title">Xylons Website</string>
+    <string name="xylon_website_title">Xylon\'s Website</string>
     <string name="xylon_website_summary">Find all the latest experiments and news here.</string>
-    <string name="xylon_source_title">Xylons Source</string>
-    <string name="xylon_source_summary">We are fully open source. You can always check our progress at http://github.com/XYAOSP</string>
+    <string name="xylon_source_title">Xylon\'s Source</string>
+    <string name="xylon_source_summary">We are fully open source. You can always check out our movements at github.com/XYAOSP</string>
     <string name="github_xyaosp">http://github.com/XYAOSP</string>
     <string name="github_daxxmax">http://github.com/daxxmax</string>
     <string name="github_arzbhatia">http://github.com/arzbhatia</string>
@@ -4554,12 +4553,12 @@
     <string name="increasing_ring_volume_notice">Notice:\nAs the start volume is set higher than the ringer volume, the ring tone will be played using the ringer volume.</string>
     <string name="increasing_ring_interval_title">Increase interval</string>
     <string name="increasing_ring_interval_eachring">On each ring</string>
+    <string name="increasing_ring_interval_half_second">0.5 seconds</string>
     <string name="increasing_ring_interval_1second">1 second</string>
     <string name="increasing_ring_interval_2seconds">2 seconds</string>
     <string name="increasing_ring_interval_3seconds">3 seconds</string>
     <string name="increasing_ring_interval_5seconds">5 seconds</string>
     <string name="increasing_ring_interval_10seconds">10 seconds</string>
-    <string name="increasing_ring_interval_15seconds">15 seconds</string>
     <string name="volume_overlay_title">Volume panel style</string>
     <string name="volume_overlay_single">Single</string>
     <string name="volume_overlay_expandable">Expandable</string>
@@ -4573,7 +4572,7 @@
     <string name="link_volume_ringtones">Link ringtone &amp; notifications volumes</string>
     <string name="link_volume_mutes">Silent mode affects notifications</string>
     <string name="volbtn_music_controls_title">Volume rocker music controls</string>
-    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will change music tracks</string>
+    <string name="volbtn_music_controls_summary">When screen off, long-pressing the volume rockers will seek music tracks</string>
 
     <!-- Safe headset volume restore checkbox -->
     <string name="safe_headset_volume_title">Safe headset volume</string>
@@ -4621,7 +4620,7 @@
 
     <!-- DPI Changer -->
     <string name="dpi">DPI</string>
-    <string name="open_market_title">4. Open the Play Store and hit accept</string>
+    <string name="open_market_title">4. Open Market and hit accept</string>
     <string name="open_market_summary">Press back when done to return here.</string>
     <string name="open_market_summary_could_not_open">"Couldn't open the market! If you're sure it's installed, open it yourself from the launcher."</string>
     <string name="custom_density_title">5. Change density to whatever you like!</string>
@@ -4644,7 +4643,7 @@
     <string name="ime_switcher_notify_summary">Display input method selector notification</string>
 
     <!-- Launches Dev Tools -->
-    <string name="development_tools_title">Launch Dev Tools</string>
+    <string name="development_tools_title">Launch Tools</string>
 
     <!-- USB Mass Storage -->
     <string name="usb_mass_storage_title">Mass storage</string>
@@ -4660,10 +4659,10 @@
     <string name="performance_settings_title">Performance</string>
 
     <!-- Performance Settings : Warning dialog  -->
-    <string name="performance_settings_warning_title">WARNING</string>
+    <string name="performance_settings_warning_title">Proceed with Caution</string>
     <string name="performance_settings_warning">These settings are included for experimentation and any changes made to them have the potential to cause instability, crashes, data loss or hardware failures.\n\nWe request you do not file bug reports if any of these settings have been changed from the defaults.
 
-Please dont blame the Xylon team if your phone goes boom</string>
+Please dont blame the XY team if your phone goes boom</string>
 
     <!-- Performance Settings : Processor settings title -->
     <string name="processor_title">Processor</string>
@@ -4672,11 +4671,11 @@ Please dont blame the Xylon team if your phone goes boom</string>
 
     <!-- Performance Settings : Processor settings sub items -->
     <string name="cpu_cur_freq_title">Current CPU frequency</string>
-    <string name="cpu_governors_title">Governor</string>
+    <string name="cpu_governors_title">CPU governor</string>
     <string name="cpu_governors_summary">%S</string>
-    <string name="cpu_min_freq_title">Min CPU frequency</string>
+    <string name="cpu_min_freq_title">Minimum CPU frequency</string>
     <string name="cpu_min_freq_summary">%s</string>
-    <string name="cpu_max_freq_title">Max CPU frequency</string>
+    <string name="cpu_max_freq_title">Maximum CPU frequency</string>
     <string name="cpu_max_freq_summary">%s</string>
     <string name="cpu_set_on_boot">Set on boot or reboot</string>
     <string name="cpu_set_on_boot_summary">Restore the processor settings on boot</string>
@@ -4688,8 +4687,8 @@ Please dont blame the Xylon team if your phone goes boom</string>
     <string name="pref_zram_title">zRAM</string>
     <string name="pref_zram_summary">Compress memory for increased virtual capacity (requires reboot)</string>
     <!-- KSM -->
-    <string name="pref_ksm_title">KSM</string>
-    <string name="pref_ksm_summary">Kernel Same page reduces physical memory requirements and improves overall performance</string>
+    <string name="pref_ksm_title">Kernel Samepage Merging</string>
+    <string name="pref_ksm_summary">KSM reduces physical memory requirements and improves performance</string>
     <!-- Purgeable Assets -->
     <string name="pref_purgeable_assets_title">Allow purging of assets</string>
     <string name="pref_purgeable_assets_summary">Purging of bitmap memory assets allows the freeing of more RAM when needed (requires reboot)</string>
@@ -4699,16 +4698,16 @@ Please dont blame the Xylon team if your phone goes boom</string>
     <string name="pref_vibe_strength_dialogtitle">Enter a value between 0-127</string>
 
     <!-- Performance Settings : I/O scheduler settings summary. -->
-    <string name="io_scheds_summary">I/O scheduler</string>
+    <string name="io_scheds_summary">Change the I/O scheduler</string>
 
     <!-- Performance Settings : I/O scheduler settings sub items -->
-    <string name="io_sched_title">Change the I/O scheduler</string>
+    <string name="io_sched_title">I/O scheduler</string>
     <string name="io_sched_summary">%S</string>
-    <string name="io_sched_set_on_boot">Set on boot</string>
+    <string name="io_sched_set_on_boot">Set on boot or reboot</string>
     <string name="io_sched_set_on_boot_summary">Restore the I/O scheduler settings on boot</string>
 
     <!-- Performance Settings : Dithering -->
-    <string name="pref_use_dithering_title">Dithering</string>
+    <string name="pref_use_dithering_title">Surface improvement</string>
     <string name="dithering_no_dither">Disable dithering</string>
     <string name="dithering_color_banding">Fix color banding (default)</string>
     <string name="dithering_blur_effect">Fix color banding and blur effect</string>
@@ -4734,8 +4733,8 @@ Please dont blame the Xylon team if your phone goes boom</string>
     <string name="sob">Set on boot</string>
     <string name="general_perf">General preferences</string>
     <string name="cpu_pref">CPU settings</string>
-    <string name="pref_disable_bootanimation_title">Disable boot animation?</string>
-    <string name="pref_disable_bootanimation_summary">Disable the boot animation for a quicker boot time</string>
+    <string name="pref_disable_bootanimation_title">Disable boot animation</string>
+    <string name="pref_disable_bootanimation_summary">Disable the boot animation for a slightly quicker boot time</string>
     <string name="io_pref">I/O settings</string>
 
     <!-- Notification shade dimming -->
@@ -4760,7 +4759,7 @@ Please dont blame the Xylon team if your phone goes boom</string>
 
     <!-- XYStats -->
     <string name="anonymous_statistics_title">Xylon statistics</string>
-    <string name="anonymous_statistics_summary">Help make Xylon better by opting into reporting anonymous statistics</string>
+    <string name="anonymous_statistics_summary">Help make Xylon better by opting into anonymous statistics reporting</string>
 
     <!-- Automatic brightness customization -->
     <string name="light_sensor_current_value">Current light sensor value: <xliff:g id="light_level">%d</xliff:g> lux</string>
