@@ -78,12 +78,8 @@ import java.util.List;
 public class DevelopmentSettings extends PreferenceFragment
         implements DialogInterface.OnClickListener, DialogInterface.OnDismissListener,
                 OnPreferenceChangeListener, CompoundButton.OnCheckedChangeListener {
-<<<<<<< HEAD
-    private static final String TAG = "DevelopmentSettings";
-=======
 
        private static final String TAG = "DevelopmentSettings";
->>>>>>> b7ca8ae... Settings: MediaScanner behavior on boot (3/3)
 
     /**
      * Preference file were development settings prefs are stored.
@@ -148,11 +144,9 @@ public class DevelopmentSettings extends PreferenceFragment
 
     private static final String PACKAGE_MIME_TYPE = "application/vnd.android.package-archive";
 
-<<<<<<< HEAD
     private static final String DEVELOPMENT_TOOLS = "development_tools";
-=======
+
     private static final String MEDIA_SCANNER_ON_BOOT = "media_scanner_on_boot";
->>>>>>> b7ca8ae... Settings: MediaScanner behavior on boot (3/3)
 
     private static final int RESULT_DEBUG_APP = 1000;
 
@@ -497,11 +491,7 @@ public class DevelopmentSettings extends PreferenceFragment
         updateShowAllANRsOptions();
         updateVerifyAppsOverUsbOptions();
         updateBugreportOptions();
-<<<<<<< HEAD
         updateRootAccessOptions();
-    }
-
-=======
         updateMSOBOptions();
     }
 
@@ -524,7 +514,6 @@ public class DevelopmentSettings extends PreferenceFragment
         mMSOB.setSummary(mMSOB.getEntry());
     }
 
->>>>>>> b7ca8ae... Settings: MediaScanner behavior on boot (3/3)
     private void updateAdbOverNetwork() {
         int port = Settings.Secure.getInt(getActivity().getContentResolver(),
                 Settings.Secure.ADB_PORT, 0);
