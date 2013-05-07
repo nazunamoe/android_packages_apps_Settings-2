@@ -1850,7 +1850,7 @@
     <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
     <string name="cpu_info">Processeur</string>
-    <string name="mem_info">Mémoire</string>
+    <string name="mem_info">Mémoire vive</string>
 
     <string name="dialog_color_picker">Sélecteur de couleur</string>
     <string name="press_color_to_apply">Appuyer sur la couleur pour valider.</string>
