@@ -1870,6 +1870,8 @@
     <string name="volume_key_cursor_control_off">Désactivé</string>
     <string name="volume_key_cursor_control_on">La touche haut déplace le curseur vers la gauche et bas vers la droite</string>
     <string name="volume_key_cursor_control_on_reverse">La touche haut déplace le curseur vers la droite et bas vers la gauche</string>
+    
+    <string name="volume_keys_control_ring_stream">Touches volume controlent le volume de la sonnerie</string>
 
     <string name="lockpattern_settings_enable_error_path_title">Afficher le mauvais schéma</string>
     <string name="lockpattern_settings_enable_dots_title">Afficher les points</string>
@@ -2061,8 +2063,8 @@
     <string name="power_notifications_enable_title">Activé</string>
     <string name="power_notifications_enable_summary">Va émettre un son de notification lorsqu\'un chargeur sera branché/débranché</string>
     <string name="power_notifications_vibrate_title">Vibreur</string>
-    <string name="power_notifications_ringtone_title">Son émis</string>
-    <string name="power_notifications_ringtone_silent">Aucun</string>
+    <string name="power_notifications_ringtone_title">Sonnerie émise</string>
+    <string name="power_notifications_ringtone_silent">Aucune</string>
 
     <!-- **XYLON/FNV ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
