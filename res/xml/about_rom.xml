@@ -3,22 +3,16 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:xy="http://schemas.android.com/apk/res/com.android.settings">
 
-	<PreferenceCategory
-		android:key="xylon"
-		android:title="@string/xylon">
-
-		<Preference
-		        android:key="xylon_website"
-			android:title="@string/xylon_website_title"
-			android:summary="@string/xylon_website_summary" />
+	<!--PreferenceCategory
+		android:key="ultimatum"
+		android:title="@string/ultimatum">
 
 		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="Xylon AOSP"
-			xy:nameDev="Xylon AOSP"
-			xy:twitterHandle="XYAOSP"
-                        xy:githubLink="@string/github_xyaosp" />
+			android:title="null"
+			xy:nameDev="null"
+			xy:twitterHandle="null" />
 
-	</PreferenceCategory>
+	</PreferenceCategory-->
 
 	<PreferenceCategory
 		android:key="team"

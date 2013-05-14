@@ -56,7 +56,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String KEY_TERMS = "terms";
     private static final String KEY_LICENSE = "license";
     private static final String KEY_COPYRIGHT = "copyright";
-    private static final String KEY_XY_STATS = "xystats";
+    //private static final String KEY_XY_STATS = "xystats";
     private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
@@ -97,7 +97,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         findPreference(KEY_BUILD_NUMBER).setEnabled(true);
         setStringSummary(KEY_KERNEL_VERSION, getFormattedKernelVersion());
         findPreference(KEY_KERNEL_VERSION).setEnabled(true);
-        setValueSummary(KEY_MOD_VERSION, "ro.xylon.version");
+        setValueSummary(KEY_MOD_VERSION, "ro.ukg.version");
         findPreference(KEY_MOD_VERSION).setEnabled(true);
         findPreference(KEY_MOD_VERSION).setEnabled(true);
         setValueSummary(KEY_MOD_BUILD_DATE, "ro.build.date");
@@ -180,7 +180,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
                 R.bool.config_show_regulatory_info);
 
         // Don't display Stats if the app itself isn't installed
-        removePreferenceIfPackageNotInstalled(findPreference(KEY_XY_STATS));
+        // removePreferenceIfPackageNotInstalled(findPreference(KEY_XY_STATS));
     }
 
     @Override

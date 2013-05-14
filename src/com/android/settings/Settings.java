@@ -124,10 +124,10 @@ public class Settings extends PreferenceActivity
             R.id.about_settings,
             R.id.accessibility_settings,
             R.id.customize_section,
-            R.id.xy_settings,
+            R.id.ukg_settings,
             R.id.performance_settings,
-            R.id.about_xy,
-            R.id.dxy_settings,
+            R.id.about_ukg,
+            R.id.dark_settings,
     };
 
     private SharedPreferences mDevelopmentPreferences;
@@ -617,11 +617,11 @@ public class Settings extends PreferenceActivity
         private LayoutInflater mInflater;
 
         static int getHeaderType(Header header) {
-            if (header.fragment == null && header.intent == null && header.id != R.id.dxy_settings) {
+            if (header.fragment == null && header.intent == null && header.id != R.id.dark_settings) {
                 return HEADER_TYPE_CATEGORY;
             } else if (header.id == R.id.wifi_settings
                     || header.id == R.id.bluetooth_settings
-                    || header.id == R.id.dxy_settings) {
+                    || header.id == R.id.dark_settings) {
                 return HEADER_TYPE_SWITCH;
             } else {
                 return HEADER_TYPE_NORMAL;
@@ -724,7 +724,7 @@ public class Settings extends PreferenceActivity
                         mWifiEnabler.setSwitch(holder.switch_);
                     } else if (header.id == R.id.bluetooth_settings) {
                         mBluetoothEnabler.setSwitch(holder.switch_);
-                    } else if (header.id == R.id.dxy_settings) {
+                    } else if (header.id == R.id.dark_settings) {
                         mTRDSSwitch = (Switch) view.findViewById(R.id.switchWidget);
                         mTRDSEnabler.setSwitch(holder.switch_);
                     }
@@ -794,7 +794,7 @@ public class Settings extends PreferenceActivity
                 setTitle(R.string.settings_label);
             }
         }
-        if (header.id == R.id.dxy_settings) {
+        if (header.id == R.id.dark_settings) {
             mTRDSSwitch.toggle();
         }
     }
