@@ -8,6 +8,52 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.net.http.AndroidHttpClient;
+import android.os.AsyncTask;
+import android.preference.Preference;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.android.settings.R;
+import com.koushikdutta.urlimageviewhelper.UrlImageViewCallback;
+import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.params.HttpClientParams;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpParams;
+
+public class DeveloperPreference extends Preference {
+
+    private static final String TAG = "DeveloperPreference";
+
+    private ImageView twitterButton;
+    private ImageView donateButton;
+    private ImageView githubButton;
+    private ImageView photoView;
+
+    private TextView devName;
+
+    private String nameDev;
+    private String twitterName;
+    private String donateLink;
+    private String githubLink;
+
+    public DeveloperPreference(Context context, AttributeSet attrs) {
+        super(context, attrs);
+
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DeveloperPreference);
+        nameDev = a.getString(R.styleable.DeveloperPreference_nameDev);
         twitterName = a.getString(R.styleable.DeveloperPreference_twitterHandle);
         donateLink = a.getString(R.styleable.DeveloperPreference_donateLink);
         githubLink = a.getString(R.styleable.DeveloperPreference_githubLink);
