@@ -2371,9 +2371,9 @@
 
     <!-- About --> <skip />
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="tablet">About tablet</string>
+    <string name="about_settings" product="tablet">Tablet</string>
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="default">About phone</string>
+    <string name="about_settings" product="default">Phone</string>
     <!-- Main settings screen, setting summary for the user to go into the About phone screen-->
     <string name="about_settings_summary">View legal info, status, software version</string>
     <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
@@ -4491,7 +4491,8 @@
     <string name="set">Set</string>
 
     <!-- About -->
-    <string name="title_about">About Ultimatum</string>
+    <string name="about_settings_key">About</string>
+    <string name="title_about">Ultimatum</string>
     <string name="team">The Team</string>
     <string name="contributors">Contributors</string>
     <string name="ultimatum">Ultimatum Kang</string>
