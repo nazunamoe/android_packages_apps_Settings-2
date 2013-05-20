@@ -1845,7 +1845,7 @@
     
     <!-- **XYLON ACTIVITIES MODIFICATIONS STARTS** -->
     
-    <string name="xylon_extras">Outils</string>
+    <string name="ultimatum_extras">Outils UKG</string>
     <string name="mod_version">Version de la Rom</string>
     <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
