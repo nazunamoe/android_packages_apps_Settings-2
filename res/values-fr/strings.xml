@@ -2079,5 +2079,20 @@
     <string name="power_notifications_ringtone_title">Sonnerie émise</string>
     <string name="power_notifications_ringtone_silent">Aucune</string>
 
+    <string name="animation_fade">S\'estomper</string>
+    <string name="animation_slide_right">Glissé à droite</string>
+    <string name="animation_slide_left">Glissé à gauche</string>
+    <string name="animation_slide_right_no_fade">Glissé à droite (sans s\'estomper)</string>
+    <string name="animation_slide_left_no_fade">Glissé à droite (sans s\'estomper)</string>
+    <string name="animation_slide_up">Glissé vers le bas</string>
+    <string name="animation_slide_down">Glissé vers le haut</string>
+    <string name="animation_default">Par défaut</string>
+    <string name="animation_translucent">Translucide</string>
+    <string name="animation_grow_shrink">S\'agrandir (haut)</string>
+    <string name="animation_grow_shrink_center">S\'agrandir (centre)</string>
+    <string name="animation_grow_shrink_bottom">S\'agrandir (bas)</string>
+    <string name="animation_grow_shrink_left">S\'agrandir (gauche)</string>
+    <string name="animation_grow_shrink_right">S\'agrandir (droite)</string>
+
     <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 </resources>
