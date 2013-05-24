@@ -4502,11 +4502,8 @@
     <string name="ultimatum_source_summary">We are fully open source. You can always check out our movements at github or bitbucket</string>
     <string name="github_daxxmax">http://github.com/daxxmax</string>
     <string name="github_arzbhatia">http://github.com/arzbhatia</string>
-    <string name="github_anarkia">http://github.com/anarkia1976</string>
     <string name="github_dorilife">http://github.com/dorilife</string>
-    <string name="github_netchipti">http://github.com/FrostBite-Android</string>
     <string name="github_fuss132">http://github.com/fuss132</string>
-    <string name="github_mbqsniper">http://github.com/MBQsniper/</string>
     <string name="github_psafx">http://github.com/psafx</string>
     <string name="github_airone">http://github.com/AirOne70</string>
     <string name="github_fnv">http://github.com/FruitNVeggies</string>
@@ -4517,6 +4514,7 @@
     <string name="github_slim">http://github.com/SlimRoms</string>
     <string name="github_sabermod">http://github.com/SaberMod</string>
     <string name="github_rascarlo">http://github.com/rascarlo</string>
+    <string name="github_baked">http://github.com/TeamBAKED</string>
 
     <!-- Customisation -->
     <string name="other_cat">Other Settings</string>

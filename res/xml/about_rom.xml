@@ -31,22 +31,10 @@
 			xy:githubLink="@string/github_arzbhatia" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="Stefano Villa"
-			xy:nameDev="anarkia"
-			xy:twitterHandle="anarkia1976"
-                        xy:githubLink="@string/github_anarkia" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="David Vidal"
 			xy:nameDev="David Vidal"
 			xy:twitterHandle="dorilife"
                         xy:githubLink="@string/github_dorilife" />
-			
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="NetChipTl"
-                        xy:nameDev="NetChipTl"
-			xy:twitterHandle="netchiptl"
-                        xy:githubLink="@string/github_netchipti" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
                         android:title="fuss132"
@@ -59,12 +47,6 @@
                         xy:nameDev="psafx"
                         xy:twitterHandle="psafx"
                         xy:githubLink="@string/github_psafx" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="Kyler"
-                        xy:nameDev="MBQsniper"
-                        xy:twitterHandle="mbqsniper"
-                        xy:githubLink="@string/github_mbqsniper" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="AirOne70"
@@ -99,7 +81,7 @@
 		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="ParanoidAndroid"
 			xy:nameDev="ParanoidAndroid"
-			xy:twitterHandle="paranoid_team"
+			xy:twitterHandle="aospa_official"
                         xy:githubLink="@string/github_paranoid" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
@@ -125,6 +107,12 @@
                         xy:nameDev="Rascarlo"
                         xy:twitterHandle="rascarlo"
                         xy:githubLink="@string/github_rascarlo" />
+
+                 <com.android.settings.about.widgets.DeveloperPreference
+                        android:title="TeamBAKED"
+                        xy:nameDev="TeamBAKED"
+                        xy:twitterHandle="Team_BAKED_ROM"
+                        xy:githubLink="@string/github_baked" />
 
 	</PreferenceCategory>
 
