@@ -31,6 +31,12 @@
 			xy:githubLink="@string/github_arzbhatia" />
 
 		<com.android.settings.about.widgets.DeveloperPreference
+                        android:title="David Hou"
+                        xy:nameDev="chaosagent"
+                        xy:twitterHandle=""
+                        xy:githubLink="@string/github_chaosagent" />
+
+		<com.android.settings.about.widgets.DeveloperPreference
 			android:title="David Vidal"
 			xy:nameDev="David Vidal"
 			xy:twitterHandle="dorilife"
