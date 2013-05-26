@@ -1845,7 +1845,7 @@
     
     <!-- **XYLON ACTIVITIES MODIFICATIONS STARTS** -->
     
-    <string name="ultimatum_extras">Outils UKG</string>
+    <string name="xylon_extras">Outils</string>
     <string name="mod_version">Version de la Rom</string>
     <string name="mod_version_default">Inconnue</string>
     <string name="build_date">Date de compilation</string>
@@ -1860,9 +1860,9 @@
     <string name="title_about">À propos de la Rom</string>
     <string name="team">La Team</string>
     <string name="contributors">Collaborateurs</string>
-    <string name="ultimatum">Ultimatum Kang</string>
-    <string name="ultimatum_website_title">Site web de la Rom</string>
-    <string name="ultimatum_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
+    <string name="xylon">Xylon</string>
+    <string name="xylon_website_title">Site web de la Rom</string>
+    <string name="xylon_website_summary">Retrouvez les actualités importantes de la Rom sur le site web officiel.</string>
 
     <string name="dark_settings_title">Mode sombre</string>
     <string name="misc">Divers</string>
