@@ -4848,6 +4848,9 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <!-- Permissions Management -->
     <string name="permissions_settings_title">Permissions</string>
 
+    <!-- Delete apn confirmation dialog message -->
+    <string name="confirm_delete_apn">The APN will be deleted.</string>
+
     <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 
 </resources>
