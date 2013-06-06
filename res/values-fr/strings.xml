@@ -1884,7 +1884,7 @@
     <string name="group_applications">Applications</string>
 
     <string name="swap_volume_buttons_title">Inversion des boutons volume</string>
-    <string name="swap_volume_buttons_summary">Inversions des boutons de volume lorsque l\'écran est tourné.</string>
+    <string name="swap_volume_buttons_summary">Inversion des boutons de volume lorsque l\'écran est tourné.</string>
 
     <string name="display_rotation_title">Rotation</string>
     <string name="display_rotation_enabled">Activée:</string>
