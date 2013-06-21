@@ -133,7 +133,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        if (deviceSupportsNfc(getActivity())) {
+        if (NfcAdapter.getDefaultAdapter(getActivity()) != null) {
             MenuItem nfc = menu.add(0, MENU_NFC_WRITE, 0, R.string.profile_write_nfc_tag)
                 .setIcon(R.drawable.ic_menu_nfc_writer_dark);
             nfc.setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM |
@@ -191,7 +191,7 @@ public class ProfileConfig extends SettingsPreferenceFragment
     }
 
     private void startWifiTrigger() {
-        final PreferenceActivity pa = (PreferenceActivity) getActivity();
+        final PreferenceDrawerActivity pa = (PreferenceDrawerActivity) getActivity();
         final String title = getResources().getString(R.string.profile_trigger_title_wifi,
                 mProfile.getName());
         final Bundle args = new Bundle();
