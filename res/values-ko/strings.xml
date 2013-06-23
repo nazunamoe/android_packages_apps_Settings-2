@@ -2017,9 +2017,7 @@
  
     <!-- Performance Settings : Warning dialog  -->
     <string name="performance_settings_warning_title">경고</string>
-    <string name="performance_settings_warning">여기 포함되 있는 설정들은 안정성 저하, 충돌, 데이터 손실 또는 하드웨어 손상등을 야기할 가능성이 있습니다.\n\n이 설정들을 수정후 발생하는 버그들에 대해서는 리포트를 삼가해 주시길 바랍니다.
-
-폰이 고장났다고 하여 XY팀월들에게 뭐라 하시지 마십시오.</string>
+    <string name="performance_settings_warning">여기 포함되 있는 설정들은 안정성 저하, 충돌, 데이터 손실 또는 하드웨어 손상등을 야기할 가능성이 있습니다.\n\n이 설정들을 수정후 발생하는 버그들에 대해서는 리포트를 삼가해 주시길 바랍니다.</string>
 
     <!-- Performance Settings : Processor settings title -->
     <string name="processor_title">프로세서</string>
