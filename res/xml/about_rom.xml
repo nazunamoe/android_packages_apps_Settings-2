@@ -48,6 +48,17 @@
             uxy:gplus="@string/airone70_gplus" />
 
         <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="cpu999"
+            uxy:devUrl="@string/chaosagent_profile"
+            uxy:gplus="@string/chaosagent_gplus"
+            uxy:donate="@string/chaosagent_donate" />
+
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="macgregorrobert"
+            uxy:devUrl="@string/mgr_profile"
+            uxy:gplus="@string/mgr_gplus" />
+
+        <com.android.settings.about.widgets.DeveloperPreference
             uxy:twitter="manelscout4life"
             uxy:devUrl="@string/ms4life_profile"
             uxy:gplus="@string/ms4life_gplus" />
