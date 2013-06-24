@@ -1,134 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:xy="http://schemas.android.com/apk/res/com.android.settings">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uxy="http://schemas.android.com/apk/res/com.android.settings">
 
-        <!--PreferenceScreen android:key="xylon_logo"
-                          android:layout="@layout/logo_row" /-->
+    <Preference
+        android:key="uxy_logo"
+        android:layout="@layout/logo_row" />
 
-	<!--PreferenceCategory
-		android:key="xylon"
-		android:title="@string/xylon">
+    <Preference
+        android:key="uxy_downloads"
+        android:title="@string/uxy_downloads_title"
+        android:summary="@string/uxy_downloads_summary" />
 
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="null"
-			xy:nameDev="null"
-			xy:twitterHandle="null" />
+    <Preference
+        android:key="uxy_source"
+        android:title="@string/uxy_source_title"
+        android:summary="@string/uxy_source_summary" />
 
-	</PreferenceCategory-->
+    <PreferenceCategory
+        android:id="@+id/aboutpage"
+        android:title="@string/uxy_devs">
 
-	<PreferenceCategory
-		android:key="team"
-		android:title="@string/team">
+        <!--
+        * Use uxy:twitter twitter name exactly as spelled
+        * Use uxy:devIcon image stored in package
+        * Use uxy:devUrl to pull image from web anywhere
+        * Use uxy:donate paypal link
+        * Use uxy:email for email link
+        * Use uxy:gplus for google+ links
+        *
+        *  -->
 
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="Daniel MM"
-			xy:nameDev="Daniel MM"
-			xy:twitterHandle="daxinonito"
-			xy:githubLink="@string/github_daxxmax" />
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="daxinonito"
+            uxy:devUrl="@string/daxinonito_profile"
+            uxy:gplus="@string/daxinonito_gplus"
+            uxy:donate="@string/daxinonito_donate" />
 
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="Arz Bhatia"
-			xy:nameDev="Arz Bhatia"
-			xy:twitterHandle="arzbhatia"
-			xy:githubLink="@string/github_arzbhatia" />
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="dorilife"
+            uxy:devUrl="@string/dorilife_profile"
+            uxy:gplus="@string/dorilife_gplus" />
 
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="David Hou"
-                        xy:nameDev="chaosagent"
-                        xy:twitterHandle=""
-                        xy:githubLink="@string/github_chaosagent" />
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="airone70500"
+            uxy:devUrl="@string/airone70_profile"
+            uxy:gplus="@string/airone70_gplus" />
 
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="David Vidal"
-			xy:nameDev="David Vidal"
-			xy:twitterHandle="dorilife"
-                        xy:githubLink="@string/github_dorilife" />
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="manelscout4life"
+            uxy:devUrl="@string/ms4life_profile"
+            uxy:gplus="@string/ms4life_gplus" />
 
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="fuss132"
-                        xy:nameDev="fuss132"
-                        xy:twitterHandle="fuss132Dev"
-                        xy:githubLink="@string/github_fuss132" />
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="psafx"
+            uxy:devUrl="@string/psafx_profile"
+            uxy:gplus="@string/psafx_gplus" />
 
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="psafx"
-                        xy:nameDev="psafx"
-                        xy:twitterHandle="psafx"
-                        xy:githubLink="@string/github_psafx" />
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="aznrice2k4"
+            uxy:devUrl="@string/aznrice2k4_profile"
+            uxy:gplus="@string/aznrice2k4_gplus" />
 
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="AirOne70"
-			xy:nameDev="AirOne"
-			xy:twitterHandle="airone70500"
-			xy:githubLink="@string/github_airone" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="aznrice2k4"
-			xy:nameDev="aznrice2k4"
-			xy:twitterHandle="aznrice2k4"
-			xy:githubLink="@string/github_aznrice2k4" />
-			
-	</PreferenceCategory>
-
-	<PreferenceCategory
-		android:key="contributors"
-		android:title="@string/contributors">
-
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="Fruits n' Veggies"
-			xy:nameDev="Fruits n' Veggies"
-			xy:twitterHandle="ProjectFNV"
-			xy:githubLink="@string/github_fnv" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="CyanogenMod"
-                        xy:nameDev="CyanogenMod"
-                        xy:twitterHandle="cyanogenmod"
-                        xy:githubLink="@string/github_cyanogenmod" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
-            		android:title="AOKP"
-	                xy:nameDev="AOKP"
-	                xy:twitterHandle="aokp_rom"
-                        xy:githubLink="@string/github_aokp" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
-			android:title="ParanoidAndroid"
-			xy:nameDev="ParanoidAndroid"
-			xy:twitterHandle="aospa_official"
-                        xy:githubLink="@string/github_paranoid" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="Carbon ROM"
-                        xy:nameDev="Carbon ROM"
-                        xy:twitterHandle="carbonrom"
-                        xy:githubLink="@string/github_carbon" />
-
-		<com.android.settings.about.widgets.DeveloperPreference
-                        android:title="SlimRoms"
-                        xy:nameDev="SlimRoms"
-                        xy:twitterHandle="slimroms"
-                        xy:githubLink="@string/github_slim" />
-
-                 <com.android.settings.about.widgets.DeveloperPreference
-                        android:title="SaberMod"
-                        xy:nameDev="SaberMod"
-                        xy:twitterHandle="sparksco1980"
-                        xy:githubLink="@string/github_sabermod" />
-
-                 <com.android.settings.about.widgets.DeveloperPreference
-                        android:title="Rascarlo"
-                        xy:nameDev="Rascarlo"
-                        xy:twitterHandle="rascarlo"
-                        xy:githubLink="@string/github_rascarlo" />
-
-                 <com.android.settings.about.widgets.DeveloperPreference
-                        android:title="TeamBAKED"
-                        xy:nameDev="TeamBAKED"
-                        xy:twitterHandle="Team_BAKED_ROM"
-                        xy:githubLink="@string/github_baked" />
-
-	</PreferenceCategory>
-
+    </PreferenceCategory>
 </PreferenceScreen>

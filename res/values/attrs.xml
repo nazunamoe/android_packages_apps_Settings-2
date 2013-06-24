@@ -101,6 +101,15 @@
         <attr name="githubLink" format="string" />
     </declare-styleable>
 
+    <declare-styleable name="DeveloperPreference">
+        <attr name="devIcon" format="reference"/>
+        <attr name="devUrl" format="string"/>
+        <attr name="donate" format="string"/>
+        <attr name="gplus" format="string"/>
+        <!--attr name="email" format="string"/-->
+        <attr name="twitter" format="string"/>
+    </declare-styleable>
+
     <declare-styleable name="ImageListPreference">
         <attr name="summaryImage" format="reference" />
         <attr name="entryImages" format="reference" />

@@ -263,6 +263,6 @@
             android:id="@+id/about_xy"
             android:fragment="com.android.settings.about.About"
             android:icon="@drawable/ic_settings_multiuser"
-            android:title="@string/title_about" />
+            android:title="@string/uxy_about_page" />
 
 </preference-headers>

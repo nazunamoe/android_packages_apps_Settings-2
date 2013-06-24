@@ -2371,9 +2371,9 @@
 
     <!-- About --> <skip />
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="tablet">About tablet</string>
+    <string name="about_settings" product="tablet">Tablet</string>
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="default">About phone</string>
+    <string name="about_settings" product="default">Phone</string>
     <!-- Main settings screen, setting summary for the user to go into the About phone screen-->
     <string name="about_settings_summary">View legal info, status, software version</string>
     <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
@@ -4494,32 +4494,15 @@
     <string name="set">Set</string>
 
     <!-- About -->
-    <string name="about_settings_key">About</string>
-    <string name="title_about">About Xylon</string>
-    <string name="team">The Team</string>
-    <string name="contributors">Contributors</string>
-    <string name="xylon">Xylon</string>
-    <string name="xylon_website_title">Xylon\'s Website</string>
-    <string name="xylon_website_summary">Find all the latest experiments and news here.</string>
-    <string name="xylon_source_title">Xylon\'s Source</string>
-    <string name="xylon_source_summary">We are fully open source. You can always check out our movements at github or bitbucket</string>
-    <string name="github_daxxmax">http://github.com/daxxmax</string>
-    <string name="github_arzbhatia">http://github.com/arzbhatia</string>
-    <string name="github_chaosagent">http://github.com/chaosagent</string>
-    <string name="github_dorilife">http://github.com/dorilife</string>
-    <string name="github_fuss132">http://github.com/fuss132</string>
-    <string name="github_psafx">http://github.com/psafx</string>
-    <string name="github_airone">http://github.com/AirOne70</string>
-    <string name="github_aznrice2k4">http://github.com/aznrice2k4</string>
-    <string name="github_fnv">http://github.com/FruitNVeggies</string>
-    <string name="github_aokp">http://github.com/AOKP</string>
-    <string name="github_cyanogenmod">http://github.com/CyanogenMod</string>
-    <string name="github_paranoid">http://github.com/ParanoidAndroid</string>
-    <string name="github_carbon">http://github.com/CarbonDev</string>
-    <string name="github_slim">http://github.com/SlimRoms</string>
-    <string name="github_sabermod">http://github.com/SaberMod</string>
-    <string name="github_rascarlo">http://github.com/rascarlo</string>
-    <string name="github_baked">http://github.com/TeamBAKED</string>
+    <string name="uxy_about_page">uXylon</string>
+    <string name="uxy_about_summary">@null</string>
+    <string name="uxy_devs">Crew of Ultimatum</string>
+    <string name="uxy_devs_summary">@null</string>
+    <string name="uxy">uXylon</string>
+    <string name="uxy_downloads_title">uXylon downloads</string>
+    <string name="uxy_downloads_summary">For downloads &amp; changelogs go to http://ultimatumdev.org</string>
+    <string name="uxy_source_title">uXylon source</string>
+    <string name="uxy_source_summary">uXylon is fully open source. http://github.com/ultimatumkang</string>
 
     <!-- Customisation -->
     <string name="other_cat">Other Settings</string>

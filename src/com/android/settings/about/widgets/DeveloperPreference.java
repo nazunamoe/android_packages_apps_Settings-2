@@ -1,142 +1,130 @@
+// A shameless kang from TeamBAKED and AOKP.
 
 package com.android.settings.about.widgets;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.net.http.AndroidHttpClient;
-import android.os.AsyncTask;
 import android.preference.Preference;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.android.settings.R;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewCallback;
 import com.koushikdutta.urlimageviewhelper.UrlImageViewHelper;
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.params.HttpClientParams;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpParams;
+import com.android.settings.R;
 
-public class DeveloperPreference extends Preference {
+public class DeveloperPreference extends Preference implements OnClickListener {
+    private Context mContext;
 
-    private static final String TAG = "DeveloperPreference";
+    private Drawable mDevIcon;
 
-    private ImageView twitterButton;
-    private ImageView donateButton;
-    private ImageView githubButton;
-    private ImageView photoView;
+    private ImageView mAvatar;
+    private ImageView mBtnDonate;
+//    private ImageView mBtnEmail;
+    private ImageView mBtnGPlus;
+    private LinearLayout mTwitterRes;
+    private TextView mTitleRes;
 
-    private TextView devName;
-
-    private String nameDev;
-    private String twitterName;
-    private String donateLink;
-    private String githubLink;
+    private String mDevUrl;
+    private String mDonate;
+//    private String mEmail;
+    private String mGPlus;
+    private String mTwitter;
 
     public DeveloperPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
 
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.DeveloperPreference);
-        nameDev = a.getString(R.styleable.DeveloperPreference_nameDev);
-        twitterName = a.getString(R.styleable.DeveloperPreference_twitterHandle);
-        donateLink = a.getString(R.styleable.DeveloperPreference_donateLink);
-        githubLink = a.getString(R.styleable.DeveloperPreference_githubLink);
-        a.recycle();
+        TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.DeveloperPreference, 0, 0);
+        mDevIcon = attributes.getDrawable(R.styleable.DeveloperPreference_devIcon);
+        mDevUrl = attributes.getString(R.styleable.DeveloperPreference_devUrl);
+        mDonate = attributes.getString(R.styleable.DeveloperPreference_donate);
+//        mEmail = attributes.getString(R.styleable.DeveloperPreference_email);
+        mGPlus = attributes.getString(R.styleable.DeveloperPreference_gplus);
+        mTwitter = attributes.getString(R.styleable.DeveloperPreference_twitter);
+        attributes.recycle();
     }
 
     @Override
     protected View onCreateView(ViewGroup parent) {
-        super.onCreateView(parent);
+        View developer = View.inflate(mContext, R.layout.widget_developer, null);
 
-        View layout = View.inflate(getContext(), R.layout.dev_card, null);
+        mAvatar = (ImageView) developer.findViewById(R.id.widget_developer_photo);
+        mBtnDonate = (ImageView) developer.findViewById(R.id.widget_developer_btn_donate);
+//        mBtnEmail = (ImageView) developer.findViewById(R.id.widget_developer_btn_email);
+        mBtnGPlus = (ImageView) developer.findViewById(R.id.widget_developer_btn_gplus);
+        mTwitterRes = (LinearLayout) developer.findViewById(R.id.widget_developer_title);
+        mTitleRes = (TextView) developer.findViewById(R.id.widget_developer_name);
 
-        twitterButton = (ImageView) layout.findViewById(R.id.twitter_button);
-        donateButton = (ImageView) layout.findViewById(R.id.donate_button);
-        githubButton = (ImageView) layout.findViewById(R.id.github_button);
-        devName = (TextView) layout.findViewById(R.id.name);
-        photoView = (ImageView) layout.findViewById(R.id.photo);
-
-        return layout;
+        return developer;
     }
 
     @Override
     protected void onBindView(View view) {
         super.onBindView(view);
 
-        if (donateLink != null) {
-            final OnClickListener openDonate = new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri donateURL = Uri.parse(donateLink);
-                    final Intent intent = new Intent(Intent.ACTION_VIEW, donateURL);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    getContext().startActivity(intent);
-                }
-            };
-
-            donateButton.setOnClickListener(openDonate);
-        } else {
-            donateButton.setVisibility(View.GONE);
+        if (mDevIcon != null) {
+            mAvatar.setImageDrawable(mDevIcon);
+        } else if (mDevUrl != null) {
+            UrlImageViewHelper.setUrlDrawable(this.mAvatar, mDevUrl, R.drawable.ic_dev_null,
+                    UrlImageViewHelper.CACHE_DURATION_TWO_DAYS);
         }
 
-        if (githubLink != null) {
-            final OnClickListener openGithub = new OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri githubURL = Uri.parse(githubLink);
-                    final Intent intent = new Intent(Intent.ACTION_VIEW, githubURL);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    getContext().startActivity(intent);
-                }
-            };
+        if (mDonate != null) {
+            mBtnDonate.setOnClickListener(this);
+        } else mBtnDonate.setVisibility(View.GONE);
 
-            githubButton.setOnClickListener(openGithub);
-        } else {
-            githubButton.setVisibility(View.GONE);
-        }
+//        if (mEmail != null) {
+//            mBtnEmail.setOnClickListener(this);
+//        } else mBtnEmail.setVisibility(View.GONE);
 
-        if (twitterName != null) {
-            final OnPreferenceClickListener openTwitter = new OnPreferenceClickListener() {
-                @Override
+        if (mGPlus != null) {
+            mBtnGPlus.setOnClickListener(this);
+        } else mBtnGPlus.setVisibility(View.GONE);
+
+        if (mTwitter != null) {
+            mTitleRes.setText("@" + mTwitter);
+            this.setOnPreferenceClickListener(new OnPreferenceClickListener() {
+
                 public boolean onPreferenceClick(Preference preference) {
-                    Uri twitterURL = Uri.parse("http://twitter.com/#!/" + twitterName);
-                    final Intent intent = new Intent(Intent.ACTION_VIEW, twitterURL);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    getContext().startActivity(intent);
+                    Uri uriUrl = Uri.parse("http://twitter.com/#!/" + mTwitter);
+                    Intent twitter = new Intent(Intent.ACTION_VIEW, uriUrl);
+                    getContext().startActivity(twitter);
                     return true;
                 }
-            };
+            });
+        } else mTwitterRes.setVisibility(View.GONE);
+    }
 
-            // changed to clicking the preference to open twitter
-            // it was a hit or miss to click the twitter bird
-            // twitterButton.setOnClickListener(openTwitter);
-            this.setOnPreferenceClickListener(openTwitter);
-            final String url = "http://api.twitter.com/1/users/profile_image/" + twitterName
-                    + "?size=original";
-            UrlImageViewHelper.setUrlDrawable(this.photoView, url, R.drawable.ic_null,
-                    UrlImageViewHelper.CACHE_DURATION_ONE_WEEK);
-        } else {
-            twitterButton.setVisibility(View.INVISIBLE);
-            photoView.setVisibility(View.GONE);
+    public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.widget_developer_btn_donate:
+                Uri uriUrl = Uri.parse(mDonate);
+                Intent donate = new Intent(Intent.ACTION_VIEW, uriUrl);
+                getContext().startActivity(donate);
+                break;
+//            case R.id.widget_developer_btn_email:
+//                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+//                emailIntent.setType("message/rfc822");
+//                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {mEmail});
+//                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "");
+//                emailIntent.putExtra(Intent.EXTRA_TEXT, "");
+//                getContext().startActivity(emailIntent);
+//                break;
+            case R.id.widget_developer_btn_gplus:
+                Uri gPlus = Uri.parse(mGPlus);
+                Intent shop = new Intent(Intent.ACTION_VIEW, gPlus);
+                getContext().startActivity(shop);
+                break;
         }
-
-        devName.setText(nameDev);
-
     }
 }
