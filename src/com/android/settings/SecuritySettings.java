@@ -329,8 +329,6 @@ public class SecuritySettings extends SettingsPreferenceFragment
            } catch (SettingNotFoundException e) {
                mPrivacyGuardDefault.setChecked(false);
            }
-        }
-
         return root;
     }
 
