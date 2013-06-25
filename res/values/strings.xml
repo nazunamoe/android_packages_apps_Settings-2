@@ -2371,9 +2371,9 @@
 
     <!-- About --> <skip />
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="tablet">Tablet</string>
+    <string name="about_settings" product="tablet">About tablet</string>
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="default">Phone</string>
+    <string name="about_settings" product="default">About phone</string>
     <!-- Main settings screen, setting summary for the user to go into the About phone screen-->
     <string name="about_settings_summary">View legal info, status, software version</string>
     <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
@@ -4472,7 +4472,7 @@
     <!-- **XYLON ACTIVITIES MODIFICATIONS STARTS** -->
 
     <!-- About phone screen,  setting option name-->
-    <string name="mod_version">Xylon version</string>
+    <string name="mod_version">uXylon version</string>
     <string name="mod_version_default">Unknown</string>
     <!-- About phone screen, build date of ROM -->
     <string name="build_date">Build date</string>
@@ -4495,7 +4495,8 @@
     <string name="set">Set</string>
 
     <!-- About -->
-    <string name="uxy_about_page">uXylon</string>
+    <string name="about_settings_key">About</string>
+    <string name="uxy_about_page">About uXylon</string>
     <string name="uxy_about_summary">@null</string>
     <string name="uxy_devs">Crew of Ultimatum</string>
     <string name="uxy_devs_summary">@null</string>
