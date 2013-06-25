@@ -73,5 +73,11 @@
             uxy:devUrl="@string/aznrice2k4_profile"
             uxy:gplus="@string/aznrice2k4_gplus" />
 
+        <com.android.settings.about.widgets.DeveloperPreference
+            uxy:twitter="root_ad"
+            uxy:devUrl="@string/andreas_profile"
+            uxy:gplus="@string/andreas_gplus"
+            uxy:donate="@string/andreas_donate" />
+
     </PreferenceCategory>
 </PreferenceScreen>
