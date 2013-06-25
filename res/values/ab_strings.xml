@@ -27,6 +27,10 @@
 <string name="aznrice2k4_profile">https://lh3.googleusercontent.com/-yCZVzIzbD6M/T-Tg39Mj1EI/AAAAAAAAAR4/4rbwULUE4ZU/s837-no/2012-05-18+22.07.11.jpg</string>
 <string name="aznrice2k4_gplus">https://plus.google.com/u/0/108575607716140781016/about</string>
 
+<string name="andreas_profile">https://lh4.googleusercontent.com/-lOQsxMArFvo/Ucm5ISmho1I/AAAAAAAAAHk/XMTwGJJH9k8/w616-h705-no/1.JPG</string>
+<string name="andreas_gplus">https://plus.google.com/u/0/111334002234773693583/about</string>
+<string name="andreas_donate">http://forum.xda-developers.com/donatetome.php?u=4583359</string>
+
     <!-- Credits to (Still in WIP...) -->
 
 </resources>
