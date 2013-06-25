@@ -2341,19 +2341,7 @@ two in order to insert additional control points. \'Remove\' deletes the selecte
     <string name="privacy_guard_default_title">Privacy Guard</string>
     <string name="privacy_guard_default_summary">Aktiviere Privacy Guard immer für neu installierte Apps</string>
     
-    <!-- HALO -->
-    <string name="halo_options_title">HALO</string>
-    <string name="halo_hide_title">Nach Aktivität HALO verstecken</string>
-    <string name="halo_hide_summary">HALO wird bei eingehenden Benachrichtigungen erscheinen und sich nach kurzer Zeit wieder verstecken</string>
-    <string name="halo_reversed_title">HALO umkehren</string>
-    <string name="halo_reversed_summary">Bewirbt sich um Aufgabenumschaltung und bewegende Gesten</string>
-    <string name="halo_state_title">HALO Politik</string>
-    <string name="halo_state_summary">Ermöglicht schwarz/weiß Auflistung der Meldungen</string>
-    <string name="halo_state_black">Schwarze Liste</string>
-    <string name="halo_state_white">Weiße Liste</string>
-    <string name="halo_pause_title">Pausiere aktive App</string>
-    <string name="halo_pause_summary">Beim Öffnen einer App mit HALO wir die darunter liegende App pausiert</string>
-
-    <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
+        <!-- **XYLON ACTIVITIES MODIFICATIONS ENDS** -->
 
 </resources>
+    
