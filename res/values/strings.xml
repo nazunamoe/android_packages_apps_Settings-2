@@ -2371,9 +2371,9 @@
 
     <!-- About --> <skip />
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="tablet">About tablet</string>
+    <string name="about_settings" product="tablet">Tablet</string>
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
-    <string name="about_settings" product="default">About phone</string>
+    <string name="about_settings" product="default">Phone</string>
     <!-- Main settings screen, setting summary for the user to go into the About phone screen-->
     <string name="about_settings_summary">View legal info, status, software version</string>
     <!-- About phone settings screen, setting option name to go to dialog that shows legal info -->
@@ -4496,7 +4496,7 @@
 
     <!-- About -->
     <string name="about_settings_key">About</string>
-    <string name="uxy_about_page">About uXylon</string>
+    <string name="uxy_about_page">uXylon</string>
     <string name="uxy_about_summary">@null</string>
     <string name="uxy_devs">Crew of Ultimatum</string>
     <string name="uxy_devs_summary">@null</string>
