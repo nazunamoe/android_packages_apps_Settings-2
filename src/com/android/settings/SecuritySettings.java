@@ -306,29 +306,28 @@ public class SecuritySettings extends SettingsPreferenceFragment
                     mToggleVerifyApps.setEnabled(false);
                 }
             }
-        }
 
-           // App security settings
-           addPreferencesFromResource(R.xml.security_settings_app_cyanogenmod);
-           mSmsSecurityCheck = (ListPreference) root.findPreference(KEY_SMS_SECURITY_CHECK_PREF);
-           if (pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
-               mSmsSecurityCheck = (ListPreference) root.findPreference(KEY_SMS_SECURITY_CHECK_PREF);
-               mSmsSecurityCheck.setOnPreferenceChangeListener(this);
-               int smsSecurityCheck = Integer.valueOf(mSmsSecurityCheck.getValue());
-               updateSmsSecuritySummary(smsSecurityCheck);
-           } else {
-               PreferenceGroup appCategory = (PreferenceGroup)
-                       root.findPreference(KEY_APP_SECURITY_CATEGORY);
-               appCategory.removePreference(mSmsSecurityCheck);
-           }
+            // App security settings
+            addPreferencesFromResource(R.xml.security_settings_app_cyanogenmod);
+            mSmsSecurityCheck = (ListPreference) root.findPreference(KEY_SMS_SECURITY_CHECK_PREF);
+            if (pm.hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+                mSmsSecurityCheck = (ListPreference) root.findPreference(KEY_SMS_SECURITY_CHECK_PREF);
+                mSmsSecurityCheck.setOnPreferenceChangeListener(this);
+                int smsSecurityCheck = Integer.valueOf(mSmsSecurityCheck.getValue());
+                updateSmsSecuritySummary(smsSecurityCheck);
+            } else {
+                PreferenceGroup appCategory = (PreferenceGroup)
+                        root.findPreference(KEY_APP_SECURITY_CATEGORY);
+                appCategory.removePreference(mSmsSecurityCheck);
+            }
 
-           mPrivacyGuardDefault = (CheckBoxPreference) findPreference(KEY_PRIVACY_GUARD_DEFAULT);
-           try {
-               mPrivacyGuardDefault.setChecked(Settings.Secure.getInt(getContentResolver(),
-                       Settings.Secure.PRIVACY_GUARD_DEFAULT) == 1);
-           } catch (SettingNotFoundException e) {
-               mPrivacyGuardDefault.setChecked(false);
-           }
+            mPrivacyGuardDefault = (CheckBoxPreference) findPreference(KEY_PRIVACY_GUARD_DEFAULT);
+            try {
+                mPrivacyGuardDefault.setChecked(Settings.Secure.getInt(getContentResolver(),
+                        Settings.Secure.PRIVACY_GUARD_DEFAULT) == 1);
+            } catch (SettingNotFoundException e) {
+                mPrivacyGuardDefault.setChecked(false);
+            }
         }
 
         return root;
